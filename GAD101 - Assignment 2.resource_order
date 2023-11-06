@@ -2,9 +2,11 @@
   "FolderOrderSettings": [
     {"name":"Global","order":1,"path":"folders/Global.yy",},
     {"name":"Level1","order":2,"path":"folders/Level1.yy",},
-    {"name":"Global level","order":1,"path":"folders/Level1/Global level.yy",},
     {"name":"Tileset","order":3,"path":"folders/Level1/Tileset.yy",},
     {"name":"Sprites","order":1,"path":"folders/Level1/Tileset/Sprites.yy",},
+    {"name":"Bloom","order":5,"path":"folders/Global/Bloom.yy",},
+    {"name":"Scripts","order":6,"path":"folders/Global/Scripts.yy",},
+    {"name":"Render","order":7,"path":"folders/Global/Render.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"shFlash","order":3,"path":"shaders/shFlash/shFlash.yy",},
@@ -14,6 +16,7 @@
     {"name":"tWalls","order":2,"path":"tilesets/tWalls/tWalls.yy",},
     {"name":"snPlayerDie","order":2,"path":"sounds/snPlayerDie/snPlayerDie.yy",},
     {"name":"rInit","order":2,"path":"rooms/rInit/rInit.yy",},
+    {"name":"shBlur","order":1,"path":"shaders/shBlur/shBlur.yy",},
     {"name":"sPlayer","order":1,"path":"sprites/sPlayer/sPlayer.yy",},
   ],
 }

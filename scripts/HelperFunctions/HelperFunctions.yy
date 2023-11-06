@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Global",
-    "path": "folders/Global.yy",
+    "name": "Scripts",
+    "path": "folders/Global/Scripts.yy",
   },
 }
