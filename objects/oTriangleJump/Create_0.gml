@@ -2,7 +2,7 @@
 
 enableLive;
 
-outlineRotation = 0;
+outlineRotation = random(360);
 collected = false;
 breakPercent = 0;
 breakCurvePercent = 0;
@@ -24,9 +24,10 @@ collect = function() {
 			image_angle = random(360);
 			radius = 8;
 			spd = random_range(0.04, 0.07);
-			CameraFunctions(5, 10);
+			ScreenShake(5, 10);
 		}
 	}
+	alarm[0] = 60;
 	
 	return true;
 }
