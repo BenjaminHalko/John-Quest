@@ -3,13 +3,13 @@
 
 particles = [];
 
-repeat(100) {
+for(var i = 0; i < 100; i++) {
 	array_push(particles, {
 		x: random(480),
 		y: random(270),
-		audioReactive: (irandom(9) == 0),
-		spd: random_range(0.02, 1),
-		paralax: random_range(0.01, 1),
-		pulse: 0
+		audioReactive: (irandom(4) == 0),
+		spd: random(1),
+		pulse: 0,
+		beat: i % 4
 	});
 }

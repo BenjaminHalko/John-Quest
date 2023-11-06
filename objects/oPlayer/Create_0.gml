@@ -35,7 +35,6 @@ yscale = 1;
 
 diagLen = point_distance(0,0,wHalf,wHalf);
 
-uPercent = shader_get_uniform(shCyanFlash,"percent");
 flash = 0;
 
 walkWave = 0;

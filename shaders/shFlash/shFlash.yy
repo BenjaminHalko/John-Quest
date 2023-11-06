@@ -1,10 +1,10 @@
 {
   "resourceType": "GMShader",
   "resourceVersion": "1.0",
-  "name": "shCyanFlash",
+  "name": "shFlash",
   "parent": {
-    "name": "Player",
-    "path": "folders/Level1/Player.yy",
+    "name": "Shaders",
+    "path": "folders/Global/Shaders.yy",
   },
   "type": 1,
 }

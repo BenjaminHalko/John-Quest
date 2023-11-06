@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Particles",
-    "path": "folders/Global/Particles.yy",
+    "path": "folders/Global/Effects/Particles.yy",
   },
   "parentObjectId": null,
   "persistent": false,

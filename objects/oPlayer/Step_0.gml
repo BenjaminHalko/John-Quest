@@ -114,7 +114,7 @@ if (respawnPercent == 1) {
 			rotation = ApproachFade(rotation,-360,20,0.6);
 			if rotation <= -359.5 rotation = 0;
 		}
-		yscale = ApproachFade(yscale,max(0.5,(vsp_final != 0 ? vsp/-4 : (_move != 0 and vsp_final == 0 ? -abs(hsp)/moveSpd*lerp(0.05,0.4,0.5+sin(walkWave*pi)/2) : _duck*0.4))+1),0.04+0.15*(vsp_final <= 0 or dance != 0),0.7);
+		yscale = ApproachFade(yscale,max(0.5,(vsp_final != 0 ? vsp/-4 : (_move != 0 and vsp_final == 0 ? -abs(hsp)/moveSpd*lerp(0.05,0.4,0.5+sin(walkWave*pi)/2) : _duck*0.4))+1),0.08+0.15*(vsp_final <= 0),0.7);
 	} else {
 		topShiftPercent = 0.6;
 		rotation = 0;

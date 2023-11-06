@@ -3,8 +3,9 @@
 var _topShift = hsp*topShiftPercent;
 var _wHalf = wHalf*xscale/yscale;
 
-shader_set(shCyanFlash);
-shader_set_uniform_f(uPercent,flash);
+shader_set(shFlash);
+shader_set_uniform_f(global.uFlashPercent,flash);
+shader_set_uniform_f(global.uFlashColor,0,1,1);
 
 if rotation == 0 {
 	draw_sprite_pos(sprite_index,image_index,
