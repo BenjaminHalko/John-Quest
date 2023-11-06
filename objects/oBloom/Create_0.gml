@@ -1,7 +1,7 @@
 /// @desc Init Bloom
 
-surfacePing = surface_create(640,360);
-surfacePong = surface_create(640,360);
+surfacePing = surface_create(480,270);
+surfacePong = surface_create(480,270);
 uBlurVector = shader_get_uniform(shBlur, "blur_vector");
 
 layer_script_begin(layer_get_id("Background"),function() {

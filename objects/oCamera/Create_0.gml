@@ -1,7 +1,7 @@
 /// @desc Set up camera
 cam = view_camera[0];
-viewWidthHalf = 640 * 0.5;
-viewHeightHalf = 360 * 0.5;
+viewWidthHalf = 480 * 0.5;
+viewHeightHalf = 270 * 0.5;
 
 shakeLength = 0;
 shakeMagnitude = 0;

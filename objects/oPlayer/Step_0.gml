@@ -4,8 +4,7 @@ var _keyUp = keyboard_check(vk_up);
 var _keyDown = keyboard_check(vk_down);
 var _keyRight = keyboard_check(vk_right);
 var _keyLeft = keyboard_check(vk_left);
-var _keyJump = keyboard_check_pressed(vk_space);
-var _keyDash = keyboard_check_pressed(vk_shift);
+var _keyDash = keyboard_check_pressed(vk_space);
 var _move = _keyRight-_keyLeft;
 var _duck = _keyUp - _keyDown;
 
@@ -42,28 +41,27 @@ if (respawnPercent == 1) {
 		
 		vsp = min(vsp,10);
 		
-		//Jump
-		if(_keyJump) jumpTimer = 10;
-
-		if(canJump-- > 0 && jumpTimer > 0) {
-			vsp = jumpSpd;
-			canJump = 0;
-			jumpTimer = 0;
+		// Jumping
+		canJump--;
+		var _triJump = instance_place(x,y,oTriangleJump);
+		if (_triJump != noone) {
+			savedJumpID = _triJump;
+			canJump = 10;
 		}
-		jumpTimer--;
 	
-		if _keyDash and allowDash {
-			dash = 12;
-			flash = 1;
-			allowDash = false;
-			
-			// Calc dash dir
-			var _xDir = dirFacing;
-			var _yDir = -_duck;
-			if (_yDir != 0) {
-				_xDir = _move;	
+		// Dashing
+		if _keyDash {
+			if canJump > 0 {
+				if(savedJumpID.collect()) {
+					vsp = jumpSpd;
+					allowDash = true;
+					rotation = -10;
+				}
+			} else if (allowDash) {
+				dash = 12;
+				flash = 1;
+				allowDash = false;
 			}
-			dashDir = point_direction(0,0,_xDir,_yDir);
 		}
 	} else {
 		dash--;
@@ -91,14 +89,20 @@ if (respawnPercent == 1) {
 	
 	x += hsp_final;
 	
+	// Semi Solids
+	var _semi = noone;
+	if (vsp_final > 0) {
+		_semi = instance_place(x,y+vsp_final,pSemiSolid);
+	}
+	
 	// Collide vertical
-	if (place_meeting(x,y+vsp_final,global.collisionMap)) {
-		while(!place_meeting(x,y+sign(vsp_final),global.collisionMap)) y += sign(vsp_final);
+	var _vertColliders = [global.collisionMap, _semi];
+	if (place_meeting(x,y+vsp_final,_vertColliders)) {
+		while(!place_meeting(x,y+sign(vsp_final),_vertColliders)) y += sign(vsp_final);
 		vsp = 0;
 		vsp_f = 0;
 		vsp_final = 0;
 		allowDash = true;
-		canJump = 10;
 	}
 	
 	y += vsp_final;
@@ -106,12 +110,18 @@ if (respawnPercent == 1) {
 	//Animation
 	if dash == 0 {
 		topShiftPercent = ApproachFade(topShiftPercent,vsp_final == 0,0.1,0.7);	
-		yscale = ApproachFade(yscale,max(0.5,(vsp_final != 0 ? vsp/-4 : (_move != 0 and vsp_final == 0 ? -abs(hsp)/moveSpd*lerp(0.05,0.4,0.5+sin(walkWave*pi)/2) : _duck*0.4))+1),0.04+0.15*(vsp_final <= 0),0.7);
+		if rotation != 0 {
+			rotation = ApproachFade(rotation,-360,20,0.6);
+			if rotation <= -359.5 rotation = 0;
+		}
+		yscale = ApproachFade(yscale,max(0.5,(vsp_final != 0 ? vsp/-4 : (_move != 0 and vsp_final == 0 ? -abs(hsp)/moveSpd*lerp(0.05,0.4,0.5+sin(walkWave*pi)/2) : _duck*0.4))+1),0.04+0.15*(vsp_final <= 0 or dance != 0),0.7);
 	} else {
 		topShiftPercent = 0.6;
+		rotation = 0;
 		yscale = ApproachFade(yscale,lerp(1,0.3,dash/20),0.4,0.7);
 	}
 } else {
+	rotation = 0;
 	yscale = ApproachFade(yscale,1,0.05,0.7);
 	topShiftPercent = ApproachFade(topShiftPercent,0,0.1,0.7);
 	dirFacing = respawnScale;
@@ -131,4 +141,4 @@ xscale = ApproachFade(xscale,dirFacing,0.2,0.7);
 
 flash = ApproachFade(flash,0,0.1,0.8);
 
-if y > room_height hurtPlayer();
+if y > room_height or place_meeting(x,y,pHurt) hurtPlayer();

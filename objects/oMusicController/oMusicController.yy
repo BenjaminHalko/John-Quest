@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Global",
-    "path": "folders/Level1/Global.yy",
+    "name": "Music",
+    "path": "folders/Level1/Global/Music.yy",
   },
   "parentObjectId": null,
   "persistent": false,

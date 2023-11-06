@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 193.38449,
   "parent": {
-    "name": "Global",
-    "path": "folders/Level1/Global.yy",
+    "name": "Music",
+    "path": "folders/Level1/Global/Music.yy",
   },
   "preload": false,
   "sampleRate": 44100,

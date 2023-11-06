@@ -9,18 +9,21 @@ vsp_final = 0;
 
 moveSpd = 4;
 grv = 0.5;
-jumpSpd = -8;
+jumpSpd = -9;
 topShiftPercent = 1;
 rotation = 0;
 
 isDashing = false;
 dash = 0;
-dashSpd = 12;
+dashSpd = 15;
+
+dance = 0;
 
 allowDash = false;
 
-doubleJump = 1;
+doubleJump = 0;
 canJump = 0;
+savedJumpID = noone;
 jumpTimer = 0;
 
 dirFacing = 1;
@@ -32,7 +35,7 @@ yscale = 1;
 
 diagLen = point_distance(0,0,wHalf,wHalf);
 
-uPercent = shader_get_uniform(shFlash,"percent");
+uPercent = shader_get_uniform(shCyanFlash,"percent");
 flash = 0;
 
 walkWave = 0;
