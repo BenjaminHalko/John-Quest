@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Platforms",
-    "path": "folders/Level1/Level Objects/Platforms.yy",
+    "name": "MovingPlatforms",
+    "path": "folders/Level1/Level Objects/MovingPlatforms.yy",
   },
   "parentObjectId": null,
   "persistent": false,

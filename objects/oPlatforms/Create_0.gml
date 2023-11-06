@@ -14,7 +14,5 @@ for(var i = 0; i < _amount; i++) {
 ds_list_destroy(_list);
 
 timer = 0;
-flash = 0;
-
 
 percent = 0;

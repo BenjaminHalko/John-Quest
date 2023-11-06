@@ -19,7 +19,7 @@ if (timer > 0) {
 		}
 	}
 } else {
-	y = Approach(y, ystart-distance, 1);	
+	y = Approach(y, ystart-distance, length);	
 }
 
-flash = ApproachFade(flash, 0, 0.2, 0.7);
+flash = ApproachFade(flash, 0, 0.1, 0.7);

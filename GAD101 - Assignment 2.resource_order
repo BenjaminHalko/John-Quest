@@ -23,9 +23,11 @@
     {"name":"Player","order":4,"path":"folders/Level1/Player.yy",},
     {"name":"Tileset","order":1,"path":"folders/Level1/Tileset.yy",},
     {"name":"Sprites","order":1,"path":"folders/Level1/Tileset/Sprites.yy",},
-    {"name":"Platforms","order":4,"path":"folders/Level1/Level Objects/Platforms.yy",},
+    {"name":"MovingPlatforms","order":4,"path":"folders/Level1/Level Objects/MovingPlatforms.yy",},
     {"name":"Effects","order":11,"path":"folders/Global/Effects.yy",},
     {"name":"AfterImage","order":2,"path":"folders/Global/Effects/AfterImage.yy",},
+    {"name":"Checkpoints","order":5,"path":"folders/Level1/Level Objects/Checkpoints.yy",},
+    {"name":"Misc","order":12,"path":"folders/Global/Misc.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},

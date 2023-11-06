@@ -9,7 +9,7 @@ vsp_final = 0;
 
 moveSpd = 4;
 grv = 0.5;
-jumpSpd = -9;
+jumpSpd = -10;
 topShiftPercent = 1;
 rotation = 0;
 
