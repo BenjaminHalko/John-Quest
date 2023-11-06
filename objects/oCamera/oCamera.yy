@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Global",
-    "path": "folders/Global.yy",
+    "name": "Camera",
+    "path": "folders/Global/Camera.yy",
   },
   "parentObjectId": null,
   "persistent": true,
