@@ -5,8 +5,6 @@ enableLive;
 if (global.audioTick) {
 	timer--;
 	
-	show_debug_message(global.audioBeat % 4);
-	
 	if (global.audioBeat % beatLoop == beatOffset) {
 		timer = length;
 	}

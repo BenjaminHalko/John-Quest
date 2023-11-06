@@ -41,6 +41,7 @@
     {"name":"sTriangleJump","order":1,"path":"sprites/sTriangleJump/sTriangleJump.yy",},
     {"name":"GMLive","order":4,"path":"scripts/GMLive/GMLive.yy",},
     {"name":"oGlobalManager","order":3,"path":"objects/oGlobalManager/oGlobalManager.yy",},
+    {"name":"oBackground","order":4,"path":"objects/oBackground/oBackground.yy",},
     {"name":"GMLive_vm_call","order":6,"path":"scripts/GMLive_vm_call/GMLive_vm_call.yy",},
     {"name":"GMLiveAPI_js","order":4,"path":"scripts/GMLiveAPI_js/GMLiveAPI_js.yy",},
     {"name":"oMusicController","order":1,"path":"objects/oMusicController/oMusicController.yy",},

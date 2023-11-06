@@ -85,6 +85,7 @@
     {"id":{"name":"GMLive","path":"scripts/GMLive/GMLive.yy",},},
     {"id":{"name":"GMLive_http","path":"scripts/GMLive_http/GMLive_http.yy",},},
     {"id":{"name":"oGlobalManager","path":"objects/oGlobalManager/oGlobalManager.yy",},},
+    {"id":{"name":"oBackground","path":"objects/oBackground/oBackground.yy",},},
     {"id":{"name":"oTriangleJump","path":"objects/oTriangleJump/oTriangleJump.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"GMLive_vm_call","path":"scripts/GMLive_vm_call/GMLive_vm_call.yy",},},
