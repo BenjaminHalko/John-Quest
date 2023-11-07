@@ -9,7 +9,7 @@ for(var i = 0; i < array_length(particles); i++) {
 	if (particles[i].y < -20) {
 		particles[i].x = random(480);
 		particles[i].y = 290;
-		particles[i].audioReactive = (irandom(4) == 0);
+		particles[i].audioReactive = (irandom(3) == 0);
 		particles[i].spd = random(1);
 	}
 }
