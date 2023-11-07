@@ -1,15 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oCheckpoint",
-  "eventList": [],
+  "name": "oBullet",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Checkpoints",
-    "path": "folders/Level1/Level Objects/Checkpoints.yy",
+    "name": "Bullets",
+    "path": "folders/Level1/Level Objects/Hurt/Bullets.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "pHurt",
+    "path": "objects/pHurt/pHurt.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -26,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sPlaceholder",
-    "path": "sprites/sPlaceholder/sPlaceholder.yy",
+    "name": "sBullet",
+    "path": "sprites/sBullet/sBullet.yy",
   },
   "spriteMaskId": null,
   "visible": true,

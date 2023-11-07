@@ -58,14 +58,14 @@ if (respawnPercent == 1) {
 					rotation = -10;
 				}
 			} else if (allowDash) {
-				dash = 12;
+				dash = 10;
 				flash = 1;
 				allowDash = false;
 			}
 		}
 	} else {
 		dash--;
-		hsp = lerp(moveSpd,dashSpd,dash/12)*dirFacing;
+		hsp = lerp(moveSpd,dashSpd,dash/10)*dirFacing;
 		vsp = 0;
 		vsp_final = 0;
 	}
