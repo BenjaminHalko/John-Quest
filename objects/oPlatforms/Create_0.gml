@@ -13,6 +13,13 @@ for(var i = 0; i < _amount; i++) {
 
 ds_list_destroy(_list);
 
+// Create springs
+for(var i = bbox_left; i < bbox_right; i += 16) {
+	if (!position_meeting(i+8,bbox_top-8,_objects)) {
+		array_push(attachedObjects, instance_create_layer(i,bbox_top-16,"Springs",oSpring));
+	}
+}
+
 timer = 0;
 
 percent = 0;
