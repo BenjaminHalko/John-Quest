@@ -27,6 +27,7 @@ collect = function() {
 			ScreenShake(5, 10);
 		}
 	}
+	audio_play_sound(snTriangleJump, 1, false,1,0,random_range(0.7, 1.3));
 	alarm[0] = 60;
 	
 	return true;

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "mLvl1Music",
+  "name": "snTriangleJump",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 102.85714,
+  "duration": 0.283787,
   "parent": {
-    "name": "Audio",
-    "path": "folders/Level1/Audio.yy",
+    "name": "SoundFXs",
+    "path": "folders/Level1/Audio/SoundFXs.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mLvl1Music.ogg",
-  "type": 1,
-  "volume": 0.8,
+  "soundFile": "snTriangleJump.wav",
+  "type": 0,
+  "volume": 0.6,
 }
