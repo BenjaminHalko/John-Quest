@@ -14,7 +14,7 @@ for(var i = 0; i < array_length(particles); i++) {
 	var _x = Wrap(particles[i].x+_camX*_paralax,_camX, _camX+_camW);
 	var _y = Wrap(particles[i].y+_camY*_paralax,_camY, _camY+_camH);
 	if (particles[i].audioReactive) {
-		draw_set_color(merge_color(c_fuchsia, c_white, particles[i].pulse/3));
+		draw_set_color(merge_color(c_fuchsia, c_aqua, particles[i].pulse/5));
 		draw_rectangle(_x-particles[i].pulse,_y-particles[i].pulse,_x+1+particles[i].pulse,_y+1+particles[i].pulse,false);
 	} else {
 		draw_set_color(c_fuchsia);
