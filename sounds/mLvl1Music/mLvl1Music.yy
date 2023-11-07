@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 193.38449,
+  "duration": 102.85714,
   "parent": {
     "name": "Music",
     "path": "folders/Level1/Global/Music.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mLvl1Music.mp3",
+  "soundFile": "mLvl1Music.ogg",
   "type": 1,
-  "volume": 1.0,
+  "volume": 0.6,
 }

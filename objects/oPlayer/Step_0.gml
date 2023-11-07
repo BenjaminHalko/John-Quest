@@ -127,8 +127,8 @@ if (respawnPercent == 1) {
 	dirFacing = respawnScale;
 	respawnPercent = ApproachFade(respawnPercent,1,0.04,0.7);
 	if respawnPercent > 0 {
-		x = lerp(xstart,respawnX,respawnPercent);
-		y = lerp(ystart,respawnY-Wave(12,24,0.5,0),respawnPercent);
+		x = round(lerp(xstart,respawnX,respawnPercent));
+		y = round(lerp(ystart,respawnY-Wave(12,24,0.5,0),respawnPercent));
 	} else {
 		yscale = random_range(0.5,1.8);
 	}

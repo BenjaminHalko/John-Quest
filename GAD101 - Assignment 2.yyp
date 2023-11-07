@@ -33,6 +33,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"TilePulse","folderPath":"folders/Level1/Global/TilePulse.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Level Objects","folderPath":"folders/Level1/Level Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Bridge","folderPath":"folders/Level1/Level Objects/Bridge.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Checkpoints","folderPath":"folders/Level1/Level Objects/Checkpoints.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Hurt","folderPath":"folders/Level1/Level Objects/Hurt.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Bullets","folderPath":"folders/Level1/Level Objects/Hurt/Bullets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level1/Level Objects/Hurt/Sprites.yy",},
@@ -43,7 +44,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Level1/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tileset","folderPath":"folders/Level1/Tileset.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level1/Tileset/Sprites.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Checkpoints","folderPath":"folders/Level1/Level Objects/Checkpoints.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
