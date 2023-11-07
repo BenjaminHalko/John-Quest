@@ -29,7 +29,10 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"scale","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1","varType":0,},
   ],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sPlaceholder",
+    "path": "sprites/sPlaceholder/sPlaceholder.yy",
+  },
   "spriteMaskId": null,
   "visible": false,
 }
