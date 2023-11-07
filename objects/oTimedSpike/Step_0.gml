@@ -21,5 +21,5 @@ if (global.audioTick) {
 }
 
 if (timer > 0) {
-	image_alpha = ApproachFade(image_alpha, 0, 0.1, 0.7);	
+	image_alpha = ApproachFade(image_alpha, 0, 0.08, 0.7);	
 }
