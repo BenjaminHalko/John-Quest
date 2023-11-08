@@ -3,9 +3,14 @@
 if (other.respawnPercent == 1) {
 	with(other) {
 		dash = 0;
-		vsp = jumpSpd;
 		allowDash = true;
-		hsp = 0;
+		if (other.image_angle != 0) {
+			hsp = 12 * other.image_xscale * -sign(other.image_angle);
+			vsp = -5;
+		} else {
+			vsp = jumpSpd;
+			hsp = 0;
+		}
 	}
 
 	image_speed = 1;

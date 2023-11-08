@@ -17,10 +17,10 @@ switch(room) {
 // Update coords to follows
 x = follow.x;
 y = follow.y;
-var _boundry = instance_position(x,y,oCameraBoundry);
-if (_boundry != noone) {
-	x = clamp(x, _boundry.bbox_left+viewWidthHalf, _boundry.bbox_right-viewWidthHalf);
-	y = clamp(y, _boundry.bbox_top+viewHeightHalf, _boundry.bbox_bottom-viewHeightHalf);
+boundry = instance_position(x,y,oCameraBoundry);
+if (boundry != noone) {
+	x = clamp(x, boundry.bbox_left+viewWidthHalf, boundry.bbox_right-viewWidthHalf);
+	y = clamp(y, boundry.bbox_top+viewHeightHalf, boundry.bbox_bottom-viewHeightHalf);
 }
 xTo = x;
 yTo = y;

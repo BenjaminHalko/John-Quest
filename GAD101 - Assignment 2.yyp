@@ -79,6 +79,7 @@
     {"id":{"name":"GMLive_token","path":"scripts/GMLive_token/GMLive_token.yy",},},
     {"id":{"name":"oCheckpoint","path":"objects/oCheckpoint/oCheckpoint.yy",},},
     {"id":{"name":"GMLiveAPI","path":"scripts/GMLiveAPI/GMLiveAPI.yy",},},
+    {"id":{"name":"oCameraSafeFall","path":"objects/oCameraSafeFall/oCameraSafeFall.yy",},},
     {"id":{"name":"obj_gmlive","path":"objects/obj_gmlive/obj_gmlive.yy",},},
     {"id":{"name":"GMLive_seekEval","path":"scripts/GMLive_seekEval/GMLive_seekEval.yy",},},
     {"id":{"name":"CameraFunctions","path":"scripts/CameraFunctions/CameraFunctions.yy",},},

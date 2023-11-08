@@ -78,10 +78,19 @@ if (respawnPercent == 1) {
 	vsp_final = vsp + vsp_f;
 	vsp_f = vsp_final - floor(abs(vsp_final))*sign(vsp_final);
 	vsp_final -= vsp_f;
+	
+	// Horizontal Semi Solids
+	var _semi = instance_place(x+hsp_final,y,pSemiSolid);
+	if (_semi != noone) {
+		if (place_meeting(x,y,_semi)) or (_semi.image_angle == 270 and x-8 < _semi.x and hsp_final >= 0) or (_semi.image_angle == 90 and x+8 > _semi.x and hsp_final <= 0) or (_semi.image_angle != 90 and _semi.image_angle != 270) {
+			_semi = noone;
+		}
+	}
 
 	//Collide horizontal
-	if (place_meeting(x+hsp_final,y,global.collisionMap)) {
-		while(!place_meeting(x+sign(hsp_final),y,global.collisionMap)) x += sign(hsp_final);
+	var _horiColliders = [global.collisionMap, _semi];
+	if (place_meeting(x+hsp_final,y,_horiColliders)) {
+		while(!place_meeting(x+sign(hsp_final),y,_horiColliders)) x += sign(hsp_final);
 		hsp_final = 0;
 		hsp = 0;
 		hsp_f = 0;
@@ -89,21 +98,24 @@ if (respawnPercent == 1) {
 	
 	x += hsp_final;
 	
-	// Semi Solids
-	var _semi = noone;
-	if (vsp_final > 0) {
-		_semi = instance_place(x,y+vsp_final,pSemiSolid);
-		if (_semi != noone and y+8 > _semi.y) _semi = noone;
+	// Vertical Semi Solids
+	_semi = instance_place(x,y+vsp_final,pSemiSolid);
+	if (_semi != noone) {
+		if (place_meeting(x,y,_semi)) or (_semi.image_angle == 0 and y+8 > _semi.y and vsp_final >= 0) or (_semi.image_angle == 180 and y-8 < _semi.y and vsp_final <= 0) or (_semi.image_angle != 0 and _semi.image_angle != 180) {
+			_semi = noone;
+		}
 	}
 	
 	// Collide vertical
 	var _vertColliders = [global.collisionMap, _semi];
 	if (place_meeting(x,y+vsp_final,_vertColliders)) {
 		while(!place_meeting(x,y+sign(vsp_final),_vertColliders)) y += sign(vsp_final);
+		if (vsp_final > 0) {
+			allowDash = true;
+		}
 		vsp = 0;
 		vsp_f = 0;
 		vsp_final = 0;
-		allowDash = true;
 	}
 	
 	y += vsp_final;
@@ -143,3 +155,13 @@ xscale = ApproachFade(xscale,dirFacing,0.2,0.7);
 flash = ApproachFade(flash,0,0.1,0.8);
 
 if y > room_height or place_meeting(x,y,pHurt) hurtPlayer();
+
+// Check if below camera boundry
+if (!place_meeting(x,y,oCameraSafeFall)) {
+	if (oCamera.boundry != noone) {
+		if (y >= oCamera.boundry.bbox_bottom-8) {
+			y = oCamera.boundry.bbox_bottom-8;
+			hurtPlayer();
+		}
+	}
+}

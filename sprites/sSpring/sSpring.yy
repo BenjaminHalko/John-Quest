@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sSpring",
-  "bbox_bottom": 21,
+  "bbox_bottom": 27,
   "bbox_left": 4,
   "bbox_right": 11,
   "bbox_top": 10,

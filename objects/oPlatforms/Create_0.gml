@@ -23,3 +23,8 @@ for(var i = bbox_left; i < bbox_right; i += 16) {
 timer = 0;
 
 percent = 0;
+
+// Resize
+if (position_meeting(bbox_left-1,bbox_bottom,_objects) || position_meeting(bbox_right+1,bbox_bottom,_objects)) {
+	image_yscale += 6/16;	
+}
