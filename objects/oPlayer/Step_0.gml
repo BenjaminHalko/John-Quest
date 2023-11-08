@@ -101,7 +101,7 @@ if (respawnPercent == 1) {
 	// Vertical Semi Solids
 	_semi = instance_place(x,y+vsp_final,pSemiSolid);
 	if (_semi != noone) {
-		if (place_meeting(x,y,_semi)) or (_semi.image_angle == 0 and y+8 > _semi.y and vsp_final >= 0) or (_semi.image_angle == 180 and y-8 < _semi.y and vsp_final <= 0) or (_semi.image_angle != 0 and _semi.image_angle != 180) {
+		if (place_meeting(x,y,_semi)) or (_semi.image_angle == 0 and y+8 > _semi.y and vsp_final <= 0) or (_semi.image_angle == 180 and y-8 < _semi.y and vsp_final >= 0) or (_semi.image_angle != 0 and _semi.image_angle != 180) {
 			_semi = noone;
 		}
 	}
