@@ -25,6 +25,6 @@ timer = 0;
 percent = 0;
 
 // Resize
-if (position_meeting(bbox_left-1,bbox_bottom,_objects) || position_meeting(bbox_right+1,bbox_bottom,_objects)) {
+if (position_meeting(bbox_left-1,bbox_bottom-8,_objects) || position_meeting(bbox_right+1,bbox_bottom-8,_objects)) {
 	image_yscale += 6/16;	
 }

@@ -5,8 +5,8 @@ if (other.respawnPercent == 1) {
 		dash = 0;
 		allowDash = true;
 		if (other.image_angle != 0) {
-			hsp = 12 * other.image_xscale * -sign(other.image_angle);
-			vsp = -5;
+			hsp = 13 * other.image_xscale * -sign(other.image_angle);
+			vsp = -7;
 		} else {
 			vsp = jumpSpd;
 			hsp = 0;
