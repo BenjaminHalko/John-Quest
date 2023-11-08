@@ -8,7 +8,7 @@ if (other.respawnPercent == 1) {
 			hsp = 13 * other.image_xscale * -sign(other.image_angle);
 			vsp = -7;
 		} else {
-			vsp = jumpSpd;
+			vsp = jumpSpd * other.image_yscale;
 			hsp = 0;
 		}
 	}
