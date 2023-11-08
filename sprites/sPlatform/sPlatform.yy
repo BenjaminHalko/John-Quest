@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sPlatform",
-  "bbox_bottom": 15,
+  "bbox_bottom": 13,
   "bbox_left": 0,
   "bbox_right": 15,
   "bbox_top": 0,
@@ -25,7 +25,7 @@
   "nineSlice": {
     "resourceType": "GMNineSliceData",
     "resourceVersion": "1.0",
-    "bottom": 4,
+    "bottom": 6,
     "enabled": true,
     "guideColour": [
       4294902015,

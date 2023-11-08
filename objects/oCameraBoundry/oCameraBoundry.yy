@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sPlaceholder",
-    "path": "sprites/sPlaceholder/sPlaceholder.yy",
+    "name": "sCameraBoundry",
+    "path": "sprites/sCameraBoundry/sCameraBoundry.yy",
   },
   "spriteMaskId": null,
   "visible": false,

@@ -16,7 +16,7 @@ if (global.audioTick) {
 			image_yscale = other.image_yscale;
 		}
 		timer = length;
-		image_index = 1;
+		image_index = 1
 	}
 }
 

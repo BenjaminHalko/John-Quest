@@ -46,7 +46,7 @@ if (respawnPercent == 1) {
 		var _triJump = instance_place(x,y,oTriangleJump);
 		if (_triJump != noone) {
 			savedJumpID = _triJump;
-			canJump = 10;
+			canJump = 3;
 		}
 	
 		// Dashing
@@ -93,6 +93,7 @@ if (respawnPercent == 1) {
 	var _semi = noone;
 	if (vsp_final > 0) {
 		_semi = instance_place(x,y+vsp_final,pSemiSolid);
+		if (_semi != noone and y+8 > _semi.y) _semi = noone;
 	}
 	
 	// Collide vertical
@@ -118,14 +119,14 @@ if (respawnPercent == 1) {
 	} else {
 		topShiftPercent = 0.6;
 		rotation = 0;
-		yscale = ApproachFade(yscale,lerp(1,0.3,dash/20),0.4,0.7);
+		yscale = ApproachFade(yscale,lerp(1,0.3,dash/10),0.4,0.7);
 	}
 } else {
 	rotation = 0;
 	yscale = ApproachFade(yscale,1,0.05,0.7);
 	topShiftPercent = ApproachFade(topShiftPercent,0,0.1,0.7);
 	dirFacing = respawnScale;
-	respawnPercent = ApproachFade(respawnPercent,1,0.04,0.7);
+	respawnPercent = ApproachFade(respawnPercent,1,0.05,0.6);
 	if respawnPercent > 0 {
 		x = round(lerp(xstart,respawnX,respawnPercent));
 		y = round(lerp(ystart,respawnY-Wave(12,24,0.5,0),respawnPercent));

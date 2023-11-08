@@ -34,7 +34,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"beatOffset","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":3.0,"rangeMin":0.0,"value":"0","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"beatLoop","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"4","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"length","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1","varType":1,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"distance","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"64","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"distance","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"96","varType":0,},
   ],
   "solid": false,
   "spriteId": {

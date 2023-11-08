@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snSpring.wav",
   "type": 0,
-  "volume": 0.6,
+  "volume": 0.3,
 }
