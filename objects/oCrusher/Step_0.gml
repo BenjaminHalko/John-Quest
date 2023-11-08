@@ -13,9 +13,9 @@ if (global.audioTick) {
 
 if (timer > 0) {
 	if (y != ystart) {
-		y = Approach(y, ystart, 20);
+		y = Approach(y, ystart, 20 * (abs(distance)/64));
 		if (y == ystart and isOnScreen()) {
-			ScreenShake(5,10);	
+			ScreenShake(6,10);	
 		}
 	}
 } else {
