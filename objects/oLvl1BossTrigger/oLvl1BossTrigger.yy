@@ -1,13 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBossTrigger",
-  "eventList": [],
+  "name": "oLvl1BossTrigger",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Boss",
-    "path": "folders/Level1/Boss.yy",
+    "name": "BossObjects",
+    "path": "folders/Level1/Boss/BossObjects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

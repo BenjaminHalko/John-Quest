@@ -34,7 +34,7 @@ if (respawnPercent == 1) {
 		}
 		
 		if (!boss) vsp += grv;
-		else {
+		else if (autoMove == undefined) {
 			vsp = ApproachFade(vsp,-_duck*moveSpd,0.8,0.85);	
 		}
 		
@@ -164,7 +164,7 @@ if y > room_height or place_meeting(x,y,pHurt) hurtPlayer();
 
 // Check if below camera boundry
 if (boss) {
-	if (oCamera.boundry != noone) {
+	if (oCamera.boundry != noone and autoMove == undefined) {
 		if (x > oCamera.boundry.bbox_right-8 or x < oCamera.boundry.bbox_left+8) {
 			x = clamp(x, oCamera.boundry.bbox_left+8, oCamera.boundry.bbox_right-8);
 			hsp_final = 0;

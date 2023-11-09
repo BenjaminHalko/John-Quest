@@ -1,16 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oMusicController",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-  ],
+  "name": "oLvl1Boss",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Global",
-    "path": "folders/Level1/Global.yy",
+    "name": "Boss",
+    "path": "folders/Level1/Boss.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sLvl1Boss",
+    "path": "sprites/sLvl1Boss/sLvl1Boss.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
