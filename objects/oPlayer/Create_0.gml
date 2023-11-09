@@ -49,6 +49,8 @@ autoMove = undefined;
 
 tempHurt = 0;
 
+boss = false;
+
 hurtPlayer = function() {
 	if(respawnPercent == 1) {
 		xstart = x;

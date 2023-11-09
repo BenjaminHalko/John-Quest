@@ -17,6 +17,7 @@
     {"name":"Level1","order":1,"path":"folders/Level1.yy",},
     {"name":"Audio","order":5,"path":"folders/Level1/Audio.yy",},
     {"name":"SoundFXs","order":1,"path":"folders/Level1/Audio/SoundFXs.yy",},
+    {"name":"Boss","order":7,"path":"folders/Level1/Boss.yy",},
     {"name":"Global","order":2,"path":"folders/Level1/Global.yy",},
     {"name":"Music","order":3,"path":"folders/Level1/Global/Music.yy",},
     {"name":"TilePulse","order":5,"path":"folders/Level1/Global/TilePulse.yy",},

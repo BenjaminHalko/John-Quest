@@ -32,7 +32,11 @@ if (respawnPercent == 1) {
 			_move = 1;
 			dirFacing = 1;
 		}
-		vsp += grv;
+		
+		if (!boss) vsp += grv;
+		else {
+			vsp = ApproachFade(vsp,-_duck*moveSpd,0.8,0.85);	
+		}
 		
 		if tempHurt > 0 {
 			hsp = 0;
@@ -41,26 +45,28 @@ if (respawnPercent == 1) {
 		
 		vsp = min(vsp,10);
 		
-		// Jumping
-		canJump--;
-		var _triJump = instance_place(x,y,oTriangleJump);
-		if (_triJump != noone) {
-			savedJumpID = _triJump;
-			canJump = 3;
-		}
+		if (autoMove == undefined) {
+			// Jumping
+			canJump--;
+			var _triJump = instance_place(x,y,oTriangleJump);
+			if (_triJump != noone) {
+				savedJumpID = _triJump;
+				canJump = 3;
+			}
 	
-		// Dashing
-		if _keyDash {
-			if canJump > 0 {
-				if(savedJumpID.collect()) {
-					vsp = jumpSpd;
-					allowDash = true;
-					rotation = -10;
+			// Dashing
+			if _keyDash {
+				if canJump > 0 {
+					if(savedJumpID.collect()) {
+						vsp = jumpSpd;
+						allowDash = true;
+						rotation = -10;
+					}
+				} else if (allowDash or boss) {
+					dash = 10;
+					flash = 1;
+					allowDash = false;
 				}
-			} else if (allowDash) {
-				dash = 10;
-				flash = 1;
-				allowDash = false;
 			}
 		}
 	} else {
@@ -157,7 +163,22 @@ flash = ApproachFade(flash,0,0.1,0.8);
 if y > room_height or place_meeting(x,y,pHurt) hurtPlayer();
 
 // Check if below camera boundry
-if (!place_meeting(x,y,oCameraSafeFall)) {
+if (boss) {
+	if (oCamera.boundry != noone) {
+		if (x > oCamera.boundry.bbox_right-8 or x < oCamera.boundry.bbox_left+8) {
+			x = clamp(x, oCamera.boundry.bbox_left+8, oCamera.boundry.bbox_right-8);
+			hsp_final = 0;
+			hsp = 0;
+			hsp_f = 0;
+		}
+		if (y > oCamera.boundry.bbox_bottom-8 or y < oCamera.boundry.bbox_top+8) {
+			y = clamp(y, oCamera.boundry.bbox_top+8, oCamera.boundry.bbox_bottom-8);
+			vsp_final = 0;
+			vsp = 0;
+			vsp_f = 0;
+		}
+	}
+} else if (!place_meeting(x,y,oCameraSafeFall)) {
 	if (oCamera.boundry != noone) {
 		if (y >= oCamera.boundry.bbox_bottom-8) {
 			y = oCamera.boundry.bbox_bottom-8;
