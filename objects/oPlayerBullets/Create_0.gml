@@ -19,5 +19,6 @@ if (helix) {
 	with(collision_line(x,y,oCamera.x+oCamera.viewWidthHalf,y,oLvl1Boss,false,false)) {
 		bigFlash = 1;
 		ScreenShake(12, 20);
+		hp -= 20;
 	}
 }
