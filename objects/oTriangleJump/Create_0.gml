@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 outlineRotation = random(360);
 collected = false;
 breakPercent = 0;

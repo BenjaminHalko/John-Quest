@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 // Break
 breakPercent = Approach(breakPercent, collected, 0.1-0.05*(!collected));
 breakCurvePercent = animcurve_channel_evaluate(collected ? disappearCurve : reappearCurve, breakPercent);

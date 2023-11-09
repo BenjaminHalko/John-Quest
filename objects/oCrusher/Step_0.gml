@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (global.audioTick) {
 	timer--;
 	

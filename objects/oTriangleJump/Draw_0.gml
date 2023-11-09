@@ -1,7 +1,5 @@
 /// @desc Draw Triangle
 
-enableLive;
-
 function drawTriangle(_length) {
 	var _rot = -outlineRotation/2;
 	var _x = x-1;

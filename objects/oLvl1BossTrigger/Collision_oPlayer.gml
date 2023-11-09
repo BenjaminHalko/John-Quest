@@ -1,5 +1,7 @@
 /// @desc 
 
-other.boss = true;
-other.autoMove = x + 128;
-instance_destroy();
+if (!activate) {
+	other.boss = true;
+	other.autoMove = playerTarget;
+	activate = true;
+}
