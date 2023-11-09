@@ -17,6 +17,8 @@ window_center();
 global.uFlashPercent = shader_get_uniform(shFlash, "percent");
 global.uFlashColor = shader_get_uniform(shFlash, "color");
 
+global.uAlphaPercent = shader_get_uniform(shAlpha, "alpha");
+
 // Change volume
 audio_master_gain(0.5);
 

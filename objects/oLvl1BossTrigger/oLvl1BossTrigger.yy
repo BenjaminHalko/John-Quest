@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "BossObjects",
-    "path": "folders/Level1/Boss/BossObjects.yy",
+    "name": "Bullets",
+    "path": "folders/Level1/Boss/Bullets.yy",
   },
   "parentObjectId": null,
   "persistent": false,

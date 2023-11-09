@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Level1/Boss/BossObjects/Bullets.yy",
+    "path": "folders/Level1/Boss/Bullets/Bullets.yy",
   },
   "parentObjectId": {
     "name": "pHurt",

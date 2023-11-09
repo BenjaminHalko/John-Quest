@@ -1,4 +1,4 @@
 /// @desc 
 
 activate = false;
-playerTarget = x + 256;
+playerTarget = x + 128;

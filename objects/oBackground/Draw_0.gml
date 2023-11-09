@@ -5,11 +5,10 @@ var _camY = camera_get_view_y(view_camera[0]);
 var _camW = camera_get_view_width(view_camera[0]);
 var _camH = camera_get_view_height(view_camera[0]);
 
-
 for(var i = 0; i < array_length(particles); i++) {
 	draw_set_alpha(1-max(0,(abs(particles[i].y - 270/2) - 270/2)/30));
 	var _paralax = lerp(0.95, 0.2, particles[i].spd);
-	var _x = Wrap(particles[i].x+_camX*_paralax,_camX, _camX+_camW);
+	var _x = lerp(Wrap(particles[i].x+_camX*_paralax,_camX, _camX+_camW),particles[i].x+_camX,bossTransitionPercent);
 	var _y = Wrap(particles[i].y+_camY*_paralax,_camY, _camY+_camH);
 	if (particles[i].audioReactive) {
 		draw_set_color(merge_color(c_fuchsia, c_aqua, particles[i].pulse/6));

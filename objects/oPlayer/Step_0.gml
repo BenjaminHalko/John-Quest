@@ -1,5 +1,7 @@
 /// @desc
 
+enableLive;
+
 var _keyUp = keyboard_check(vk_up);
 var _keyDown = keyboard_check(vk_down);
 var _keyRight = keyboard_check(vk_right);
@@ -14,8 +16,10 @@ if (respawnPercent == 1) {
 			if _move != 0 {
 				dirFacing = _move;
 				walkWave += 1/10;
+			} else if (_duck != 0 and boss) {
+				walkWave += 1/10;
 			} else walkWave = pi*1.5;
-			hsp = ApproachFade(hsp,_move*(moveSpd),0.8,0.85);
+			hsp = ApproachFade(hsp,_move*(moveSpd+1*boss),0.8,0.85-0.2*boss);
 		} else {
 			if abs(x-autoMove) <= moveSpd+5 {
 				x = autoMove;
@@ -35,7 +39,7 @@ if (respawnPercent == 1) {
 		
 		if (!boss) vsp += grv;
 		else if (autoMove == undefined) {
-			vsp = ApproachFade(vsp,-_duck*moveSpd,0.8,0.85);	
+			vsp = ApproachFade(vsp,-_duck*(moveSpd+1),0.8,0.75);	
 		}
 		
 		if tempHurt > 0 {
@@ -133,7 +137,7 @@ if (respawnPercent == 1) {
 			rotation = ApproachFade(rotation,-360,20,0.6);
 			if rotation <= -359.5 rotation = 0;
 		}
-		yscale = ApproachFade(yscale,max(0.5,(vsp_final != 0 ? vsp/-4 : (_move != 0 and vsp_final == 0 ? -abs(hsp)/moveSpd*lerp(0.05,0.4,0.5+sin(walkWave*pi)/2) : _duck*0.4))+1),0.08+0.15*(vsp_final <= 0),0.7);
+		yscale = ApproachFade(yscale,max(0.5,(vsp_final != 0 and !boss ? vsp/-4 : ((_move != 0 or (_duck != 0 and boss)) and vsp_final == 0 ? -abs(hsp)/moveSpd*lerp(0.05,0.4,0.5+sin(walkWave*pi)/2) : _duck*0.4))+1),0.08+0.15*(vsp_final <= 0),0.7);
 	} else {
 		topShiftPercent = 0.6;
 		rotation = 0;
@@ -156,7 +160,9 @@ if (respawnPercent == 1) {
 if tempHurt > 0 yscale = random_range(0.5,1.8);
 
 tempHurt = Approach(tempHurt,0,1);
-xscale = ApproachFade(xscale,dirFacing,0.2,0.7);
+if (!boss) {
+	xscale = ApproachFade(xscale,dirFacing,0.2,0.7);
+} else xscale = 1;
 
 flash = ApproachFade(flash,0,0.1,0.8);
 

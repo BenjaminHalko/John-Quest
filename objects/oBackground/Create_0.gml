@@ -1,5 +1,7 @@
 /// @desc 
 
+bossTransitionPercent = 0;
+bossMode = false;
 
 particles = [];
 

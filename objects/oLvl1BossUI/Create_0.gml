@@ -1,0 +1,3 @@
+/// @desc 
+
+healthDisplay = 0;

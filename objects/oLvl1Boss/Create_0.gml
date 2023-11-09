@@ -1,4 +1,9 @@
 /// @desc 
 
 enableLive;
-intro = false;
+
+flash = 0;
+bigFlash = 0;
+
+hp = 1000;
+maxHp = hp;
