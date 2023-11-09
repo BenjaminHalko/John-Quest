@@ -52,7 +52,12 @@ tempHurt = 0;
 boss = false;
 
 hurtPlayer = function() {
-	if(respawnPercent == 1) {
+	if (boss) {
+		hsp = 0;
+		vsp = 0;
+		tempHurt = 30;
+		audio_play_sound(snPlayerDie,1,false);
+	} else if(respawnPercent == 1) {
 		xstart = x;
 		ystart = y;
 		hsp = 0;

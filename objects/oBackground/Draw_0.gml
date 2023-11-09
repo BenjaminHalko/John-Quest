@@ -1,5 +1,7 @@
 /// @desc 
 
+enableLive;
+
 var _camX = camera_get_view_x(view_camera[0]);
 var _camY = camera_get_view_y(view_camera[0]);
 var _camW = camera_get_view_width(view_camera[0]);
@@ -14,9 +16,9 @@ for(var i = 0; i < array_length(particles); i++) {
 		draw_set_color(merge_color(c_fuchsia, c_aqua, particles[i].pulse/6));
 		draw_rectangle(_x-particles[i].pulse,_y-particles[i].pulse,_x+1+particles[i].pulse,_y+1+particles[i].pulse,false);
 	} else  {
-		draw_set_color(c_fuchsia);
-		if (particles[i].spd >= 0.5)
-			draw_rectangle(_x,_y,_x+1,_y+1,false);
+		draw_set_color(merge_color(c_fuchsia, #27357F, max(0,bossTransitionPercent-particles[i].spd*0.3)));
+		if (particles[i].spd >= 0.5 or bossMode)
+			draw_rectangle(_x,_y,_x+lerp(1,12*particles[i].spd,bossTransitionPercent),_y+lerp(1,(particles[i].spd >= 0.9),bossTransitionPercent),false);
 		else
 			draw_point(_x,_y);
 	}

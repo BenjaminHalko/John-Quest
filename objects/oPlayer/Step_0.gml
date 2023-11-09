@@ -42,11 +42,6 @@ if (respawnPercent == 1) {
 			vsp = ApproachFade(vsp,-_duck*(moveSpd+1),0.8,0.75);	
 		}
 		
-		if tempHurt > 0 {
-			hsp = 0;
-			vsp = 0;
-		}
-		
 		vsp = min(vsp,10);
 		
 		if (autoMove == undefined) {

@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0daf0c1f-d27b-4df5-b0b6-0a57817e395a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "BossSprites",
     "path": "folders/Level1/Boss/BossSprites.yy",
@@ -59,7 +59,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 48,
+    "xorigin": 56,
     "yorigin": 48,
   },
   "swatchColours": null,

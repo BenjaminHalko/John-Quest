@@ -7,7 +7,7 @@ var _y = camera_get_view_y(view_camera[0]);
 var _barY = _y + 260;
 var _rectHeight = 8;
 var _barY1 = _barY-_rectHeight/2-1;
-var _barY2 = _barY+_rectHeight/2;
+var _barY2 = _barY+_rectHeight/2-1;
 var _barX1 = _x + 56;
 var _barX2 = _x + 472;
 

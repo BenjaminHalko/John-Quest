@@ -1,8 +1,10 @@
 /// @desc 
 
+enableLive;
+
 for(var i = 0; i < array_length(particles); i++) {
 	particles[i].y -= lerp(1, 4, particles[i].spd) * (1-bossTransitionPercent);
-	particles[i].x -= lerp(9, 14, particles[i].spd) * bossTransitionPercent;
+	particles[i].x -= lerp(15, 20, particles[i].spd) * bossTransitionPercent;
 	
 	if (global.audioTick and particles[i].audioReactive and global.audioBeat % 4 == particles[i].beat and !bossMode) {
 		particles[i].pulse = 6;
@@ -18,7 +20,7 @@ for(var i = 0; i < array_length(particles); i++) {
 	if (particles[i].x < -30) {
 		particles[i].x = 590;
 		particles[i].y = random(270);
-		particles[i].audioReactive = (irandom(2) == 0);
+		particles[i].audioReactive = false;
 		particles[i].spd = random(1);
 	}
 }
