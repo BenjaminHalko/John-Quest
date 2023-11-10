@@ -1,29 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (!surface_exists(surf))
-{
-	surf = surface_create(sprite_width, sprite_height);
-}
 
 surface_set_target(surf);
+draw_clear_alpha(c_black, 0);
 draw_sprite(sprite_index, image_index, sprite_xoffset, sprite_yoffset);
-gpu_set_colorwriteenable(1, 1, 1, 1);
+gpu_set_colorwriteenable(1, 1, 1, 0);
 
 var radius = 10;
-var player = instance_nearest(x, y, oPlayer)
 
 var draw_x = 0;
 var draw_y = 0;
 
-if (player != noone)
-{
-    var angle = point_direction(x, y, player.x, player.y);
-	
-    var newX = lengthdir_x(radius, angle);
-    var newY = lengthdir_y(radius, angle);
-	draw_x = newX;
-    draw_y = newY;
-}
+
+var angle = point_direction(x, y, oPlayer.x, oPlayer.y);
+draw_x = lengthdir_x(radius, angle);
+draw_y = lengthdir_y(radius, angle);
 
 	draw_sprite(sLvl1BossEyeNormalIris, 0, draw_x, draw_y);
 	gpu_set_colorwriteenable(1, 1, 1, 1);
