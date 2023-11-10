@@ -19,8 +19,8 @@ if (player != noone)
 {
     var angle = point_direction(x, y, player.x, player.y);
 	
-    var newX = lengthdir_x(5, angle);
-    var newY = lengthdir_y(5, angle);
+    var newX = lengthdir_x(radius, angle);
+    var newY = lengthdir_y(radius, angle);
 	draw_x = newX;
     draw_y = newY;
 }
