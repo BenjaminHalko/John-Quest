@@ -3,13 +3,9 @@
 enableLive;
 
 // Bullets
-
 if (global.audioTick and global.audioBeat % 2 == 0) {
 	instance_create_layer(x,y,layer,oBulletBomb)
 }
-
-
-
 
 // Boss Flashing
 flash = Approach(flash, 0, 0.3);
