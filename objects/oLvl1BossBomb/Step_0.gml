@@ -36,3 +36,12 @@ if (global.audioTick) {
 		instance_destroy();
 	}
 }
+
+if (targetPercent == 1) {
+	if (place_meeting(x,y,oPlayer) and oPlayer.tempHurt == 0) {
+		oPlayer.hurtPlayer();
+		var _dir = point_direction(x,y,oPlayer.x,oPlayer.y);
+		oPlayer.hsp = lengthdir_x(12, _dir);
+		oPlayer.vsp = lengthdir_y(12, _dir);	
+	}
+}

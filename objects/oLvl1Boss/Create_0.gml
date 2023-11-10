@@ -5,7 +5,7 @@ enableLive;
 flash = 0;
 bigFlash = 0;
 
-hp = 1000;
+hp = 1500;
 maxHp = hp;
 
-phase = 0;
+phase = 1;
