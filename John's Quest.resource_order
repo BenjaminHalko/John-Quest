@@ -21,6 +21,7 @@
     {"name":"Boss","order":7,"path":"folders/Level1/Boss.yy",},
     {"name":"BossSprites","order":2,"path":"folders/Level1/Boss/BossSprites.yy",},
     {"name":"Bullets","order":1,"path":"folders/Level1/Boss/Bullets.yy",},
+    {"name":"Blocks","order":3,"path":"folders/Level1/Boss/Bullets/Blocks.yy",},
     {"name":"BulletBomb","order":1,"path":"folders/Level1/Boss/Bullets/BulletBomb.yy",},
     {"name":"Snakes","order":2,"path":"folders/Level1/Boss/Bullets/Snakes.yy",},
     {"name":"Gun","order":4,"path":"folders/Level1/Boss/Gun.yy",},
@@ -37,7 +38,6 @@
     {"name":"Tileset","order":1,"path":"folders/Level1/Tileset.yy",},
     {"name":"Sprites","order":1,"path":"folders/Level1/Tileset/Sprites.yy",},
     {"name":"Title","order":5,"path":"folders/Title.yy",},
-    {"name":"Blocks","order":3,"path":"folders/Level1/Boss/Bullets/Blocks.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},
@@ -79,6 +79,7 @@
     {"name":"AfterImageFunctions","order":1,"path":"scripts/AfterImageFunctions/AfterImageFunctions.yy",},
     {"name":"GMLive_notOnce","order":1,"path":"scripts/GMLive_notOnce/GMLive_notOnce.yy",},
     {"name":"GMLive_new","order":2,"path":"scripts/GMLive_new/GMLive_new.yy",},
+    {"name":"sLvl1BossBlock","order":1,"path":"sprites/sLvl1BossBlock/sLvl1BossBlock.yy",},
     {"name":"GMLive_program","order":3,"path":"scripts/GMLive_program/GMLive_program.yy",},
     {"name":"sCrusher","order":2,"path":"sprites/sCrusher/sCrusher.yy",},
     {"name":"oDebug","order":10,"path":"objects/oDebug/oDebug.yy",},

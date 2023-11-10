@@ -29,10 +29,10 @@ draw_set_color(_col);
 draw_rectangle(_barX1+1,_barY1+1,_barX2,_barY2,true);
 if (healthDisplay > 0) {
 	draw_set_color(merge_color(_col, c_white, oLvl1Boss.bigFlash));
-	draw_rectangle(_barInnerX1,_barInnerY1,lerp(_barInnerX1,_barInnerX2,healthDisplay),_barY2,false);
+	draw_rectangle(_barInnerX1,_barInnerY1,lerp(_barInnerX1,_barInnerX2,healthDisplay),_barInnerY2,false);
 }
 draw_set_color(c_black);
 for (var i = 1; i < 6; i++) {
-	var _lineX = 0;
+	var _lineX = lerp(_barInnerX1, _barInnerX2, i/6);
 	draw_rectangle(_lineX,_barInnerY1,_lineX+1,_barInnerY2,false);
 }

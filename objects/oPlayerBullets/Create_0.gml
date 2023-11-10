@@ -15,10 +15,4 @@ helixDots = [];
 helixDotTimer = 0;
 helixDotCounter = 0;
 
-if (helix) {
-	with(collision_line(x,y,oCamera.x+oCamera.viewWidthHalf,y,oLvl1Boss,false,false)) {
-		bigFlash = 1;
-		ScreenShake(12, 20);
-		hp -= 20;
-	}
-}
+attacked = false;
