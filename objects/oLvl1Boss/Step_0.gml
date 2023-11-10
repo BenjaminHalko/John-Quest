@@ -3,8 +3,12 @@
 enableLive;
 
 // Bullets
-if (global.audioTick and global.audioBeat % 2 == 0) {
-	instance_create_layer(x,y,layer,oBulletBomb)
+switch(phase) {
+	case 0: {
+		if (global.audioTick and global.audioBeat % 2 == 0) {
+			instance_create_layer(x,y,layer,oLvl1BossBomb)
+		}
+	}
 }
 
 // Boss Flashing

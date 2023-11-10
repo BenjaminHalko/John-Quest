@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBulletBomb",
+  "name": "oLvl1BossBomb",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sBulletBomb",
-    "path": "sprites/sBulletBomb/sBulletBomb.yy",
+    "name": "sLvl1BossBomb",
+    "path": "sprites/sLvl1BossBomb/sLvl1BossBomb.yy",
   },
   "spriteMaskId": null,
   "visible": true,

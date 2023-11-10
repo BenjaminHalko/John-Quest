@@ -16,6 +16,7 @@ rotation = 0;
 isDashing = false;
 dash = 0;
 dashSpd = 15;
+dashDir = 0;
 
 dance = 0;
 

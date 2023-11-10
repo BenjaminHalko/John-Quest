@@ -7,3 +7,5 @@ bigFlash = 0;
 
 hp = 1000;
 maxHp = hp;
+
+phase = 0;

@@ -65,14 +65,19 @@ if (respawnPercent == 1) {
 					dash = 10;
 					flash = 1;
 					allowDash = false;
+					if (boss) {
+						dashDir = point_direction(0,0,_move,-_duck);
+					} else {
+						dashDir = 180 * (dirFacing == -1);
+					}
 				}
 			}
 		}
 	} else {
 		dash--;
-		hsp = lerp(moveSpd,dashSpd,dash/10)*dirFacing;
-		vsp = 0;
-		vsp_final = 0;
+		var _spd = lerp(moveSpd,dashSpd,dash/10);
+		hsp = lengthdir_x(_spd,dashDir);
+		vsp = lengthdir_y(_spd,dashDir);
 	}
 	
 	//Spd Calculations
@@ -163,7 +168,7 @@ flash = ApproachFade(flash,0,0.1,0.8);
 
 if y > room_height or place_meeting(x,y,pHurt) hurtPlayer();
 else if (boss and respawnPercent == 1) {
-	var _bomb = instance_place(x,y,oBulletBomb);
+	var _bomb = instance_place(x,y,oLvl1BossBomb);
 	if (_bomb != noone and _bomb.targetPercent == 1) {
 		hurtPlayer();
 		var _dir = point_direction(_bomb.x,_bomb.y,x,y);
