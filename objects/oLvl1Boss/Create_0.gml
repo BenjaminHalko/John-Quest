@@ -8,4 +8,7 @@ bigFlash = 0;
 hp = 1500;
 maxHp = hp;
 
-phase = 1;
+phase = 0;
+inBetweenPhases = true;
+
+surf = -1;

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "sLvl1BossEyeNormalBg",
-  "bbox_bottom": 44,
-  "bbox_left": 1,
-  "bbox_right": 62,
-  "bbox_top": 23,
+  "name": "sLvl1BossIris",
+  "bbox_bottom": 33,
+  "bbox_left": 19,
+  "bbox_right": 40,
+  "bbox_top": 29,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85dd6813-bfff-4026-bf38-a7ee54319c32",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9a77783-5902-47b2-9235-18dc9f279ff2",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 64,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6eee5673-5a6e-408c-9867-ff27fc9c6dfc","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ff29a009-df89-4a7c-9ee0-551b91abc18a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "sLvl1BossEyeNormalBg",
+    "name": "sLvl1BossIris",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"85dd6813-bfff-4026-bf38-a7ee54319c32","path":"sprites/sLvl1BossEyeNormalBg/sLvl1BossEyeNormalBg.yy",},},},"Disabled":false,"id":"0639195c-4733-44c9-8340-6ae1b637630b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d9a77783-5902-47b2-9235-18dc9f279ff2","path":"sprites/sLvl1BossIris/sLvl1BossIris.yy",},},},"Disabled":false,"id":"e39d50fc-c47c-4545-a675-24a6308642f5","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
