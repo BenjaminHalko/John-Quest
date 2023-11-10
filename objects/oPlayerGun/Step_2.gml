@@ -8,7 +8,6 @@ y = oPlayer.y;
 if (oPlayer.tempHurt == 0) {
 	if (--shotTimer <= 0) {
 		instance_create_depth(x,y+random_range(-6,6),depth,oPlayerBullets);
-		ScreenShake(2,1);
 		shotTimer = 5;
 	}
 

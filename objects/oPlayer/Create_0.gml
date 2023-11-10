@@ -52,21 +52,23 @@ tempHurt = 0;
 boss = false;
 
 hurtPlayer = function() {
-	if (boss) {
-		hsp = 0;
-		vsp = 0;
-		tempHurt = 30;
-		audio_play_sound(snPlayerDie,1,false);
-	} else if(respawnPercent == 1) {
-		xstart = x;
-		ystart = y;
-		hsp = 0;
-		vsp = -5;
-		hsp_final = 0;
-		vsp_final = 0;
-		dash = 0;
-		respawnPercent = -1;
-		allowDash = true;
-		audio_play_sound(snPlayerDie,1,false);
-	}	
+	if(respawnPercent == 1) {
+		if (boss) {
+			hsp = 0;
+			vsp = 0;
+			tempHurt = 60;
+			audio_play_sound(snPlayerDie,1,false);
+		} else {
+			xstart = x;
+			ystart = y;
+			hsp = 0;
+			vsp = -5;
+			hsp_final = 0;
+			vsp_final = 0;
+			dash = 0;
+			respawnPercent = -1;
+			allowDash = true;
+			audio_play_sound(snPlayerDie,1,false);
+		}
+	}
 }

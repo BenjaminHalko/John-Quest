@@ -162,6 +162,15 @@ if (!boss) {
 flash = ApproachFade(flash,0,0.1,0.8);
 
 if y > room_height or place_meeting(x,y,pHurt) hurtPlayer();
+else if (boss and respawnPercent == 1) {
+	var _bomb = instance_place(x,y,oBulletBomb);
+	if (_bomb != noone and _bomb.targetPercent == 1) {
+		hurtPlayer();
+		var _dir = point_direction(_bomb.x,_bomb.y,x,y);
+		hsp = lengthdir_x(12, _dir);
+		vsp = lengthdir_y(12, _dir);
+	}
+}
 
 // Check if below camera boundry
 if (boss) {

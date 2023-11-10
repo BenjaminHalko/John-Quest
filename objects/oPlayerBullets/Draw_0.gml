@@ -3,7 +3,7 @@
 enableLive;
 
 if (!helix) {
-	draw_self();	
+	draw_self();
 } else {
 	draw_set_color(image_blend);
 	if (helixRectHeight != 0) draw_rectangle(xstart,ystart-helixRectHeight/2,oCamera.x+oCamera.viewWidthHalf,ystart+helixRectHeight/2,false);	
