@@ -10,6 +10,10 @@ var _barY1 = _barY-_rectHeight/2-1;
 var _barY2 = _barY+_rectHeight/2-1;
 var _barX1 = _x + 56;
 var _barX2 = _x + 472;
+var _barInnerX1 = _barX1+3;
+var _barInnerX2 = _barX2-3;
+var _barInnerY1 = _barY1+3;
+var _barInnerY2 = _barY2-3;
 
 var _col = #ED008C;
 
@@ -25,5 +29,10 @@ draw_set_color(_col);
 draw_rectangle(_barX1+1,_barY1+1,_barX2,_barY2,true);
 if (healthDisplay > 0) {
 	draw_set_color(merge_color(_col, c_white, oLvl1Boss.bigFlash));
-	draw_rectangle(_barX1+3,_barY1+3,lerp(_barX1+3,_barX2-3,healthDisplay),_barY2-3,false);
+	draw_rectangle(_barInnerX1,_barInnerY1,lerp(_barInnerX1,_barInnerX2,healthDisplay),_barY2,false);
+}
+draw_set_color(c_black);
+for (var i = 1; i < 6; i++) {
+	var _lineX = 0;
+	draw_rectangle(_lineX,_barInnerY1,_lineX+1,_barInnerY2,false);
 }

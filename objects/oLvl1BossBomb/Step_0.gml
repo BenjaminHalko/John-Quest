@@ -18,7 +18,7 @@ if (global.audioTick) {
 	if(--beatCount <= 0) {
 		var _dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 		for(var i = 0; i < 4; i++) {
-			with(instance_create_depth(x,y,depth,oBullet)) {
+			with(instance_create_depth(x,y,depth,oLvl1BossBullet)) {
 				speed = 6;
 				direction = i * 90 + _dir;
 			}

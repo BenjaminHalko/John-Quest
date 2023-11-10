@@ -16,6 +16,7 @@ rotation = 0;
 isDashing = false;
 dash = 0;
 dashSpd = 15;
+dashDir = 0;
 
 dance = 0;
 
@@ -69,6 +70,9 @@ hurtPlayer = function() {
 			respawnPercent = -1;
 			allowDash = true;
 			audio_play_sound(snPlayerDie,1,false);
+			with (oDebug) {
+				deathCounter++;
+			}
 		}
 	}
 }

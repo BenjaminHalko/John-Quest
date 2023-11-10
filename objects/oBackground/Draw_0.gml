@@ -2,8 +2,8 @@
 
 enableLive;
 
-var _camX = camera_get_view_x(view_camera[0]);
-var _camY = camera_get_view_y(view_camera[0]);
+var _camX = floor(camera_get_view_x(view_camera[0]));
+var _camY = floor(camera_get_view_y(view_camera[0]));
 var _camW = camera_get_view_width(view_camera[0]);
 var _camH = camera_get_view_height(view_camera[0]);
 
