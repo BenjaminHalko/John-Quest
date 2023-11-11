@@ -1,10 +1,9 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
-    {"name":"oLevel1BossEye","order":7,"path":"objects/oLevel1BossEye/oLevel1BossEye.yy",},
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},
     {"name":"sTimedSpike","order":1,"path":"sprites/sTimedSpike/sTimedSpike.yy",},
-    {"name":"sLvl1BossEyeNormalIris","order":2,"path":"sprites/sLvl1BossEyeNormalIris/sLvl1BossEyeNormalIris.yy",},
+    {"name":"sLvl1BossIris","order":2,"path":"sprites/sLvl1BossIris/sLvl1BossIris.yy",},
     {"name":"snTriangleJump","order":2,"path":"sounds/snTriangleJump/snTriangleJump.yy",},
     {"name":"GMLive_tools","order":1,"path":"scripts/GMLive_tools/GMLive_tools.yy",},
     {"name":"oTimedSpike","order":3,"path":"objects/oTimedSpike/oTimedSpike.yy",},
@@ -54,7 +53,7 @@
     {"name":"GMLive_vm","order":5,"path":"scripts/GMLive_vm/GMLive_vm.yy",},
     {"name":"pHurt","order":1,"path":"objects/pHurt/pHurt.yy",},
     {"name":"sSpring","order":1,"path":"sprites/sSpring/sSpring.yy",},
-    {"name":"sLvl1BossEyeNormalBg","order":1,"path":"sprites/sLvl1BossEyeNormalBg/sLvl1BossEyeNormalBg.yy",},
+    {"name":"sLvl1Boss","order":1,"path":"sprites/sLvl1Boss/sLvl1Boss.yy",},
     {"name":"GMLive_parser","order":4,"path":"scripts/GMLive_parser/GMLive_parser.yy",},
     {"name":"GMLive_thread","order":4,"path":"scripts/GMLive_thread/GMLive_thread.yy",},
     {"name":"GMLive_compiler","order":1,"path":"scripts/GMLive_compiler/GMLive_compiler.yy",},
