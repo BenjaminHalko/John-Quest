@@ -36,8 +36,8 @@ if (!inBetweenPhases) {
 }
 
 // Boss Flashing
-flash = Approach(flash, 0, 0.3);
-bigFlash = ApproachFade(bigFlash, 0, 0.05, 0.7);
+flash = Approach(flash, 0, 0.1);
+bigFlash = ApproachFade(bigFlash, 0, 0.03, 0.7);
 image_blend = merge_color(c_white, c_red, flash);
 
 x = ApproachFade(x,xstart-96,5,0.7);
@@ -48,11 +48,11 @@ x += random_range(-5, 5) * min(4, flash + bigFlash * 4);
 y += random_range(-5, 5) * min(4, flash + bigFlash * 4);
 
 // Lock HP
-//hp = max(hp, maxHp / 6 * (5-phase));
+hp = max(hp, maxHp / 6 * (5-phase));
 
-if (global.audioTick and global.audioBeat % 4 == 0 and hp == maxHp / 6 * (5-phase)) {
-	phase++;
+if (global.audioTick and global.audioBeat % 4 == 0 and hp == maxHp / 6 * (5-phase) and !inBetweenPhases) {
 	inBetweenPhases = true;
+	alarm[0] = 60;
 }
 
 // Surface

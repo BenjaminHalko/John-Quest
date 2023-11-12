@@ -73,6 +73,7 @@
   "resources": [
     {"id":{"name":"sLvl1BossBullet","path":"sprites/sLvl1BossBullet/sLvl1BossBullet.yy",},},
     {"id":{"name":"oCrusher","path":"objects/oCrusher/oCrusher.yy",},},
+    {"id":{"name":"sTitleCursor","path":"sprites/sTitleCursor/sTitleCursor.yy",},},
     {"id":{"name":"oBloom","path":"objects/oBloom/oBloom.yy",},},
     {"id":{"name":"sTimedSpike","path":"sprites/sTimedSpike/sTimedSpike.yy",},},
     {"id":{"name":"sLvl1BossIris","path":"sprites/sLvl1BossIris/sLvl1BossIris.yy",},},
@@ -148,6 +149,7 @@
     {"id":{"name":"oLvl1BossBullet","path":"objects/oLvl1BossBullet/oLvl1BossBullet.yy",},},
     {"id":{"name":"sCameraBoundry","path":"sprites/sCameraBoundry/sCameraBoundry.yy",},},
     {"id":{"name":"GMLive_vm","path":"scripts/GMLive_vm/GMLive_vm.yy",},},
+    {"id":{"name":"sTitleLandscape","path":"sprites/sTitleLandscape/sTitleLandscape.yy",},},
     {"id":{"name":"pHurt","path":"objects/pHurt/pHurt.yy",},},
     {"id":{"name":"sSpring","path":"sprites/sSpring/sSpring.yy",},},
     {"id":{"name":"sLvl1Boss","path":"sprites/sLvl1Boss/sLvl1Boss.yy",},},
@@ -157,6 +159,7 @@
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"id":{"name":"GMLive_compiler","path":"scripts/GMLive_compiler/GMLive_compiler.yy",},},
     {"id":{"name":"snSpring","path":"sounds/snSpring/snSpring.yy",},},
+    {"id":{"name":"sTitleBuilding","path":"sprites/sTitleBuilding/sTitleBuilding.yy",},},
     {"id":{"name":"GMLive_roomLoader","path":"scripts/GMLive_roomLoader/GMLive_roomLoader.yy",},},
     {"id":{"name":"shBlur","path":"shaders/shBlur/shBlur.yy",},},
     {"id":{"name":"sWalls","path":"sprites/sWalls/sWalls.yy",},},
@@ -168,8 +171,8 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
     {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
+    {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
