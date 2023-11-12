@@ -10,8 +10,8 @@ moveUpSpd = 0;
 menuSelected = 1;
 
 textNum = -1;
-textTarget = 5;
-textAlpha = 0;
+textTarget = -1;
+textAlpha = 1;
 wait = 0;
 
 smallerBuildingHeight = sprite_get_height(sTitleLandscape);
@@ -32,7 +32,7 @@ repeat(100) {
 }
 
 text = [
-"IN THE MYSTICAL REALMS,\nA TALE OF TWO REALMS UNFOLDED.",
+"IN THE MYSTICAL REALMS,\nA TALE OF TWO RIVALS UNFOLDED.",
 "JOHN, THE WARRIOR OF LIGHT\nAND EVIL JOHN, HIS SHADOW TWIN.",
 "EVIL JOHN, CONSUMED BY ENVY,\nSOUGHT TO CONQUER BOTH REALMS.",
 "WITH HIS SIX EVIL EYES, HE CORRUPTED\nTHE INHABITANTS OF THE LAND.",

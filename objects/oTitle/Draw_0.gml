@@ -44,7 +44,7 @@ if (title) {
 		draw_set_color(c_black);
 		draw_rectangle(0,room_height-_rectHeight,room_width,room_height,false);
 		
-		if (textAlpha > 0) {
+		if (textAlpha > 0 and textNum >= 0) {
 			draw_set_alpha(floor(textAlpha * 3) / 3);
 			draw_set_color(c_white);
 			draw_set_font(fFont);
