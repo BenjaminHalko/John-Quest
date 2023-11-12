@@ -2,6 +2,7 @@
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},
+    {"name":"sTitleCursor","order":5,"path":"sprites/sTitleCursor/sTitleCursor.yy",},
     {"name":"sTimedSpike","order":1,"path":"sprites/sTimedSpike/sTimedSpike.yy",},
     {"name":"sLvl1BossIris","order":2,"path":"sprites/sLvl1BossIris/sLvl1BossIris.yy",},
     {"name":"snTriangleJump","order":2,"path":"sounds/snTriangleJump/snTriangleJump.yy",},
@@ -51,6 +52,7 @@
     {"name":"oLvl1BossBullet","order":1,"path":"objects/oLvl1BossBullet/oLvl1BossBullet.yy",},
     {"name":"sCameraBoundry","order":3,"path":"sprites/sCameraBoundry/sCameraBoundry.yy",},
     {"name":"GMLive_vm","order":5,"path":"scripts/GMLive_vm/GMLive_vm.yy",},
+    {"name":"sTitleLandscape","order":4,"path":"sprites/sTitleLandscape/sTitleLandscape.yy",},
     {"name":"pHurt","order":1,"path":"objects/pHurt/pHurt.yy",},
     {"name":"sSpring","order":1,"path":"sprites/sSpring/sSpring.yy",},
     {"name":"sLvl1Boss","order":1,"path":"sprites/sLvl1Boss/sLvl1Boss.yy",},
@@ -58,6 +60,7 @@
     {"name":"GMLive_thread","order":4,"path":"scripts/GMLive_thread/GMLive_thread.yy",},
     {"name":"GMLive_compiler","order":1,"path":"scripts/GMLive_compiler/GMLive_compiler.yy",},
     {"name":"snSpring","order":1,"path":"sounds/snSpring/snSpring.yy",},
+    {"name":"sTitleBuilding","order":3,"path":"sprites/sTitleBuilding/sTitleBuilding.yy",},
     {"name":"GMLive_roomLoader","order":2,"path":"scripts/GMLive_roomLoader/GMLive_roomLoader.yy",},
     {"name":"shBlur","order":1,"path":"shaders/shBlur/shBlur.yy",},
     {"name":"sPlayer","order":1,"path":"sprites/sPlayer/sPlayer.yy",},
