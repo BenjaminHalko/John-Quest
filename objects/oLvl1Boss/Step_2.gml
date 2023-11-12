@@ -42,7 +42,7 @@ image_blend = merge_color(c_white, c_red, flash);
 
 x = ApproachFade(x,xstart-96,5,0.7);
 
-y = ystart + sin((oMusicController.thisBeat % 4) * pi / 2) * 60;
+y = ystart + sin((oMusicController.thisBeat % 8) * pi / 4) * 60;
 
 x += random_range(-5, 5) * min(4, flash + bigFlash * 4);
 y += random_range(-5, 5) * min(4, flash + bigFlash * 4);
@@ -56,6 +56,11 @@ if (global.audioTick and global.audioBeat % 4 == 0 and hp == maxHp / 6 * (5-phas
 }
 
 // Surface
-if (!surface_exists(surf)) {
-	surf = surface_create(sprite_width, sprite_height);
+if (!surface_exists(surf)) surf = surface_create(sprite_width, sprite_height);
+
+// Control Eyes
+for (var i = 0; i < 5; i++) {
+	eyes[i].obj.image_angle = eyes[i].angle + Wave(-3,3,2+eyes[i].waveOffset,eyes[i].waveOffset);
+	eyes[i].obj.x = x + eyes[i].x;
+	eyes[i].obj.y = ystart + eyes[i].y + Wave(-4,4,5+eyes[i].waveOffset,eyes[i].waveOffset) + sin(((oMusicController.thisBeat % 8)+0.1*abs(eyes[i].y)/50) * pi / 4) * 60;
 }
