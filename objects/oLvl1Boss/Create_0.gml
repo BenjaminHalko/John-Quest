@@ -9,7 +9,7 @@ hp = 2000;
 maxHp = hp;
 
 phase = 0;
-inBetweenPhases = true;
+inBetweenPhases = false;
 
 surf = -1;
 

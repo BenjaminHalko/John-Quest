@@ -32,6 +32,16 @@ if (!inBetweenPhases) {
 				}
 			}
 		} break;
+		case 2: {
+			if (global.audioTick and global.audioBeat % 2 == 0) {
+				var _choice = irandom(1);
+				if (_choice) {
+					instance_create_layer(irandom_range(-240,240)+oCamera.x,oCamera.y-32-oCamera.viewHeightHalf,layer,oLvl1BossShockFade,{image_angle: 180});
+				} else {
+					instance_create_layer(irandom_range(-240,240)+oCamera.x,oCamera.y+32+oCamera.viewHeightHalf,layer,oLvl1BossShockFade);
+				}
+			}
+		} break;
 	}
 }
 
@@ -52,7 +62,7 @@ hp = max(hp, maxHp / 6 * (5-phase));
 
 if (global.audioTick and global.audioBeat % 4 == 0 and hp == maxHp / 6 * (5-phase) and !inBetweenPhases) {
 	inBetweenPhases = true;
-	alarm[0] = 60;
+	alarm[0] = 180;
 }
 
 // Surface

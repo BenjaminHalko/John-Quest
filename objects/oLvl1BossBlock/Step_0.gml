@@ -2,7 +2,7 @@
 
 enableLive;
 
-flash = Approach(flash, 0, 0.05);
+flash = Approach(flash, 0, 0.1);
 
 if (global.audioTick) counter--;
 
@@ -21,7 +21,7 @@ if (image_alpha != 1) {
 	}
 	
 	if (counter <= -2) {
-		scale = Approach(scale, 0, 0.1);
+		scale = Approach(scale, 0, 0.2);
 		if (scale == 0) instance_destroy();
 	}
 }
