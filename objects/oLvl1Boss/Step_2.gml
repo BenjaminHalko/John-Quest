@@ -43,6 +43,22 @@ if (!inBetweenPhases) {
 				}
 			}
 		} break;
+		case 3: {
+			if (global.audioTick) {
+				if (irandom(2) == 0) {
+					var _y = irandom_range(-135,135)+oCamera.y;
+					if (irandom(3) == 0) _y = oPlayer.y + irandom_range(-6,6);
+					with(instance_create_layer(oCamera.x, _y, layer, oLvl1BossCrusherFade)) {
+						image_angle += 90;
+						image_yscale = 34;
+					}
+				} else {
+					var _x = irandom_range(-240,240)+oCamera.x;
+					if (irandom(3) == 0) _x = oPlayer.x + irandom_range(-6,6);
+					instance_create_layer(_x, oCamera.y, layer, oLvl1BossCrusherFade);
+				}
+			}
+		} break;
 	}
 } else if (alarm[0] <= 0) {
 	movement = ApproachFade(movement, 0, 0.1, 0.7);

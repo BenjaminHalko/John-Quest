@@ -17,6 +17,7 @@ dead = false;
 movement = 1;
 
 surf = -1;
+lastTime = -1;
 
 eyes = [
 	{ x: -42, y: 2, angle: 4 }, // 3

@@ -54,6 +54,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tileset","folderPath":"folders/Level1/Tileset.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level1/Tileset/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Crushers","folderPath":"folders/Level1/Boss/Bullets/Crushers.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -72,6 +73,7 @@
     "IDEVersion": "2023.8.2.108",
   },
   "resources": [
+    {"id":{"name":"oLvl1BossCrusher","path":"objects/oLvl1BossCrusher/oLvl1BossCrusher.yy",},},
     {"id":{"name":"sLvl1BossBullet","path":"sprites/sLvl1BossBullet/sLvl1BossBullet.yy",},},
     {"id":{"name":"oCrusher","path":"objects/oCrusher/oCrusher.yy",},},
     {"id":{"name":"sTitleCursor","path":"sprites/sTitleCursor/sTitleCursor.yy",},},
@@ -84,6 +86,7 @@
     {"id":{"name":"GMLive_tools","path":"scripts/GMLive_tools/GMLive_tools.yy",},},
     {"id":{"name":"oTimedSpike","path":"objects/oTimedSpike/oTimedSpike.yy",},},
     {"id":{"name":"oLvl1BossUI","path":"objects/oLvl1BossUI/oLvl1BossUI.yy",},},
+    {"id":{"name":"oLvl1BossCrusherFade","path":"objects/oLvl1BossCrusherFade/oLvl1BossCrusherFade.yy",},},
     {"id":{"name":"GMLive_exec","path":"scripts/GMLive_exec/GMLive_exec.yy",},},
     {"id":{"name":"GMLive_nodeTools","path":"scripts/GMLive_nodeTools/GMLive_nodeTools.yy",},},
     {"id":{"name":"GMLive_vm_init","path":"scripts/GMLive_vm_init/GMLive_vm_init.yy",},},

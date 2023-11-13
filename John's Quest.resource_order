@@ -1,6 +1,7 @@
 {
   "FolderOrderSettings": [
     {"name":"Shock","order":1,"path":"folders/Level1/Boss/Bullets/Shock.yy",},
+    {"name":"Crushers","order":2,"path":"folders/Level1/Boss/Bullets/Crushers.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},
@@ -12,6 +13,7 @@
     {"name":"GMLive_tools","order":1,"path":"scripts/GMLive_tools/GMLive_tools.yy",},
     {"name":"oTimedSpike","order":3,"path":"objects/oTimedSpike/oTimedSpike.yy",},
     {"name":"oLvl1BossUI","order":5,"path":"objects/oLvl1BossUI/oLvl1BossUI.yy",},
+    {"name":"oLvl1BossCrusherFade","order":1,"path":"objects/oLvl1BossCrusherFade/oLvl1BossCrusherFade.yy",},
     {"name":"GMLive_exec","order":1,"path":"scripts/GMLive_exec/GMLive_exec.yy",},
     {"name":"GMLive_nodeTools","order":3,"path":"scripts/GMLive_nodeTools/GMLive_nodeTools.yy",},
     {"name":"GMLive_vm_init","order":7,"path":"scripts/GMLive_vm_init/GMLive_vm_init.yy",},
