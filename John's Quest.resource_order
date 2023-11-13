@@ -1,7 +1,8 @@
 {
   "FolderOrderSettings": [
-    {"name":"Shock","order":1,"path":"folders/Level1/Boss/Bullets/Shock.yy",},
     {"name":"Crushers","order":2,"path":"folders/Level1/Boss/Bullets/Crushers.yy",},
+    {"name":"Shock","order":1,"path":"folders/Level1/Boss/Bullets/Shock.yy",},
+    {"name":"Spiral Snake","order":3,"path":"folders/Level1/Boss/Bullets/Spiral Snake.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},

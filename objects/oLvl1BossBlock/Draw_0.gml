@@ -1,3 +1,4 @@
+/// @desc 
 
 shader_set(shFlash);
 shader_set_uniform_f(global.uFlashColor, 1,1,1);

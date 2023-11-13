@@ -59,6 +59,23 @@ if (!inBetweenPhases) {
 				}
 			}
 		} break;
+		case 4: {
+			if (global.audioTick) {
+				var _boundry = oCamera.boundry;
+				var _x = _boundry.x + _boundry.sprite_width / 2;
+				var _y = _boundry.y + _boundry.sprite_height / 2;
+				
+				var _angle = random(360);
+				var _rot = random_range(3,4.5) * choose(-1,1);
+				
+				for(var i = 0; i < 3; i++) {
+					with(instance_create_layer(_x, _y, layer, oLvl1BossSpiralSnake)) {
+						image_angle = _angle + i * 120;
+						rotation = _rot;
+					}
+				}
+			}
+		} break;
 	}
 } else if (alarm[0] <= 0) {
 	movement = ApproachFade(movement, 0, 0.1, 0.7);
