@@ -8,8 +8,6 @@ bigFlash = 0;
 hp = 1500
 maxHp = hp;
 
-hp -= 1500 / 6 - 50
-
 phase = 0;
 inBetweenPhases = false;
 stunned = false;
