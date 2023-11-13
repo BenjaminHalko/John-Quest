@@ -1,5 +1,6 @@
 image_angle -= 30;
 
-if (place_meeting(x,y,global.collisionMap)) {
-	instance_destroy();	
+if (oLvl1Boss.inBetweenPhases) {
+	image_xscale = Approach(image_xscale, 0, 0.1);	
+	image_yscale = image_xscale;
 }

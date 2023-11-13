@@ -43,13 +43,11 @@ if (helix) {
 }
 
 if (!helix) {
-	var _boss = collision_rectangle(bbox_left,bbox_top,bbox_left+speed,bbox_bottom,[oLvl1BossSmall, oLvl1Boss, oLvl1BossShock],false,false);
+	var _boss = collision_rectangle(bbox_left,bbox_top,bbox_left+speed,bbox_bottom,[oLvl1BossSmall, oLvl1Boss],false,false);
 	if (_boss != noone) {
-		if (_boss.object_index != oLvl1BossShock) {
-			_boss.flash = 1;
-			oLvl1Boss.hp--;
-			ScreenShake(2, 2);
-		}
+		_boss.flash = 1;
+		oLvl1Boss.hp--;
+		ScreenShake(2, 2);
 		instance_destroy();
 	}
 }

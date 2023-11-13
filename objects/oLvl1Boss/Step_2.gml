@@ -4,6 +4,7 @@ enableLive;
 
 // Bullets
 if (!inBetweenPhases) {
+	movement = ApproachFade(movement, 1, 0.1, 0.7);
 	switch(phase) {
 		case 0: default: {
 			if (global.audioTick and global.audioBeat % 2 == 0) {
@@ -43,7 +44,36 @@ if (!inBetweenPhases) {
 			}
 		} break;
 	}
+} else if (alarm[0] <= 0) {
+	movement = ApproachFade(movement, 0, 0.1, 0.7);
+	if (--explosionWait > 0 or !global.audioTick or global.audioBeat % 2 != 0) {
+		eyes[0].obj.flash = 1;
+		with(instance_create_depth(eyes[0].obj.x,eyes[0].obj.y,eyes[0].obj.depth+1,oTriangleParticle)) {
+			image_blend = choose(#ED008C, #8800ED);
+			direction = random(360);
+			image_angle = random(360);
+			speed = random_range(0.5,4);
+			radius = 8;
+		}
+		ScreenShake(2, 2);
+	} else {
+		alarm[0] = 80;
+		repeat(50) {
+			with(instance_create_depth(eyes[0].obj.x,eyes[0].obj.y,eyes[0].obj.depth+1,oTriangleParticle)) {
+				image_blend = c_white;
+				direction = random(360);
+				image_angle = random(360);
+				speed = random_range(0.5,4);
+				radius = 12;
+			}
+		}
+		instance_destroy(eyes[0].obj);
+		array_delete(eyes,0,1);
+		ScreenShake(30, 50);
+	}
 }
+
+stunned = ApproachFade(stunned, (inBetweenPhases and alarm[0] <= 0), 0.1, 0.7);
 
 // Boss Flashing
 flash = Approach(flash, 0, 0.1);
@@ -52,7 +82,7 @@ image_blend = merge_color(c_white, c_red, flash);
 
 x = ApproachFade(x,xstart-96,5,0.7);
 
-y = ystart + sin((oMusicController.thisBeat % 8) * pi / 4) * 60;
+y = ystart + Wave(-4,4,5,0) + sin((oMusicController.thisBeat % 8) * pi / 4) * 60 * movement;
 
 x += random_range(-5, 5) * min(4, flash + bigFlash * 4);
 y += random_range(-5, 5) * min(4, flash + bigFlash * 4);
@@ -62,15 +92,17 @@ hp = max(hp, maxHp / 6 * (5-phase));
 
 if (global.audioTick and global.audioBeat % 4 == 0 and hp == maxHp / 6 * (5-phase) and !inBetweenPhases) {
 	inBetweenPhases = true;
-	alarm[0] = 180;
+	explosionWait = 60;
+	eyes[0].obj.dead = true;
 }
 
 // Surface
 if (!surface_exists(surf)) surf = surface_create(sprite_width, sprite_height);
 
 // Control Eyes
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < array_length(eyes); i++) {
 	eyes[i].obj.image_angle = eyes[i].angle + Wave(-3,3,2+eyes[i].waveOffset,eyes[i].waveOffset);
 	eyes[i].obj.x = x + eyes[i].x;
-	eyes[i].obj.y = ystart + eyes[i].y + Wave(-4,4,5+eyes[i].waveOffset,eyes[i].waveOffset) + sin(((oMusicController.thisBeat % 8)+0.1*abs(eyes[i].y)/50) * pi / 4) * 60;
+	eyes[i].obj.y = ystart + eyes[i].y + Wave(-4,4,5+eyes[i].waveOffset,eyes[i].waveOffset) + sin(((oMusicController.thisBeat % 8)+0.1*abs(eyes[i].y)/50) * pi / 4) * 60 * movement;
 }
+

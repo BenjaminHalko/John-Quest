@@ -6,7 +6,18 @@ var _spikeDir = spikeDir * 90 + image_angle - 90;
 var _spikeX = lengthdir_x(28, _spikeDir) - lengthdir_y(8 * spikeDir, _spikeDir);
 var _spikeY = lengthdir_y(28, _spikeDir) - lengthdir_x(8 * spikeDir, _spikeDir);
 
-if (image_yscale != targetYscale) {
+if (oLvl1Boss.inBetweenPhases) {
+	image_yscale = ApproachFade(image_yscale,0,1,0.6);
+	with(spikes) {
+		var _len = (other.image_yscale - other.targetYscale) * 16;
+		x = other.x + _spikeX + lengthdir_x(_len, image_angle);
+		y = other.y + _spikeY + lengthdir_y(_len, image_angle);	
+	}
+	if (image_yscale <= 0) {
+		instance_destroy(spikes);
+		instance_destroy();
+	}
+} else if (image_yscale != targetYscale) {
 	image_yscale = ApproachFade(image_yscale, targetYscale, 4, 0.6);
 	
 	if (image_yscale >= targetYscale-0.01 and global.audioTick) {

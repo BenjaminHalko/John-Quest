@@ -26,5 +26,10 @@ if (image_alpha != 1) {
 	}
 }
 
-image_xscale = scale + flash;
+if (oLvl1Boss.inBetweenPhases) {
+	image_xscale = ApproachFade(image_xscale,0,0.1,0.7);
+	if (image_xscale <= 0) instance_destroy();
+} else {
+	image_xscale = scale + flash;
+}
 image_yscale = image_xscale;

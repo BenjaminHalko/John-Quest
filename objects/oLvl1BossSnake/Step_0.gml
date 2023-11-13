@@ -13,7 +13,7 @@ image_yscale = image_xscale;
 
 if (--waitTimer <= 0) {
 	waitTimer = 4;
-	if (!created and x-24 >= oCamera.x - oCamera.viewWidthHalf) {
+	if (!created and x-24 >= oCamera.x - oCamera.viewWidthHalf and !oLvl1Boss.inBetweenPhases) {
 		created = true;
 		with(instance_create_layer(x-18,y,layer,oLvl1BossSnake)) {
 			counter = other.counter;

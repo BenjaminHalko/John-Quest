@@ -5,25 +5,32 @@ enableLive;
 flash = 0;
 bigFlash = 0;
 
-hp = 2000;
+hp = 1500
 maxHp = hp;
+
+hp -= 1500 / 6 - 50
 
 phase = 0;
 inBetweenPhases = false;
+stunned = false;
+explosionWait = 0;
+
+dead = false;
+movement = 1;
 
 surf = -1;
 
 eyes = [
-	{ x: -14, y: -44, angle: -7 },
-	{ x: -29, y: -20, angle: -2 },
-	{ x: -42, y: 2, angle: 4 },
-	{ x: -24, y: 24, angle: -2 },
-	{ x: -9, y: 50, angle: 5 }
+	{ x: -42, y: 2, angle: 4 }, // 3
+	{ x: -14, y: -44, angle: -7 }, // 1
+	{ x: -9, y: 50, angle: 5 }, // 5
+	{ x: -24, y: 24, angle: -2 }, // 4
+	{ x: -29, y: -20, angle: -2 } // 2
 ];
 
 for (var i = 0; i < 5; i++) {
 	eyes[i].waveOffset = random(1);
-	eyes[i].obj = instance_create_layer(x+eyes[i].x,y+eyes[i].y,layer,oLvl1BossSmall);
+	eyes[i].obj = instance_create_depth(x+eyes[i].x,y+eyes[i].y,depth-(5-i)*2,oLvl1BossSmall);
 	with(eyes[i].obj) {
 		image_angle = other.eyes[i].angle;	
 	}

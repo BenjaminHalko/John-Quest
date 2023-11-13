@@ -4,9 +4,6 @@
 #macro enableLive if (live_call()) return live_result
 instance_create_layer(0,0,layer,obj_gmlive);
 
-sprite_set_live(sLvl1Boss, true);
-sprite_set_live(sLvl1BossIris, true);
-
 // Lock resolution
 surface_resize(application_surface,480,270);
 

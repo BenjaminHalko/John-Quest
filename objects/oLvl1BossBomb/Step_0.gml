@@ -2,7 +2,13 @@
 
 enableLive;
 
-image_xscale = Approach(image_xscale, 1, 0.2);
+
+if (oLvl1Boss.inBetweenPhases) {
+	image_xscale = ApproachFade(image_xscale,0,0.1,0.7);
+	if (image_xscale <= 0) instance_destroy();
+} else {
+	image_xscale = Approach(image_xscale, 1, 0.2);
+}
 image_yscale = image_xscale;
 
 image_angle -= 10;
@@ -15,7 +21,7 @@ flash = ApproachFade(flash, 0, 0.05, 0.7);
 
 if (global.audioTick) {
 	flash = 1;
-	if(--beatCount <= 0) {
+	if(--beatCount <= 0 and !oLvl1Boss.inBetweenPhases) {
 		var _dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 		for(var i = 0; i < 6; i++) {
 			with(instance_create_depth(x,y,depth,oLvl1BossBullet)) {

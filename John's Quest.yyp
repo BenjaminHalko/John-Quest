@@ -37,6 +37,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Blocks","folderPath":"folders/Level1/Boss/Bullets/Blocks.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"BulletBomb","folderPath":"folders/Level1/Boss/Bullets/BulletBomb.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Bullets","folderPath":"folders/Level1/Boss/Bullets/Bullets.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shock","folderPath":"folders/Level1/Boss/Bullets/Shock.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Snakes","folderPath":"folders/Level1/Boss/Bullets/Snakes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Gun","folderPath":"folders/Level1/Boss/Gun.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Global","folderPath":"folders/Level1/Global.yy",},
@@ -53,7 +54,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tileset","folderPath":"folders/Level1/Tileset.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level1/Tileset/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shock","folderPath":"folders/Level1/Boss/Bullets/Shock.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
