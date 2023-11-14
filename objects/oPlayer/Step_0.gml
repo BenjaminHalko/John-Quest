@@ -168,26 +168,26 @@ flash = ApproachFade(flash,0,0.1,0.8);
 
 if y > room_height or place_meeting(x,y,pHurt) hurtPlayer();
 
-// Check if below camera boundry
+// Check if below camera boundary
 if (boss) {
-	if (oCamera.boundry != noone and autoMove == undefined) {
-		if (x > oCamera.boundry.bbox_right-8 or x < oCamera.boundry.bbox_left+8) {
-			x = clamp(x, oCamera.boundry.bbox_left+8, oCamera.boundry.bbox_right-8);
+	if (oCamera.boundary != noone and autoMove == undefined) {
+		if (x > oCamera.boundary.bbox_right-8 or x < oCamera.boundary.bbox_left+8) {
+			x = clamp(x, oCamera.boundary.bbox_left+8, oCamera.boundary.bbox_right-8);
 			hsp_final = 0;
 			hsp = 0;
 			hsp_f = 0;
 		}
-		if (y > oCamera.boundry.bbox_bottom-8 or y < oCamera.boundry.bbox_top+8) {
-			y = clamp(y, oCamera.boundry.bbox_top+8, oCamera.boundry.bbox_bottom-8);
+		if (y > oCamera.boundary.bbox_bottom-8 or y < oCamera.boundary.bbox_top+8) {
+			y = clamp(y, oCamera.boundary.bbox_top+8, oCamera.boundary.bbox_bottom-8);
 			vsp_final = 0;
 			vsp = 0;
 			vsp_f = 0;
 		}
 	}
 } else if (!place_meeting(x,y,oCameraSafeFall)) {
-	if (oCamera.boundry != noone) {
-		if (y >= oCamera.boundry.bbox_bottom-8) {
-			y = oCamera.boundry.bbox_bottom-8;
+	if (oCamera.boundary != noone) {
+		if (y >= oCamera.boundary.bbox_bottom-8) {
+			y = oCamera.boundary.bbox_bottom-8;
 			hurtPlayer();
 		}
 	}

@@ -4,12 +4,12 @@
 if(instance_exists(follow)) {
 	xTo = follow.x;
 	yTo = follow.y;
-	boundry = instance_position(xTo,yTo,oCameraBoundry);
-	if (boundry != noone) {
-		xTo = clamp(xTo, boundry.bbox_left+viewWidthHalf, boundry.bbox_right-viewWidthHalf);
-		yTo = clamp(yTo, boundry.bbox_top+viewHeightHalf, boundry.bbox_bottom-viewHeightHalf);
+	boundary = instance_position(xTo,yTo,oCameraBoundary);
+	if (boundary != noone) {
+		xTo = clamp(xTo, boundary.bbox_left+viewWidthHalf, boundary.bbox_right-viewWidthHalf);
+		yTo = clamp(yTo, boundary.bbox_top+viewHeightHalf, boundary.bbox_bottom-viewHeightHalf);
 	}
-} else boundry = noone;
+} else boundary = noone;
 
 //Update Object Position
 x += (xTo - x) / 12;

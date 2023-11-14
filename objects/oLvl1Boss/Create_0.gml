@@ -19,6 +19,9 @@ movement = 1;
 surf = -1;
 lastTime = -1;
 
+panic = 0;
+shootPulse = 0;
+
 eyes = [
 	{ x: -42, y: 2, angle: 4 }, // 3
 	{ x: -14, y: -44, angle: -7 }, // 1

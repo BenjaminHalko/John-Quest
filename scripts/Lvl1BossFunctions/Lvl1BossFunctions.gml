@@ -10,9 +10,14 @@ function DrawBossLvl1(_surface) {
 	surface_set_target(_surface);
 	draw_clear_alpha(c_black, 0);
 	shader_set(shFlash);
-	shader_set_uniform_f(global.uFlashPercent, flash * (1 - dead * 0.5));
-	shader_set_uniform_f_array(global.uFlashColor, choose([0.8,0,0],[0.2,0.1,0]));
-	var _index = 0;
+	if (oLvl1Boss.shootPulse > 0) {
+		shader_set_uniform_f(global.uFlashPercent, oLvl1Boss.shootPulse);
+		shader_set_uniform_f(global.uFlashColor, 237 / 255, 0, 140 / 255);
+	} else {
+		shader_set_uniform_f(global.uFlashPercent, flash * (1 - dead * 0.5));
+		shader_set_uniform_f_array(global.uFlashColor, choose([0.8,0,0],[0.2,0.1,0]));
+	}
+	var _index = (oLvl1Boss.phase == 5);
 	if (flash > 0) _index = image_index;
 
 	// Draw Eyes
@@ -25,15 +30,18 @@ function DrawBossLvl1(_surface) {
 	
 	var _drawX = sprite_xoffset + lengthdir_x(_radius, _angle) + random_range(-5, 5) * min(4, flash + oLvl1Boss.bigFlash * 4);
 	var _drawY = sprite_yoffset + lengthdir_y(_radius*2, _angle) + random_range(-5, 5) * min(4, flash + oLvl1Boss.bigFlash * 4);
-	if (!dead) {
+	 if (oLvl1Boss.shootPulse == 0) {
 		var _col = make_color_hsv(random(255),255,255);
 		shader_set_uniform_f(global.uFlashColor, color_get_red(_col)/255, color_get_green(_col)/255, color_get_blue(_col)/255);
+	} else if (!dead) {
+		shader_set_uniform_f(global.uFlashPercent, oLvl1Boss.shootPulse);
+		shader_set_uniform_f(global.uFlashColor, 0,0,0);
 	} else {
 		shader_set_uniform_f(global.uFlashPercent, 1);
 		shader_set_uniform_f(global.uFlashColor, 1, 1, 1);
 	}
 
-	draw_sprite_ext((sprite_index == sLvl1BossSmall) ? sLvl1BossSmallIris : sLvl1BossIris, _index, _drawX, _drawY, 1+flash+oLvl1Boss.stunned/2, 1+flash*2+oLvl1Boss.stunned/2, _angle-180, c_white, 1);
+	draw_sprite_ext((sprite_index == sLvl1BossSmall) ? sLvl1BossSmallIris : sLvl1BossIris, _index + (oLvl1Boss.phase == 5) * 2, _drawX, _drawY, 1+flash+oLvl1Boss.stunned/2, 1+flash*2+oLvl1Boss.stunned/2, _angle-180, c_white, 1);
 
 	shader_reset();
 	gpu_set_colorwriteenable(1, 1, 1, 1);
@@ -46,7 +54,7 @@ function DrawBossLvl1(_surface) {
 	shader_set_uniform_f(global.uFlashColor, 1,1,1);
 	shader_set_uniform_f(global.uFlashPercent, oLvl1Boss.bigFlash);
 
-	var _scale = 1 + flash * 0.2 * (1 + dead);
+	var _scale = 1 + oLvl1Boss.shootPulse / 3 + flash * 0.2 * (1 + dead);
 	var _len = point_distance(0,0,sprite_xoffset,sprite_yoffset)*_scale;
 	var _dir = point_direction(sprite_xoffset,sprite_yoffset,0,0) + _turnAngle;
 	var _extra = random_range(-10,10) * flash;

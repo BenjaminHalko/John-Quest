@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oCameraBoundry",
+  "name": "oCameraBoundary",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sCameraBoundry",
-    "path": "sprites/sCameraBoundry/sCameraBoundry.yy",
+    "name": "sCameraBoundary",
+    "path": "sprites/sCameraBoundary/sCameraBoundary.yy",
   },
   "spriteMaskId": null,
   "visible": false,

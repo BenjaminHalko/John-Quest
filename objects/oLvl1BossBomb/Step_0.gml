@@ -25,7 +25,6 @@ if (global.audioTick) {
 		var _dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 		for(var i = 0; i < 6; i++) {
 			with(instance_create_depth(x,y,depth,oLvl1BossBullet)) {
-				speed = 6;
 				direction = i * 60 + _dir;
 			}
 		}

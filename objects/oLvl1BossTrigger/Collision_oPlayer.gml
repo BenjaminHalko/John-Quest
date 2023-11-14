@@ -11,7 +11,7 @@ if (!activate) {
 		shader_set_uniform_f(global.uAlphaPercent, 1-oBackground.bossTransitionPercent);
 	});
 	
-	layer_script_end("Walls", function() {
+	layer_script_end("SemiSolidBridge", function() {
 		shader_reset();
 	});
 }

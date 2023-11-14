@@ -15,6 +15,6 @@ with(oCheckpoint) {
 		oCamera.y = oPlayer.y;
 		oCamera.xTo = oCamera.x;
 		oCamera.yTo = oCamera.y;
-		oCamera.boundry = noone;
+		oCamera.boundary = noone;
 	}
 }
