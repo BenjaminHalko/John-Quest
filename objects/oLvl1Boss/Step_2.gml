@@ -76,12 +76,27 @@ if (!inBetweenPhases) {
 				}
 			}
 		} break;
+		case 5: {
+			
+		} break;
 	}
 } else if (alarm[0] <= 0) {
 	movement = ApproachFade(movement, 0, 0.1, 0.7);
 	if (--explosionWait > 0 or !global.audioTick or global.audioBeat % 2 != 0) {
-		eyes[0].obj.flash = 1;
-		with(instance_create_depth(eyes[0].obj.x,eyes[0].obj.y,eyes[0].obj.depth+1,oTriangleParticle)) {
+		var _x, _y, _depth;
+		if (array_length(eyes) > 0) {
+			_x = eyes[0].obj.x;
+			_y = eyes[0].obj.y;
+			_depth = eyes[0].obj.depth;
+			eyes[0].obj.flash = 1;
+		} else {
+			_x = x;
+			_y = y;
+			_depth = depth;
+			flash = 1;
+		}
+		
+		with(instance_create_depth(_x,_y,_depth+1,oTriangleParticle)) {
 			image_blend = choose(#ED008C, #8800ED);
 			direction = random(360);
 			image_angle = random(360);
@@ -90,9 +105,20 @@ if (!inBetweenPhases) {
 		}
 		ScreenShake(2, 2);
 	} else {
-		alarm[0] = 80;
+		var _x, _y, _depth;
+		if (array_length(eyes) > 0) {
+			_x = eyes[0].obj.x;
+			_y = eyes[0].obj.y;
+			_depth = eyes[0].obj.depth;
+			alarm[0] = 80;
+		} else {
+			_x = x;
+			_y = y;
+			_depth = depth;
+		}
+		
 		repeat(50) {
-			with(instance_create_depth(eyes[0].obj.x,eyes[0].obj.y,eyes[0].obj.depth+1,oTriangleParticle)) {
+			with(instance_create_depth(_x,_y,_depth+1,oTriangleParticle)) {
 				image_blend = c_white;
 				direction = random(360);
 				image_angle = random(360);
@@ -100,9 +126,11 @@ if (!inBetweenPhases) {
 				radius = 12;
 			}
 		}
-		instance_destroy(eyes[0].obj);
-		array_delete(eyes,0,1);
-		ScreenShake(30, 50);
+		if (array_length(eyes) > 0) {
+			instance_destroy(eyes[0].obj);
+			array_delete(eyes,0,1);
+		}
+		ScreenShake(25, 50);
 	}
 }
 
@@ -125,8 +153,13 @@ hp = max(hp, maxHp / 6 * (5-phase));
 
 if (global.audioTick and global.audioBeat % 4 == 0 and hp == maxHp / 6 * (5-phase) and !inBetweenPhases) {
 	inBetweenPhases = true;
-	explosionWait = 60;
-	eyes[0].obj.dead = true;
+	if (phase < 5) {
+		explosionWait = 60;
+		eyes[0].obj.dead = true;
+	} else {
+		explosionWait = 120;
+		dead = true;
+	}
 }
 
 // Surface
