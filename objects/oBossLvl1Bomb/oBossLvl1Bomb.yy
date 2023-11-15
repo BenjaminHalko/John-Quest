@@ -1,17 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oSpring",
+  "name": "oBossLvl1Bomb",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oPlayerLvl1","path":"objects/oPlayerLvl1/oPlayerLvl1.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Spring",
-    "path": "folders/Level1/Level Objects/Spring.yy",
+    "name": "BulletBomb",
+    "path": "folders/Level1/Boss/Bullets/BulletBomb.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sSpring",
-    "path": "sprites/sSpring/sSpring.yy",
+    "name": "sBossLvl1Bomb",
+    "path": "sprites/sBossLvl1Bomb/sBossLvl1Bomb.yy",
   },
   "spriteMaskId": null,
   "visible": true,

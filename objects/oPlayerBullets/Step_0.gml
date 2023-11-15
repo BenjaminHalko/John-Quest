@@ -31,8 +31,8 @@ if (helix) {
 	}
 	
 	if (!attacked and helixRectHeight > 0) {
-		if (collision_line(x,y,oCamera.x+oCamera.viewWidthHalf,y,[oLvl1Boss,oLvl1BossSmall],false,false) != noone) {
-			with(oLvl1Boss) {
+		if (collision_line(x,y,oCamera.x+oCamera.viewWidthHalf,y,[oBossLvl1,oBossLvl1Small],false,false) != noone) {
+			with(oBossLvl1) {
 				bigFlash = 1;
 				ScreenShake(12, 20);
 				hp -= 20;
@@ -43,10 +43,10 @@ if (helix) {
 }
 
 if (!helix) {
-	var _boss = collision_rectangle(bbox_left,bbox_top,bbox_left+speed,bbox_bottom,[oLvl1BossSmall, oLvl1Boss],false,false);
+	var _boss = collision_rectangle(bbox_left,bbox_top,bbox_left+speed,bbox_bottom,[oBossLvl1Small, oBossLvl1],false,false);
 	if (_boss != noone) {
 		_boss.flash = 1;
-		oLvl1Boss.hp--;
+		oBossLvl1.hp--;
 		ScreenShake(2, 2);
 		instance_destroy();
 	}

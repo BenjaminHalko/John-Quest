@@ -1,13 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oPlayer",
-  "eventList": [],
+  "name": "oBossLvl1CrusherFade",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Parents",
-    "path": "folders/Global/Parents.yy",
+    "name": "Crushers",
+    "path": "folders/Level1/Boss/Bullets/Crushers.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -25,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sBossLvl1Block",
+    "path": "sprites/sBossLvl1Block/sBossLvl1Block.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

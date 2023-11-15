@@ -4,7 +4,7 @@
   "name": "shBlur",
   "parent": {
     "name": "Bloom",
-    "path": "folders/Global/Bloom.yy",
+    "path": "folders/Global/Effects/Bloom.yy",
   },
   "type": 1,
 }

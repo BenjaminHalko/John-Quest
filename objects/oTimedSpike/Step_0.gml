@@ -8,7 +8,7 @@ if (global.audioTick) {
 		image_index = 0;
 	}
 	
-	if (global.audioBeat % 4 == beatOffset and !instance_exists(oLvl1Intro)) {
+	if (global.audioBeat % 4 == beatOffset and !instance_exists(oIntroLvl1)) {
 		spike = instance_create_depth(x,y,depth+1,oSpike);
 		with(spike) {
 			image_angle = other.image_angle;

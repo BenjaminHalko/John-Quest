@@ -2,10 +2,10 @@
 
 enableLive;
 
-x = oPlayer.x;
-y = oPlayer.y;
+x = oPlayerLvl1.x;
+y = oPlayerLvl1.y;
 
-if (oPlayer.tempHurt == 0 and !oLvl1Boss.inBetweenPhases and !oLvl1Boss.tutorial) {
+if (oPlayerLvl1.tempHurt == 0 and !oBossLvl1.inBetweenPhases and !oBossLvl1.tutorial) {
 	if (--shotTimer <= 0) {
 		instance_create_depth(x,y+random_range(-6,6),depth,oPlayerBullets);
 		shotTimer = 5;

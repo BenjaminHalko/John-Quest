@@ -1,15 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oPlayer",
+  "name": "oPlayerLvl2",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Parents",
-    "path": "folders/Global/Parents.yy",
+    "name": "Player",
+    "path": "folders/Level2/Player.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oPlayer",
+    "path": "objects/oPlayer/oPlayer.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sPlayer",
+    "path": "sprites/sPlayer/sPlayer.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -1,17 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oSpring",
+  "name": "oBossLvl1SpiralSnake",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oPlayerLvl1","path":"objects/oPlayerLvl1/oPlayerLvl1.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Spring",
-    "path": "folders/Level1/Level Objects/Spring.yy",
+    "name": "Spiral Snake",
+    "path": "folders/Level1/Boss/Bullets/Spiral Snake.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sSpring",
-    "path": "sprites/sSpring/sSpring.yy",
+    "name": "sBossLvl1Block",
+    "path": "sprites/sBossLvl1Block/sBossLvl1Block.yy",
   },
   "spriteMaskId": null,
   "visible": true,
