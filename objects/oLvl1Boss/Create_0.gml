@@ -8,9 +8,7 @@ bigFlash = 0;
 hp = 1500
 maxHp = hp;
 
-hp = 10;
-
-phase = 5;
+phase = 0;
 inBetweenPhases = false;
 stunned = false;
 explosionWait = 0;
@@ -30,10 +28,8 @@ shootPulse = 0;
 destroyCurve = animcurve_get_channel(Lvl1BossCurves, "destroy");
 
 tutorial = true;
-audio_sound_loop(oMusicController.music, true);
-audio_sound_set_track_position(oMusicController.music, 60 / 140 * 51 * 4);
 
-eyes = []; /*
+eyes = [];
 
 eyes = [
 	{ x: -42, y: 2, angle: 4 }, // 3
