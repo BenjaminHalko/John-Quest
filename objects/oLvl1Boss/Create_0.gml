@@ -29,8 +29,6 @@ destroyCurve = animcurve_get_channel(Lvl1BossCurves, "destroy");
 
 tutorial = true;
 
-eyes = [];
-
 eyes = [
 	{ x: -42, y: 2, angle: 4 }, // 3
 	{ x: -14, y: -44, angle: -7 }, // 1
