@@ -60,6 +60,7 @@
     {"name":"oLvl1Intro","order":4,"path":"objects/oLvl1Intro/oLvl1Intro.yy",},
     {"name":"GMLive_seekSetOp","order":6,"path":"scripts/GMLive_seekSetOp/GMLive_seekSetOp.yy",},
     {"name":"rTitle","order":1,"path":"rooms/rTitle/rTitle.yy",},
+    {"name":"SaveLoad","order":1,"path":"scripts/SaveLoad/SaveLoad.yy",},
     {"name":"oLvl1BossHomingExplosion","order":4,"path":"objects/oLvl1BossHomingExplosion/oLvl1BossHomingExplosion.yy",},
     {"name":"sPlayerBullets","order":1,"path":"sprites/sPlayerBullets/sPlayerBullets.yy",},
     {"name":"sBridge","order":1,"path":"sprites/sBridge/sBridge.yy",},

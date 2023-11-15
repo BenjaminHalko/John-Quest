@@ -15,12 +15,15 @@ switch(room) {
 }
 
 // Update coords to follows
-x = follow.x;
-y = follow.y;
-boundary = instance_position(x,y,oCameraBoundary);
-if (boundary != noone) {
-	x = clamp(x, boundary.bbox_left+viewWidthHalf, boundary.bbox_right-viewWidthHalf);
-	y = clamp(y, boundary.bbox_top+viewHeightHalf, boundary.bbox_bottom-viewHeightHalf);
+snapToFollow = function() {
+	x = follow.x;
+	y = follow.y;
+	boundary = instance_position(x,y,oCameraBoundary);
+	if (boundary != noone) {
+		x = clamp(x, boundary.bbox_left+viewWidthHalf, boundary.bbox_right-viewWidthHalf);
+		y = clamp(y, boundary.bbox_top+viewHeightHalf, boundary.bbox_bottom-viewHeightHalf);
+	}
+	xTo = x;
+	yTo = y;
 }
-xTo = x;
-yTo = y;
+snapToFollow();

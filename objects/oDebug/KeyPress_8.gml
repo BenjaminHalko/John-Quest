@@ -11,10 +11,7 @@ with(oCheckpoint) {
 		oPlayer.x = x+sprite_width/2;
 		oPlayer.y = y+sprite_height-8;
 		
-		oCamera.x = oPlayer.x;
-		oCamera.y = oPlayer.y;
-		oCamera.xTo = oCamera.x;
-		oCamera.yTo = oCamera.y;
+		oCamera.snapToFollow();
 		oCamera.boundary = noone;
 	}
 }
