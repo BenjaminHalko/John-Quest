@@ -1,5 +1,7 @@
 /// @desc 
 
+if (image_index == 1) exit;
+
 if (global.audioTick) {
 	timer--;
 	
@@ -21,3 +23,6 @@ if (timer > 0) {
 }
 
 flash = ApproachFade(flash, 0, 0.1, 0.7);
+
+extra.y = extra.ystart + (y - ystart);
+extra.flash = flash;
