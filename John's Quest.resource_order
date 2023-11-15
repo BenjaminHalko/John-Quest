@@ -57,6 +57,7 @@
     {"name":"GMLive_program","order":3,"path":"scripts/GMLive_program/GMLive_program.yy",},
     {"name":"sCrusher","order":2,"path":"sprites/sCrusher/sCrusher.yy",},
     {"name":"oDebug","order":10,"path":"objects/oDebug/oDebug.yy",},
+    {"name":"oLvl1Intro","order":4,"path":"objects/oLvl1Intro/oLvl1Intro.yy",},
     {"name":"GMLive_seekSetOp","order":6,"path":"scripts/GMLive_seekSetOp/GMLive_seekSetOp.yy",},
     {"name":"rTitle","order":1,"path":"rooms/rTitle/rTitle.yy",},
     {"name":"oLvl1BossHomingExplosion","order":4,"path":"objects/oLvl1BossHomingExplosion/oLvl1BossHomingExplosion.yy",},
