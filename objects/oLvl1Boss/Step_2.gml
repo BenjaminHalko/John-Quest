@@ -3,7 +3,9 @@
 enableLive;
 
 // Bullets
-if (!inBetweenPhases) {
+if (tutorial) {
+	if (oPlayer.vsp != 0) tutorial = false;
+} else if (!inBetweenPhases) {
 	movement = ApproachFade(movement, 1, 0.1, 0.7);
 	switch(phase) {
 		case 0: default: {

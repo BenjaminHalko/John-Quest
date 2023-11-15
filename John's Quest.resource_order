@@ -66,6 +66,7 @@
     {"name":"oLvl1BossBullet","order":1,"path":"objects/oLvl1BossBullet/oLvl1BossBullet.yy",},
     {"name":"oLvl1BossSmall","order":7,"path":"objects/oLvl1BossSmall/oLvl1BossSmall.yy",},
     {"name":"sCameraBoundary","order":3,"path":"sprites/sCameraBoundary/sCameraBoundary.yy",},
+    {"name":"sLvl1BossMovementTutorial","order":9,"path":"sprites/sLvl1BossMovementTutorial/sLvl1BossMovementTutorial.yy",},
     {"name":"GMLive_vm","order":5,"path":"scripts/GMLive_vm/GMLive_vm.yy",},
     {"name":"sTitleLandscape","order":4,"path":"sprites/sTitleLandscape/sTitleLandscape.yy",},
     {"name":"pHurt","order":1,"path":"objects/pHurt/pHurt.yy",},

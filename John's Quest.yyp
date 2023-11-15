@@ -166,6 +166,7 @@
     {"id":{"name":"oLvl1BossBullet","path":"objects/oLvl1BossBullet/oLvl1BossBullet.yy",},},
     {"id":{"name":"oLvl1BossSmall","path":"objects/oLvl1BossSmall/oLvl1BossSmall.yy",},},
     {"id":{"name":"sCameraBoundary","path":"sprites/sCameraBoundary/sCameraBoundary.yy",},},
+    {"id":{"name":"sLvl1BossMovementTutorial","path":"sprites/sLvl1BossMovementTutorial/sLvl1BossMovementTutorial.yy",},},
     {"id":{"name":"GMLive_vm","path":"scripts/GMLive_vm/GMLive_vm.yy",},},
     {"id":{"name":"sTitleLandscape","path":"sprites/sTitleLandscape/sTitleLandscape.yy",},},
     {"id":{"name":"pHurt","path":"objects/pHurt/pHurt.yy",},},

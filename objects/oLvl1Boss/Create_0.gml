@@ -14,13 +14,15 @@ stunned = false;
 explosionWait = 0;
 
 dead = false;
-movement = 1;
+movement = 0;
 
 surf = -1;
 lastTime = -1;
 
 panic = 0;
 shootPulse = 0;
+
+tutorial = true;
 
 eyes = [
 	{ x: -42, y: 2, angle: 4 }, // 3
