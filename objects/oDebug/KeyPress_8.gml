@@ -7,7 +7,7 @@ if (currentCheckpoint < 14) {
 }
 
 with(oCheckpoint) {
-	if (scale == 1 and other.currentCheckpoint != 14 and checkpointNumber == other.currentCheckpoint) or (scale == -1 and other.currentCheckpoint == 14 and checkpointNumber == 13)	{
+	if (scale == 1 and other.currentCheckpoint == checkpointNumber)	{
 		oPlayer.x = x+sprite_width/2;
 		oPlayer.y = y+sprite_height-8;
 		

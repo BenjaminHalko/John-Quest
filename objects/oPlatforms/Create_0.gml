@@ -1,4 +1,4 @@
-var _objects = [pHurt, oSpring];
+var _objects = [oSpike, oSpring];
 var _list = ds_list_create();
 var _amount = instance_place_list(x+1,y,_objects,_list,false);
 _amount += instance_place_list(x-1,y,_objects,_list,false);
