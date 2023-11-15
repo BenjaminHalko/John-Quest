@@ -1,9 +1,13 @@
 /// @desc 
 
+enableLive;
+
 oPlayer.autoMove = oPlayer.x;
 
-counter = 100;
-lastTime = 0;
+counter = 14;
+lastTime = infinity;
+
+playerY = oCamera.y - oCamera.viewHeightHalf - 32;
 
 layersToHide = [
 	"Hurt",
