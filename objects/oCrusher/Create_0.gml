@@ -9,8 +9,8 @@ extra.beatOffset = beatOffset;
 extra.beatLoop = beatLoop;
 extra.length = length;
 extra.distance = distance;
-extra.image_yscale = image_yscale - 0.5;
+extra.image_yscale = image_yscale - 0.5 * sign(image_yscale);
 
-y += sprite_height - 80;
-image_yscale = 1;
+y += sprite_height - 80 * sign(image_yscale);
+image_yscale = sign(image_yscale);
 ystart = y;
