@@ -2,6 +2,8 @@
 
 enableLive;
 
+if (!isOnScreen() and oBossLvl1.dead) instance_destroy();
+
 var _percent = min(1, (oMusicController.thisBeat - startBeat) / time);
 
 x = lerp(xstart, targetX, _percent);

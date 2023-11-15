@@ -35,7 +35,7 @@ if (deadBeat >= 23) {
 	_time = lastTime;
 } else if (tutorial) {
 	if (oPlayer.vsp != 0) tutorial = false;
-} else if (!inBetweenPhases) {
+} else if (!inBetweenPhases and !dead) {
 	movement = ApproachFade(movement, 1, 0.1, 0.7);
 	switch(phase) {
 		case 0: default: {
@@ -195,16 +195,14 @@ hp = max(hp, maxHp / 6 * (5-phase));
 if (global.audioTick and global.audioBeat % (4 * (1 + (phase == 5))) == (phase == 5) * 4 and hp == maxHp / 6 * (5-phase) and !inBetweenPhases) {
 	if (hp <= 0 and audio_is_playing(mLvl1Music)) {
 		with(oBossLvl1Homing) {
-			startBeat -= oMusicController.thisBeat;	
+			startBeat -= oMusicController.thisBeat;
 		}
 		audio_stop_sound(mLvl1Music);
 		oMusicController.music = audio_play_sound(mLvl1MusicBossDefeat, 1, false);
 		oMusicController.thisBeat = 0;
 	}
 	
-	if (phase == 4) {
-		audio_sound_loop(oMusicController.music, true);
-	}
+	if (phase == 4) allowLoop = true;
 	
 	image_angle = 0;
 	inBetweenPhases = true;
@@ -214,6 +212,12 @@ if (global.audioTick and global.audioBeat % (4 * (1 + (phase == 5))) == (phase =
 	} else {
 		dead = true;
 	}
+}
+
+if (allowLoop and oMusicController.thisBeat < 57 * 4) {
+	audio_sound_loop_start(oMusicController.music, 60 / oMusicController.bpm * 51 * 4);
+	audio_sound_loop_end(oMusicController.music, 60 / oMusicController.bpm * 57 * 4);
+	allowLoop = false;
 }
 
 // Surface
