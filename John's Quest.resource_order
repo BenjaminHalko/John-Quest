@@ -1,9 +1,16 @@
 {
   "FolderOrderSettings": [
+    {"name":"Audio","order":1,"path":"folders/Level1/Audio.yy",},
+    {"name":"SoundFXs","order":1,"path":"folders/Level1/Audio/SoundFXs.yy",},
+    {"name":"Boss","order":6,"path":"folders/Level1/Boss.yy",},
     {"name":"Crushers","order":2,"path":"folders/Level1/Boss/Bullets/Crushers.yy",},
     {"name":"Homing","order":4,"path":"folders/Level1/Boss/Bullets/Homing.yy",},
     {"name":"Shock","order":1,"path":"folders/Level1/Boss/Bullets/Shock.yy",},
     {"name":"Spiral Snake","order":3,"path":"folders/Level1/Boss/Bullets/Spiral Snake.yy",},
+    {"name":"Global","order":2,"path":"folders/Level1/Global.yy",},
+    {"name":"Level Objects","order":3,"path":"folders/Level1/Level Objects.yy",},
+    {"name":"Player","order":4,"path":"folders/Level1/Player.yy",},
+    {"name":"Tileset","order":5,"path":"folders/Level1/Tileset.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},
@@ -16,6 +23,7 @@
     {"name":"oTimedSpike","order":3,"path":"objects/oTimedSpike/oTimedSpike.yy",},
     {"name":"oLvl1BossUI","order":5,"path":"objects/oLvl1BossUI/oLvl1BossUI.yy",},
     {"name":"oLvl1BossCrusherFade","order":1,"path":"objects/oLvl1BossCrusherFade/oLvl1BossCrusherFade.yy",},
+    {"name":"Lvl1BossCurves","order":10,"path":"animcurves/Lvl1BossCurves/Lvl1BossCurves.yy",},
     {"name":"sLvl1BossHomingTrail","order":3,"path":"sprites/sLvl1BossHomingTrail/sLvl1BossHomingTrail.yy",},
     {"name":"GMLive_exec","order":1,"path":"scripts/GMLive_exec/GMLive_exec.yy",},
     {"name":"GMLive_nodeTools","order":3,"path":"scripts/GMLive_nodeTools/GMLive_nodeTools.yy",},
@@ -36,6 +44,7 @@
     {"name":"oBackground","order":1,"path":"objects/oBackground/oBackground.yy",},
     {"name":"oLvl1BossTrigger","order":6,"path":"objects/oLvl1BossTrigger/oLvl1BossTrigger.yy",},
     {"name":"GMLive_vm_call","order":6,"path":"scripts/GMLive_vm_call/GMLive_vm_call.yy",},
+    {"name":"mLvl1MusicBossDefeat","order":2,"path":"sounds/mLvl1MusicBossDefeat/mLvl1MusicBossDefeat.yy",},
     {"name":"sTitle","order":2,"path":"sprites/sTitle/sTitle.yy",},
     {"name":"GMLiveAPI_js","order":4,"path":"scripts/GMLiveAPI_js/GMLiveAPI_js.yy",},
     {"name":"oLvl1BossBomb","order":1,"path":"objects/oLvl1BossBomb/oLvl1BossBomb.yy",},

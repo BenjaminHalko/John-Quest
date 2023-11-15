@@ -18,7 +18,7 @@ for(var i = 0; i < array_length(particles); i++) {
 	} else  {
 		draw_set_color(merge_color(c_fuchsia, #27357F, max(0,bossTransitionPercent-particles[i].spd*0.3)));
 		if (particles[i].spd >= 0.5 or bossMode)
-			draw_rectangle(_x,_y,_x+lerp(1,12*particles[i].spd,bossTransitionPercent),_y+lerp(1,(particles[i].spd >= 0.9),bossTransitionPercent),false);
+			draw_rectangle(_x,_y,_x+lerp(1,12*particles[i].spd,bossTransitionPercent*finalSpd),_y+lerp(1,(particles[i].spd >= 0.9),bossTransitionPercent),false);
 		else
 			draw_point(_x,_y);
 	}

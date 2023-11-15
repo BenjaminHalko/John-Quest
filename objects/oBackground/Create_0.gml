@@ -1,5 +1,6 @@
 /// @desc 
 
+finalSpd = 1;
 bossTransitionPercent = 0;
 bossMode = false;
 

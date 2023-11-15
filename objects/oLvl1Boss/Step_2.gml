@@ -2,8 +2,34 @@
 
 enableLive;
 
-// Bullets
-if (tutorial) {
+if (dead and global.audioTick) {
+	deadBeat++;
+}
+
+if (deadBeat >= 23) {
+	if (!audio_is_playing(mLvl1MusicBossDefeat)) {
+		oBackground.finalSpd = 0;
+		instance_destroy(oPlayerGun);
+		instance_destroy();
+	} else {
+		var _percent = clamp((oMusicController.thisBeat - 23) / 0.5, 0 ,1);
+		scale = animcurve_channel_evaluate(destroyCurve, _percent);
+		oBackground.finalSpd = 1 - _percent;
+	}
+} else if (deadBeat >= 12) {
+	deadFlash = clamp((oMusicController.thisBeat - 12) / 10, 0 ,1);
+	var _time = oMusicController.thisBeat % 0.5;
+	if (_time < lastTime and deadBeat < 20) {
+		with(instance_create_depth(x,y,depth+1,oTriangleParticle)) {
+			image_blend = c_white;
+			direction = random(360);
+			image_angle = random(360);
+			speed = 4;
+			radius = 16 + other.deadFlash * 8;
+		}	
+	}
+	_time = lastTime;
+} else if (tutorial) {
 	if (oPlayer.vsp != 0) tutorial = false;
 } else if (!inBetweenPhases) {
 	movement = ApproachFade(movement, 1, 0.1, 0.7);
@@ -89,7 +115,7 @@ if (tutorial) {
 	else if (phase == 5) image_angle += (1 + 20 * shootPulse) * (1 + panic);
 } else if (alarm[0] <= 0) {
 	movement = ApproachFade(movement, 0, 0.1, 0.7);
-	if (--explosionWait > 0 or !global.audioTick or global.audioBeat % 2 != 0) {
+	if (--explosionWait > 0 or !global.audioTick or (global.audioBeat % 2 != 0 and !dead)) {
 		var _x, _y, _depth;
 		if (array_length(eyes) > 0) {
 			_x = eyes[0].obj.x;
@@ -137,14 +163,14 @@ if (tutorial) {
 			instance_destroy(eyes[0].obj);
 			array_delete(eyes,0,1);
 		}
-		ScreenShake(25, 50);
+		ScreenShake(25 - 15 * dead, 50);
 	}
 }
 
-stunned = ApproachFade(stunned, (inBetweenPhases and alarm[0] <= 0), 0.1, 0.7);
+stunned = ApproachFade(stunned, ((inBetweenPhases and alarm[0] <= 0) or (deadBeat > 0)) - min(1, deadFlash * 1.5), 0.1, 0.7);
 
 // Boss Flashing
-flash = Approach(flash, 0, 0.1);
+flash = Approach(flash, 0, 0.1 - 0.05 * (deadBeat >= 12));
 bigFlash = ApproachFade(bigFlash, 0, 0.03, 0.7);
 image_blend = merge_color(c_white, c_red, flash);
 shootPulse = Approach(shootPulse, 0, 0.05);
@@ -162,14 +188,26 @@ panic = Approach(panic, hp <= maxHp / 12, 0.1, 0.7);
 // Lock HP
 hp = max(hp, maxHp / 6 * (5-phase));
 
-if (global.audioTick and global.audioBeat % 4 == 0 and hp == maxHp / 6 * (5-phase) and !inBetweenPhases) {
+if (global.audioTick and global.audioBeat % (4 * (1 + (phase == 5))) == (phase == 5) * 4 and hp == maxHp / 6 * (5-phase) and !inBetweenPhases) {
+	if (hp <= 0 and audio_is_playing(mLvl1Music)) {
+		with(oLvl1BossHoming) {
+			startBeat -= oMusicController.thisBeat;	
+		}
+		audio_stop_sound(mLvl1Music);
+		oMusicController.music = audio_play_sound(mLvl1MusicBossDefeat, 1, false);
+		oMusicController.thisBeat = 0;
+	}
+	
+	if (phase == 4) {
+		audio_sound_loop(oMusicController.music, true);
+	}
+	
 	image_angle = 0;
 	inBetweenPhases = true;
+	explosionWait = 60;
 	if (phase < 5) {
-		explosionWait = 60;
 		eyes[0].obj.dead = true;
 	} else {
-		explosionWait = 120;
 		dead = true;
 	}
 }

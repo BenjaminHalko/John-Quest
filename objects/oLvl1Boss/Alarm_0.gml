@@ -1,4 +1,6 @@
 /// @desc 
 
-inBetweenPhases = false;
-phase++;
+if (!dead) {
+	inBetweenPhases = false;
+	phase++;
+}

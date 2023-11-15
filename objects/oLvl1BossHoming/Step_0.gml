@@ -28,13 +28,16 @@ if (_percent == 1) {
 }
 
 flash = Approach(flash, 0, 0.05);
-if (global.audioTick) flash = 1;
 
-if (place_meeting(x,y,oPlayer)) {
-	oPlayer.hurtPlayer();
-	var _dir = point_direction(x,y,oPlayer.x,oPlayer.y);
-	oPlayer.hsp = lengthdir_x(8,_dir);
-	oPlayer.vsp = lengthdir_y(8,_dir);
+if (!oLvl1Boss.inBetweenPhases) {
+	if (global.audioTick) flash = 1;
+
+	if (place_meeting(x,y,oPlayer)) {
+		oPlayer.hurtPlayer();
+		var _dir = point_direction(x,y,oPlayer.x,oPlayer.y);
+		oPlayer.hsp = lengthdir_x(8,_dir);
+		oPlayer.vsp = lengthdir_y(8,_dir);
+	}
 }
 
 image_angle -= 10;

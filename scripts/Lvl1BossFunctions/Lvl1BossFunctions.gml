@@ -17,7 +17,7 @@ function DrawBossLvl1(_surface) {
 		shader_set_uniform_f(global.uFlashPercent, flash * (1 - dead * 0.5));
 		shader_set_uniform_f_array(global.uFlashColor, choose([0.8,0,0],[0.2,0.1,0]));
 	}
-	var _index = (oLvl1Boss.phase == 5);
+	var _index = (oLvl1Boss.phase == 5 and !oLvl1Boss.dead);
 	if (flash > 0) _index = image_index;
 
 	// Draw Eyes
@@ -52,9 +52,8 @@ function DrawBossLvl1(_surface) {
 	camera_apply(view_camera[0]);
 	shader_set(shFlash);
 	shader_set_uniform_f(global.uFlashColor, 1,1,1);
-	shader_set_uniform_f(global.uFlashPercent, oLvl1Boss.bigFlash);
-
-	var _scale = 1 + oLvl1Boss.shootPulse / 3 + flash * 0.2 * (1 + dead);
+	shader_set_uniform_f(global.uFlashPercent, min(1, oLvl1Boss.bigFlash + oLvl1Boss.deadFlash));
+	var _scale = (1 + oLvl1Boss.shootPulse / 3 + flash * 0.2 * (1 + dead) + oLvl1Boss.deadFlash * 0.75) * oLvl1Boss.scale;
 	var _len = point_distance(0,0,sprite_xoffset,sprite_yoffset)*_scale;
 	var _dir = point_direction(sprite_xoffset,sprite_yoffset,0,0) + _turnAngle;
 	var _extra = random_range(-10,10) * flash;

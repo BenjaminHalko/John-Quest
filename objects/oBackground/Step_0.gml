@@ -4,7 +4,7 @@ enableLive;
 
 for(var i = 0; i < array_length(particles); i++) {
 	particles[i].y -= lerp(1, 4, particles[i].spd) * (1-bossTransitionPercent);
-	particles[i].x -= lerp(15, 20, particles[i].spd) * bossTransitionPercent;
+	particles[i].x -= lerp(15, 20, particles[i].spd) * bossTransitionPercent * lerp(0.2, 1, finalSpd);
 	
 	if (global.audioTick and particles[i].audioReactive and global.audioBeat % 4 == particles[i].beat and !bossMode) {
 		particles[i].pulse = 6;
@@ -17,7 +17,7 @@ for(var i = 0; i < array_length(particles); i++) {
 		particles[i].spd = random(1);
 	}
 	
-	if (particles[i].x < -30) {
+	if (particles[i].x < -30 and finalSpd == 1) {
 		particles[i].x = 590;
 		particles[i].y = random(270);
 		particles[i].audioReactive = false;
