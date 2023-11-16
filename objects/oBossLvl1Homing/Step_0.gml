@@ -2,8 +2,6 @@
 
 enableLive;
 
-if (!isOnScreen() and oBossLvl1.dead) instance_destroy();
-
 var _percent = min(1, (oMusicController.thisBeat - startBeat) / time);
 
 x = lerp(xstart, targetX, _percent);
@@ -17,15 +15,15 @@ for(var i = trailNum; i < floor(point_distance(xstart,ystart,x,y) / 8); i++) {
 	trailNum++;
 }
 
-if (_percent == 1) {
+if (_percent == 1 or _percent < 0) {
 	for(var i = 0; i < 10; i++) {
-		with(instance_create_layer(x,y,layer,oBossLvl1Bullet)) {
+		with(instance_create_layer(targetX,targetY,layer,oBossLvl1Bullet)) {
 			direction = other.dir + (i + 0.5) * 36;
 			image_xscale = 0.75;
 			image_yscale = 0.75;
 		}
 	}
-	instance_create_layer(x,y,layer,oBossLvl1HomingExplosion);
+	instance_create_layer(targetX,targetY,layer,oBossLvl1HomingExplosion);
 	instance_destroy();
 }
 

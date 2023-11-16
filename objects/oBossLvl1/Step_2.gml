@@ -8,7 +8,7 @@ if (dead and global.audioTick) {
 
 if (deadBeat >= 23) {
 	if (!audio_is_playing(mLvl1MusicBossDefeat)) {
-		call_later(60, time_source_units_frames, function() { Transition(rLvl2) });
+		call_later(60 * 3, time_source_units_frames, function() { Transition(rLvl2) });
 		oPlayer.autoMove = oPlayer.x;
 		oPlayer.hsp = 0;
 		oPlayer.vsp = 0;
