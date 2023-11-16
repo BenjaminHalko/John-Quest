@@ -24,7 +24,7 @@ scale = 1;
 
 panic = 0;
 shootPulse = 0;
-allowLoop = true;
+allowLoop = false;
 
 destroyCurve = animcurve_get_channel(BossLvl1Curves, "destroy");
 
