@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snExplosion.wav",
   "type": 0,
-  "volume": 0.8,
+  "volume": 0.65,
 }
