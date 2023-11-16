@@ -25,7 +25,7 @@ function DrawBossLvl1(_surface) {
 
 	gpu_set_colorwriteenable(1, 1, 1, 0);
 
-	var _radius = (8 - 5 * (sprite_index == sLvl1BossSmall)) * (1 - oBossLvl1.stunned);
+	var _radius = (8 - 5 * (sprite_index == sBossLvl1Small)) * (1 - oBossLvl1.stunned);
 	var _angle = lerp(point_direction(x, y, oPlayer.x, oPlayer.y) - _turnAngle, 180, oBossLvl1.stunned);
 	
 	var _drawX = sprite_xoffset + lengthdir_x(_radius, _angle) + random_range(-5, 5) * min(4, flash + oBossLvl1.bigFlash * 4);
@@ -41,7 +41,7 @@ function DrawBossLvl1(_surface) {
 		shader_set_uniform_f(global.uFlashColor, 1, 1, 1);
 	}
 
-	draw_sprite_ext((sprite_index == sLvl1BossSmall) ? sLvl1BossSmallIris : sLvl1BossIris, _index + (oBossLvl1.phase == 5) * 2, _drawX, _drawY, 1+flash+oBossLvl1.stunned/2, 1+flash*2+oBossLvl1.stunned/2, _angle-180, c_white, 1);
+	draw_sprite_ext((sprite_index == sBossLvl1Small) ? sBossLvl1SmallIris : sBossLvl1Iris, _index + (oBossLvl1.phase == 5) * 2, _drawX, _drawY, 1+flash+oBossLvl1.stunned/2, 1+flash*2+oBossLvl1.stunned/2, _angle-180, c_white, 1);
 
 	shader_reset();
 	gpu_set_colorwriteenable(1, 1, 1, 1);

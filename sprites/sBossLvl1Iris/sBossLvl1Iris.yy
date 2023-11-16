@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "sLvl1BossIris",
+  "name": "sBossLvl1Iris",
   "bbox_bottom": 34,
   "bbox_left": 19,
   "bbox_right": 63,
@@ -34,7 +34,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "sLvl1BossIris",
+    "name": "sBossLvl1Iris",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -56,9 +56,9 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e487e1fa-a6f5-4086-9480-dd12004e69c5","path":"sprites/sLvl1BossIris/sLvl1BossIris.yy",},},},"Disabled":false,"id":"f8d65910-2df2-4b34-9cad-d0c24cc433dc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aa7116e1-dc54-4230-a861-97fd4c231c78","path":"sprites/sLvl1BossIris/sLvl1BossIris.yy",},},},"Disabled":false,"id":"fd840a8d-fd0e-4d72-ac2c-2ea02e6aeb87","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fee1677a-cbc0-4bbd-9226-d941d395da3b","path":"sprites/sLvl1BossIris/sLvl1BossIris.yy",},},},"Disabled":false,"id":"9a984ac3-a848-4572-90f1-63f35b16466a","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e487e1fa-a6f5-4086-9480-dd12004e69c5","path":"sprites/sBossLvl1Iris/sBossLvl1Iris.yy",},},},"Disabled":false,"id":"f8d65910-2df2-4b34-9cad-d0c24cc433dc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aa7116e1-dc54-4230-a861-97fd4c231c78","path":"sprites/sBossLvl1Iris/sBossLvl1Iris.yy",},},},"Disabled":false,"id":"fd840a8d-fd0e-4d72-ac2c-2ea02e6aeb87","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fee1677a-cbc0-4bbd-9226-d941d395da3b","path":"sprites/sBossLvl1Iris/sBossLvl1Iris.yy",},},},"Disabled":false,"id":"9a984ac3-a848-4572-90f1-63f35b16466a","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

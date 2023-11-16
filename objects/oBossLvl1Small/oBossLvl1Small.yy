@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sLvl1BossSmall",
-    "path": "sprites/sLvl1BossSmall/sLvl1BossSmall.yy",
+    "name": "sBossLvl1Small",
+    "path": "sprites/sBossLvl1Small/sBossLvl1Small.yy",
   },
   "spriteMaskId": null,
   "visible": true,
