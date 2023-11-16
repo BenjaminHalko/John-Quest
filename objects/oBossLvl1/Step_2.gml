@@ -51,6 +51,7 @@ if (deadBeat >= 23) {
 		ScreenShake(5,10);
 	}
 	if (introPhase == 4) {
+		if (!instance_exists(oBossLvl1UI)) instance_create_depth(0,0,layer_get_depth("Bloom")+1,oBossLvl1UI);
 		var _target = oCamera.boundary.bbox_right-48;
 		x = ApproachFade(x,_target,10,0.7);	
 		if (x >= _target-0.1 and alarm[0] <= 0) {
