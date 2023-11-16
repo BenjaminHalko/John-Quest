@@ -109,7 +109,7 @@ if (deadBeat >= 23) {
 			}
 		} break;
 		case 5: {
-			if (global.audioTick and global.audioBeat % 2 == 0) {
+			if (global.audioTick and global.audioBeat % (4 - 2 * (hp <= maxHp / 12)) == 0) {
 				instance_create_layer(x-16,y,layer,oBossLvl1Homing);
 				shootPulse = 1;
 			}
