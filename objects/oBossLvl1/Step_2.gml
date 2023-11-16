@@ -212,7 +212,7 @@ if (global.audioTick and global.audioBeat % (4 * (1 + (phase == 5))) == (phase =
 	}
 }
 
-if (hp < maxHp / 6 * 1.5 and allowLoop and oMusicController.thisBeat < 57 * 4) {
+if (hp < maxHp / 6 * 2 and allowLoop and oMusicController.thisBeat < 57 * 4) {
 	audio_sound_loop_start(oMusicController.music, 60 / oMusicController.bpm * 51 * 4);
 	audio_sound_loop_end(oMusicController.music, 60 / oMusicController.bpm * 57 * 4);
 	allowLoop = false;

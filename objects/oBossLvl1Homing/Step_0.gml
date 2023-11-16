@@ -16,9 +16,10 @@ for(var i = trailNum; i < floor(point_distance(xstart,ystart,x,y) / 8); i++) {
 }
 
 if (_percent == 1 or _percent < 0) {
-	for(var i = 0; i < 10; i++) {
+	var _amount = 10 + 4 * (oBossLvl1.hp > oBossLvl1.maxHp / 12);
+	for(var i = 0; i < _amount; i++) {
 		with(instance_create_layer(targetX,targetY,layer,oBossLvl1Bullet)) {
-			direction = other.dir + (i + 0.5) * 36;
+			direction = other.dir + (i + 0.5) * 360 / _amount;
 			image_xscale = 0.75;
 			image_yscale = 0.75;
 		}
