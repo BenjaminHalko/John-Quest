@@ -1,12 +1,8 @@
 /// @desc
 
-var _keyUp = keyboard_check(vk_up);
-var _keyDown = keyboard_check(vk_down);
-var _keyRight = keyboard_check(vk_right);
-var _keyLeft = keyboard_check(vk_left);
-var _keyDash = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_shift);
-var _move = _keyRight-_keyLeft;
-var _duck = _keyUp - _keyDown;
+Input()
+var _move = keyRight-keyLeft;
+var _duck = keyUp - keyDown;
 
 if (respawnPercent == 1) {
 	if dash == 0 {
@@ -52,7 +48,7 @@ if (respawnPercent == 1) {
 			}
 	
 			// Dashing
-			if _keyDash {
+			if keyAction {
 				if canJump > 0 {
 					if(savedJumpID.collect()) {
 						vsp = jumpSpd;
