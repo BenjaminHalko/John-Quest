@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (!helix) {
 	draw_self();
 } else {

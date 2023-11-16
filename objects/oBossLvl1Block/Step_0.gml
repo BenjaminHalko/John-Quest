@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 flash = Approach(flash, 0, 0.1);
 
 if (global.audioTick) counter--;

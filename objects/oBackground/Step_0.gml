@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 for(var i = 0; i < array_length(particles); i++) {
 	particles[i].y -= lerp(1, 4, particles[i].spd) * (1-bossTransitionPercent);
 	particles[i].x -= lerp(15, 20, particles[i].spd) * bossTransitionPercent * lerp(0.2, 1, finalSpd);

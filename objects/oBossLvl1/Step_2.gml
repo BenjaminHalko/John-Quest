@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (dead and global.audioTick) {
 	deadBeat++;
 }
@@ -33,8 +31,48 @@ if (deadBeat >= 23) {
 		}	
 	}
 	_time = lastTime;
+} else if (intro) {
+	if (introPhase == 0 and sprite_index == sBossLvl1Intro) image_speed = 1;
+	if (introPhase == 1 and blink != 4) {
+		blink = Approach(blink, 4, 0.1);
+		if (blink == 4) alarm[0] = 15;
+	}
+	if (introPhase == 2 and introEyePercent != 1) {
+		introEyePercent = ApproachFade(introEyePercent, 1, 0.1, 0.7);
+		if (introEyePercent == 1) alarm[0] = 5;
+	}
+	if (introPhase == 3) {
+		if (alarm[0] <= 0) {
+			alarm[0] = 200;
+			audio_play_sound(snBossLvl1Roar, 1, false);
+		}
+		x = xstart + random_range(-10,10);
+		y = ystart + random_range(-10,10);
+		ScreenShake(5,10);
+	}
+	if (introPhase == 4) {
+		var _target = oCamera.boundary.bbox_right-48;
+		x = ApproachFade(x,_target,10,0.7);	
+		if (x >= _target-0.1 and alarm[0] <= 0) {
+			x = _target;
+			alarm[0] = 10;
+		}
+	}
+	if (introPhase == 5) {
+		for(var i = 0; i < 5; i++) {
+			if (i == 0 or eyes[i-1].obj.scale > 0.5) {
+				eyes[i].obj.scale = ApproachFade(eyes[i].obj.scale, 1, 0.1, 0.7);	
+			}
+		}
+		
+		if (eyes[4].obj.scale == 1 and alarm[0] <= 0) alarm[0] = 10;
+	}
+	
+	if (sprite_index != sBossLvl1Intro) image_angle = lerp(-90,0,(x - xstart) / ((oCamera.boundary.bbox_right-48) - xstart));
 } else if (tutorial) {
-	if (oPlayer.vsp != 0) tutorial = false;
+	tutorialScale = ApproachFade(tutorialScale, 1, 0.1, 0.7);
+	if (oPlayer.vsp != 0) showMovementTutorial = false;
+	if (bigFlash != 0) tutorial = false;
 } else if (!inBetweenPhases and !dead) {
 	movement = ApproachFade(movement, 1, 0.1, 0.7);
 	switch(phase) {
@@ -180,8 +218,11 @@ bigFlash = ApproachFade(bigFlash, 0, 0.03, 0.7);
 image_blend = merge_color(c_white, c_red, flash);
 shootPulse = Approach(shootPulse, 0, 0.05);
 
-if (phase == 5) x = xstart - 96 + sin((oMusicController.thisBeat % 4) * pi * (1 + panic)) * 32 * movement - 16 * movement + 16 * shootPulse;
-else x = ApproachFade(x,xstart-96,5,0.7);
+var _ramPercent = animcurve_channel_evaluate(ramCurve, ram);
+if (phase == 5) x = oCamera.boundary.bbox_right-48 + sin((oMusicController.thisBeat % 4) * pi * (1 + panic)) * 32 * movement - 16 * movement + 16 * shootPulse;
+else if (ram != 0) {
+	x = oCamera.boundary.bbox_right-48 - _ramPercent * 96;
+} else if (!intro) x = ApproachFade(x,oCamera.boundary.bbox_right-48,5,0.7);
 
 y = ystart + Wave(-4,4,5,0) + sin((oMusicController.thisBeat % (8 - (phase == 5) * 2)) * pi / (4 - (phase == 5))) * 60 * movement;
 
@@ -205,12 +246,13 @@ if (global.audioTick and global.audioBeat % (4 * (1 + (phase == 5))) == (phase =
 	
 	image_angle = 0;
 	inBetweenPhases = true;
-	explosionWait = 60;
+	explosionWait = 120;
 	if (phase < 5) {
 		eyes[0].obj.dead = true;
 	} else {
 		dead = true;
 	}
+	audio_play_sound(snBossLvl1Roar, 1, false);
 }
 
 if (hp < maxHp / 6 * 2 and allowLoop and oMusicController.thisBeat < 57 * 4) {
@@ -227,4 +269,32 @@ for (var i = 0; i < array_length(eyes); i++) {
 	eyes[i].obj.image_angle = eyes[i].angle + Wave(-3,3,2+eyes[i].waveOffset,eyes[i].waveOffset);
 	eyes[i].obj.x = x + eyes[i].x;
 	eyes[i].obj.y = ystart + eyes[i].y + Wave(-4,4,5+eyes[i].waveOffset,eyes[i].waveOffset) + sin(((oMusicController.thisBeat % 8)+0.1*abs(eyes[i].y)/50) * pi / 4) * 60 * movement;
+}
+
+if (place_meeting(x,y,oPlayer) and !inBetweenPhases) {
+	oPlayer.hurtPlayer();
+	oPlayer.hsp = -10;
+}
+
+if (x - oPlayer.x < 100 and oPlayer.y > bbox_top and oPlayer.y < bbox_bottom) {
+	ramWait++;	
+} else {
+	var _detect = false;
+	with (oBossLvl1Small) {
+		if (x - oPlayer.x < 100 and oPlayer.y > bbox_top and oPlayer.y < bbox_bottom) {
+			_detect = true;
+			break;
+		}
+	}
+	
+	if (_detect) ramWait++;
+	else ramWait = max(ramWait - 2,0);
+}
+
+if (inBetweenPhases or dead) ramWait = 0;
+
+if (ram != 0 or ramWait > 60) {
+	ramWait = 0;
+	ram = Approach(ram, 1, 0.05);
+	if (ram == 1) ram = 0;
 }

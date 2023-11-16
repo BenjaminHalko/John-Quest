@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (moveUpPercent > 0.1) {
 	for(var i = 0; i < array_length(stars); i++) {
 		stars[i].alpha += stars[i].spd;

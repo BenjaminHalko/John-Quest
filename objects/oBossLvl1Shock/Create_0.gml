@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 targetYscale = 0;
 fade = noone;
 spikeDir = 0;

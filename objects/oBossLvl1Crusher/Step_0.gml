@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (remove or oBossLvl1.inBetweenPhases) {
 	image_yscale = Approach(image_yscale, 0, 4);
 	if (image_yscale == 0) instance_destroy();

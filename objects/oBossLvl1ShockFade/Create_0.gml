@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 image_alpha = 0;
 counter = 4;
 

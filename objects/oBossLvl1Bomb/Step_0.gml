@@ -1,8 +1,5 @@
 /// @desc 
 
-enableLive;
-
-
 if (oBossLvl1.inBetweenPhases) {
 	image_xscale = ApproachFade(image_xscale,0,0.1,0.7);
 	if (image_xscale <= 0) instance_destroy();

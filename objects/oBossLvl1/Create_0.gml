@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 flash = 0;
 bigFlash = 0;
 
@@ -29,6 +27,20 @@ allowLoop = true;
 destroyCurve = animcurve_get_channel(BossLvl1Curves, "destroy");
 
 tutorial = true;
+tutorialScale = 0;
+showMovementTutorial = true;
+
+intro = true;
+image_speed = 0;
+sprite_index = sBossLvl1Intro;
+introPhase = -1;
+alarm[0] = 60;
+introEyePercent = 0;
+blink = 0;
+
+ram = 0;
+ramWait = 0;
+ramCurve = animcurve_get_channel(BossLvl1Curves, "ram");
 
 eyes = [
 	{ x: -42, y: 2, angle: 4 }, // 3

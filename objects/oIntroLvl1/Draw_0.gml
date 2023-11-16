@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (counter > 0 and counter % 2 == 1) {
 	var _x = oCamera.x;
 	var _y = oCamera.y;

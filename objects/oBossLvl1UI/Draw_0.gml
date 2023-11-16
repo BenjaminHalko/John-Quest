@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 var _x = camera_get_view_x(view_camera[0]);
 var _y = camera_get_view_y(view_camera[0]);
 var _barY = _y + 260 + (32 * (1 - oBossLvl1.movement) * oBossLvl1.dead);
@@ -26,7 +24,7 @@ draw_text(_x+8,_barY,"BOSS:");
 draw_set_color(c_black);
 draw_rectangle(_barX1,_barY1,_barX2,_barY2,false);
 draw_set_color(_col);
-draw_rectangle(_barX1+1,_barY1+1,_barX2,_barY2,true);
+draw_rectangle(_barX1+1,_barY1+1,_barX2,_barY2-0.5,true);
 if (healthDisplay > 0) {
 	draw_set_color(merge_color(_col, c_white, oBossLvl1.bigFlash));
 	draw_rectangle(_barInnerX1,_barInnerY1,lerp(_barInnerX1,_barInnerX2,healthDisplay),_barInnerY2,false);

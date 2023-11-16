@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (counter <= 0) {
 	baseScale = Approach(baseScale, 0, 0.2);
 	if (baseScale <= 0.2) instance_destroy();

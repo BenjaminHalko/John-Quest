@@ -1,3 +1,5 @@
 /// @desc 
 
-DrawBossLvl1(surf);
+if (scale > 0) {
+	DrawBossLvl1(surf);
+}

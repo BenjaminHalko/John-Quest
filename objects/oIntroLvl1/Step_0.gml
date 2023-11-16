@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 var _time = oMusicController.thisBeat % 0.25;
 
 if (counter > 0) {

@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 startBeat = oMusicController.thisBeat;
 time = 2 - (oMusicController.thisBeat % 2 - global.audioBeat % 2);
 

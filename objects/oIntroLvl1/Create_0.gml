@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 counter = 14;
 lastTime = infinity;
 

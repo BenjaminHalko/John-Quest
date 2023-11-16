@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 title = false;
 
 moveUpPercent = 0;

@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 targetYscale = 1;
 fade = noone;
 image_yscale = 1;

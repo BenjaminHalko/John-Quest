@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 draw_self();
 var _spikeDir = spikeDir * 90 + image_angle - 90;
 var _spikeX = x + lengthdir_x(28, _spikeDir) - lengthdir_y(8 * spikeDir, _spikeDir);

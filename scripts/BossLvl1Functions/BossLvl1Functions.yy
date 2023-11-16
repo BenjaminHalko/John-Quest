@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Lvl1BossFunctions",
+  "name": "BossLvl1Functions",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

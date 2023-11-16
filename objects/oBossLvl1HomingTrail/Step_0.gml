@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 var _wave = sin(((oMusicController.thisBeat % 1) + waveOffset) * pi * 2) * 2.5;
 x = xstart + lengthdir_x(_wave,dir-90);
 y = ystart + lengthdir_y(_wave,dir-90);

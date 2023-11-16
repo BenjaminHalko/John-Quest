@@ -1,7 +1,5 @@
 /// @desc
 
-enableLive;
-
 var _keyUp = keyboard_check(vk_up);
 var _keyDown = keyboard_check(vk_down);
 var _keyRight = keyboard_check(vk_right);

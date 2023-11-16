@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 flash = 1;
 baseScale = 1;
 
