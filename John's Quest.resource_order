@@ -2,6 +2,7 @@
   "FolderOrderSettings": [
     {"name":"Bloom","order":2,"path":"folders/Global/Effects/Bloom.yy",},
     {"name":"Particles","order":1,"path":"folders/Global/Effects/Particles.yy",},
+    {"name":"Transition","order":11,"path":"folders/Global/Transition.yy",},
     {"name":"Audio","order":1,"path":"folders/Level1/Audio.yy",},
     {"name":"SoundFXs","order":1,"path":"folders/Level1/Audio/SoundFXs.yy",},
     {"name":"Boss","order":6,"path":"folders/Level1/Boss.yy",},
@@ -17,7 +18,6 @@
     {"name":"Player","order":1,"path":"folders/Level2/Player.yy",},
     {"name":"Tilesets","order":4,"path":"folders/Level2/Tilesets.yy",},
     {"name":"Sprites","order":1,"path":"folders/Level2/Tilesets/Sprites.yy",},
-    {"name":"Transition","order":11,"path":"folders/Global/Transition.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},
