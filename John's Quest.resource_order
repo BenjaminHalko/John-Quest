@@ -60,6 +60,7 @@
     {"name":"oBossLvl1Bomb","order":1,"path":"objects/oBossLvl1Bomb/oBossLvl1Bomb.yy",},
     {"name":"tWallBack","order":3,"path":"tilesets/tWallBack/tWallBack.yy",},
     {"name":"oBossLvl1ShockFade","order":2,"path":"objects/oBossLvl1ShockFade/oBossLvl1ShockFade.yy",},
+    {"name":"snExplosion","order":3,"path":"sounds/snExplosion/snExplosion.yy",},
     {"name":"oMusicController","order":3,"path":"objects/oMusicController/oMusicController.yy",},
     {"name":"oCameraBoundary","order":2,"path":"objects/oCameraBoundary/oCameraBoundary.yy",},
     {"name":"shFlash","order":1,"path":"shaders/shFlash/shFlash.yy",},

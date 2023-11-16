@@ -167,6 +167,7 @@ if (deadBeat >= 23) {
 			instance_destroy(eyes[0].obj);
 			array_delete(eyes,0,1);
 		}
+		audio_play_sound(snExplosion, 1, false, 1, 0, random_range(0.8, 1.2));
 		ScreenShake(25 - 15 * dead, 50);
 	}
 }
