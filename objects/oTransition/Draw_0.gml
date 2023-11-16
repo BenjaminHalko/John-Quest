@@ -11,7 +11,7 @@ switch(transitionType) {
 		var _delay = 2;
 		for(var i = 0; i < 16; i++) {
 			for(var j = 0; j < 9; j++) {
-				var _dir = leading ? (1 - i / 16) : (i / 16);
+				var _dir = leading ? (1 - j / 9) : (j / 9);
 				var _percent = clamp(percent * (1 + _delay) - _dir * _delay, 0, 1);
 				if (_percent > 0) {
 					var _x = _camX + (i + 0.5) * 30;
