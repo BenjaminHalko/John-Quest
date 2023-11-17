@@ -1,11 +1,15 @@
 /// @desc Entity Loop
+enableLive;
+
 depth = -bbox_bottom;
 if (lifted) and (instance_exists(oPlayer))
 {
-	x = oPlayer.x;
-	y = oPlayer.y;
-	z = 8;
-	depth = oPlayer.depth-1;
+	if (oPlayer.animType != PLAYERANIM.LIFT) {
+		x = oPlayer.x + oPlayer.topShift;
+		y = oPlayer.y;
+		z = CARRY_HEIGHT;
+		depth = oPlayer.depth-1;
+	}
 }
 	
 if (!lifted)
@@ -16,7 +20,7 @@ if (!lifted)
 		throwDistanceTravelled = min(throwDistanceTravelled+3,entityThrowDistance);
 		x = xstart + lengthdir_x(throwDistanceTravelled, direction);
 		y = ystart + lengthdir_y(throwDistanceTravelled, direction);
-		if(tilemap_get_at_pixel(collisionMap,x,y) > 0)
+		if(tilemap_get_at_pixel(global.collisionMap,x,y) > 0)
 		{
 			thrown = false;
 			grav = 0.1;

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "State Machine",
-    "path": "folders/Level2/Player/Player Scripts/State Machine.yy",
+    "path": "folders/Level2/Player/Scripts/State Machine.yy",
   },
 }

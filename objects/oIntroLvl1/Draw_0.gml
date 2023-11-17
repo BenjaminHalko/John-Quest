@@ -12,5 +12,5 @@ if (counter > 0 and counter % 2 == 1) {
 }
 
 if (counter <= 0) {
-	draw_sprite_ext(sPlayer, 0, oPlayer.x, playerY - 8, 0.5, 2, 0, c_white, 1);	
+	draw_sprite_ext(sPlayerLvl1, 0, oPlayer.x, playerY - 8, 0.5, 2, 0, c_white, 1);	
 }

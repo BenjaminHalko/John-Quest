@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sPlayer",
-    "path": "sprites/sPlayer/sPlayer.yy",
+    "name": "sPlayerLvl1",
+    "path": "sprites/sPlayerLvl1/sPlayerLvl1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

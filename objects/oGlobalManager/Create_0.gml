@@ -1,9 +1,5 @@
 /// @desc Initialize Game
 
-// Macros
-#macro CARRY_HEIGHT 8
-#macro TILE_SIZE 16
-
 // GMLive
 #macro enableLive if (live_call()) return live_result
 instance_create_layer(0,0,layer,obj_gmlive);

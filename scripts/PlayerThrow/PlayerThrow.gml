@@ -13,7 +13,7 @@ function PlayerThrow() {
 		xstart = x;
 		ystart = y;
 	}
-	PlayerActOutAnimation(sPlayerLift);
+	//PlayerActOutAnimation(sPlayerLift);
 	
 	PlayerDropItem();
 }

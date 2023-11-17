@@ -1,10 +1,3 @@
-enum ITEM {
-	SWORD,
-	BOMB,
-	HOOK,
-	TYPE_COUNT
-}
-
 global.gamePaused = false;
 global.textSpeed = .75;
 global.targetRoom = -1;

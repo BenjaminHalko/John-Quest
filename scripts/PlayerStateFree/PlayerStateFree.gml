@@ -4,6 +4,16 @@ function PlayerStateFree() {
 	vSpeed = lengthdir_y(inputMagnitude * speedWalk, inputDirection);
 
 	PlayerCollision();
+	
+	if (inputMagnitude != 0) {
+		animType = PLAYERANIM.RUN;
+		direction = inputDirection;
+	} else {
+		animType = PLAYERANIM.IDLE;
+		direction = 90 * sign(xscale) + 90;
+	}
+	
+	PlayerAnimateSprite();
 
 	//Activate Key Logic
 	if (keyAction)
