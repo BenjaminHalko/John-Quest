@@ -63,6 +63,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level2/Tilesets/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"House","folderPath":"folders/Level2/House.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rock","folderPath":"folders/Level2/Rock.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -98,6 +99,7 @@
     {"id":{"name":"oTimedSpike","path":"objects/oTimedSpike/oTimedSpike.yy",},},
     {"id":{"name":"oBossLvl1UI","path":"objects/oBossLvl1UI/oBossLvl1UI.yy",},},
     {"id":{"name":"oBossLvl1CrusherFade","path":"objects/oBossLvl1CrusherFade/oBossLvl1CrusherFade.yy",},},
+    {"id":{"name":"sRock","path":"sprites/sRock/sRock.yy",},},
     {"id":{"name":"BossLvl1Curves","path":"animcurves/BossLvl1Curves/BossLvl1Curves.yy",},},
     {"id":{"name":"sBossLvl1HomingTrail","path":"sprites/sBossLvl1HomingTrail/sBossLvl1HomingTrail.yy",},},
     {"id":{"name":"GMLive_exec","path":"scripts/GMLive_exec/GMLive_exec.yy",},},
