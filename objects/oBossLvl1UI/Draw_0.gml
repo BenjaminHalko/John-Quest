@@ -15,7 +15,7 @@ var _barInnerY2 = _barY2-3;
 
 var _col = #ED008C;
 
-draw_set_font(fFont);
+draw_set_font(fRetro);
 draw_set_color(_col);
 draw_set_halign(fa_left);
 draw_set_valign(fa_center);

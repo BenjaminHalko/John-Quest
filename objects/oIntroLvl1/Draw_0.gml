@@ -4,7 +4,7 @@ if (counter > 0 and counter % 2 == 1) {
 	var _x = oCamera.x;
 	var _y = oCamera.y;
 
-	draw_set_font(fFont);
+	draw_set_font(fRetro);
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
