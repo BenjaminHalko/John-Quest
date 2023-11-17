@@ -8,10 +8,10 @@ if (flash != 0) {
 }
 
 draw_sprite_pos(sprite_index,image_index,
-	floor(x)-wHalf*xscale+topShift,floor(y)-wHalf*2*yscale+wHalf,
-	floor(x)+wHalf*xscale+topShift,floor(y)-wHalf*2*yscale+wHalf,
-	floor(x)+wHalf*xscale,floor(y)+wHalf,
-	floor(x)-wHalf*xscale,floor(y)+wHalf,
+	floor(x)-wHalf*xscale+topShift,floor(y)-wHalf*2*yscale,
+	floor(x)+wHalf*xscale+topShift,floor(y)-wHalf*2*yscale,
+	floor(x)+wHalf*xscale,floor(y),
+	floor(x)-wHalf*xscale,floor(y),
 image_alpha);
 
 if (flash != 0) shader_reset();
