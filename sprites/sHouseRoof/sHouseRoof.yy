@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "House",
-    "path": "folders/Level2/House.yy",
+    "path": "folders/Level2/Level Objects/House.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

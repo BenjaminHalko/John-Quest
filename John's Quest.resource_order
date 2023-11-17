@@ -18,8 +18,8 @@
     {"name":"Player","order":1,"path":"folders/Level2/Player.yy",},
     {"name":"Tilesets","order":4,"path":"folders/Level2/Tilesets.yy",},
     {"name":"Sprites","order":1,"path":"folders/Level2/Tilesets/Sprites.yy",},
-    {"name":"House","order":5,"path":"folders/Level2/House.yy",},
-    {"name":"Rock","order":6,"path":"folders/Level2/Rock.yy",},
+    {"name":"Rock","order":1,"path":"folders/Level2/Level Objects/Rock.yy",},
+    {"name":"Level Objects","order":7,"path":"folders/Level2/Level Objects.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oCrusher","order":5,"path":"objects/oCrusher/oCrusher.yy",},

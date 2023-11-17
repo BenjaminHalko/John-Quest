@@ -27,7 +27,7 @@
   "origin": 0,
   "parent": {
     "name": "Rock",
-    "path": "folders/Level2/Rock.yy",
+    "path": "folders/Level2/Level Objects/Rock.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
