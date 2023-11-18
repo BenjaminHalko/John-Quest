@@ -293,8 +293,8 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
     {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
+    {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
     {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
   ],
   "templateType": "game",

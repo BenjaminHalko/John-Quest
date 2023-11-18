@@ -55,7 +55,7 @@ boss = false;
 hurtPlayer = function() {
 	if(respawnPercent == 1) {
 		if (boss) {
-			if (tempHurt == 0 and !oBossLvl1.inBetweenPhases) {
+			if (tempHurt <= 30 and !oBossLvl1.inBetweenPhases) {
 				hsp = 0;
 				vsp = 0;
 				tempHurt = 60;
