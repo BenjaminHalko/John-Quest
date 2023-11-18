@@ -5,7 +5,7 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":null,"propertyId":{"name":"entityShadow","path":"objects/pEntity_1/pEntity_1.yy",},"value":"False",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":null,"propertyId":null,"value":"False",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pCollectable","path":"objects/pCollectable/pCollectable.yy",},"propertyId":{"name":"collectScript","path":"objects/pCollectable/pCollectable.yy",},"value":"CollectCoins",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pCollectable","path":"objects/pCollectable/pCollectable.yy",},"propertyId":{"name":"collectScriptArg","path":"objects/pCollectable/pCollectable.yy",},"value":"1",},
   ],
