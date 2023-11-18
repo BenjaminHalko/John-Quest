@@ -17,13 +17,6 @@ function PlayerStateFree() {
 	//Activate Key Logic
 	if (keyAction)
 	{
-		//1. Check for an entity to activate
-		//2. If there is nothing, or there is somehing but it has no script
-			//2A. If we are carrying something, throw it!
-			//2B. Otherwise, roll!
-		//3. Otherwise, there is something and it has a script! Activate!
-		//4. If the thing we activate is an NPC, make it face towards us!
-	
 		var _activateX = x;
 		var _activateY = y;
 		var _activateSize = 10;
@@ -48,8 +41,19 @@ function PlayerStateFree() {
 		if(activate == noone) {
 			if(global.iLifted != noone) {
 				PlayerThrow();
-			} else {
-				// Attack	
+			} else if (global.playerHasAnyItems) {
+				switch(global.playerEquipped) {
+					case ITEM.SWORD: {
+						UseItemSword();
+					} break;
+					case ITEM.HOOK: {
+						UseItemHook();
+					} break;
+					case ITEM.BOMB: {
+						UseItemBomb();
+					} break;
+				}
+				
 			}
 		} else if (activate.entityActivateScript == ActivateLiftable and global.iLifted != noone) {
 			PlayerThrow();
@@ -68,8 +72,8 @@ function PlayerStateFree() {
 			do
 			{
 				global.playerEquipped += _cycleDirection;
-				if(global.playerEquipped < 1) global.playerEquipped = ITEM.TYPE_COUNT-1;
-				if(global.playerEquipped >= ITEM.TYPE_COUNT) global.playerEquipped = 1;
+				if(global.playerEquipped < 0) global.playerEquipped = ITEM.TYPE_COUNT-1;
+				if(global.playerEquipped >= ITEM.TYPE_COUNT) global.playerEquipped = 0;
 			}
 			until (global.playerItemUnlocked[global.playerEquipped]);
 		}

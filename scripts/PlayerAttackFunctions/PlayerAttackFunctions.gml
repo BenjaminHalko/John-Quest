@@ -1,33 +1,3 @@
-function AttackSlash()
-{
-	//Attack Just Started
-	if (sprite_index != sPlayerAttackSlash)
-	{
-		sprite_index = sPlayerAttackSlash;
-		localFrame = 0;
-		image_index = 0;
-	
-		//Clear hit list
-		if (!ds_exists(hitByAttack,ds_type_list)) hitByAttack = ds_list_create();
-		ds_list_clear(hitByAttack);
-	}
-
-	CalcAttack(sPlayerAttackSlashHB);
-
-	if(animationEnd)
-	{
-		state = PlayerStateFree;
-		animationEnd = false;
-	}
-
-
-}
-
-function AttackSpin()
-{
-
-}
-
 function CalcAttack(argument0)
 {
 	//Use attack hibox & check for hits

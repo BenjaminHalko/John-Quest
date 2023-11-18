@@ -3,8 +3,6 @@
 enableLive;
 
 Input();
-keyItemSelectUp = 0;
-keyItemSelectDown = 0;
 
 inputMagnitude = (keyRight - keyLeft != 0) or (keyDown - keyUp != 0);
 inputDirection = point_direction(0,0,keyRight-keyLeft,keyDown-keyUp);

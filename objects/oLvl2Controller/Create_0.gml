@@ -9,10 +9,10 @@ global.playerHealth = global.playerHealthMax;
 global.playerMoney = 0;
 
 //Items
-global.playerHasAnyItems = false;
-global.playerEquipped = ITEM.SWORD;
-global.playerAmmo = array_create(ITEM.TYPE_COUNT,-1);
-global.playerItemUnlocked = array_create(ITEM.TYPE_COUNT, false);
+global.playerHasAnyItems = true;
+global.playerEquipped = ITEM.BOMB;
+global.playerBombAmmo = 10;
+global.playerItemUnlocked = array_create(ITEM.TYPE_COUNT, true);
 
 global.iLifted = noone;
 global.iUI = instance_create_layer(0,0,layer,oUI);

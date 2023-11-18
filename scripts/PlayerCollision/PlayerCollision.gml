@@ -47,7 +47,7 @@ function PlayerCollision() {
 	}
 
 	//Vertical Entity
-	var _entityCount = instance_position_list(x,y+vSpeed,pEntity,_entityList,false);
+	_entityCount = instance_position_list(x,y+vSpeed,pEntity,_entityList,false);
 	var _snapY;
 	while (_entityCount > 0)
 	{

@@ -46,7 +46,19 @@ _xx = 8;
 _yy = 24;
 
 draw_sprite(sItemUIBox,0,_xx,_yy);
-if(global.playerHasAnyItems or true)
+if(global.playerHasAnyItems)
 {
 	draw_sprite(sItemUI,global.playerEquipped,_xx,_yy);
+	if(global.playerEquipped == ITEM.BOMB)
+	{
+		draw_set_font(fAmmo);
+		draw_set_halign(fa_right);
+		draw_set_valign(fa_bottom);
+		draw_set_colour(c_white);
+		draw_text(
+			_xx + sprite_get_width(sItemUIBox)+1,
+			_yy + sprite_get_height(sItemUIBox)+1,
+			string(global.playerBombAmmo)
+		);
+	}
 }

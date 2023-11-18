@@ -7,7 +7,10 @@
 enum PLAYERANIM {
 	IDLE,
 	RUN,
-	LIFT
+	LIFT,
+	HOOK,
+	HURT,
+	SLASH
 }
 
 enum ENEMYSTATE
@@ -23,10 +26,9 @@ enum ENEMYSTATE
 
 enum ITEM
 {
-	NONE,
 	SWORD,
-	BOMB,
 	HOOK,
+	BOMB,
 	TYPE_COUNT
 }
 
