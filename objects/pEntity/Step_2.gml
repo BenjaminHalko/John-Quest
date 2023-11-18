@@ -1,13 +1,13 @@
 /// @desc Entity Loop
 enableLive;
 
-depth = -bbox_bottom;
+depth = -y;
 if (lifted) and (instance_exists(oPlayer))
 {
 	if (oPlayer.animType != PLAYERANIM.LIFT) {
 		x = oPlayer.x + oPlayer.topShift;
 		y = oPlayer.y;
-		z = CARRY_HEIGHT;
+		z = CARRY_HEIGHT - 16 + 16 * oPlayer.yscale;
 		depth = oPlayer.depth-1;
 	}
 }

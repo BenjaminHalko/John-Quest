@@ -1,4 +1,7 @@
 function PlayerStateAct() {
+	//Update Sprite
+	PlayerAnimateSprite();
+
 	if (animationEnd)
 	{
 		state = PlayerStateFree;

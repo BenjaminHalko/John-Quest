@@ -35,8 +35,6 @@
     {"name":"Text","order":8,"path":"folders/Level2/Text.yy",},
     {"name":"Tilesets","order":2,"path":"folders/Level2/Tilesets.yy",},
     {"name":"UI","order":5,"path":"folders/Level2/UI.yy",},
-    {"name":"Sprites","order":2,"path":"folders/Sprites.yy",},
-    {"name":"Player","order":1,"path":"folders/Sprites/Player.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oTextQueued","order":1,"path":"objects/oTextQueued/oTextQueued.yy",},

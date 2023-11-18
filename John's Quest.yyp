@@ -84,8 +84,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tilesets","folderPath":"folders/Level2/Tilesets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level2/Tilesets/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Level2/UI.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Sprites.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
   ],
   "IncludedFiles": [
@@ -196,7 +194,6 @@
     {"id":{"name":"oMusicController","path":"objects/oMusicController/oMusicController.yy",},},
     {"id":{"name":"oCameraBoundary","path":"objects/oCameraBoundary/oCameraBoundary.yy",},},
     {"id":{"name":"GMLive_builder","path":"scripts/GMLive_builder/GMLive_builder.yy",},},
-    {"id":{"name":"sPlayer_1","path":"sprites/sPlayer_1/sPlayer_1.yy",},},
     {"id":{"name":"shFlash","path":"shaders/shFlash/shFlash.yy",},},
     {"id":{"name":"sHealth","path":"sprites/sHealth/sHealth.yy",},},
     {"id":{"name":"oBridge","path":"objects/oBridge/oBridge.yy",},},

@@ -24,7 +24,7 @@ switch (roomTo) {
 			_heightLeft -= 30;
 		}
 		transitionSpd = 0.02;
-		if (room == rLvl1) percent = 1;
+		if (room == rLvl1 and oPlayer.autoMove != undefined) percent = 1;
 	} break;
 }
 

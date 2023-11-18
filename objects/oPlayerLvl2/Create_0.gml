@@ -35,3 +35,5 @@ xDir = 0;
 xscale = 1;
 yscale = 1;
 wHalf = sprite_width/2;
+
+liftAnimPercent = 0;

@@ -10,7 +10,6 @@ function PlayerStateFree() {
 		direction = inputDirection;
 	} else {
 		animType = PLAYERANIM.IDLE;
-		direction = 90 * sign(xscale) + 90;
 	}
 	
 	PlayerAnimateSprite();
@@ -25,17 +24,18 @@ function PlayerStateFree() {
 		//3. Otherwise, there is something and it has a script! Activate!
 		//4. If the thing we activate is an NPC, make it face towards us!
 	
-		var _activateX = x + lengthdir_x(10, direction);
-		var _activateY = y + lengthdir_y(10, direction);
-		var _activateSize = 4;
+		var _activateX = x;
+		var _activateY = y;
+		var _activateSize = 10;
 		var _activateList = ds_list_create();
 		activate = noone;
 		var _entitiesFound = collision_rectangle_list(_activateX-_activateSize,_activateY-_activateSize,_activateX+_activateSize,_activateY+_activateSize,pEntity,false,true,_activateList,true);
 	
+	
 		//If the first instance we find is either our lifted entity or it has no script: try the next one
-		while (_entitiesFound > 0)
+		for(var i = 0; i < _entitiesFound; i++)
 		{
-			var _check = _activateList[| --_entitiesFound];
+			var _check = _activateList[| i];
 			if (_check != global.iLifted) and (_check.entityActivateScript != -1)
 			{
 				activate = _check;
@@ -51,6 +51,8 @@ function PlayerStateFree() {
 			} else {
 				// Attack	
 			}
+		} else if (activate.entityActivateScript == ActivateLiftable and global.iLifted != noone) {
+			PlayerThrow();
 		} else {
 			//Activate Entity
 			ScriptExecuteArray(activate.entityActivateScript, activate.entityActivateArgs);
