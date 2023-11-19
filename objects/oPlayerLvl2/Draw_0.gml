@@ -14,7 +14,7 @@ if(invulnerable != 0) and ((invulnerable mod 8 < 2) == 0) and (flash == 0) {
 		shader_set_uniform_f(global.uFlashColor,1,0,0);
 	}
 
-	draw_sprite_pos(sprite_index,image_index,
+	draw_sprite_pos(sprite_index,round(direction / 90),
 		floor(x)-wHalf*xscale+topShift,floor(y)-wHalf*2*yscale,
 		floor(x)+wHalf*xscale+topShift,floor(y)-wHalf*2*yscale,
 		floor(x)+wHalf*xscale,floor(y),

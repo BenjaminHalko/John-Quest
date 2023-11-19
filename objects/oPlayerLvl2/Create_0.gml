@@ -25,6 +25,8 @@ hookX = 0;
 hookY = 0;
 hookSize = sprite_get_width(sHookChain);
 
+direction = 270;
+
 // custom
 lastAnim = animType;
 animTimer = 0;
