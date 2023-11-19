@@ -16,3 +16,6 @@ global.playerItemUnlocked = array_create(ITEM.TYPE_COUNT, true);
 
 global.iLifted = noone;
 global.iUI = instance_create_layer(0,0,layer,oUI);
+
+// Collision
+layer_set_visible("Walls", false);

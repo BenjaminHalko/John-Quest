@@ -45,7 +45,7 @@
   "origin": 9,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Level2/Effects/Sprites.yy",
+    "path": "folders/Level2/Misc/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
