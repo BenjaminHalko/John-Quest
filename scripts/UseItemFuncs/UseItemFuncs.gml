@@ -3,13 +3,14 @@ function UseItemSword() {
 	if (animType != PLAYERANIM.SLASH)
 	{
 		animType = PLAYERANIM.SLASH;
+		instance_create_depth(x,y,depth-1,oSword);
 	
 		//Clear hit list
 		if (!ds_exists(hitByAttack,ds_type_list)) hitByAttack = ds_list_create();
 		ds_list_clear(hitByAttack);
 	}
 
-	CalcAttack(sPlayerAttackSlashHB);
+	CalcAttack(sSword);
 
 	if(animationEnd)
 	{

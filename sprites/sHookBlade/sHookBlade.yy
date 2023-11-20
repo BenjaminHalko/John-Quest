@@ -29,7 +29,7 @@
   "origin": 4,
   "parent": {
     "name": "Hook",
-    "path": "folders/Level2/Entities/Objects/Items/Hook.yy",
+    "path": "folders/Level2/Items/Hook.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
