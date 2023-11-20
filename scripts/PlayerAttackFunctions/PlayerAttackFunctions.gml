@@ -1,7 +1,5 @@
-function CalcAttack(argument0)
+function CalcAttack()
 {
-	//Use attack hibox & check for hits
-	mask_index = argument0;
 	var hitByAttackNow = ds_list_create();
 	var hits = instance_place_list(x,y,pEntity,hitByAttackNow,false);
 	if(hits > 0)
@@ -10,9 +8,9 @@ function CalcAttack(argument0)
 		{
 			//If this instance has not yet been hit by this attack, hit it
 			var hitID = hitByAttackNow[| i];
-			if(ds_list_find_index(hitByAttack, hitID) == -1)
+			if(ds_list_find_index(oPlayer.hitByAttack, hitID) == -1)
 			{
-				ds_list_add(hitByAttack,hitID);
+				ds_list_add(oPlayer.hitByAttack,hitID);
 				with(hitID)
 				{
 					if (object_is_ancestor(object_index, pEnemy))
@@ -25,7 +23,6 @@ function CalcAttack(argument0)
 		}
 	}
 	ds_list_destroy(hitByAttackNow);
-	mask_index = sPlayerLvl1;
 }
 
 function HurtEnemy(_enemy, _damage, _source, _knockback)

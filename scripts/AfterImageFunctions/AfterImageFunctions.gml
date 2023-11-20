@@ -6,5 +6,6 @@ function CreateAfterImage(_obj, _spd=0.1) {
 		sprite_index = _obj.sprite_index;
 		image_index = _obj.image_index;
 		image_speed = 0;
+		spd = _spd; 
 	}
 }

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "PlayerStateAttack",
+  "name": "PlayerStateSword",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

@@ -10,7 +10,7 @@ global.playerMoney = 0;
 
 //Items
 global.playerHasAnyItems = true;
-global.playerEquipped = ITEM.BOMB;
+global.playerEquipped = ITEM.SWORD;
 global.playerBombAmmo = 10;
 global.playerItemUnlocked = array_create(ITEM.TYPE_COUNT, true);
 

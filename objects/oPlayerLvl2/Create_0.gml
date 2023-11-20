@@ -32,12 +32,15 @@ lastAnim = animType;
 animTimer = 0;
 walkWave = 0;
 topShift = 0;
+topShiftY = 0;
 xDir = 0;
 xscale = 1;
 yscale = 1;
 wHalf = sprite_width/2;
 
-liftAnimPercent = 0;
+animPercent = 0;
+swordCurve = animcurve_get_channel(PlayerLvl2Curves, "Sword");
+swordDir = 1;
 
 // Hurt Player
 hurtPlayer = function(_direction,_force,_damage)

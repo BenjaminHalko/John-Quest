@@ -1,6 +1,6 @@
 /// @desc 
 
-draw_sprite_ext(sPlayerShadow,0,floor(x),floor(y),xscale,1,0,c_white,1);
+draw_sprite_ext(sPlayerShadow,0,floor(x),floor(y+topShiftY/2),xscale,1,0,c_white,1);
 
 // Hookshot (before player)
 if (state == PlayerStateHook) and (direction == 90) DrawHookChain();
@@ -15,8 +15,8 @@ if(invulnerable != 0) and ((invulnerable mod 8 < 2) == 0) and (flash == 0) {
 	}
 
 	draw_sprite_pos(sprite_index,round(direction / 90),
-		floor(x)-wHalf*xscale+topShift,floor(y)-wHalf*2*yscale,
-		floor(x)+wHalf*xscale+topShift,floor(y)-wHalf*2*yscale,
+		floor(x)-wHalf*xscale+topShift,floor(y)-wHalf*2*yscale+topShiftY,
+		floor(x)+wHalf*xscale+topShift,floor(y)-wHalf*2*yscale+topShiftY,
 		floor(x)+wHalf*xscale,floor(y),
 		floor(x)-wHalf*xscale,floor(y),
 	image_alpha);
