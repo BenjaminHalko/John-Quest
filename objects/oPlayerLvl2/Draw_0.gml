@@ -5,9 +5,7 @@ draw_sprite_ext(sPlayerShadow,0,floor(x),floor(y+topShiftY/2),xscale,1,0,c_white
 // Hookshot (before player)
 if (state == PlayerStateHook) and (direction == 90) DrawHookChain();
 
-if(invulnerable != 0) and ((invulnerable mod 8 < 2) == 0) and (flash == 0) {
-	// skip draw	
-} else {
+
 	if (flash != 0) {
 		shader_set(shFlash);
 		shader_set_uniform_f(global.uFlashPercent,flash);
@@ -15,14 +13,13 @@ if(invulnerable != 0) and ((invulnerable mod 8 < 2) == 0) and (flash == 0) {
 	}
 
 	draw_sprite_pos(sprite_index,round(direction / 90),
-		floor(x)-wHalf*xscale+topShift,floor(y)-wHalf*2*yscale+topShiftY,
-		floor(x)+wHalf*xscale+topShift,floor(y)-wHalf*2*yscale+topShiftY,
-		floor(x)+wHalf*xscale,floor(y),
-		floor(x)-wHalf*xscale,floor(y),
+		floor(x)-wHalf*xscale+topShift,floor(y-z)-wHalf*2*yscale+topShiftY,
+		floor(x)+wHalf*xscale+topShift,floor(y-z)-wHalf*2*yscale+topShiftY,
+		floor(x)+wHalf*xscale,floor(y-z),
+		floor(x)-wHalf*xscale,floor(y-z),
 	image_alpha);
 
 	if (flash != 0) shader_reset();
-}
 
 //Hookshot (after player)
 if (state == PlayerStateHook) and (direction != 90) DrawHookChain();

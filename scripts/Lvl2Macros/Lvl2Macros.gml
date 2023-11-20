@@ -10,7 +10,8 @@ enum PLAYERANIM {
 	LIFT,
 	HOOK,
 	HURT,
-	SLASH
+	SLASH,
+	DIE
 }
 
 enum ENEMYSTATE

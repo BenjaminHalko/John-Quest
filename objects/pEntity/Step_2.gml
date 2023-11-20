@@ -1,5 +1,4 @@
 /// @desc Entity Loop
-enableLive;
 
 depth = -y;
 if (lifted) and (instance_exists(oPlayer))

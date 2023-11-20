@@ -5,7 +5,7 @@ function PlayerStateFree() {
 
 	PlayerCollision();
 	
-	if (inputMagnitude != 0) {
+	if (hSpeed != 0 or vSpeed != 0) {
 		animType = PLAYERANIM.RUN;
 		direction = inputDirection;
 	} else {

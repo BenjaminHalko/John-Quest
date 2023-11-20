@@ -5,7 +5,6 @@ enum TRANSITION {
 	SPIRAL
 }
 
-percent = 0;
 leading = true;
 transitionSpd = 0.05;
 switch (roomTo) {
@@ -24,13 +23,12 @@ switch (roomTo) {
 			_heightLeft -= 30;
 		}
 		transitionSpd = 0.02;
-		if (room == rLvl1 and oPlayer.autoMove != undefined) percent = 1;
 	} break;
 }
 
 playerX = undefined;
 playerY = undefined;
-if (instance_exists(oPlayer)) {
+if (instance_exists(oPlayer) and (room == rLvl1 and roomTo == rLvl2)) {
 	depth = oPlayer.depth + 1;
 	playerX = oPlayer.x - oCamera.x;
 	playerY = oPlayer.y - oCamera.y;

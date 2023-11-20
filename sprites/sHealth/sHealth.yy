@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sHealth",
-  "bbox_bottom": 11,
+  "bbox_bottom": 12,
   "bbox_left": 0,
   "bbox_right": 13,
   "bbox_top": 0,

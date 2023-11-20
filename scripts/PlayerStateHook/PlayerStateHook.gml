@@ -102,7 +102,7 @@ function PlayerStateHook()
 	//Finish retract and end state
 	if(hook <= 0)
 	{
-		if (hookedEntity.entityActivateScript == ActivateLiftable) {
+		if (hookedEntity != noone and hookedEntity.entityActivateScript == ActivateLiftable) {
 			ScriptExecuteArray(ActivateLiftable,hookedEntity.entityActivateArgs);
 		}
 		hookedEntity = noone;

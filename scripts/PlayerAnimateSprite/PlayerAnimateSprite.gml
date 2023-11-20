@@ -30,5 +30,41 @@ function PlayerAnimateSprite() {
 			topShiftY = lengthdir_y(5, direction) * _realPercent;
 			if (animPercent == 1) animationEnd = true;
 		} break;
+		case PLAYERANIM.HURT: {
+			if (global.playerHealth > 0) {
+				yscale = random_range(0.5,1.8);
+				xscale = 1/yscale;
+			} else {
+				topShift = 0;
+				yscale = 1;
+				xscale = 1;
+			}
+		} break;
+		case PLAYERANIM.DIE: {
+			topShift = 0;
+			yscale = 1;
+			xscale = 1;
+			if (_changedAnim) animPercent = floor(direction / 90)
+			if(animPercent != 12) {
+				animPercent = Approach(animPercent, 16, 0.2);
+				direction = floor(animPercent) * 90;
+				if(animPercent == 12) {
+					animTimer = 30;
+				}
+			} else if (--animTimer == 0) {
+				repeat(100) {
+					with(instance_create_depth(x,y,depth,oTriangleParticle)) {
+						direction = random(360);
+						image_angle = random(360);
+						speed = random(3);
+						spd = 0.02;
+						radius = 8;
+					}
+				}
+				visible = false;
+			} else if (animTimer == -90) {
+				animationEnd = true;	
+			}
+		} break;
 	}
 }

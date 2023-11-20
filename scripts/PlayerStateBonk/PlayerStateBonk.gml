@@ -11,12 +11,16 @@ function PlayerStateBonk() {
 
 	//Change Height
 	z = sin(((moveDistanceRemaining / distanceBonk) * pi)) * distanceBonkHeight;
+	
+	// Animate
+	PlayerAnimateSprite();
 
 
 	//Change State
 	if(moveDistanceRemaining <= 0)
 	{
-		state = PlayerStateFree;
+		if (global.playerHealth <= 0) state = PlayerStateDead;
+		else state = PlayerStateFree;
 	}
 
 

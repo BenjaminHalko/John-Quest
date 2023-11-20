@@ -29,7 +29,7 @@
   "origin": 9,
   "parent": {
     "name": "Slime",
-    "path": "folders/Level2/Entities/Sprites/Enemies/Slime.yy",
+    "path": "folders/Level2/Entities/Enemies/Slime/Sprites/Slime.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

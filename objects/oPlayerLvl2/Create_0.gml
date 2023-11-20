@@ -8,8 +8,11 @@ inputMagnitude = 0;
 hSpeed = 0;
 vSpeed = 0;
 speedWalk = 2.5;
+speedBonk = 1.5;
 speedHook = 7.0;
 
+distanceBonk = 40;
+distanceBonkHeight = 12;
 distanceHook = 128;
 
 animType = PLAYERANIM.IDLE;
@@ -45,25 +48,34 @@ swordDir = 1;
 // Hurt Player
 hurtPlayer = function(_direction,_force,_damage)
 {
-	if (oPlayer.invulnerable <= 0)
+	if (oPlayer.invulnerable <= 0 and global.playerHealth > 0)
 	{
 		global.playerHealth = max(0, global.playerHealth-_damage);
 		
-		if (global.playerHealth > 0)
+		with (oPlayer)
 		{
-			with (oPlayer)
-			{
-				state = PlayerStateBonk;
-				direction = _direction-180;
-				moveDistanceRemaining = _force;
-				ScreenShake(2,10);
-				flash = 0.7;
-				invulnerable = 60;
-			}
+			state = PlayerStateBonk;
+			direction = _direction-180;
+			moveDistanceRemaining = _force;
+			ScreenShake(2,10);
+			flash = 0.7;
+			invulnerable = 60;
 		}
-		else
+		
+		if (global.playerHealth <= 0)
 		{
-			with(oPlayer) state = PlayerStateDead;
+			invulnerable = 0;
+			flash = 0;
+			speedBonk /= 2;
+			layer_set_visible("Tiles", false);
+			layer_set_visible("TilesAbove", false);
+			layer_set_visible("TilesGlow", false);
+			with(all) {
+				if (sprite_index != undefined and object_index != oPlayerLvl2) {
+					visible = false;
+				}
+			}
+			with(oPlayer) state = PlayerStateBonk;
 		}
 	}
 }

@@ -3,8 +3,8 @@ function CollectCoins(_amount)
 	global.playerMoney += _amount;
 }
 
-function CollectAmmo(_array)
+function CollectBomb(_amount)
 {
 	//_array = [type,amount]
-	global.playerAmmo[_array[0]] += _array[1];
+	global.playerBombAmmo += _amount;
 }
