@@ -213,7 +213,6 @@
     {"id":{"name":"snExplosion","path":"sounds/snExplosion/snExplosion.yy",},},
     {"id":{"name":"GMLive_call","path":"scripts/GMLive_call/GMLive_call.yy",},},
     {"id":{"name":"oMusicController","path":"objects/oMusicController/oMusicController.yy",},},
-    {"id":{"name":"Sprite64","path":"sprites/Sprite64/Sprite64.yy",},},
     {"id":{"name":"oCameraBoundary","path":"objects/oCameraBoundary/oCameraBoundary.yy",},},
     {"id":{"name":"GMLive_builder","path":"scripts/GMLive_builder/GMLive_builder.yy",},},
     {"id":{"name":"shFlash","path":"shaders/shFlash/shFlash.yy",},},

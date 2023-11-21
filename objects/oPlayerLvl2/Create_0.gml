@@ -8,11 +8,11 @@ inputMagnitude = 0;
 hSpeed = 0;
 vSpeed = 0;
 speedWalk = 2.5;
-speedBonk = 1.5;
+speedBonk = 1.25;
 speedHook = 7.0;
 
 distanceBonk = 40;
-distanceBonkHeight = 12;
+distanceBonkHeight = 20;
 distanceHook = 128;
 
 animType = PLAYERANIM.IDLE;
@@ -67,6 +67,9 @@ hurtPlayer = function(_direction,_force,_damage)
 			invulnerable = 0;
 			flash = 0;
 			speedBonk /= 2;
+			oCamera.follow = noone;
+			oCamera.xTo = oCamera.x;
+			oCamera.yTo = oCamera.y;
 			layer_set_visible("Tiles", false);
 			layer_set_visible("TilesAbove", false);
 			layer_set_visible("TilesGlow", false);

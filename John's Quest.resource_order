@@ -117,7 +117,6 @@
     {"name":"sPlantB","order":2,"path":"sprites/sPlantB/sPlantB.yy",},
     {"name":"snExplosion","order":3,"path":"sounds/snExplosion/snExplosion.yy",},
     {"name":"oMusicController","order":3,"path":"objects/oMusicController/oMusicController.yy",},
-    {"name":"Sprite64","order":5,"path":"sprites/Sprite64/Sprite64.yy",},
     {"name":"oCameraBoundary","order":2,"path":"objects/oCameraBoundary/oCameraBoundary.yy",},
     {"name":"sHealth","order":4,"path":"sprites/sHealth/sHealth.yy",},
     {"name":"oBombDrop","order":2,"path":"objects/oBombDrop/oBombDrop.yy",},
