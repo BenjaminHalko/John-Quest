@@ -16,7 +16,7 @@
   ],
   "parent": {
     "name": "Items",
-    "path": "folders/Level2/Entities/Objects/Items.yy",
+    "path": "folders/Level2/Entities/Non-Placeable/Items.yy",
   },
   "parentObjectId": {
     "name": "pEntity",

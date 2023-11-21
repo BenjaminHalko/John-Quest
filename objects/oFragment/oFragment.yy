@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Fragments",
-    "path": "folders/Level2/Entities/Objects/Fragments.yy",
+    "path": "folders/Level2/Entities/Non-Placeable/Fragments.yy",
   },
   "parentObjectId": null,
   "persistent": false,

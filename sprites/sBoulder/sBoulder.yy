@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Quest",
-    "path": "folders/Level2/Entities/Sprites/Quest.yy",
+    "name": "Sprites",
+    "path": "folders/Level2/Entities/Quest/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

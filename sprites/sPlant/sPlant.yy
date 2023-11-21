@@ -48,8 +48,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "General",
-    "path": "folders/Level2/Entities/Sprites/General.yy",
+    "name": "Sprites",
+    "path": "folders/Level2/Entities/General/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

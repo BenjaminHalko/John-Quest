@@ -20,7 +20,7 @@
   ],
   "parent": {
     "name": "General",
-    "path": "folders/Level2/Entities/Objects/General.yy",
+    "path": "folders/Level2/Entities/General.yy",
   },
   "parentObjectId": {
     "name": "pEntity",

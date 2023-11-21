@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Effects",
-    "path": "folders/Level2/Entities/Sprites/Effects.yy",
+    "path": "folders/Level2/Entities/Effects.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

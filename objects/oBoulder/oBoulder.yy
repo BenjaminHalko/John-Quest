@@ -13,7 +13,7 @@
   ],
   "parent": {
     "name": "Quest",
-    "path": "folders/Level2/Entities/Objects/Quest.yy",
+    "path": "folders/Level2/Entities/Quest.yy",
   },
   "parentObjectId": {
     "name": "pEntity",

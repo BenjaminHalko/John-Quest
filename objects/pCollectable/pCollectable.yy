@@ -12,7 +12,7 @@
   ],
   "parent": {
     "name": "Collectables",
-    "path": "folders/Level2/Entities/Objects/Collectables.yy",
+    "path": "folders/Level2/Entities/Non-Placeable/Collectables.yy",
   },
   "parentObjectId": {
     "name": "pEntity",

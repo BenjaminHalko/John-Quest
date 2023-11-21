@@ -29,7 +29,7 @@
   "origin": 4,
   "parent": {
     "name": "Plants",
-    "path": "folders/Level2/Entities/Sprites/Fragments/Plants.yy",
+    "path": "folders/Level2/Entities/Non-Placeable/Fragments/Sprites/Plants.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

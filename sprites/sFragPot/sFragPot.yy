@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Fragments",
-    "path": "folders/Level2/Entities/Sprites/Fragments.yy",
+    "name": "Sprites",
+    "path": "folders/Level2/Entities/Non-Placeable/Fragments/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
