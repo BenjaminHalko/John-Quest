@@ -39,7 +39,7 @@
         54,
         15,
       ],},
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"GrassPath","closed_edge":false,"tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"Grass","closed_edge":false,"tiles":[
         101,
         104,
         103,
