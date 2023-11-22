@@ -3,7 +3,6 @@ function PlayerStateSword() {
 	if (animType != PLAYERANIM.SLASH)
 	{
 		animType = PLAYERANIM.SLASH;
-		direction = round(direction / 90) * 90;
 		swordDir = -swordDir;
 		instance_create_depth(x+lengthdir_x(1,direction),y-8+lengthdir_y(1,direction),depth-lengthdir_y(1,direction),oSword,{image_angle: direction, image_yscale: swordDir});
 		

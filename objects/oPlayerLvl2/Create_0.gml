@@ -28,7 +28,12 @@ hookX = 0;
 hookY = 0;
 hookSize = sprite_get_width(sHookChain);
 
-direction = 270;
+if (global.saveX != -1) {
+	x = global.saveX;
+	y = global.saveY;
+	oCamera.snapToFollow();
+}
+direction = global.saveDir;
 
 // custom
 lastAnim = animType;

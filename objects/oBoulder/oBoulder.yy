@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "oBoulder",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oExplode","path":"objects/oExplode/oExplode.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [
@@ -16,8 +16,8 @@
     "path": "folders/Level2/Entities/Quest.yy",
   },
   "parentObjectId": {
-    "name": "pEntity",
-    "path": "objects/pEntity/pEntity.yy",
+    "name": "oRockPile",
+    "path": "objects/oRockPile/oRockPile.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

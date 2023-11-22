@@ -18,13 +18,12 @@ for(var i = 0; i < array_length(layersToHide); i++) {
 }
 
 // Load Save Data
-var _checkpointScale = Load("lvl1","saveScale", 1);
+var _checkpointScale = Load("lvl1","saveDir", 1);
 var _checkpointNum = Load("lvl1","saveNumber", 0);
 
-/*
 with (oCheckpoint) {
-	if (checkpointNumber == _checkpointNum and scale == _checkpointScale) {
-		oPlayer.xscale = scale;
+	if (checkpointNumber == _checkpointNum and dir == _checkpointScale) {
+		oPlayer.xscale = dir;
 		oPlayer.x = x+sprite_width/2;
 		oPlayer.y = y+sprite_height-8;
 		
@@ -33,6 +32,5 @@ with (oCheckpoint) {
 		break;
 	}
 }
-*/
 
 oPlayer.autoMove = oPlayer.x;
