@@ -13,7 +13,7 @@ var _min = 0;
 if (responseSelected > _max) responseSelected = _min;
 if (responseSelected < _min) responseSelected = _max;
 
-if (keyboard_check_pressed(vk_space))
+if (oPlayer.keyAction)
 {
 	var _textLength = string_length(text);
 	if (textProgress >= _textLength)
@@ -30,7 +30,10 @@ if (keyboard_check_pressed(vk_space))
 		}
 		else
 		{
-			with(oPlayer) state = lastState;
+			with(oPlayer) {
+				state = lastState;
+				keyAction = false;
+			}
 		}
 	}
 	else
