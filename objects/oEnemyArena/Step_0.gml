@@ -23,6 +23,7 @@ if (place_meeting(x,y,oPlayer)) {
 		}
 		
 		ds_list_destroy(_list);
+		Save("lvl2",$"enemyArena{arenaNumber}",true);
 		
 		instance_destroy();
 	}
