@@ -14,8 +14,8 @@ snapToFollow = function() {
 	y = follow.y;
 	boundary = instance_position(x,y,oCameraBoundary);
 	if (boundary != noone) {
-		x = clamp(x, boundary.bbox_left+viewWidthHalf+boundary.xOffset, boundary.bbox_right-viewWidthHalf+boundary.xOffset);
-		y = clamp(y, boundary.bbox_top+viewHeightHalf+boundary.yOffset, boundary.bbox_bottom-viewHeightHalf+boundary.yOffset);
+		x = clamp(x, boundary.bbox_left+viewWidthHalf+max(0,boundary.xOffset), boundary.bbox_right-viewWidthHalf+min(0,boundary.xOffset));
+		y = clamp(y, boundary.bbox_top+viewHeightHalf+max(0,boundary.yOffset), boundary.bbox_bottom-viewHeightHalf+min(0,boundary.yOffset));
 	}
 	xTo = x;
 	yTo = y;

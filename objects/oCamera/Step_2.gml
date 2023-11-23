@@ -6,8 +6,8 @@ if(instance_exists(follow)) {
 	yTo = follow.y;
 	boundary = instance_position(xTo,yTo,oCameraBoundary);
 	if (boundary != noone) {
-		xTo = clamp(xTo, boundary.bbox_left+viewWidthHalf+boundary.xOffset, boundary.bbox_right-viewWidthHalf+boundary.xOffset);
-		yTo = clamp(yTo, boundary.bbox_top+viewHeightHalf+boundary.yOffset, boundary.bbox_bottom-viewHeightHalf+boundary.yOffset);
+		xTo = clamp(xTo, boundary.bbox_left+viewWidthHalf+max(0,boundary.xOffset), boundary.bbox_right-viewWidthHalf+min(0,boundary.xOffset));
+		yTo = clamp(yTo, boundary.bbox_top+viewHeightHalf+max(0,boundary.yOffset), boundary.bbox_bottom-viewHeightHalf+min(0,boundary.yOffset));
 	}
 } else boundary = noone;
 
