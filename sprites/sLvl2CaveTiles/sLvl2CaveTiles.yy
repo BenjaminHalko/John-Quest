@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sLvl2CaveTiles",
-  "bbox_bottom": 287,
+  "bbox_bottom": 159,
   "bbox_left": 0,
-  "bbox_right": 127,
-  "bbox_top": 0,
+  "bbox_right": 159,
+  "bbox_top": 16,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"56f20a89-a9b9-4014-bbf1-a6b21a3c4000",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ec1d2e4d-d034-49ed-bbd2-c50a271ac2e6",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 288,
+  "height": 160,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fa0a6da8-4941-4250-8fea-32a13ddfebd8","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"48b4610b-e560-48d7-a54e-54db690912c0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"56f20a89-a9b9-4014-bbf1-a6b21a3c4000","path":"sprites/sLvl2CaveTiles/sLvl2CaveTiles.yy",},},},"Disabled":false,"id":"5f11b4f3-9d1d-4bd4-88d5-9ffe3f94841f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ec1d2e4d-d034-49ed-bbd2-c50a271ac2e6","path":"sprites/sLvl2CaveTiles/sLvl2CaveTiles.yy",},},},"Disabled":false,"id":"7060b2d2-3415-42bf-930b-22d88d07aeb1","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 128,
+  "width": 160,
 }
