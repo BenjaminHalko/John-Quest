@@ -31,7 +31,6 @@ hookSize = sprite_get_width(sHookChain);
 if (global.saveX != -1) {
 	x = global.saveX;
 	y = global.saveY;
-	oCamera.snapToFollow();
 }
 direction = global.saveDir;
 
