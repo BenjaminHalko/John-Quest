@@ -19,7 +19,7 @@ function ActivateSwordNPC()
 				//complete quest
 				NewTextBox("Wow, you found my hat without\nme even asking you to!",1);
 				NewTextBox("You are a true hero indeed!",1);
-				NewTextBox("Here, take this sword.\nI hear it is dangerous to go alone.",1);
+				NewTextBox("Here, take this sword.\nI hear it is dangerous to go without it.",1);
 				RemoveHat();
 				oPlayer.lastState = PlayerStateGetItem;
 			}
@@ -39,7 +39,7 @@ function ActivateSwordNPC()
 				//complete quest
 				NewTextBox("Wow, you found my hat!",1);
 				NewTextBox("You are a true hero indeed!",1);
-				NewTextBox("Here, take this sword.\nI hear it is dangerous to go alone.",1);
+				NewTextBox("Here, take this sword.\nI hear it is dangerous to go without it.",1);
 				RemoveHat();
 				oPlayer.lastState = PlayerStateGetItem;
 			}
@@ -52,7 +52,7 @@ function ActivateSwordNPC()
 		case 2: //quest already completed
 		{
 			if (!global.playerItemUnlocked[ITEM.SWORD]) {
-				NewTextBox("Here, take this sword.\nI hear it dangerous to go alone.",1);
+				NewTextBox("Here, take this sword.\nI hear it dangerous to go without it.",1);
 				oPlayer.lastState = PlayerStateGetItem;
 			} else {
 				NewTextBox("Thanks again!\nI hope you find that sword useful!",1);
