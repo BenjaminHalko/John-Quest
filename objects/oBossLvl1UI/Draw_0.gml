@@ -18,7 +18,7 @@ var _col = #ED008C;
 draw_set_font(fRetro);
 draw_set_color(_col);
 draw_set_halign(fa_left);
-draw_set_valign(fa_center);
+draw_set_valign(fa_middle);
 
 draw_text(_x+8,_barY,"BOSS:");
 draw_set_color(c_black);

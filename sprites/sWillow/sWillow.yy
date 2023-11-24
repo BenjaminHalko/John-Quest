@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "pine",
-  "bbox_bottom": 39,
+  "name": "sWillow",
+  "bbox_bottom": 37,
   "bbox_left": 0,
-  "bbox_right": 31,
+  "bbox_right": 38,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,26 +13,26 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e28cc89-a816-46cc-abb1-fd1ead717bde",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e8ad597a-4329-42b2-b444-ed9c7b16b0ec",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 40,
+  "height": 38,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b01a8a6c-f657-4bf7-a8eb-797b9482e53e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"81bd7432-32c3-4ae1-b6e2-59aab63db193","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Level2/Entities/General/Sprites.yy",
+    "path": "folders/Level2/Entities/Trees/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "pine",
+    "name": "sWillow",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6e28cc89-a816-46cc-abb1-fd1ead717bde","path":"sprites/pine/pine.yy",},},},"Disabled":false,"id":"ff1d45ca-8ea5-4340-86ba-c5a853f25277","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e8ad597a-4329-42b2-b444-ed9c7b16b0ec","path":"sprites/sWillow/sWillow.yy",},},},"Disabled":false,"id":"24d9405c-d49c-4d69-8a74-09c8f8a53d4d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 32,
+  "width": 39,
 }

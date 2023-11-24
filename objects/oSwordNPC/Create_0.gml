@@ -26,3 +26,5 @@ places = [
 currentPlace = 0;
 xstart = places[currentPlace][0];
 ystart = places[currentPlace][1];
+
+boundry = instance_place(x,y,oCameraBoundary);

@@ -31,7 +31,7 @@ if (point_distance(x,y,oPlayer.x,oPlayer.y) > 48) {
 			dir = point_direction(x,y,xstart,ystart) + irandom_range(-100,100);
 			wanderDistance = 256+_extra;
 			for(var i = 0; i < 500; i++) {
-				if (!collision_line(x,y,x+lengthdir_x(wanderDistance,dir),y+lengthdir_y(wanderDistance,dir),[global.collisionMap,oPlant,oRoof],false,false)) {
+				if (!collision_line(x,y,x+lengthdir_x(wanderDistance,dir),y+lengthdir_y(wanderDistance,dir),[global.collisionMap,oPlant,oRoof],false,false) and instance_place(x+lengthdir_x(wanderDistance,dir),y+lengthdir_y(wanderDistance,dir),oCameraBoundary) == boundry) {
 					break;	
 				}
 				
