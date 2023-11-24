@@ -16,7 +16,7 @@ if (point_distance(x,y,oPlayer.x,oPlayer.y) > 48) {
 		//Set new target destination
 		if (++wait >= waitDuration or timePassed < 5)
 		{
-			if (++count >= 12-10*(currentPlace == 0)) {
+			if (++count >= 12) or (currentPlace == 0 and point_distance(x,y,xstart,ystart) < 120) {
 				if (currentPlace == 0) {
 					currentPlace = random_range(1,array_length(places)-1);	
 				} else {
@@ -27,7 +27,7 @@ if (point_distance(x,y,oPlayer.x,oPlayer.y) > 48) {
 			}
 			wait = 0;
 			timePassed = 0;
-			var _extra = 64 * (currentPlace == 0);
+			var _extra = 96 * (currentPlace == 0);
 			dir = point_direction(x,y,xstart,ystart) + irandom_range(-100,100);
 			wanderDistance = 256+_extra;
 			for(var i = 0; i < 500; i++) {
@@ -38,7 +38,7 @@ if (point_distance(x,y,oPlayer.x,oPlayer.y) > 48) {
 				wanderDistance--;
 				if (wanderDistance <= 104+_extra) {
 					dir = point_direction(x,y,xstart,ystart) + irandom_range(-150,150);
-					wanderDistance = 140+_extra;
+					wanderDistance = 256+_extra;
 				}
 			}
 			
