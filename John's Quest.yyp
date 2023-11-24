@@ -83,6 +83,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Level2/Entities/Scripts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Activation","folderPath":"folders/Level2/Entities/Scripts/Activation.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Entity Hit","folderPath":"folders/Level2/Entities/Scripts/Entity Hit.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Trees","folderPath":"folders/Level2/Entities/Trees.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level2/Entities/Trees/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Global","folderPath":"folders/Level2/Global.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Items","folderPath":"folders/Level2/Items.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Bomb","folderPath":"folders/Level2/Items/Bomb.yy",},
@@ -100,8 +102,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level2/Tilesets/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Level2/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Trees","folderPath":"folders/Level2/Entities/Trees.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level2/Entities/Trees/Sprites.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
