@@ -1,5 +1,10 @@
 /// @desc 
 
+if (global.playerItemUnlocked[ITEM.BOMB] and !place_meeting(x,y,oEnemyArena)) {
+	instance_destroy();
+	exit;
+}
+
 var _list = ds_list_create();
 var _amount = instance_place_list(x,y,oRockPile,_list,false);
 

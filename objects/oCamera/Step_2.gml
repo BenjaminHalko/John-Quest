@@ -25,4 +25,4 @@ y += random_range(-shakeRemain,shakeRemain);
 
 shakeRemain = max(0, shakeRemain - ((1/shakeLength) * shakeMagnitude));
 
-camera_set_view_pos(cam,x - viewWidthHalf,y - viewHeightHalf);
+camera_set_view_pos(cam,round(x) - viewWidthHalf,round(y) - viewHeightHalf);

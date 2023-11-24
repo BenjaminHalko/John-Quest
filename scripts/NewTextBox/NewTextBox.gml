@@ -8,6 +8,7 @@ function NewTextBox() {
 	with(instance_create_layer(0,0,"Instances",_obj))
 	{
 		text = argument[0];
+		lerpProgress = 0;
 		if(instance_exists(other)) originInstance = other.id; else originInstance = noone;
 		if(argument_count > 1) background = argument[1]; else background = 1;
 		if(argument_count > 2)

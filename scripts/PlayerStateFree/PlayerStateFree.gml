@@ -19,7 +19,7 @@ function PlayerStateFree() {
 	{
 		var _activateX = x;
 		var _activateY = y;
-		var _activateSize = 10;
+		var _activateSize = 16;
 		var _activateList = ds_list_create();
 		activate = noone;
 		var _entitiesFound = collision_rectangle_list(_activateX-_activateSize,_activateY-_activateSize,_activateX+_activateSize,_activateY+_activateSize,pEntity,false,true,_activateList,true);
@@ -66,12 +66,11 @@ function PlayerStateFree() {
 	//Cycle Items
 	if(global.playerHasAnyItems)
 	{
-		var _cycleDirection = keyItemSelectUp - keyItemSelectDown;
-		if(_cycleDirection != 0)
+		if(keySecondary != 0)
 		{
 			do
 			{
-				global.playerEquipped += _cycleDirection;
+				global.playerEquipped += keySecondary;
 				if(global.playerEquipped < 0) global.playerEquipped = ITEM.TYPE_COUNT-1;
 				if(global.playerEquipped >= ITEM.TYPE_COUNT) global.playerEquipped = 0;
 			}

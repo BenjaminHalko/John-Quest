@@ -1,5 +1,4 @@
 function PlayerStateLocked() {
-	//do nothing
-
-
+	animType = PLAYERANIM.IDLE;
+	PlayerAnimateSprite();
 }

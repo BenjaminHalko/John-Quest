@@ -9,7 +9,7 @@ if (state == PlayerStateHook) and (direction == 90) DrawHookChain();
 	if (flash != 0) {
 		shader_set(shFlash);
 		shader_set_uniform_f(global.uFlashPercent,flash);
-		shader_set_uniform_f(global.uFlashColor,1,0,0);
+		shader_set_uniform_f_array(global.uFlashColor,flashCol);
 	}
 
 	draw_sprite_pos(sprite_index,round(direction / 90),

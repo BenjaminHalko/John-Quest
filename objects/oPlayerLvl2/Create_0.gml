@@ -49,6 +49,8 @@ animPercent = 0;
 swordCurve = animcurve_get_channel(PlayerLvl2Curves, "Sword");
 swordDir = 1;
 
+flashCol = [1,0,0];
+
 // Hurt Player
 hurtPlayer = function(_direction,_force,_damage)
 {
@@ -63,6 +65,7 @@ hurtPlayer = function(_direction,_force,_damage)
 			moveDistanceRemaining = _force;
 			ScreenShake(2,10);
 			flash = 0.7;
+			flashCol = [1,0,0];
 			invulnerable = 60;
 		}
 		

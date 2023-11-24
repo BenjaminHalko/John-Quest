@@ -1,27 +1,34 @@
 function ActivateSwordNPC()
 {
+	
+	function RemoveHat() {
+		global.questStatusHat = 2;
+		Save("lvl2","questHat",global.questStatusHat);
+		PlayerDropItem();
+		instance_destroy(oHat);
+	}
+	
 	var _hasHat = (global.iLifted != noone) and (global.iLifted.object_index == oHat);
-	switch (global.questStatus[? "TheHatQuest"])
+	switch (global.questStatusHat)
 	{
-		case 0: //not started
+		case 0: case 0.5://not started
 		{
 			//player might have brought the hat back anyway
 			if(_hasHat)
 			{
 				//complete quest
-				NewTextBox("Wow, you found my hat without me even asking you to!",2);
-				NewTextBox("You are a true hero indeed!",2);
-				global.questStatus[? "TheHatQuest"] = 2;
-				with(oQuestNPC) sprite_index = sQuestyHat;
-				with(oHat) instance_destroy();
-				PlayerDropItem();
+				NewTextBox("Wow, you found my hat without\nme even asking you to!",1);
+				NewTextBox("You are a true hero indeed!",1);
+				NewTextBox("Here, take this sword.\nI hear it is dangerous to go alone.",1);
+				RemoveHat();
+				oPlayer.lastState = PlayerStateGetItem;
 			}
 			else
 			{
 				//offer quest
-				NewTextBox("Hello There! You look like a brave adventurer\nWhat with the cape and all.",2);
-				NewTextBox("Could you help me find my missing hat?",2,
-				["4:Of course!","5:This task is beneath me"]);
+				if (global.questStatusHat == 0) NewTextBox("Hello there! You look like a brave adventurer.",1);
+				NewTextBox("Could you help me find my missing hat?",1,
+				["0:Of course!","1:This task is beneath me"]);
 				
 			}
 		}break;
@@ -30,23 +37,30 @@ function ActivateSwordNPC()
 			if(_hasHat)
 			{
 				//complete quest
-				NewTextBox("Wow, you found my hat!",2);
-				NewTextBox("You are a true hero indeed!",2);
-				global.questStatus[? "TheHatQuest"] = 2;
-				with(oQuestNPC) sprite_index = sQuestyHat;
-				with(oHat) instance_destroy();
-				PlayerDropItem();
+				NewTextBox("Wow, you found my hat!",1);
+				NewTextBox("You are a true hero indeed!",1);
+				NewTextBox("Here, take this sword.\nI hear it is dangerous to go alone.",1);
+				RemoveHat();
+				oPlayer.lastState = PlayerStateGetItem;
 			}
 			else
 			{
 				//clue reminder
-				NewTextBox("I think I left my hat in that\nscary cave to the north east.",2);
-				NewTextBox("You might need some items to get there!",2);
+				NewTextBox("I think I left my hat in the evil\nSlime base to the South.",1);
 			}
 		}break;
 		case 2: //quest already completed
 		{
-			NewTextBox("Thanks again!",2);
+			if (!global.playerItemUnlocked[ITEM.SWORD]) {
+				NewTextBox("Here, take this sword.\nI hear it dangerous to go alone.",1);
+				oPlayer.lastState = PlayerStateGetItem;
+			} else {
+				NewTextBox("Thanks again!\nI hope you find that sword useful!",1);
+			}
 		}break;
 	}
+}
+
+function ActivateSwordNPCItemGot() {
+	NewTextBox("Thanks again!\nI hope you find that sword useful!",1);
 }

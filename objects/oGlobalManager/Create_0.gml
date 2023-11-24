@@ -14,8 +14,10 @@ window_center();
 // Shaders
 global.uFlashPercent = shader_get_uniform(shFlash, "percent");
 global.uFlashColor = shader_get_uniform(shFlash, "color");
-
 global.uAlphaPercent = shader_get_uniform(shAlpha, "alpha");
+
+// Saving
+global.noSave = false;
 
 // Change volume
 audio_master_gain(0.5);

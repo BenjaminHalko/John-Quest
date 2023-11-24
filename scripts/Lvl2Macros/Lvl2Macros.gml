@@ -11,7 +11,8 @@ enum PLAYERANIM {
 	HOOK,
 	HURT,
 	SLASH,
-	DIE
+	DIE,
+	GETITEM
 }
 
 enum ENEMYSTATE

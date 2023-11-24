@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CheckpointFunctions",
+  "name": "SignTexts",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Checkpoints",
-    "path": "folders/Global/Checkpoints.yy",
+    "name": "Dialogue",
+    "path": "folders/Level2/Text/Dialogue.yy",
   },
 }

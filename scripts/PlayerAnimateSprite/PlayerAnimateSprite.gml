@@ -4,7 +4,7 @@ function PlayerAnimateSprite() {
 	var _changedAnim = (lastAnim != animType);
 	lastAnim = animType;
 	switch(animType) {
-		case PLAYERANIM.IDLE: case PLAYERANIM.RUN: {
+		case PLAYERANIM.IDLE: case PLAYERANIM.RUN: default: {
 			var _movement = (animType == PLAYERANIM.RUN);
 			if (_movement) walkWave += 1/10;
 			var _lift = (global.iLifted != noone);
@@ -65,6 +65,10 @@ function PlayerAnimateSprite() {
 			} else if (animTimer == -60) {
 				animationEnd = true;	
 			}
+		} break;
+		case PLAYERANIM.GETITEM: {
+			yscale = ApproachFade(yscale,max(0.5,(z == 0) ? 1 : grav),0.08+0.15*(grav <= 0),0.7);
+			xscale = 1/yscale;
 		} break;
 	}
 }

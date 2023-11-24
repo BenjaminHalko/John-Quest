@@ -15,8 +15,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"propertyId":{"name":"entityHookable","path":"objects/pEntity/pEntity.yy",},"value":"1",},
   ],
   "parent": {
-    "name": "Items",
-    "path": "folders/Level2/Entities/Non-Placeable/Items.yy",
+    "name": "Bomb",
+    "path": "folders/Level2/Items/Bomb.yy",
   },
   "parentObjectId": {
     "name": "pEntity",

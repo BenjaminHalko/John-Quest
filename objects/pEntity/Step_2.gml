@@ -2,10 +2,6 @@
 
 depth = -y;
 
-if (entityNPC and instance_exists(oPlayer)) {
-	image_xscale = 1 - (oPlayer.x < x) * 2;	
-}
-
 if (lifted) and (instance_exists(oPlayer))
 {
 	if (oPlayer.animType != PLAYERANIM.LIFT) {

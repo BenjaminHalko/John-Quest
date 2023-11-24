@@ -48,7 +48,7 @@ if (respawnPercent == 1) {
 			}
 	
 			// Dashing
-			if keyAction {
+			if keyAction or keySecondary {
 				if canJump > 0 {
 					if(savedJumpID.collect()) {
 						vsp = jumpSpd;

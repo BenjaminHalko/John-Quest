@@ -1,16 +1,16 @@
 x1 = RESOLUTION_W/2;
-y1 = RESOLUTION_H-70;
+y1 = RESOLUTION_H-60;
 x2 = RESOLUTION_W/2;
 y2 = RESOLUTION_H;
 
-x1Target = 0;
-x2Target = RESOLUTION_W;
+x1Target = 80;
+x2Target = RESOLUTION_W-80;
 
-lerpProgress = 0;
 textProgress = 0;
 
 responseSelected = 0;
 
-text = "";
-responses = [];
-background = 0;
+portraits = [
+	sSwordNPCPortrait,
+	sBombNPCPortrait
+];

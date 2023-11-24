@@ -7,7 +7,7 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"propertyId":{"name":"enemyAggroRadius","path":"objects/pEnemy/pEnemy.yy",},"value":"48",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"propertyId":{"name":"enemyAggroRadius","path":"objects/pEnemy/pEnemy.yy",},"value":"64",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"propertyId":{"name":"enemyHP","path":"objects/pEnemy/pEnemy.yy",},"value":"10",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"propertyId":{"name":"enemyAttackRadius","path":"objects/pEnemy/pEnemy.yy",},"value":"24",},
   ],

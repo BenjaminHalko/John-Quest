@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Activation",
-    "path": "folders/Level2/Entities/Scripts/Activation.yy",
+    "name": "Dialogue",
+    "path": "folders/Level2/Text/Dialogue.yy",
   },
 }
