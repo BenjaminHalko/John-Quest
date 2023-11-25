@@ -18,6 +18,7 @@ global.uAlphaPercent = shader_get_uniform(shAlpha, "alpha");
 
 // Saving
 global.noSave = false;
+global.atBoss = false;
 
 // Change volume
 audio_master_gain(0.5);

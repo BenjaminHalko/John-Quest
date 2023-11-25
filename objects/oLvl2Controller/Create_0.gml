@@ -26,5 +26,23 @@ layer_set_visible("Walls", false);
 // Quest Status
 global.questStatusHat = Load("lvl2","questHat",0,false);
 
+// In Cave
+global.inCave = Load("lvl2","inCave",false,false);
+music = audio_play_sound(mLvl2Music, 1, true, 1-global.inCave);
+caveMusic = audio_play_sound(mLvl2MusicCave, 1, true, global.inCave);
+audio_pause_sound(global.inCave ? music : caveMusic);
+inCave = global.inCave;
+
 // Close file
 ini_close();
+
+// At Boss
+if (global.atBoss) {
+	global.saveX = 2384;
+	global.saveY = 1524;
+	global.saveDir = 90;
+	global.playerItemUnlocked[ITEM.SWORD] = true;
+	global.playerItemUnlocked[ITEM.BOMB] = true;
+	global.playerHasAnyItems = true;
+	global.playerBombAmmo = 20;
+}
