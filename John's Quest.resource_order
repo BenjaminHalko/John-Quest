@@ -25,6 +25,8 @@
     {"name":"Player","order":3,"path":"folders/Level1/Player.yy",},
     {"name":"Tileset","order":4,"path":"folders/Level1/Tileset.yy",},
     {"name":"Level2","order":4,"path":"folders/Level2.yy",},
+    {"name":"Audio","order":9,"path":"folders/Level2/Audio.yy",},
+    {"name":"Music","order":1,"path":"folders/Level2/Audio/Music.yy",},
     {"name":"Entities","order":2,"path":"folders/Level2/Entities.yy",},
     {"name":"Effects","order":6,"path":"folders/Level2/Entities/Effects.yy",},
     {"name":"Enemies","order":1,"path":"folders/Level2/Entities/Enemies.yy",},
@@ -60,8 +62,6 @@
     {"name":"Tilesets","order":1,"path":"folders/Level2/Tilesets.yy",},
     {"name":"UI","order":4,"path":"folders/Level2/UI.yy",},
     {"name":"Title","order":3,"path":"folders/Title.yy",},
-    {"name":"Audio","order":9,"path":"folders/Level2/Audio.yy",},
-    {"name":"Music","order":1,"path":"folders/Level2/Audio/Music.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oTextQueued","order":1,"path":"objects/oTextQueued/oTextQueued.yy",},

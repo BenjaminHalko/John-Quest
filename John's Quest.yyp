@@ -58,6 +58,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tileset","folderPath":"folders/Level1/Tileset.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level1/Tileset/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Level2","folderPath":"folders/Level2.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Level2/Audio.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Music","folderPath":"folders/Level2/Audio/Music.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Entities","folderPath":"folders/Level2/Entities.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Effects","folderPath":"folders/Level2/Entities/Effects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Level2/Entities/Enemies.yy",},
@@ -102,8 +104,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level2/Tilesets/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Level2/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Level2/Audio.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Music","folderPath":"folders/Level2/Audio/Music.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
