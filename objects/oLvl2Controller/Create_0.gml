@@ -27,11 +27,9 @@ layer_set_visible("Walls", false);
 global.questStatusHat = Load("lvl2","questHat",0,false);
 
 // In Cave
-global.inCave = Load("lvl2","inCave",false,false);
-music = audio_play_sound(mLvl2Music, 1, true, 1-global.inCave);
-caveMusic = audio_play_sound(mLvl2MusicCave, 1, true, global.inCave);
-audio_pause_sound(global.inCave ? music : caveMusic);
-inCave = global.inCave;
+var _inCave = Load("lvl2","inCave",false,false) or global.atBoss;
+music = audio_play_sound(_inCave ? mLvl2MusicCave : mLvl2Music, 1, true);
+if (_inCave) call_later(1,time_source_units_frames,function(){ instance_destroy(oCaveTrigger); });
 
 // Close file
 ini_close();

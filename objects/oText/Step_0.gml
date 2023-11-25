@@ -1,3 +1,5 @@
+if (background != 0) frameNumber = (frameNumber + portraitAnim[background-1].spd) % portraitAnim[background-1].number;
+
 lerpProgress += (1 - lerpProgress) / 50;
 textProgress += global.textSpeed;
 

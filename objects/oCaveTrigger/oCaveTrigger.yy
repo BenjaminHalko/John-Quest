@@ -1,15 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oLvl2Controller",
+  "name": "oCaveTrigger",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Global",
-    "path": "folders/Level2/Global.yy",
+    "name": "Triggers",
+    "path": "folders/Level2/Entities/Quest/Triggers.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -27,7 +29,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sPlaceholder",
+    "path": "sprites/sPlaceholder/sPlaceholder.yy",
+  },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
