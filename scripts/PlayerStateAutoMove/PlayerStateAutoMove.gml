@@ -6,7 +6,8 @@ function PlayerStateAutoMove() {
 	hSpeed = lengthdir_x(_dist, _dir);
 	vSpeed = lengthdir_y(_dist, _dir);
 	
-	PlayerCollision();
+	x += hSpeed;
+	y += vSpeed;
 	
 	if (hSpeed != 0 or vSpeed != 0) {
 		animType = PLAYERANIM.RUN;
