@@ -84,7 +84,10 @@ hurtPlayer = function(_direction,_force,_damage)
 			oCamera.yTo = oCamera.y;
 			layer_set_visible("Tiles", false);
 			layer_set_visible("TilesAbove", false);
-			layer_set_visible("TilesGlow", false);
+			layer_set_visible("TilesCave", false);
+			layer_set_visible("TilesCaveBelow", false);
+			layer_set_visible("TilesReallyAbove", false);
+			layer_set_visible("TilesReallyAboveCave", false);
 			with(all) {
 				if (sprite_index != undefined and object_index != oPlayerLvl2) {
 					visible = false;

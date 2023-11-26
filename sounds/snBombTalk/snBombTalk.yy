@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.115011,
+  "duration": 0.119116,
   "parent": {
     "name": "Talk",
     "path": "folders/Level2/Audio/SoundFX/Talk.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snBombTalk.wav",
   "type": 0,
-  "volume": 0.25,
+  "volume": 0.4,
 }

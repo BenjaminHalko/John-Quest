@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.195079,
+  "duration": 0.146667,
   "parent": {
     "name": "SoundFX",
     "path": "folders/Level2/Audio/SoundFX.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snSwordSwing.wav",
   "type": 0,
-  "volume": 0.5,
+  "volume": 0.2,
 }

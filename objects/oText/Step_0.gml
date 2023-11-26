@@ -6,7 +6,8 @@ textProgress += global.textSpeed;
 if (lastTextIndex != floor(textProgress) and textProgress < string_length(text)) {
 	lastTextIndex = floor(textProgress);
 	if (string_char_at(text, lastTextIndex) != " ") {
-		audio_play_sound(talkSound[background],1,false);
+		var _char = max(-26,ord(string_lower(string_char_at(text, lastTextIndex))) - ord("z"));
+		audio_play_sound(talkSound[background],1,false,1,0,1-_char*0.01);
 	} else {
 		audio_stop_sound(talkSound[background]);	
 	}
