@@ -17,10 +17,10 @@ function ActivateSwordNPC()
 			if(_hasHat)
 			{
 				//complete quest
+				RemoveHat();
 				NewTextBox("Wow, you found my hat without\nme even asking you to!",1);
 				NewTextBox("You are a true hero indeed!",1);
 				NewTextBox("Here, take this sword.\nI hear it is dangerous to go without it.",1);
-				RemoveHat();
 				oPlayer.lastState = PlayerStateGetItem;
 			}
 			else
@@ -37,10 +37,10 @@ function ActivateSwordNPC()
 			if(_hasHat)
 			{
 				//complete quest
+				RemoveHat();
 				NewTextBox("Wow, you found my hat!",1);
 				NewTextBox("You are a true hero indeed!",1);
 				NewTextBox("Here, take this sword.\nI hear it is dangerous to go without it.",1);
-				RemoveHat();
 				oPlayer.lastState = PlayerStateGetItem;
 			}
 			else

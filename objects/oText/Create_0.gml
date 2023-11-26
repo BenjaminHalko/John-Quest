@@ -12,7 +12,7 @@ responseSelected = 0;
 lastTextIndex = -1;
 
 portraits = [
-	sSwordNPCPortrait,
+	global.questStatusHat == 2 ? sSwordNPCPortraitHat : sSwordNPCPortrait,
 	sBombNPCPortrait
 ];
 
