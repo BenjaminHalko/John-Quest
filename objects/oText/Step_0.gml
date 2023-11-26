@@ -3,6 +3,15 @@ if (background != 0) frameNumber = (frameNumber + portraitAnim[background-1].spd
 lerpProgress += (1 - lerpProgress) / 50;
 textProgress += global.textSpeed;
 
+if (lastTextIndex != floor(textProgress) and textProgress < string_length(text)) {
+	lastTextIndex = floor(textProgress);
+	if (string_char_at(text, lastTextIndex) != " ") {
+		audio_play_sound(talkSound[background],1,false);
+	} else {
+		audio_stop_sound(talkSound[background]);	
+	}
+}
+
 x1 = lerp(x1, x1Target, lerpProgress);
 x2 = lerp(x2, x2Target, lerpProgress);
 

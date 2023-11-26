@@ -17,6 +17,7 @@ if (image_xscale == 1 and --wait <= 0) {
 		global.playerHasAnyItems = true;
 		global.saveDir = 270;
 		SaveLvl2();
+		audio_play_sound(snItemGet, 1, false);
 		instance_destroy();
 	}
 } else {

@@ -17,6 +17,8 @@ function PlayerStateSword() {
 		//Clear hit list
 		if (!ds_exists(hitByAttack,ds_type_list)) hitByAttack = ds_list_create();
 		ds_list_clear(hitByAttack);
+		
+		audio_play_sound(snSwordSwing, 1, false, 1, 0, random_range(0.8, 1.2));
 	}
 
 	PlayerAnimateSprite();

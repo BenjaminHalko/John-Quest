@@ -9,6 +9,7 @@ x2Target = RESOLUTION_W-80;
 textProgress = 0;
 
 responseSelected = 0;
+lastTextIndex = -1;
 
 portraits = [
 	sSwordNPCPortrait,
@@ -23,3 +24,9 @@ for(var i = 0; i < array_length(portraits); i++) {
 	})
 }
 frameNumber = 0;
+
+talkSound = [
+	snSignTalk,
+	snSwordTalk,
+	snBombTalk,
+];

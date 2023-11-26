@@ -60,6 +60,7 @@ hurtPlayer = function(_direction,_force,_damage)
 	if (oPlayer.invulnerable <= 0 and global.playerHealth > 0)
 	{
 		global.playerHealth = max(0, global.playerHealth-_damage);
+		audio_play_sound(snPlayerDie, 1, false);
 		
 		with (oPlayer)
 		{
@@ -74,6 +75,7 @@ hurtPlayer = function(_direction,_force,_damage)
 		
 		if (global.playerHealth <= 0)
 		{
+			audio_stop_sound(oLvl2Controller.music);
 			invulnerable = 0;
 			flash = 0;
 			speedBonk /= 2;
