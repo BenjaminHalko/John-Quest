@@ -20,7 +20,6 @@ function ActivateBombNPC()
 				instance_destroy(oBombNPC);
 			}
 			global.ranOutOfBombs++;
-			
 		} else if (global.ranOutOfBombs == 3) {
 			NewTextBox("...why?",2);
 		} else if (global.ranOutOfBombs == 2) {
@@ -28,11 +27,11 @@ function ActivateBombNPC()
 		} else if (global.ranOutOfBombs == 1) {
 			NewTextBox("Be more careful next time.",2);
 		} else {
-			NewTextBox("Legends has it, you can\npress [SHIFT] to swap items",2);
+			NewTextBox("Word of advice:\nDon't go wasting your bombs,\nyou only have a limited number.",2);
 		}
 	}
 }
 
 function ActivateBombNPCItemGot() {
-	NewTextBox("Legends has it, you can\npress [SHIFT] to swap items",2);
+	NewTextBox("Legends has it, you can\npress [SHIFT] to swap items.",2);
 }

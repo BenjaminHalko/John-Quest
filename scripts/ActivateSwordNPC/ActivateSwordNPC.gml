@@ -26,9 +26,12 @@ function ActivateSwordNPC()
 			else
 			{
 				//offer quest
-				if (global.questStatusHat == 0) NewTextBox("Hello there! You look like a brave adventurer.",1);
-				NewTextBox("Could you help me find my missing hat?",1,
-				["0:Of course!","1:This task is beneath me"]);
+				if (global.questStatusHat == 0) {
+					NewTextBox("Hello there! You look like a brave adventurer.",1);
+					NewTextBox("Could you help me find my missing hat?",1,["0:Of course!","1:This task is beneath me"]);
+				} else {
+					NewTextBox("Did you change your mind about helping me?",1,["0:Sure, I can help.","1:Haha! I don't care about your stinky hat!"]);
+				}
 				
 			}
 		}break;
@@ -46,7 +49,7 @@ function ActivateSwordNPC()
 			else
 			{
 				//clue reminder
-				NewTextBox("I think I left my hat in the evil\nSlime base to the South.",1);
+				NewTextBox("Did you forget where I left my hat?\nI think it was in the Evil Slime Base.",1);
 			}
 		}break;
 		case 2: //quest already completed
@@ -55,7 +58,7 @@ function ActivateSwordNPC()
 				NewTextBox("Here, take this sword.\nI hear it dangerous to go without it.",1);
 				oPlayer.lastState = PlayerStateGetItem;
 			} else {
-				NewTextBox("Thanks again!\nI hope you find that sword useful!",1);
+				NewTextBox("I am glad I got my hat back,\nnow I can see again.",1);
 			}
 		}break;
 	}
