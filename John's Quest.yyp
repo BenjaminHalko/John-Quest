@@ -302,6 +302,7 @@
     {"id":{"name":"DropItems","path":"scripts/DropItems/DropItems.yy",},},
     {"id":{"name":"sWillow","path":"sprites/sWillow/sWillow.yy",},},
     {"id":{"name":"sCoin","path":"sprites/sCoin/sCoin.yy",},},
+    {"id":{"name":"Sprite79","path":"sprites/Sprite79/Sprite79.yy",},},
     {"id":{"name":"PlayerStateLocked","path":"scripts/PlayerStateLocked/PlayerStateLocked.yy",},},
     {"id":{"name":"GMLive_seekSetOp","path":"scripts/GMLive_seekSetOp/GMLive_seekSetOp.yy",},},
     {"id":{"name":"sHookBlade","path":"sprites/sHookBlade/sHookBlade.yy",},},

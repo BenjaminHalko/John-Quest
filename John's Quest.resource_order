@@ -190,6 +190,7 @@
     {"name":"PlayerStateSword","order":5,"path":"scripts/PlayerStateSword/PlayerStateSword.yy",},
     {"name":"DropItems","order":3,"path":"scripts/DropItems/DropItems.yy",},
     {"name":"sWillow","order":5,"path":"sprites/sWillow/sWillow.yy",},
+    {"name":"Sprite79","order":3,"path":"sprites/Sprite79/Sprite79.yy",},
     {"name":"PlayerStateLocked","order":1,"path":"scripts/PlayerStateLocked/PlayerStateLocked.yy",},
     {"name":"GMLive_seekSetOp","order":6,"path":"scripts/GMLive_seekSetOp/GMLive_seekSetOp.yy",},
     {"name":"rTitle","order":1,"path":"rooms/rTitle/rTitle.yy",},
