@@ -170,6 +170,7 @@
     {"id":{"name":"tCol","path":"tilesets/tCol/tCol.yy",},},
     {"id":{"name":"oSpike","path":"objects/oSpike/oSpike.yy",},},
     {"id":{"name":"PlayerStateHook","path":"scripts/PlayerStateHook/PlayerStateHook.yy",},},
+    {"id":{"name":"snExplosionShort","path":"sounds/snExplosionShort/snExplosionShort.yy",},},
     {"id":{"name":"oLvl2Controller","path":"objects/oLvl2Controller/oLvl2Controller.yy",},},
     {"id":{"name":"GMLive_token","path":"scripts/GMLive_token/GMLive_token.yy",},},
     {"id":{"name":"oUI","path":"objects/oUI/oUI.yy",},},

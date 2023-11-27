@@ -42,6 +42,10 @@ if (oPlayer.keyAction)
 		}
 		else
 		{
+			global.gamePaused = false;
+			with(pEnemy) {
+				image_speed = 1;
+			}	
 			with(oPlayer) {
 				state = lastState;
 				keyAction = false;

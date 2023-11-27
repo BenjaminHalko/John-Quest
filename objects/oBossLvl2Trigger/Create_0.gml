@@ -3,4 +3,4 @@
 enableLive;
 
 active = 0;
-wait = 90;
+wait = 120;

@@ -103,6 +103,7 @@
     {"name":"oBushWide","order":3,"path":"objects/oBushWide/oBushWide.yy",},
     {"name":"tCol","order":1,"path":"tilesets/tCol/tCol.yy",},
     {"name":"PlayerStateHook","order":3,"path":"scripts/PlayerStateHook/PlayerStateHook.yy",},
+    {"name":"snExplosionShort","order":6,"path":"sounds/snExplosionShort/snExplosionShort.yy",},
     {"name":"GMLive_token","order":7,"path":"scripts/GMLive_token/GMLive_token.yy",},
     {"name":"GMLiveAPI","order":3,"path":"scripts/GMLiveAPI/GMLiveAPI.yy",},
     {"name":"oCameraSafeFall","order":4,"path":"objects/oCameraSafeFall/oCameraSafeFall.yy",},

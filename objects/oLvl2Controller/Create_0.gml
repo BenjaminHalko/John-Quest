@@ -44,3 +44,4 @@ if (global.atBoss) {
 	global.playerHasAnyItems = true;
 	global.playerBombAmmo = 20;
 }
+global.ranOutOfBombs = false;
