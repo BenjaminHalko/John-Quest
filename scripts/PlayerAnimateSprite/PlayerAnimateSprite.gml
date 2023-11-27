@@ -52,6 +52,7 @@ function PlayerAnimateSprite() {
 					animTimer = 30;
 				}
 			} else if (--animTimer == 0) {
+				audio_play_sound(snExplosion, 1, false);
 				repeat(100) {
 					with(instance_create_depth(x,y,depth,oTriangleParticle)) {
 						direction = random(360);

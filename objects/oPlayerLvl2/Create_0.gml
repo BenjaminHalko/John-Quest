@@ -51,12 +51,16 @@ swordDir = 1;
 
 flashCol = [1,0,0];
 
+autoMoveX = 0;
+autoMoveY = 0;
+
 // Hurt Player
 hurtPlayer = function(_direction,_force,_damage)
 {
 	if (oPlayer.invulnerable <= 0 and global.playerHealth > 0)
 	{
 		global.playerHealth = max(0, global.playerHealth-_damage);
+		audio_play_sound(snPlayerDie, 1, false);
 		
 		with (oPlayer)
 		{
@@ -71,6 +75,7 @@ hurtPlayer = function(_direction,_force,_damage)
 		
 		if (global.playerHealth <= 0)
 		{
+			audio_stop_sound(oLvl2Controller.music);
 			invulnerable = 0;
 			flash = 0;
 			speedBonk /= 2;
@@ -79,7 +84,10 @@ hurtPlayer = function(_direction,_force,_damage)
 			oCamera.yTo = oCamera.y;
 			layer_set_visible("Tiles", false);
 			layer_set_visible("TilesAbove", false);
-			layer_set_visible("TilesGlow", false);
+			layer_set_visible("TilesCave", false);
+			layer_set_visible("TilesCaveBelow", false);
+			layer_set_visible("TilesReallyAbove", false);
+			layer_set_visible("TilesReallyAboveCave", false);
 			with(all) {
 				if (sprite_index != undefined and object_index != oPlayerLvl2) {
 					visible = false;

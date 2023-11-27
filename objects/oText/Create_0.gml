@@ -9,8 +9,24 @@ x2Target = RESOLUTION_W-80;
 textProgress = 0;
 
 responseSelected = 0;
+lastTextIndex = -1;
 
 portraits = [
-	sSwordNPCPortrait,
+	global.questStatusHat == 2 ? sSwordNPCPortraitHat : sSwordNPCPortrait,
 	sBombNPCPortrait
+];
+
+portraitAnim = [];
+for(var i = 0; i < array_length(portraits); i++) {
+	array_push(portraitAnim, {
+		spd: sprite_get_speed(portraits[i]) / 60,
+		number: sprite_get_number(portraits[i]),
+	})
+}
+frameNumber = 0;
+
+talkSound = [
+	snSignTalk,
+	snSwordTalk,
+	snBombTalk,
 ];

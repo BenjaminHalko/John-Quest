@@ -34,14 +34,19 @@ if (!lifted)
 			if (entityThrowBreak) instance_destroy();
 		}
 	}
-	else
+	else if (!entityNPC)
 	{
 		//Fall back to earth
 		if (z > 0)
 		{
 			z = max(z - grav, 0);
 			grav += 0.1;
-			if(z == 0) and (entityThrowBreak) instance_destroy();
+			if(z == 0) {
+				if (entityThrowBreak) instance_destroy();
+				else {
+					audio_play_sound(snThud, 1, false, 1, 0, random_range(0.9,1.1));	
+				}
+			}
 		}
 		else
 		{

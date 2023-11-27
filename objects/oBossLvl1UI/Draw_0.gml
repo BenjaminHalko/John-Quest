@@ -9,7 +9,7 @@ var _barY2 = _barY+_rectHeight/2-1;
 var _barX1 = _x + 56;
 var _barX2 = _x + 472;
 var _barInnerX1 = _barX1+3;
-var _barInnerX2 = _barX2-3;
+var _barInnerX2 = _barX2-2;
 var _barInnerY1 = _barY1+3;
 var _barInnerY2 = _barY2-3;
 

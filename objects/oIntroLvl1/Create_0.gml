@@ -21,6 +21,11 @@ for(var i = 0; i < array_length(layersToHide); i++) {
 var _checkpointScale = Load("lvl1","saveDir", 1);
 var _checkpointNum = Load("lvl1","saveNumber", 0);
 
+if (global.atBoss) {
+	_checkpointNum = 13;
+	_checkpointScale = 1;
+}
+
 with (oCheckpoint) {
 	if (checkpointNumber == _checkpointNum and dir == _checkpointScale) {
 		oPlayer.xscale = dir;
