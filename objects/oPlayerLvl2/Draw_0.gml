@@ -12,12 +12,18 @@ if (state == PlayerStateHook) and (direction == 90) DrawHookChain();
 		shader_set_uniform_f_array(global.uFlashColor,flashCol);
 	}
 
-	draw_sprite_pos(sprite_index,round(direction / 90),
-		floor(x)-wHalf*xscale+topShift,floor(y-z)-wHalf*2*yscale+topShiftY,
-		floor(x)+wHalf*xscale+topShift,floor(y-z)-wHalf*2*yscale+topShiftY,
-		floor(x)+wHalf*xscale,floor(y-z),
-		floor(x)-wHalf*xscale,floor(y-z),
-	image_alpha);
+	if (image_angle != 0) {
+		draw_sprite_ext(sprite_index,round(direction / 90),
+		floor(x+lengthdir_x(8,image_angle-90)),floor(y-8-z+lengthdir_y(8,image_angle-90)),
+		1,1,image_angle,c_white,1);
+	} else {
+		draw_sprite_pos(sprite_index,round(direction / 90),
+			floor(x)-wHalf*xscale+topShift,floor(y-z)-wHalf*2*yscale+topShiftY,
+			floor(x)+wHalf*xscale+topShift,floor(y-z)-wHalf*2*yscale+topShiftY,
+			floor(x)+wHalf*xscale,floor(y-z),
+			floor(x)-wHalf*xscale,floor(y-z),
+		image_alpha);
+	}
 
 	if (flash != 0) shader_reset();
 

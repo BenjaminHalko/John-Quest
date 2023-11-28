@@ -14,6 +14,7 @@ eyeExpandPercent = 0;
 teleportMovementSpd = 3;
 teleportAppearWait = 0;
 teleportAppear = false;
+changeLocation = false;
 
 disappearPercent = 0;
 surf = surface_create(sprite_width,sprite_height);
@@ -24,6 +25,19 @@ yEyeOffset = 40;
 
 intro = true;
 introWait = 60;
+
+isShooting = false;
+shootPercent = 0;
+shootCounter = 0;
+
+dead = false;
+deadPercent = 0;
+deadPhase = 0;
+deadWait = 30;
+
+shouldDie = false;
+zSpeed = 0;
+zSpeedAccel = 0;
 
 eyes = [
 	{ x: 0, y: 2, waveOffset: 0.9},

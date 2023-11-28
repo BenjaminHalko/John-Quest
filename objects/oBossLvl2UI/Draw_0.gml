@@ -2,7 +2,7 @@
 
 var _x = camera_get_view_x(view_camera[0]);
 var _y = camera_get_view_y(view_camera[0]);
-var _barY = _y + 260 + 32 * (1 - percent);
+var _barY = _y + 260 + 32 * (1 - percent) + 32 * oBossLvl2.deadPercent;
 var _rectHeight = 8;
 var _barY1 = _barY-_rectHeight/2-1;
 var _barY2 = _barY+_rectHeight/2-1;

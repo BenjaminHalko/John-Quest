@@ -2,9 +2,9 @@
 
 enableLive;
 
-depth = -bbox_bottom;
+depth = -bbox_bottom - oBossLvl2.yEyeOffset/2;
 
-if (oBossLvl2.eyeExpandPercent > 0.4) depth -= oBossLvl2.yEyeOffset;
+if (oBossLvl2.eyeExpandPercent > 0.4 or oBossLvl2.dead) depth -= oBossLvl2.yEyeOffset/2;
 
 if (size == 0) {
 	image_xscale = xscale;
@@ -17,8 +17,8 @@ if (size == 0) {
 	sprite_index = sBossLvl2Eye;
 }
 
-image_blend = merge_color(#aaaaaa,c_white,size);
+image_blend = merge_color(#888888,c_white,min(size+oBossLvl2.deadPercent,1));
 
-if (place_meeting(x,y,oPlayer) and !oBossLvl2.intro) {
+if (place_meeting(x,y,oPlayer) and !oBossLvl2.intro and oBossLvl2.eyeExpandPercent-(!oBossLvl2.teleportAppear) > 0.3 and !oBossLvl2.dead and !oBossLvl2.shouldDie) {
 	oPlayer.hurtPlayer(point_direction(x,y,oPlayer.x,oPlayer.y),32,1);
 }
