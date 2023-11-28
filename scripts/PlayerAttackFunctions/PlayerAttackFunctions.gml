@@ -29,7 +29,7 @@ function HurtEnemy(_enemy, _damage, _source, _knockback)
 {
 	with (_enemy)
 	{
-		if (state != ENEMYSTATE.DIE)
+		if (state != ENEMYSTATE.DIE and enemyAttackable)
 		{
 			enemyHP -= _damage;
 			flash = 1;

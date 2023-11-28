@@ -1,15 +1,29 @@
 /// @desc 
 
+event_inherited();
+
 enableLive;
 
-hp = 200;
-maxHp = hp;
+maxHp = enemyHP;
 
+isTeleporting = false;
+
+eyeSpinRotationDir = 1;
 eyeSpinRotation = 0;
-teleportPercent = 0;
-teleportPercentTarget = 0;
+eyeExpandPercent = 0;
+teleportMovementSpd = 3;
+teleportAppearWait = 0;
+teleportAppear = false;
+
+disappearPercent = 0;
+surf = surface_create(sprite_width,sprite_height);
 
 eyeExpandCurve = animcurve_get_channel(BossLvl2Curves, "eyeExpand");
+
+yEyeOffset = 40;
+
+intro = true;
+introWait = 60;
 
 eyes = [
 	{ x: 0, y: 2, waveOffset: 0.9},
@@ -19,5 +33,16 @@ eyes = [
 	{ x: 3, y: -5, waveOffset: 0.7 }
 ];
 for(var i = 0; i < 5; i++) {
-	eyes[i].obj = instance_create_layer(eyes[i].x+x,eyes[i].y+bbox_top,layer,oBossLvl2Eye);
+	eyes[i].obj = instance_create_layer(0,0,layer,oBossLvl2Eye);
+}
+
+eyeX = x;
+eyeY = y;
+newX = x;
+newY = y;
+
+if (intro) {
+	eyeExpandPercent = 1;
+	disappearPercent = 1.5;
+	teleportAppear = true;
 }

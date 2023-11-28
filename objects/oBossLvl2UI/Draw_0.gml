@@ -26,6 +26,6 @@ draw_rectangle(_barX1,_barY1,_barX2,_barY2,false);
 draw_set_color(_col);
 draw_rectangle(_barX1+1,_barY1+1,_barX2,_barY2-0.5,true);
 if (healthDisplay > 0) {
-	//draw_set_color(merge_color(_col, c_white, oBossLvl1.bigFlash));
+	draw_set_color(merge_color(_col, c_white, oBossLvl2.flash));
 	draw_rectangle(_barInnerX1,_barInnerY1,lerp(_barInnerX1,_barInnerX2,healthDisplay),_barInnerY2,false);
 }

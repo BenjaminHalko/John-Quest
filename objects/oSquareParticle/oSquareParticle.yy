@@ -1,17 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBossLvl2Eye",
+  "name": "oSquareParticle",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Boss",
-    "path": "folders/Level2/Boss.yy",
+    "name": "Particles",
+    "path": "folders/Global/Effects/Particles.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,10 +29,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "sBossLvl2Eye",
-    "path": "sprites/sBossLvl2Eye/sBossLvl2Eye.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

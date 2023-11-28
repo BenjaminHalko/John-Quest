@@ -4,6 +4,8 @@ enableLive;
 
 depth = -bbox_bottom;
 
+if (oBossLvl2.eyeExpandPercent > 0.4) depth -= oBossLvl2.yEyeOffset;
+
 if (size == 0) {
 	image_xscale = xscale;
 	image_yscale = yscale;
@@ -16,3 +18,7 @@ if (size == 0) {
 }
 
 image_blend = merge_color(#aaaaaa,c_white,size);
+
+if (place_meeting(x,y,oPlayer) and !oBossLvl2.intro) {
+	oPlayer.hurtPlayer(point_direction(x,y,oPlayer.x,oPlayer.y),32,1);
+}
