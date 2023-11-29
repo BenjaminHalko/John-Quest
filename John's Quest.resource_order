@@ -67,6 +67,7 @@
     {"name":"UI","order":4,"path":"folders/Level2/UI.yy",},
     {"name":"Level3","order":5,"path":"folders/Level3.yy",},
     {"name":"Title","order":3,"path":"folders/Title.yy",},
+    {"name":"Global","order":3,"path":"folders/Level3/Global.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},

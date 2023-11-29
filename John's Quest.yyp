@@ -109,6 +109,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Level2/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Level3","folderPath":"folders/Level3.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Global","folderPath":"folders/Level3/Global.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -157,6 +158,7 @@
     {"id":{"name":"oBossLvl1UI","path":"objects/oBossLvl1UI/oBossLvl1UI.yy",},},
     {"id":{"name":"sFragRock","path":"sprites/sFragRock/sFragRock.yy",},},
     {"id":{"name":"PlayerActOutAnimation","path":"scripts/PlayerActOutAnimation/PlayerActOutAnimation.yy",},},
+    {"id":{"name":"oLvl3Controller","path":"objects/oLvl3Controller/oLvl3Controller.yy",},},
     {"id":{"name":"sPot","path":"sprites/sPot/sPot.yy",},},
     {"id":{"name":"oBossLvl1CrusherFade","path":"objects/oBossLvl1CrusherFade/oBossLvl1CrusherFade.yy",},},
     {"id":{"name":"BossLvl1Curves","path":"animcurves/BossLvl1Curves/BossLvl1Curves.yy",},},
@@ -414,13 +416,17 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
-    {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
-    {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"roomId":{"name":"rLvl3","path":"rooms/rLvl3/rLvl3.yy",},},
+    {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
+    {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
+    {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"tgLvl1","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"tgLvl2","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"tgLvl3","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"tgNoExport","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-3035426170322551023,},
   ],
 }

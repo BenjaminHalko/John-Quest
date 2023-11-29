@@ -19,10 +19,10 @@
     "name": "sCol",
     "path": "sprites/sCol/sCol.yy",
   },
-  "spriteNoExport": false,
+  "spriteNoExport": true,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgNoExport",
+    "path": "texturegroups/tgNoExport",
   },
   "tile_count": 2,
   "tileAnimation": {

@@ -38,10 +38,10 @@
     "name": "sLvl2CaveTiles",
     "path": "sprites/sLvl2CaveTiles/sLvl2CaveTiles.yy",
   },
-  "spriteNoExport": false,
+  "spriteNoExport": true,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgLvl2",
+    "path": "texturegroups/tgLvl2",
   },
   "tile_count": 100,
   "tileAnimation": {

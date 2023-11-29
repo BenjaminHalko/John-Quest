@@ -19,10 +19,10 @@
     "name": "sWallBack",
     "path": "sprites/sWallBack/sWallBack.yy",
   },
-  "spriteNoExport": false,
+  "spriteNoExport": true,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgLvl1",
+    "path": "texturegroups/tgLvl1",
   },
   "tile_count": 2,
   "tileAnimation": {

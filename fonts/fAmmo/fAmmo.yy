@@ -47,8 +47,8 @@
   "size": 12.0,
   "styleName": "Medium",
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgLvl2",
+    "path": "texturegroups/tgLvl2",
   },
   "TTFName": "",
   "usesSDF": false,

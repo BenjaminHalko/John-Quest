@@ -92,10 +92,10 @@
     "name": "sLvl2Tiles",
     "path": "sprites/sLvl2Tiles/sLvl2Tiles.yy",
   },
-  "spriteNoExport": false,
+  "spriteNoExport": true,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgLvl2",
+    "path": "texturegroups/tgLvl2",
   },
   "tile_count": 255,
   "tileAnimation": {
