@@ -65,8 +65,8 @@
     {"name":"Dialogue","order":4,"path":"folders/Level2/Text/Dialogue.yy",},
     {"name":"Tilesets","order":1,"path":"folders/Level2/Tilesets.yy",},
     {"name":"UI","order":4,"path":"folders/Level2/UI.yy",},
-    {"name":"Title","order":3,"path":"folders/Title.yy",},
     {"name":"Level3","order":5,"path":"folders/Level3.yy",},
+    {"name":"Title","order":3,"path":"folders/Title.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
