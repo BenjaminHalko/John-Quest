@@ -6,6 +6,11 @@ if (global.playerHealth == 0) exit;
 
 depth = -y;
 
+if (keyboard_check_pressed(ord("D")) and false) {
+	shouldDie = true;
+	isTeleporting = true;
+}
+
 // Intro
 if (intro) {
 	if (disappearPercent == 0 and --introWait <= 0) {
@@ -14,15 +19,11 @@ if (intro) {
 }
 
 // Dead
-if shouldDie and x == oCamera.boundary.x + 240 and y == oCamera.boundary.y + 135 and eyeExpandPercent == 0 {
+if shouldDie and x == oCamera.boundary.x + 240 and y == oCamera.boundary.y + 120 and eyeExpandPercent == 0 {
 	dead = true;
 	shouldDie = false;
 	audio_sound_gain(oLvl2Controller.music,0,1000);
 	audio_play_sound(snBossLvl1Roar,1,false);
-	with(pEnemy) {
-		enemyHP = 0;
-		state = ENEMYSTATE.DIE;
-	}
 }
 if dead {
 	if (deadPhase == 0) {
@@ -100,7 +101,6 @@ if dead {
 			}
 			audio_play_sound(snExplosion,1,false);
 			ScreenShake(15,90);
-			audio_play_sound(snAscend,1,false);
 		}
 	}
 	
@@ -109,13 +109,14 @@ if dead {
 		eyeExpandPercent = Approach(eyeExpandPercent, 2, 0.03 + 0.02 * (eyeExpandPercent < 1));
 		eyeSpinRotationDir = -1;
 		if eyeExpandPercent == 2 {
-			deadWait = 200;
+			deadWait = 250;
 			deadPhase++;
+			audio_play_sound(snAscend,1,false);
 		}
 	}
 	
 	if (deadPhase >= 8) {
-		repeat((irandom(deadWait/8) <= 1)*min(4,zSpeed/2 + 1)) {
+		repeat((irandom(max(1,(deadWait-50)/8)) <= 1)*min(4,zSpeed/2 + 1)) {
 			var _x = random_range(oCamera.boundary.bbox_left, oCamera.boundary.bbox_right);
 			var _y = random_range(oCamera.boundary.bbox_top, oCamera.boundary.bbox_bottom);
 			with(instance_create_depth(_x,_y,-100000,oSquareParticle)) {
@@ -170,7 +171,7 @@ if (isTeleporting) {
 		var _boundary = oCamera.boundary;
 		if (shouldDie) {
 			newX = _boundary.x + 240;
-			newY = _boundary.y + 135; 
+			newY = _boundary.y + 120; 
 		} else {
 			var _found = false;
 			repeat(100) {
@@ -206,7 +207,7 @@ if (isTeleporting) {
 #endregion
 
 // Damage
-entityCollision = (disappearPercent == 0);
+entityCollision = (disappearPercent == 0 and !dead);
 enemyAttackable = (eyeExpandPercent == 0);
 
 #region Eyes
@@ -311,5 +312,11 @@ if (flash != 0 and !isTeleporting and enemyAttackable) {
 	alarm[0] = 1;
 	shootCounter = 0;
 	DropItems(x,y,[oHeartDrop, oCoin, oCoin, oCoin, oCoin]);
-	if (enemyHP <= 0) shouldDie = true;
+	if (enemyHP <= 0) {
+		shouldDie = true;
+		with(pEnemy) {
+			enemyHP = 0;
+			state = ENEMYSTATE.DIE;
+		}
+	}
 }
