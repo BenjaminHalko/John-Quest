@@ -15,8 +15,6 @@ timePassed = 0;
 
 count = 0;
 
-sprite_set_live(sSwordNPCPortrait,true);
-
 places = [
 	[xstart,ystart],
 	[2224,3064],

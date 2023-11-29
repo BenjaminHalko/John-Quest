@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snFireballShoot",
+  "name": "snBossLvl2Talk",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.509184,
+  "duration": 0.153741,
   "parent": {
-    "name": "SoundFX",
-    "path": "folders/Level2/Audio/SoundFX.yy",
+    "name": "Talk",
+    "path": "folders/Level2/Audio/SoundFX/Talk.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snFireballShoot.wav",
+  "soundFile": "snBossLvl2Talk.wav",
   "type": 0,
   "volume": 0.4,
 }

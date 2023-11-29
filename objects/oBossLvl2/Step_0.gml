@@ -13,8 +13,12 @@ if (keyboard_check_pressed(ord("D"))) {
 
 // Intro
 if (intro) {
-	if (disappearPercent == 0 and --introWait <= 0) {
-		intro = false;
+	if (disappearPercent == 0) {
+		if (--introWait == 0) {
+			ActivateBossLvl2NPC();
+		} else if (introWait < 0 and !instance_exists(oText) and !instance_exists(oTextQueued)) {
+			intro = false;
+		}
 	}
 }
 

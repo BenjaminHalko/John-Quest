@@ -13,7 +13,8 @@ lastTextIndex = -1;
 
 portraits = [
 	sSwordNPCPortrait,
-	sBombNPCPortrait
+	sBombNPCPortrait,
+	sBossLvl2Portrait
 ];
 frameNumber = 0;
 
@@ -21,4 +22,5 @@ talkSound = [
 	snSignTalk,
 	snSwordTalk,
 	snBombTalk,
+	snBossLvl2Talk,
 ];
