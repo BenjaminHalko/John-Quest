@@ -371,8 +371,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "tgLvl3",
-    "path": "texturegroups/tgLvl3",
+    "name": "tgLvl3Imgs",
+    "path": "texturegroups/tgLvl3Imgs",
   },
   "type": 0,
   "VTile": false,

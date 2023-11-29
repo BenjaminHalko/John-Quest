@@ -34,7 +34,8 @@ if (global.movePercent != 1) {
 		}
 	} else {
 		var _left = (global.mx <= 480/2);
-		setCursor(_left ? CURSOR.LEFT : CURSOR.RIGHT);
+		if (_node.twoWay) setCursor(_left ? CURSOR.BACKWARD_LEFT : CURSOR.BACKWARD_RIGHT);
+		else setCursor(_left ? CURSOR.LEFT : CURSOR.RIGHT);
 		if (global.clicked) _rotate = _left ? 1 : -1;
 	}
 
