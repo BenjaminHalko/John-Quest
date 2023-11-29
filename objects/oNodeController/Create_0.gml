@@ -75,10 +75,18 @@ for(var i = 0; i < array_length(global.nodes); i++) {
 	}
 }
 
-global.currentNode = 10;
-global.currentDir = 1;
+// Load
+global.currentNode = Load("lvl3","node",10);
+global.currentDir = Load("lvl3","dir",1);
+global.piecesCollected = array_create(3,false);
 
 nextNode = global.currentNode;
 nextDir = global.currentDir;
 turnDir = 0;
 global.movePercent = 1;
+
+// Roar
+bossRoared = array_create(3,false);
+
+// Input
+global.allowInput = true;

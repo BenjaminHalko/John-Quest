@@ -1,7 +1,7 @@
 /// @desc 
 
-// Load all texture maps
-//texture_prefetch("tgLvl3");
+#macro INVENTORY_Y 180
+
 
 // Cursor
 windowWidth = window_get_width();

@@ -4,22 +4,48 @@ enableLive;
 
 if (global.movePercent != 1) {
 	setCursor(CURSOR.NORMAL);
-	global.movePercent = ApproachFade(global.movePercent,1,0.08+(1-max(0,abs(turnDir)-1))*0.2,0.6);
+	global.allowInput = false;
+	global.movePercent = ApproachFade(global.movePercent,1,0.045+(1-max(0,abs(turnDir)-1))*0.14,0.6);
 	if (global.movePercent == 1) {
-		global.currentNode = nextNode;
-		global.currentDir = nextDir;
 		turnDir = 0;
+		
+		if (nextDir != global.currentDir) {
+			global.currentDir = nextDir;
+			Save("lvl3","dir",global.currentDir);
+		} else {
+			global.currentNode = nextNode;
+			Save("lvl3","node",global.currentNode);
+
+			// Check for boss roar
+			var _node = global.nodes[global.currentNode];
+		
+			for(var i = 0; i < 4; i++) {
+				if (_node.nextNode[i] != -1) {
+					var _nextNode = global.nodes[_node.nextNode[i]];
+					if (_nextNode.hasPiece != -1) {
+						var _piece = _nextNode.hasPiece;
+						if (!global.piecesCollected[_piece] and !bossRoared[_piece]) {
+							audio_play_sound(snBossLvl1Roar,1,false);
+							bossRoared[_piece] = true;
+						}
+					}
+				}
+			}
+		}
 	}
-} else {
+} else if (audio_is_playing(snBossLvl1Roar)) {
+	setCursor(CURSOR.NORMAL);
+	ScreenShake(3,5);
+	global.allowInput = false;
+} else if (global.inHand == -1 and global.my <= INVENTORY_Y) {
+	global.allowInput = true;
 	// Vars
 	var _node = global.nodes[global.currentNode];
 	var _move = false;
 	var _rotate = 0;
 
 	// Inventory
-	if (global.my > 220) {
-		setCursor(CURSOR.NORMAL);
-	} else if (_node.nextNode[global.currentDir] != -1) {
+	if (_node.nextNode[global.currentDir] != -1) {
 		var _amount = 480/4; 
 		if (_node.twoWay) _amount -= _amount/3;	
 		
@@ -43,7 +69,10 @@ if (global.movePercent != 1) {
 	if (_move) {
 		nextNode = _node.nextNode[global.currentDir];
 		global.movePercent = 0;
+		audio_play_sound(snWalking,1,false,1,0,random_range(0.8,1.2));
 	} else if(_rotate != 0) {
+		if (_node.twoWay) audio_play_sound(snWalkingSlow,1,false,1,0,random_range(0.8,1.5));
+		else audio_play_sound(snWalking,1,false,1,0,random_range(0.8,1.2));
 		nextDir = global.currentDir;
 		do {
 			nextDir = Wrap(nextDir+_rotate,0,3);
