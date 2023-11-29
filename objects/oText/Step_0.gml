@@ -1,10 +1,11 @@
 if background == 1 {
 	frameNumber = oSwordNPC.image_index;
 }
-	
-
 if(background == 2) {
 	frameNumber = (frameNumber + 12/60) % 3;
+}
+if(background == 3) {
+	frameNumber = (frameNumber + sprite_get_speed(sBossLvl2Portrait)/60) % sprite_get_number(sBossLvl2Portrait);
 }
 
 lerpProgress += (1 - lerpProgress) / 50;
