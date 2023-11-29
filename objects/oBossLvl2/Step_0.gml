@@ -140,7 +140,10 @@ if dead {
 		zSpeed += 0.015 + zSpeedAccel;
 		oPlayer.image_angle += 2 + zSpeedAccel * 50;
 		
-		if (oPlayer.z > 400) Transition(rLvl3);
+		if (oPlayer.z > 400 and !instance_exists(oTransition)) {
+			Save("lvl2","money",global.playerMoney);
+			Transition(rLvl3);
+		}
 	}
 	
 	x = newX+random_range(-2,2);

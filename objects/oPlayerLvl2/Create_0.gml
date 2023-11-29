@@ -88,6 +88,7 @@ hurtPlayer = function(_direction,_force,_damage)
 			layer_set_visible("TilesCaveBelow", false);
 			layer_set_visible("TilesReallyAbove", false);
 			layer_set_visible("TilesReallyAboveCave", false);
+			instance_destroy(pCollectable);
 			with(all) {
 				if (sprite_index != undefined and object_index != oPlayerLvl2) {
 					visible = false;
