@@ -11,7 +11,7 @@
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
-  "For3D": false,
+  "For3D": true,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0ffc3b4c-e2d6-45e8-8c64-863c28176e50",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9a3a3b4b-af81-4e32-b20c-c3aea8a01ba4",},
@@ -176,10 +176,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"569527ec-3723-4a96-a246-3b51d50963fe","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 9,
+  "origin": 0,
   "parent": {
-    "name": "Global",
-    "path": "folders/Level3/Global.yy",
+    "name": "Nodes",
+    "path": "folders/Level3/Nodes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -365,8 +365,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 8,
-    "yorigin": 8,
+    "xorigin": 0,
+    "yorigin": 0,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
