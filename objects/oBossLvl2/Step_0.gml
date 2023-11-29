@@ -209,7 +209,7 @@ if (isTeleporting) {
 		}
 	}
 } else if (!isShooting and eyeExpandPercent == 0 and alarm[0] <= 0 and !dead and !intro and enemyHP != maxHp) {
-	alarm[0] = (shootCounter == 0 ? 210 - 40 * (maxHp-enemyHP)/maxHp : 30 - 15 * (maxHp-enemyHP)/maxHp);	
+	alarm[0] = (shootCounter == 0 ? 200 - 50 * (maxHp-enemyHP)/maxHp : 25 - 20 * (maxHp-enemyHP)/maxHp);	
 }
 #endregion
 
