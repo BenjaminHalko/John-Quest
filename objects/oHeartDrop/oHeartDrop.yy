@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBombDrop",
+  "name": "oHeartDrop",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pCollectable","path":"objects/pCollectable/pCollectable.yy",},"propertyId":{"name":"collectScript","path":"objects/pCollectable/pCollectable.yy",},"value":"CollectBomb",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pCollectable","path":"objects/pCollectable/pCollectable.yy",},"propertyId":{"name":"collectScript","path":"objects/pCollectable/pCollectable.yy",},"value":"CollectHeart",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pCollectable","path":"objects/pCollectable/pCollectable.yy",},"propertyId":{"name":"collectScriptArg","path":"objects/pCollectable/pCollectable.yy",},"value":"1",},
   ],
   "parent": {
@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sBombDrop",
-    "path": "sprites/sBombDrop/sBombDrop.yy",
+    "name": "sHeartDrop",
+    "path": "sprites/sHeartDrop/sHeartDrop.yy",
   },
   "spriteMaskId": null,
   "visible": true,

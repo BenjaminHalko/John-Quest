@@ -59,7 +59,7 @@ hurtPlayer = function(_direction,_force,_damage)
 {
 	if (oPlayer.invulnerable <= 0 and global.playerHealth > 0)
 	{
-		//global.playerHealth = max(0, global.playerHealth-_damage);
+		global.playerHealth = max(0, global.playerHealth-_damage);
 		audio_play_sound(snPlayerDie, 1, false);
 		
 		with (oPlayer)
@@ -70,7 +70,7 @@ hurtPlayer = function(_direction,_force,_damage)
 			ScreenShake(2,10);
 			flash = 0.7;
 			flashCol = [1,0,0];
-			invulnerable = 60;
+			invulnerable = 90;
 		}
 		
 		if (global.playerHealth <= 0)

@@ -16,7 +16,7 @@ if (flash != 0)
 {
 	shader_set(shFlash);
 	shader_set_uniform_f(global.uFlashPercent,flash);
-	shader_set_uniform_f_array(global.uFlashColor,flashColor);
+	shader_set_uniform_f_array(global.uFlashColor,flashCol);
 }
 
 if (teleportAppear) {

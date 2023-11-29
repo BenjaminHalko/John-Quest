@@ -68,6 +68,7 @@ function PlayerStateFree() {
 	{
 		if(keySecondary != 0)
 		{
+			var _start = global.playerEquipped;
 			do
 			{
 				global.playerEquipped += keySecondary;
@@ -75,6 +76,7 @@ function PlayerStateFree() {
 				if(global.playerEquipped >= ITEM.TYPE_COUNT) global.playerEquipped = 0;
 			}
 			until (global.playerItemUnlocked[global.playerEquipped]);
+			if (global.playerEquipped != _start) audio_play_sound(snBlip,1,false);
 		}
 	}
 }

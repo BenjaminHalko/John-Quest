@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snExplosionShort",
+  "name": "snFireballShoot",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.383265,
+  "duration": 0.509184,
   "parent": {
     "name": "SoundFX",
     "path": "folders/Level2/Audio/SoundFX.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snExplosionShort.wav",
+  "soundFile": "snFireballShoot.wav",
   "type": 0,
-  "volume": 0.3,
+  "volume": 0.4,
 }

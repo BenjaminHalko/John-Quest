@@ -30,6 +30,4 @@ playerX = undefined;
 playerY = undefined;
 if (instance_exists(oPlayer) and (room == rLvl1 and roomTo == rLvl2)) {
 	depth = oPlayer.depth + 1;
-	playerX = oPlayer.x - oCamera.x;
-	playerY = oPlayer.y - oCamera.y;
 }

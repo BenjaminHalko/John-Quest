@@ -19,6 +19,6 @@ if (size == 0) {
 
 image_blend = merge_color(#888888,c_white,min(size+oBossLvl2.deadPercent,1));
 
-if (place_meeting(x,y,oPlayer) and !oBossLvl2.intro and oBossLvl2.eyeExpandPercent-(!oBossLvl2.teleportAppear) > 0.3 and !oBossLvl2.dead and !oBossLvl2.shouldDie) {
-	oPlayer.hurtPlayer(point_direction(x,y,oPlayer.x,oPlayer.y),32,1);
+if (place_meeting(x,y,oPlayer) and !oBossLvl2.intro and oBossLvl2.eyeExpandPercent-(!oBossLvl2.teleportAppear) > 0.5 and !oBossLvl2.dead and !oBossLvl2.shouldDie) {
+	oPlayer.hurtPlayer(point_direction(x,y,oPlayer.x,oPlayer.y),32,0.25);
 }

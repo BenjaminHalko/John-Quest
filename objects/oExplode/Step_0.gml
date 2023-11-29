@@ -15,7 +15,7 @@ if(image_index < 4)
 			{
 				if(object_is_ancestor(object_index,pEnemy))
 				{
-					HurtEnemy(id,25,other.id,20);
+					HurtEnemy(id,15,other.id,20);
 				}
 				else
 				{

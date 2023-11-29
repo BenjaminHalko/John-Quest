@@ -2,28 +2,9 @@
 
 enableLive;
 
-depth = -y;
+if (global.playerHealth == 0) exit;
 
-if (keyboard_check_pressed(ord("T"))) isTeleporting = 1 - isTeleporting;
-if (keyboard_check_pressed(ord("Y"))) isShooting = 1 - isShooting;
-if (keyboard_check_pressed(ord("D"))) {
-	if (oPlayer.state != PlayerStateLocked) {
-		shouldDie = true;
-		isTeleporting = true;
-	} else {
-		dead = false;
-		shouldDie = false;
-		oPlayer.state = PlayerStateFree;
-		oPlayer.z = 0;
-		zSpeedAccel = 0;
-		zSpeed = 0;
-		oPlayer.image_angle = 0;
-	}
-	deadPhase = 0;
-	deadWait = 60;
-	deadPercent = 0;
-	visible = true;
-}
+depth = -y;
 
 // Intro
 if (intro) {
@@ -36,10 +17,12 @@ if (intro) {
 if shouldDie and x == oCamera.boundary.x + 240 and y == oCamera.boundary.y + 135 and eyeExpandPercent == 0 {
 	dead = true;
 	shouldDie = false;
-	oPlayer.state = PlayerStateLocked;
-	oPlayer.direction = 270;
 	audio_sound_gain(oLvl2Controller.music,0,1000);
 	audio_play_sound(snBossLvl1Roar,1,false);
+	with(pEnemy) {
+		enemyHP = 0;
+		state = ENEMYSTATE.DIE;
+	}
 }
 if dead {
 	if (deadPhase == 0) {
@@ -77,6 +60,7 @@ if dead {
 					radius = 2;
 				}	
 			}
+			DropItems(x,y,array_create(5,oCoin));
 			deadWait = 30;
 			if (deadPhase == 6) {
 				visible = false;
@@ -144,7 +128,8 @@ if dead {
 			}
 		}
 		if (deadPhase == 8 and --deadWait <= 0) {
-			deadPhase++;	
+			deadPhase++;
+			oPlayer.state = PlayerStateLocked;
 		}
 	}
 	
@@ -215,20 +200,18 @@ if (isTeleporting) {
 			ystart = y;
 		}
 	}
-} else if (!isShooting and alarm[0] <= 0 and !dead and !intro) {
-	alarm[0] = (shootCounter == 0 ? 180 : 20 - 15 * (maxHp-enemyHP)/maxHp);	
+} else if (!isShooting and eyeExpandPercent == 0 and alarm[0] <= 0 and !dead and !intro and enemyHP != maxHp) {
+	alarm[0] = (shootCounter == 0 ? 210 - 40 * (maxHp-enemyHP)/maxHp : 30 - 15 * (maxHp-enemyHP)/maxHp);	
 }
 #endregion
 
 // Damage
-if (disappearPercent == 0 and place_meeting(x,y,oPlayer)) {
-	oPlayer.hurtPlayer(point_direction(x,y,oPlayer.x,oPlayer.y),32,0.25);
-}
+entityCollision = (disappearPercent == 0);
 enemyAttackable = (eyeExpandPercent == 0);
 
 #region Eyes
 var _teleportFade = animcurve_channel_evaluate(eyeExpandCurve, max(0,eyeExpandPercent-(!teleportAppear)));
-var _rotSpd = 3 * (3-max(0,_teleportFade)*2) * eyeSpinRotationDir;
+var _rotSpd = 2 * (3-max(0,_teleportFade)*2) * eyeSpinRotationDir;
 if (dead) _rotSpd *= 1.5;
 eyeSpinRotation -= _rotSpd;
 for(var i = 0; i < 5; i++) {
@@ -280,8 +263,10 @@ if (shootPercent > 0) {
 	}
 	if (!dead and shootPercent == 1) {
 		isShooting = false;
+		var _num = 3;
+		var _dir = point_direction(eyes[0].obj.x,eyes[0].obj.y,oPlayer.x,oPlayer.y);
 		with(instance_create_depth(eyes[0].obj.x,eyes[0].obj.y,depth-1,oBossLvl2Fireball)) {
-			speed = 5+(other.maxHp-other.enemyHP)/other.maxHp*3;
+			speed = 4+(other.maxHp-other.enemyHP)/other.maxHp*2;
 		}
 	}
 }
@@ -301,7 +286,7 @@ if (dead and deadPhase < 6) {
 // Values
 if (!dead) eyeExpandPercent = Approach(min(2-teleportAppear,eyeExpandPercent), (intro or isTeleporting)*(2 - teleportAppear), 0.03);
 disappearPercent = Approach(disappearPercent,(!teleportAppear and _teleportFade > 0) * 1.5,0.03-0.015*intro);
-if (!dead) shootPercent = ApproachFade(shootPercent, isShooting, 0.1+(maxHp-enemyHP)/maxHp*0.3, 0.7);
+if (!dead) shootPercent = ApproachFade(shootPercent, isShooting, 0.1+(maxHp-enemyHP)/maxHp*0.5, 0.7);
 if (dead) deadPercent = ApproachFade(deadPercent, 1, 0.02, 0.7);
 flash = max(flash-0.1,0);
 
@@ -321,8 +306,10 @@ if (eyeExpandPercent != 0 and (!teleportAppear or eyeExpandPercent == 1) and dis
 }
 
 // Get hit
-if (flash != 0 and !isTeleporting) {
+if (flash != 0 and !isTeleporting and enemyAttackable) {
+	audio_play_sound(snBreak,1,false);
 	alarm[0] = 1;
 	shootCounter = 0;
+	DropItems(x,y,[oHeartDrop, oCoin, oCoin, oCoin, oBombDrop]);
 	if (enemyHP <= 0) shouldDie = true;
 }
