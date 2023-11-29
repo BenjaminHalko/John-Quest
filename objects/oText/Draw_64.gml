@@ -28,4 +28,7 @@ draw_text((x1+x2)/2+_portrait*24, y1+7, _print);
 
 if (_portrait) {
 	draw_sprite(portraits[background-1],frameNumber,x1+8,(y1+y2)/2);
+	if (background == 1 and global.questStatusHat == 2) {
+		draw_sprite(sSwordNPCPortraitHat,0,x1+8,(y1+y2)/2);
+	}
 }

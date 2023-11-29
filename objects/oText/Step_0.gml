@@ -1,4 +1,11 @@
-if (background != 0) frameNumber = (frameNumber + portraitAnim[background-1].spd) % portraitAnim[background-1].number;
+if background == 1 {
+	frameNumber = oSwordNPC.image_index;
+}
+	
+
+if(background == 2) {
+	frameNumber = (frameNumber + 12/60) % 3;
+}
 
 lerpProgress += (1 - lerpProgress) / 50;
 textProgress += global.textSpeed;

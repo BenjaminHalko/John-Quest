@@ -12,17 +12,9 @@ responseSelected = 0;
 lastTextIndex = -1;
 
 portraits = [
-	global.questStatusHat == 2 ? sSwordNPCPortraitHat : sSwordNPCPortrait,
+	sSwordNPCPortrait,
 	sBombNPCPortrait
 ];
-
-portraitAnim = [];
-for(var i = 0; i < array_length(portraits); i++) {
-	array_push(portraitAnim, {
-		spd: sprite_get_speed(portraits[i]) / 60,
-		number: sprite_get_number(portraits[i]),
-	})
-}
 frameNumber = 0;
 
 talkSound = [
