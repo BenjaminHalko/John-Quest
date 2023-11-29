@@ -302,7 +302,6 @@
     {"id":{"name":"AfterImageFunctions","path":"scripts/AfterImageFunctions/AfterImageFunctions.yy",},},
     {"id":{"name":"sBossLvl1Intro","path":"sprites/sBossLvl1Intro/sBossLvl1Intro.yy",},},
     {"id":{"name":"sSlimeDie","path":"sprites/sSlimeDie/sSlimeDie.yy",},},
-    {"id":{"name":"GMLive_notOnce","path":"scripts/GMLive_notOnce/GMLive_notOnce.yy",},},
     {"id":{"name":"GMLive_new","path":"scripts/GMLive_new/GMLive_new.yy",},},
     {"id":{"name":"sBossLvl1Block","path":"sprites/sBossLvl1Block/sBossLvl1Block.yy",},},
     {"id":{"name":"oCircleParticle","path":"objects/oCircleParticle/oCircleParticle.yy",},},

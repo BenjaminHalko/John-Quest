@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 depth = -bbox_bottom - oBossLvl2.yEyeOffset/2;
 
 if (oBossLvl2.eyeExpandPercent > 0.4 or oBossLvl2.dead) depth -= oBossLvl2.yEyeOffset/2;

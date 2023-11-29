@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (global.playerHealth == 0) exit;
 
 depth = -y;

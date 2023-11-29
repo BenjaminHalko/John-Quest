@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (shootCounter-- == 0) {
 	isTeleporting = true;
 	shootCounter = 4;

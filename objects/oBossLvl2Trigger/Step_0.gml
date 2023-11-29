@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (active == 0 and place_meeting(x,y,oPlayer)) {
 	active = 1;
 	oPlayer.state = PlayerStateAutoMove;

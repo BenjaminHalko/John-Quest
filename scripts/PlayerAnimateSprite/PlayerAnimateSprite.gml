@@ -1,6 +1,4 @@
 function PlayerAnimateSprite() {
-	if (live_call()) return live_result;
-	
 	var _changedAnim = (lastAnim != animType);
 	lastAnim = animType;
 	switch(animType) {

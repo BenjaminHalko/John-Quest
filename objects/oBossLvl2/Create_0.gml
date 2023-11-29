@@ -2,8 +2,6 @@
 
 event_inherited();
 
-enableLive;
-
 maxHp = enemyHP;
 
 isTeleporting = false;

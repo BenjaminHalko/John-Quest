@@ -196,7 +196,6 @@
     {"name":"AfterImageFunctions","order":1,"path":"scripts/AfterImageFunctions/AfterImageFunctions.yy",},
     {"name":"sBossLvl1Intro","order":7,"path":"sprites/sBossLvl1Intro/sBossLvl1Intro.yy",},
     {"name":"sSlimeDie","order":2,"path":"sprites/sSlimeDie/sSlimeDie.yy",},
-    {"name":"GMLive_notOnce","order":1,"path":"scripts/GMLive_notOnce/GMLive_notOnce.yy",},
     {"name":"GMLive_new","order":2,"path":"scripts/GMLive_new/GMLive_new.yy",},
     {"name":"sBossLvl1Block","order":1,"path":"sprites/sBossLvl1Block/sBossLvl1Block.yy",},
     {"name":"oSword","order":1,"path":"objects/oSword/oSword.yy",},

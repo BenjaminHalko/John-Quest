@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (!isOnScreen()) instance_destroy();
 
 if (point_in_circle(oPlayer.x,oPlayer.y,x,y,8)) {

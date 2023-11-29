@@ -1,7 +1,5 @@
 /// @desc Draw Textbox
 
-enableLive;
-
 draw_sprite_ext(sTextboxBg, background, x1, y1, (x2 - x1) / 24, (y2 - y1) / 24, 0, c_white, 1);
 draw_set_font(fRPG);
 draw_set_halign(fa_center);

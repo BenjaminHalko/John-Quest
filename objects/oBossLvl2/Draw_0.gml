@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 var _rectH = 8;
 var _rectY = lerp(-_rectH*(!teleportAppear),sprite_height,disappearPercent)-1;
 var _rectCol1 = #BB00FF;

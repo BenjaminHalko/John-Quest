@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 Input();
 
 inputMagnitude = (keyRight - keyLeft != 0) or (keyDown - keyUp != 0);
