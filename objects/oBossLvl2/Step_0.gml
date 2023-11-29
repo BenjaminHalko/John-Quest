@@ -116,7 +116,7 @@ if dead {
 	}
 	
 	if (deadPhase >= 8) {
-		repeat((irandom(max(1,(deadWait-100)/8)) <= 1)*min(4,zSpeed/2 + 1)) {
+		repeat((irandom(max(1,(deadWait-100)/8)) <= 1)*min(4,zSpeed/2 + 2)) {
 			var _x = random_range(oCamera.boundary.bbox_left, oCamera.boundary.bbox_right);
 			var _y = random_range(oCamera.boundary.bbox_top, oCamera.boundary.bbox_bottom);
 			with(instance_create_depth(_x,_y,-100000,oSquareParticle)) {
