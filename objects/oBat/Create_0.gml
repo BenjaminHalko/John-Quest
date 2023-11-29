@@ -20,5 +20,5 @@ entityDropList = choose
 (
 	[oCoin,oCoin,oCoin],
 	[oBombDrop,oBombDrop],
-	[oHeartDrop],
+	[irandom(2) == 0 ? oHeartDrop : oCoin],
 )
