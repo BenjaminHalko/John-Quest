@@ -310,6 +310,6 @@ if (flash != 0 and !isTeleporting and enemyAttackable) {
 	audio_play_sound(snBreak,1,false);
 	alarm[0] = 1;
 	shootCounter = 0;
-	DropItems(x,y,[oHeartDrop, oCoin, oCoin, oCoin, oBombDrop]);
+	DropItems(x,y,[oHeartDrop, oCoin, oCoin, oCoin, oCoin]);
 	if (enemyHP <= 0) shouldDie = true;
 }
