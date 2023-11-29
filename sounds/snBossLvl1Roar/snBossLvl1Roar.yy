@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snBossLvl1Roar.ogg",
   "type": 1,
-  "volume": 0.7,
+  "volume": 0.6,
 }
