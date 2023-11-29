@@ -66,6 +66,7 @@
     {"name":"Tilesets","order":1,"path":"folders/Level2/Tilesets.yy",},
     {"name":"UI","order":4,"path":"folders/Level2/UI.yy",},
     {"name":"Title","order":3,"path":"folders/Title.yy",},
+    {"name":"Level3","order":5,"path":"folders/Level3.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
@@ -207,6 +208,7 @@
     {"name":"oIntroLvl1","order":4,"path":"objects/oIntroLvl1/oIntroLvl1.yy",},
     {"name":"snSignTalk","order":1,"path":"sounds/snSignTalk/snSignTalk.yy",},
     {"name":"PlayerStateGetItem","order":7,"path":"scripts/PlayerStateGetItem/PlayerStateGetItem.yy",},
+    {"name":"sLvl3Images","order":1,"path":"sprites/sLvl3Images/sLvl3Images.yy",},
     {"name":"PlayerStateSword","order":5,"path":"scripts/PlayerStateSword/PlayerStateSword.yy",},
     {"name":"DropItems","order":3,"path":"scripts/DropItems/DropItems.yy",},
     {"name":"sWillow","order":5,"path":"sprites/sWillow/sWillow.yy",},

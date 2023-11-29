@@ -108,6 +108,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level2/Tilesets/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Level2/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Level3","folderPath":"folders/Level3.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -223,6 +224,7 @@
     {"id":{"name":"GMLive_vm_call","path":"scripts/GMLive_vm_call/GMLive_vm_call.yy",},},
     {"id":{"name":"oBomb","path":"objects/oBomb/oBomb.yy",},},
     {"id":{"name":"oRoof","path":"objects/oRoof/oRoof.yy",},},
+    {"id":{"name":"rLvl3","path":"rooms/rLvl3/rLvl3.yy",},},
     {"id":{"name":"oBush","path":"objects/oBush/oBush.yy",},},
     {"id":{"name":"oPines","path":"objects/oPines/oPines.yy",},},
     {"id":{"name":"UseItemFuncs","path":"scripts/UseItemFuncs/UseItemFuncs.yy",},},
@@ -321,6 +323,7 @@
     {"id":{"name":"PlayerStateGetItem","path":"scripts/PlayerStateGetItem/PlayerStateGetItem.yy",},},
     {"id":{"name":"mLvl1Music","path":"sounds/mLvl1Music/mLvl1Music.yy",},},
     {"id":{"name":"HelperFunctions","path":"scripts/HelperFunctions/HelperFunctions.yy",},},
+    {"id":{"name":"sLvl3Images","path":"sprites/sLvl3Images/sLvl3Images.yy",},},
     {"id":{"name":"PlayerStateSword","path":"scripts/PlayerStateSword/PlayerStateSword.yy",},},
     {"id":{"name":"DropItems","path":"scripts/DropItems/DropItems.yy",},},
     {"id":{"name":"sWillow","path":"sprites/sWillow/sWillow.yy",},},
@@ -412,6 +415,7 @@
     {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
     {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
     {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
+    {"roomId":{"name":"rLvl3","path":"rooms/rLvl3/rLvl3.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

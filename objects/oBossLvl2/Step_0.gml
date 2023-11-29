@@ -6,7 +6,7 @@ if (global.playerHealth == 0) exit;
 
 depth = -y;
 
-if (keyboard_check_pressed(ord("D")) and false) {
+if (keyboard_check_pressed(ord("D"))) {
 	shouldDie = true;
 	isTeleporting = true;
 }
@@ -109,14 +109,14 @@ if dead {
 		eyeExpandPercent = Approach(eyeExpandPercent, 2, 0.03 + 0.02 * (eyeExpandPercent < 1));
 		eyeSpinRotationDir = -1;
 		if eyeExpandPercent == 2 {
-			deadWait = 250;
+			deadWait = 300;
 			deadPhase++;
 			audio_play_sound(snAscend,1,false);
 		}
 	}
 	
 	if (deadPhase >= 8) {
-		repeat((irandom(max(1,(deadWait-50)/8)) <= 1)*min(4,zSpeed/2 + 1)) {
+		repeat((irandom(max(1,(deadWait-100)/8)) <= 1)*min(4,zSpeed/2 + 1)) {
 			var _x = random_range(oCamera.boundary.bbox_left, oCamera.boundary.bbox_right);
 			var _y = random_range(oCamera.boundary.bbox_top, oCamera.boundary.bbox_bottom);
 			with(instance_create_depth(_x,_y,-100000,oSquareParticle)) {
@@ -139,6 +139,8 @@ if dead {
 		oPlayer.z += zSpeed;
 		zSpeed += 0.015 + zSpeedAccel;
 		oPlayer.image_angle += 2 + zSpeedAccel * 50;
+		
+		if (oPlayer.z > 400) Transition(rLvl3);
 	}
 	
 	x = newX+random_range(-2,2);
