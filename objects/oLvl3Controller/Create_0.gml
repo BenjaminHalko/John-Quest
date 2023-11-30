@@ -1,6 +1,6 @@
 /// @desc 
 
-#macro INVENTORY_Y 180
+#macro INVENTORY_Y 200
 
 
 // Cursor
