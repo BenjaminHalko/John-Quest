@@ -2,13 +2,19 @@
 
 enableLive;
 
+if (audio_is_playing(snBossLvl1Roar)) {
+	setCursor(CURSOR.NORMAL);
+	ScreenShake(3,5);
+	global.allowInput = false;
+}
+
 if (global.movePercent != 1) {
 	setCursor(CURSOR.NORMAL);
 	global.allowInput = false;
-	global.movePercent = ApproachFade(global.movePercent,1,0.045+(1-max(0,abs(turnDir)-1))*0.14,0.6);
+	global.movePercent = ApproachFade(global.movePercent,1,0.045+(1-max(0,abs(turnDir)-1,forceSlowTurn))*0.14,0.6);
 	if (global.movePercent == 1) {
 		turnDir = 0;
-		
+		forceSlowTurn = false;
 		if (nextDir != global.currentDir) {
 			global.currentDir = nextDir;
 			Save("lvl3","dir",global.currentDir);
@@ -16,28 +22,55 @@ if (global.movePercent != 1) {
 			global.currentNode = nextNode;
 			Save("lvl3","node",global.currentNode);
 
-			// Check for boss roar
+			// Check for boss roar and node
 			var _node = global.nodes[global.currentNode];
 		
-			for(var i = 0; i < 4; i++) {
-				if (_node.nextNode[i] != -1) {
-					var _nextNode = global.nodes[_node.nextNode[i]];
-					if (_nextNode.hasPiece != -1) {
-						var _piece = _nextNode.hasPiece;
-						if (!global.piecesCollected[_piece] and !bossRoared[_piece]) {
-							audio_play_sound(snBossLvl1Roar,1,false);
-							bossRoared[_piece] = true;
+			if (_node.hasPiece != -1 and !global.piecesCollected[_node.hasPiece]) {
+				if (_node.pieceDir != global.currentDir) {
+					turnDir = 0;
+					nextDir = global.currentDir;
+					while(nextDir != _node.pieceDir) {
+						turnDir++;
+						nextDir = Wrap(nextDir+1,0,3);
+					}
+					turnDir = ((turnDir+1) % 4) - 1;
+					global.movePercent = 0;
+					forceSlowTurn = true;
+				}
+			} else {
+				for(var i = 0; i < 4; i++) {
+					if (_node.nextNode[i] != -1) {
+						var _nextNode = global.nodes[_node.nextNode[i]];
+						if (_nextNode.hasPiece != -1) {
+							var _piece = _nextNode.hasPiece;
+							if (!global.piecesCollected[_piece] and !bossRoared[_piece]) {
+								audio_play_sound(snBossLvl1Roar,1,false,0.5);
+								bossRoared[_piece] = true;
+							
+								if (i != global.currentDir) {
+									turnDir = 0;
+									while(nextDir != i) {
+										turnDir++;
+										nextDir = Wrap(nextDir+1,0,3);
+									}
+									turnDir = ((turnDir+1) % 4) - 1;
+									forceSlowTurn = true;
+									global.movePercent = 0;
+								}
+							}
 						}
 					}
 				}
 			}
 		}
+		
+		var _node = global.nodes[global.currentNode];
+		if (_node.hasPiece != -1 and !global.piecesCollected[_node.hasPiece] and _node.pieceDir == global.currentDir) {
+			global.isBattle = true;
+			instance_create_layer(0,0,"Boss",oBossLvl3);
+		}
 	}
-} else if (audio_is_playing(snBossLvl1Roar)) {
-	setCursor(CURSOR.NORMAL);
-	ScreenShake(3,5);
-	global.allowInput = false;
-} else if (global.inHand == -1 and global.my <= INVENTORY_Y) {
+} else if (!audio_is_playing(snBossLvl1Roar) and global.inHand == -1 and global.my <= INVENTORY_Y and !audio_is_playing(oInventory.talking) and !global.isBattle) {
 	global.allowInput = true;
 	// Vars
 	var _node = global.nodes[global.currentNode];

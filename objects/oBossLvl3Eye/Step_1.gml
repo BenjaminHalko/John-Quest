@@ -1,0 +1,7 @@
+/// @desc 
+
+enableLive;
+
+if (dead) {
+	
+}

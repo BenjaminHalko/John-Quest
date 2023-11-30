@@ -78,11 +78,16 @@ for(var i = 0; i < array_length(global.nodes); i++) {
 // Load
 global.currentNode = Load("lvl3","node",10);
 global.currentDir = Load("lvl3","dir",1);
-global.piecesCollected = array_create(3,false);
+global.piecesCollected = [
+	Load("lvl3","item0",false),
+	Load("lvl3","item1",false),
+	Load("lvl3","item2",false),
+];
 
 nextNode = global.currentNode;
 nextDir = global.currentDir;
 turnDir = 0;
+forceSlowTurn = false;
 global.movePercent = 1;
 
 // Roar
@@ -90,3 +95,12 @@ bossRoared = array_create(3,false);
 
 // Input
 global.allowInput = true;
+
+// Is battle
+global.isBattle = false;
+
+var _node = global.nodes[global.currentNode];
+if (_node.hasPiece != -1 and !global.piecesCollected[_node.hasPiece] and _node.pieceDir == global.currentDir) {
+	global.isBattle = true;	
+	instance_create_layer(0,0,"Boss",oBossLvl3);
+}
