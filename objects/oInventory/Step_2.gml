@@ -34,7 +34,7 @@ if (itemReturn != -1) {
 	if (itemReturnPercent == 1) itemReturn = -1;
 }
 
-var _target = (global.my > INVENTORY_Y or global.inHand != -1 or itemReturnPercent < 0.95);
+var _target = (global.my > INVENTORY_Y or global.inHand != -1 or itemReturn != -1);
 for(var i = 0; i < 5; i++) {
 	if (i == 0 or (_target ? (inventoryItemY[i-1] > 0.4) : (inventoryItemY[i-1] < 0.6))) {
 		inventoryItemY[i] = Approach(inventoryItemY[i],_target,0.1);
