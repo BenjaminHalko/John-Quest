@@ -101,6 +101,7 @@ if dead {
 					radius = 12;
 				}
 			}
+			instance_create_depth(eyes[0].obj.x,eyes[0].obj.y,depth+1,oBossLvl2List);
 			audio_play_sound(snExplosion,1,false);
 			ScreenShake(15,90);
 		}

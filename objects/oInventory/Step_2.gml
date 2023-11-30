@@ -15,7 +15,7 @@ if (global.inHand != -1) {
 		itemReturnPercent = 0;
 		global.inHand = -1;
 	}
-	setCursor(CURSOR.NORMAL);
+	if (global.my > INVENTORY_Y) setCursor(CURSOR.NORMAL);
 } else if (global.my > INVENTORY_Y) {
 	var _hovering = false;
 	for(var i = 0; i < inventorySlots; i++) {
