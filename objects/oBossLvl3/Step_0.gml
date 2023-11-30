@@ -45,8 +45,8 @@ if (global.my <= INVENTORY_Y) {
 								if (_type != INVENTORY.MONEY and other.type == 0) {
 									with(oInventory) {
 										audio_stop_sound(talking);
-										talking = audio_play_sound(snAttemptMoney,1,false);
-										subtitles = "Unfortunately, they seemed to have figured\nout that shopkeepers are immune to damage!!!";
+										talking = audio_play_sound(snAttemptDamage,1,false);
+										subtitles = "Unfortunately, they seemed to have figured\nout that shopkeepers are immune to damage!";
 									}
 									break;
 								}
