@@ -391,6 +391,7 @@
     {"id":{"name":"snCoinDesc","path":"sounds/snCoinDesc/snCoinDesc.yy",},},
     {"id":{"name":"sLvl2Tiles","path":"sprites/sLvl2Tiles/sLvl2Tiles.yy",},},
     {"id":{"name":"sPlaceholder","path":"sprites/sPlaceholder/sPlaceholder.yy",},},
+    {"id":{"name":"snLaserDesc","path":"sounds/snLaserDesc/snLaserDesc.yy",},},
     {"id":{"name":"snPlayerDie","path":"sounds/snPlayerDie/snPlayerDie.yy",},},
     {"id":{"name":"SaveLoad","path":"scripts/SaveLoad/SaveLoad.yy",},},
     {"id":{"name":"sEnemyArena","path":"sprites/sEnemyArena/sEnemyArena.yy",},},

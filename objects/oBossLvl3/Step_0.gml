@@ -26,7 +26,7 @@ if (global.my <= INVENTORY_Y) {
 									subtitles = "What am I going to do with this?\nGive it paper cuts?";
 								}
 							} break;
-							case INVENTORY.CANNON: case INVENTORY.PROPELLER: case INVENTORY.SHIP2: {
+							case INVENTORY.CANNON: case INVENTORY.PROPELLER: case INVENTORY.LASER: {
 								with(oInventory) {
 									audio_stop_sound(talking);
 									talking = audio_play_sound(snAttemptPart,1,false);

@@ -262,6 +262,7 @@
     {"name":"rTitle","order":1,"path":"rooms/rTitle/rTitle.yy",},
     {"name":"snCoinDesc","order":1,"path":"sounds/snCoinDesc/snCoinDesc.yy",},
     {"name":"sLvl2Tiles","order":1,"path":"sprites/sLvl2Tiles/sLvl2Tiles.yy",},
+    {"name":"snLaserDesc","order":16,"path":"sounds/snLaserDesc/snLaserDesc.yy",},
     {"name":"SaveLoad","order":1,"path":"scripts/SaveLoad/SaveLoad.yy",},
     {"name":"sEnemyArena","order":2,"path":"sprites/sEnemyArena/sEnemyArena.yy",},
     {"name":"oBossLvl1HomingExplosion","order":4,"path":"objects/oBossLvl1HomingExplosion/oBossLvl1HomingExplosion.yy",},

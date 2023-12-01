@@ -9,7 +9,7 @@ enum INVENTORY {
 	BOMB,
 	PROPELLER,
 	CANNON,
-	SHIP2
+	LASER
 }
 
 inventorySlots = 4;
@@ -50,7 +50,7 @@ dialog[INVENTORY.BOMB] = {audio: snBombDesc, subtitles: "It's a bomb! Very explo
 dialog[INVENTORY.MONEY] = {audio: snCoinDesc, subtitles: "That's all the coins I collected\nfrom those evil monsters!"};
 dialog[INVENTORY.PROPELLER] = {audio: snPropellerDesc, subtitles: "It's the propeller I repaired with my sword."};
 dialog[INVENTORY.CANNON] = {audio: snCannonDesc, subtitles: "The cannon is loaded with explosive bombs!"};
-dialog[INVENTORY.SHIP2] = {audio: snCoinDesc, subtitles: "???"};
+dialog[INVENTORY.LASER] = {audio: snLaserDesc, subtitles: "It shoots deadly lasers."};
 talking = -1;
 subtitles = "";
 
@@ -67,9 +67,9 @@ for(var i = 0; i < _number; i++) {
 itemListDesc = [
 	"propeller\nblades",
 	"explosive\ncannon",
-	"???"
+	"laser\nblaster"
 ];
 
-if (global.piecesCollected[2]) inventory[1] = INVENTORY.SHIP2;
+if (global.piecesCollected[2]) inventory[1] = INVENTORY.LASER;
 if (global.piecesCollected[0]) inventory[2] = INVENTORY.PROPELLER;
 if (global.piecesCollected[1]) inventory[3] = INVENTORY.CANNON;
