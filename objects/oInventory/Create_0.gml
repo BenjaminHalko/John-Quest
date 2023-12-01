@@ -70,6 +70,6 @@ itemListDesc = [
 	"???"
 ];
 
-if (global.piecesCollected[2]) inventory[0] = INVENTORY.SHIP2;
-if (global.piecesCollected[0]) inventory[1] = INVENTORY.PROPELLER;
-if (global.piecesCollected[1]) inventory[2] = INVENTORY.CANNON;
+if (global.piecesCollected[2]) inventory[1] = INVENTORY.SHIP2;
+if (global.piecesCollected[0]) inventory[2] = INVENTORY.PROPELLER;
+if (global.piecesCollected[1]) inventory[3] = INVENTORY.CANNON;

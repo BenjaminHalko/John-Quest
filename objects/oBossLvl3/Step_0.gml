@@ -23,13 +23,13 @@ if (global.my <= INVENTORY_Y) {
 								with(oInventory) {
 									audio_stop_sound(talking);
 									talking = audio_play_sound(snAttemptList,1,false);
-									subtitles = "What am I supposed to do with this?\nGive it paper cuts?";
+									subtitles = "What am I going to do with this?\nGive it paper cuts?";
 								}
 							} break;
 							case INVENTORY.CANNON: case INVENTORY.PROPELLER: case INVENTORY.SHIP2: {
 								with(oInventory) {
 									audio_stop_sound(talking);
-									talking = audio_play_sound(snAttemptList,1,false);
+									talking = audio_play_sound(snAttemptPart,1,false);
 									subtitles = "I am supposed to be collecting these!\nNot giving them away...";
 								}
 							} break;
@@ -69,6 +69,7 @@ if (global.my <= INVENTORY_Y) {
 global.allowInput = !showingAnimation;
 
 if (!instance_exists(oBossLvl3Eye)) {
+	global.allowInput = true;
 	instance_create_layer(room_width/2,room_height/2-20,layer,oItemLvl3);
 	instance_destroy();
 }
