@@ -67,6 +67,7 @@
     {"name":"UI","order":4,"path":"folders/Level2/UI.yy",},
     {"name":"Level3","order":14,"path":"folders/Level3.yy",},
     {"name":"Audio","order":4,"path":"folders/Level3/Audio.yy",},
+    {"name":"Music","order":3,"path":"folders/Level3/Audio/Music.yy",},
     {"name":"SoundFX","order":1,"path":"folders/Level3/Audio/SoundFX.yy",},
     {"name":"Speech","order":2,"path":"folders/Level3/Audio/Speech.yy",},
     {"name":"Boss","order":6,"path":"folders/Level3/Boss.yy",},
@@ -80,7 +81,6 @@
     {"name":"Nodes","order":3,"path":"folders/Level3/Nodes.yy",},
     {"name":"Level4","order":15,"path":"folders/Level4.yy",},
     {"name":"Title","order":12,"path":"folders/Title.yy",},
-    {"name":"Music","order":3,"path":"folders/Level3/Audio/Music.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
