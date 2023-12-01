@@ -26,7 +26,14 @@ if (global.my <= INVENTORY_Y) {
 				audio_play_sound(snItemGet,1,false,0.6);
 				Save("lvl3",$"item{type}",true);
 				global.piecesCollected[type] = true;
-				global.isBattle = false;
+				if (array_equals(global.piecesCollected, [1,1,1])) {
+					global.allowInput = false;
+					call_later(60, time_source_units_frames, function() {
+						Transition(rLvl4);	
+					});
+				} else {
+					global.isBattle = false;
+				}
 				global.clicked = false;
 				instance_destroy();
 			} else {
