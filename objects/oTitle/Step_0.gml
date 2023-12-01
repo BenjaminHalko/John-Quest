@@ -26,27 +26,89 @@ if (title) {
 		if (menu == MENU.MAIN) {
 			var _input = keyDown - keyUp;
 			if (_input != 0) {
-				if (!menuPressed) {
+				if (menuPressedV != _input) {
 					menuSelected = Wrap(menuSelected+_input,lastLevel == -1,3);
-					menuPressed = true;
+					menuPressedV = _input;
+					audio_play_sound(snBlip,1,false);
 				}
 			} else {
-				menuPressed = false;
+				menuPressedV = 0;
 			}
 			
 			if (keyAction) {
 				if (menuSelected == 2) {
-					menu = MENU.LEVELSELECT;	
+					menu = MENU.LEVELSELECT;
+					menuSelected = 0;
+					audio_play_sound(snBlip,1,false);
 				} else if (menuSelected == 3) {
-					menu = MENU.CREDITS;	
+					menu = MENU.CREDITS;
+					audio_play_sound(snBlip,1,false);
+				} else if (menuSelected == 1 and lastLevel != -1) {
+					menu = MENU.NEWGAME;
+					menuSelected = 1;
+					audio_play_sound(snBlip,1,false);
 				} else {
 					_select();	
 				}
 			}
 		} else if (menu == MENU.LEVELSELECT) {
-				
-		} else {
+			var _hInput = keyRight - keyLeft;
+			var _vInput = keyDown - keyUp;
+			if (_hInput != 0) {
+				if (menuPressedH != _hInput) {
+					if (menuSelected == 0) menuSelected = 1+(_hInput == 1);
+					else menuSelected = (menuSelected - 1 + (menuSelected % 2)*2);
+					menuPressedH = _hInput;
+					audio_play_sound(snBlip,1,false);
+				}
+			} else {
+				menuPressedH = 0;	
+			}
+			if (_vInput != 0) {
+				if (menuPressedV != _vInput) {
+					if (menuSelected == 0 and _vInput == 1) menuSelected = 1;
+					else {
+						menuSelected += _vInput * 2;
+						if (menuSelected == -1 or menuSelected > 6) menuSelected = 0;
+						else if (menuSelected < 0) menuSelected = 5;
+						audio_play_sound(snBlip,1,false);
+					}
+					menuPressedV = _vInput;
+				}
+			} else {
+				menuPressedV = 0;
+			}
 			
+			if (keyAction) {
+				if (menuSelected == 0) {
+					menu = MENU.MAIN;
+					menuSelected = 2;
+					audio_play_sound(snBlip,1,false);
+				} else _select();
+			}
+		} else if (menu == MENU.NEWGAME) {
+			var _input = keyDown - keyUp;
+			if (_input != 0) {
+				if (menuPressedV != _input) {
+					menuSelected = 1 - menuSelected;
+					menuPressedV = _input;
+					audio_play_sound(snBlip,1,false);
+				}
+			} else {
+				menuPressedV = 0;
+			}
+			
+			if (keyAction) {
+				if (menuSelected == 0) _select();
+				else {
+					menu = MENU.MAIN;
+					menuSelected = 1;
+					audio_play_sound(snBlip,1,false);
+				}
+			}
+		} else if (keyAction) {
+			menu = MENU.MAIN;
+			audio_play_sound(snBlip,1,false);
 		}
 	} else if (blink > 12) {
 		if (menu == MENU.MAIN) {
@@ -57,13 +119,24 @@ if (title) {
 				file_delete(SAVEFILE);
 				Transition(rLvl1);
 			}
+		} else if (menu == MENU.NEWGAME) {
+			file_delete(SAVEFILE);
+			Transition(rLvl1);
 		} else {
 			global.noSave = true;
+			
+			if (menuSelected <= 2) Transition(rLvl1);
+			else if (menuSelected <= 4) Transition(rLvl2);
+			else if (menuSelected == 5) Transition(rLvl3);
+			else Transition(rLvl4);
+			
+			global.atBoss = (menuSelected == 2 or menuSelected == 4);
 		}
 	}
 } else {
 	if (keyAction) {
-		title = true;	
+		title = true;
+		moveUpPercent = 1;
 	}
 	if (textNum < 5) {
 		var _target = (textNum == textTarget);

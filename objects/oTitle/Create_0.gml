@@ -1,9 +1,8 @@
 /// @desc 
 
-enableLive;
-
 enum MENU {
 	MAIN,
+	NEWGAME,
 	LEVELSELECT,
 	CREDITS
 }
@@ -22,7 +21,8 @@ textTarget = -1;
 textAlpha = 1;
 wait = 0;
 
-menuPressed = false;
+menuPressedV = 0;
+menuPressedH = 0;
 
 smallerBuildingHeight = sprite_get_height(sTitleLandscape);
 buildingHeight = sprite_get_height(sTitleBuilding);
@@ -43,6 +43,18 @@ mainMenu = [
 	"NEW GAME",
 	"LEVEL SELECT",
 	"CREDITS"
+];
+
+levelSelect = [
+	"BACK",
+	"LEVEL 1", "BOSS 1",
+	"LEVEL 2", "BOSS 2",
+	"LEVEL 3", "LEVEL 4"
+];
+
+newGame = [
+	"NEW GAME",
+	"BACK",
 ]
 
 repeat(100) {

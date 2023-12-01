@@ -21,15 +21,35 @@ if (title) {
 	// Menu
 	var _menuX = 100;
 	var _menuY = 160;
-	
-	for(var i = 0; i < 4; i++) {
-		draw_set_color(i != 0 or lastLevel != -1 ? c_white : c_dkgray);
-		if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX,_menuY+16*i,mainMenu[i]);
+	draw_set_color(c_white);
+	if (menu != MENU.CREDITS) draw_text(_menuX-16,_menuY+80,"PRESS ENTER");
+	if (menu == MENU.MAIN) {
+		for(var i = 0; i < 4; i++) {
+			draw_set_color(i != 0 or lastLevel != -1 ? c_white : c_dkgray);
+			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX,_menuY+16*i,mainMenu[i]);
+		}
+		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
+	} else if (menu == MENU.LEVELSELECT) {
+		for(var i = 0; i < 7; i++) {
+			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
+		}
+		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY+(floor(max(0,menuSelected+1) / 2))*16);
+		
+		draw_set_color(c_dkgray);
+		draw_text(_menuX+48,_menuY-8,"GAME ISNT SAVED\nIN LEVEL SELECT");
+	} else if (menu == MENU.NEWGAME) {
+		draw_text(_menuX-16,_menuY,"ARE YOU SURE YOU\nWANT TO START OVER?");
+		for(var i = 0; i < 2; i++) {
+			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX,_menuY+32+16*i,newGame[i]);
+		}
+		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+32+16*menuSelected);
+	} else {
+		draw_set_font(fRPG);
+		draw_text(_menuX-32,_menuY-4,"Programming - Benjamin\nLevel Design - Benjamin\nMusic & Sound FX - Benjamin\nCharacter Art - Morlan\nKey-Item Art - Morlan / Benjamin\nEnvironment Art\n  - Morlan / Haoxi / Benjamin");
+		
+		draw_set_color(c_dkgray);
+		draw_text(_menuX-64,_menuY-20,"Thanks to everyone that made this possible");
 	}
-	
-	draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
-	
-	draw_text(_menuX-16,_menuY+80,"PRESS ENTER");
 } else {
 	draw_sprite(sTitleLandscape,0,0,room_height+smallerBuildingHeight*moveUpPercent * 1.7);
 	

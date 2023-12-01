@@ -43,5 +43,6 @@ if (global.atBoss) {
 	global.playerItemUnlocked[ITEM.BOMB] = true;
 	global.playerHasAnyItems = true;
 	global.playerBombAmmo = 20;
+	global.playerMoney = 50;
 }
 global.ranOutOfBombs = false;
