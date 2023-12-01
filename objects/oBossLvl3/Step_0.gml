@@ -34,7 +34,7 @@ if (global.my <= INVENTORY_Y) {
 								}
 							} break;
 							default: {
-								if (_type == INVENTORY.MONEY and other.type != 0) {
+								if (_type == INVENTORY.MONEY and other.type != 2) {
 									with(oInventory) {
 										audio_stop_sound(talking);
 										talking = audio_play_sound(snAttemptMoney,1,false);
@@ -42,7 +42,7 @@ if (global.my <= INVENTORY_Y) {
 									}
 									break;
 								}
-								if (_type != INVENTORY.MONEY and other.type == 0) {
+								if (_type != INVENTORY.MONEY and other.type == 2) {
 									with(oInventory) {
 										audio_stop_sound(talking);
 										talking = audio_play_sound(snAttemptDamage,1,false);
@@ -50,6 +50,10 @@ if (global.my <= INVENTORY_Y) {
 									}
 									break;
 								}
+								other.showingAnimation = true;
+								dead = true;
+								type = _type;
+								depth--;
 							} break;
 						}
 					}
@@ -60,4 +64,11 @@ if (global.my <= INVENTORY_Y) {
 		}
 	}
 	setCursor(_hovered ? CURSOR.HOVER : CURSOR.NORMAL);
+}
+
+global.allowInput = !showingAnimation;
+
+if (!instance_exists(oBossLvl3Eye)) {
+	instance_create_layer(room_width/2,room_height/2-20,layer,oItemLvl3);
+	instance_destroy();
 }

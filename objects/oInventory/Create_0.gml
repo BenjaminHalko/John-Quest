@@ -24,6 +24,7 @@ isDraggable = false;
 width = 300;
 inventoryY = 256;
 
+waitY = 0;
 inventoryItemY = array_create(5,0);
 inventoryYCurve = animcurve_get_channel(InventoryCurves,"appear");
 
@@ -40,15 +41,16 @@ itemReturn = -1;
 itemX = -1;
 itemY = -1;
 itemReturnPercent = 1;
+stopReturn = false;
 
 // Speech
 dialog = [];
-dialog[INVENTORY.SWORD] = {audio: snBombDesc, subtitles: "It's a bomb! Very explosive!"};
+dialog[INVENTORY.SWORD] = {audio: snSwordDesc, subtitles: "It is my trusty sword."};
 dialog[INVENTORY.BOMB] = {audio: snBombDesc, subtitles: "It's a bomb! Very explosive!"};
 dialog[INVENTORY.MONEY] = {audio: snCoinDesc, subtitles: "That's all the coins I collected\nfrom those evil monsters!"};
 dialog[INVENTORY.PROPELLER] = {audio: snPropellerDesc, subtitles: "It's the propeller I repaired with my sword."};
 dialog[INVENTORY.CANNON] = {audio: snCannonDesc, subtitles: "The cannon is loaded with explosive bombs!"};
-dialog[INVENTORY.SHIP2] = {audio: snCoinDesc, subtitles: "That's all the coins I collected\nfrom those evil monsters!"};
+dialog[INVENTORY.SHIP2] = {audio: snCoinDesc, subtitles: "???"};
 talking = -1;
 subtitles = "";
 

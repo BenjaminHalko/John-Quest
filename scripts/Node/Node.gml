@@ -16,7 +16,7 @@ function Node(_east, _north, _west, _south) constructor {
 			nextNode[i] = image[i];	
 		}
 		if (image[i] < -2) {
-			hasPiece = image[i] * -1 - 3;
+			hasPiece = 5 - image[i] * -1;
 			pieceDir = i;
 		}
 	}

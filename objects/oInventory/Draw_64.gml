@@ -11,14 +11,14 @@ for(var i = 0; i < inventorySlots; i++) {
 	if (inventory[i] != -1) {
 		if (global.inHand != i and itemReturn != i) {
 			var _hovering = (point_in_rectangle(global.mx,global.my,_x-24,inventoryY-48,_x+24,inventoryY)) and (global.inHand == -1);
-			if (_hovering) DrawOutline(sInventoryItems,i,_x,inventoryY-16+Wave(-5,0,5,waveOffsets[i])+_y*64);
-			else draw_sprite(sInventoryItems,i,_x,inventoryY-16+Wave(-5,0,5,waveOffsets[i])+_y*64);
+			if (_hovering) DrawOutline(sInventoryItems,inventory[i],_x,inventoryY-16+Wave(-5,0,5,waveOffsets[i])+_y*64);
+			else draw_sprite(sInventoryItems,inventory[i],_x,inventoryY-16+Wave(-5,0,5,waveOffsets[i])+_y*64);
 		}
 	}
 }
 
 if (global.inHand != -1) {
-	if (global.inHand != INVENTORY.LIST or global.isBattle) DrawOutline(sInventoryItems,global.inHand,global.mx,global.my);
+	if (global.inHand != INVENTORY.LIST or global.isBattle) DrawOutline(sInventoryItems,inventory[global.inHand],global.mx,global.my);
 	else {
 		draw_set_font(fRetro);
 		draw_set_halign(fa_center);
@@ -31,14 +31,14 @@ if (global.inHand != -1) {
 		var _x = 240 - 44;
 		for(var i = 0; i < 3; i++) {
 			var _y = INVENTORY_Y/2+28+(i-1)*32;
-			draw_sprite(sCheckmark,0,_x,_y);
+			draw_sprite(sCheckmark,global.piecesCollected[i],_x,_y);
 			draw_text_ext(_x+20,_y-1,itemListDesc[i],9,100);
 		}
 	}
 } else if (itemReturn != -1) {
 	var _x = 480/2 + (width - 32)/(inventorySlots-1)*(itemReturn-(inventorySlots-1)/2);
 	var _y = 1-animcurve_channel_evaluate(inventoryYCurve,inventoryItemY[itemReturn]);
-	draw_sprite(sInventoryItems,itemReturn,lerp(itemX,_x,itemReturnPercent),lerp(itemY,inventoryY-16+Wave(-5,0,5,waveOffsets[itemReturn]),itemReturnPercent)+_y*64);
+	draw_sprite(sInventoryItems,inventory[itemReturn],lerp(itemX,_x,itemReturnPercent),lerp(itemY,inventoryY-16+Wave(-5,0,5,waveOffsets[itemReturn]),itemReturnPercent)+_y*64);
 }
 
 if (audio_is_playing(talking)) {

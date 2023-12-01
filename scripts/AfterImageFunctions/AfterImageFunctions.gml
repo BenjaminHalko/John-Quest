@@ -9,3 +9,12 @@ function CreateAfterImage(_obj, _spd=0.1) {
 		spd = _spd; 
 	}
 }
+
+function CreateAfterImageSprite(_sprite, _index, _x, _y, _spd=0.1) {
+	with(instance_create_depth(_x,_y,depth+1,oAfterImage)) {
+		sprite_index = _sprite;
+		image_index = _index;
+		image_speed = 0;
+		spd = _spd; 
+	}
+}

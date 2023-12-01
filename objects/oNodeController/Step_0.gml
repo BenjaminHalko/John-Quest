@@ -11,7 +11,7 @@ if (audio_is_playing(snBossLvl1Roar)) {
 if (global.movePercent != 1) {
 	setCursor(CURSOR.NORMAL);
 	global.allowInput = false;
-	global.movePercent = ApproachFade(global.movePercent,1,0.045+(1-max(0,abs(turnDir)-1,forceSlowTurn))*0.14,0.6);
+	global.movePercent = ApproachFade(global.movePercent,1,0.045+(1-max(0,abs(turnDir)-1,forceSlowTurn*0.5))*0.14,0.6);
 	if (global.movePercent == 1) {
 		turnDir = 0;
 		forceSlowTurn = false;
