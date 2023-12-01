@@ -1,5 +1,9 @@
 /// @desc 
 
+enableLive;
+
+Input();
+
 if (moveUpPercent > 0.1) {
 	for(var i = 0; i < array_length(stars); i++) {
 		stars[i].alpha += stars[i].spd;
@@ -13,8 +17,54 @@ if (moveUpPercent > 0.1) {
 }
 
 if (title) {
-	
+	var _select = function() {
+		allowInput = false;
+		alarm[0] = blinkSpd;
+	}
+	if (allowInput) {
+		blinkWave = Wave(0,2,0.5,0);
+		if (menu == MENU.MAIN) {
+			var _input = keyDown - keyUp;
+			if (_input != 0) {
+				if (!menuPressed) {
+					menuSelected = Wrap(menuSelected+_input,lastLevel == -1,3);
+					menuPressed = true;
+				}
+			} else {
+				menuPressed = false;
+			}
+			
+			if (keyAction) {
+				if (menuSelected == 2) {
+					menu = MENU.LEVELSELECT;	
+				} else if (menuSelected == 3) {
+					menu = MENU.CREDITS;	
+				} else {
+					_select();	
+				}
+			}
+		} else if (menu == MENU.LEVELSELECT) {
+				
+		} else {
+			
+		}
+	} else if (blink > 12) {
+		if (menu == MENU.MAIN) {
+			if (menuSelected == 0) {
+				var _levels = [rLvl1,rLvl2,rLvl3,rLvl4];
+				Transition(_levels[lastLevel]);
+			} else {
+				file_delete(SAVEFILE);
+				Transition(rLvl1);
+			}
+		} else {
+			global.noSave = true;
+		}
+	}
 } else {
+	if (keyAction) {
+		title = true;	
+	}
 	if (textNum < 5) {
 		var _target = (textNum == textTarget);
 		textAlpha = Approach(textAlpha, _target, 0.03);

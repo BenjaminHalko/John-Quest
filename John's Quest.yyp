@@ -121,6 +121,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"List","folderPath":"folders/Level3/Inventory/List.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Nodes","folderPath":"folders/Level3/Nodes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Level4","folderPath":"folders/Level4.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -175,6 +176,7 @@
     {"id":{"name":"oBossLvl1CrusherFade","path":"objects/oBossLvl1CrusherFade/oBossLvl1CrusherFade.yy",},},
     {"id":{"name":"BossLvl1Curves","path":"animcurves/BossLvl1Curves/BossLvl1Curves.yy",},},
     {"id":{"name":"sBossLvl1HomingTrail","path":"sprites/sBossLvl1HomingTrail/sBossLvl1HomingTrail.yy",},},
+    {"id":{"name":"rLvl4","path":"rooms/rLvl4/rLvl4.yy",},},
     {"id":{"name":"snPropellerDesc","path":"sounds/snPropellerDesc/snPropellerDesc.yy",},},
     {"id":{"name":"GMLive_exec","path":"scripts/GMLive_exec/GMLive_exec.yy",},},
     {"id":{"name":"PlayerStateAutoMove","path":"scripts/PlayerStateAutoMove/PlayerStateAutoMove.yy",},},
@@ -471,10 +473,11 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rLvl3","path":"rooms/rLvl3/rLvl3.yy",},},
+    {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
     {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
-    {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
+    {"roomId":{"name":"rLvl3","path":"rooms/rLvl3/rLvl3.yy",},},
+    {"roomId":{"name":"rLvl4","path":"rooms/rLvl4/rLvl4.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

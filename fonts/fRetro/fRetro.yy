@@ -136,8 +136,8 @@
   "size": 6.0,
   "styleName": "Regular",
   "textureGroupId": {
-    "name": "tgLvl1",
-    "path": "texturegroups/tgLvl1",
+    "name": "Default",
+    "path": "texturegroups/Default",
   },
   "TTFName": "",
   "usesSDF": false,

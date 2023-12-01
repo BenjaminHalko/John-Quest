@@ -1,4 +1,4 @@
 /// @desc 
 
 audio_stop_all();
-Transition(rLvl2);
+room_goto(rLvl2);

@@ -1,22 +1,49 @@
 /// @desc 
 
+enableLive;
+
+enum MENU {
+	MAIN,
+	LEVELSELECT,
+	CREDITS
+}
+
 title = false;
 
 moveUpPercent = 0;
 moveUpSpd = 0;
 
-menuSelected = 1;
+lastLevel = Load("global","lvl",-1);
+
+menuSelected = (lastLevel == -1);
 
 textNum = -1;
 textTarget = -1;
 textAlpha = 1;
 wait = 0;
 
+menuPressed = false;
+
 smallerBuildingHeight = sprite_get_height(sTitleLandscape);
 buildingHeight = sprite_get_height(sTitleBuilding);
 buildingScale = 18 * 144 / buildingHeight;
 
+blink = 0;
+blinkSpd = 5;
+blinkWave = 0;
+
+allowInput = true;
+
+menu = MENU.MAIN;
+
 stars = [];
+
+mainMenu = [
+	"CONTINUE",
+	"NEW GAME",
+	"LEVEL SELECT",
+	"CREDITS"
+]
 
 repeat(100) {
 	array_push(stars, {

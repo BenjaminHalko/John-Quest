@@ -1,4 +1,4 @@
 /// @desc 
 
 audio_stop_all();
-room_goto(rLvl3);
+room_goto(rTitle);

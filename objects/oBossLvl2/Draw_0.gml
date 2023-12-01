@@ -62,6 +62,6 @@ if (disappearPercent != 0 or eyeExpandPercent > 0 or deadPercent > 0) {
 }
 surface_reset_target();
 
-draw_surface(surf,x-sprite_xoffset,y-sprite_yoffset);
+draw_surface(surf,xstart-sprite_xoffset,ystart-sprite_yoffset);
 
 if(shader_current() != -1) shader_reset();

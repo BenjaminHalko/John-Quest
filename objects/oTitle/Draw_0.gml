@@ -1,5 +1,7 @@
 /// @desc 
 
+enableLive;
+
 for(var i = 0; i < array_length(stars); i++) {
 	draw_set_alpha(0.5 - cos(stars[i].alpha * pi) / 2);
 	draw_set_color(stars[i].col);
@@ -8,7 +10,7 @@ for(var i = 0; i < array_length(stars); i++) {
 draw_set_alpha(1);
 
 if (title) {
-	draw_sprite(sTitle,0,floor((room_width-180)/2),floor(room_height/3));
+	//draw_sprite(sTitle,0,floor((room_width-180)/2),floor(room_height/3));
 	draw_sprite(sTitleBuilding, 0, room_width, room_height);
 	draw_sprite(sPlayerLvl1,0,350,room_height-buildingHeight+24);
 	
@@ -19,14 +21,13 @@ if (title) {
 	// Menu
 	var _menuX = 100;
 	var _menuY = 160;
-	draw_set_color(c_dkgrey);
-	draw_text(_menuX,_menuY,"CONTINUE");
-	draw_set_color(c_white);
-	draw_text(_menuX,_menuY+16,"NEW GAME");
-	draw_text(_menuX,_menuY+32,"LEVEL SELECT");
-	draw_text(_menuX,_menuY+48,"CREDITS");
 	
-	draw_sprite(sTitleCursor,0,_menuX-16,_menuY+menuSelected*16);
+	for(var i = 0; i < 4; i++) {
+		draw_set_color(i != 0 or lastLevel != -1 ? c_white : c_dkgray);
+		if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX,_menuY+16*i,mainMenu[i]);
+	}
+	
+	draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
 	
 	draw_text(_menuX-16,_menuY+80,"PRESS ENTER");
 } else {
