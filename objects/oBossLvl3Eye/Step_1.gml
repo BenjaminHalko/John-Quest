@@ -89,8 +89,8 @@ if (dead) {
 				swordX1 = swordX2;
 				swordY1 = swordY2;
 				var _dir = point_direction(swordX1,swordY1,x,y)+random_range(-90,90);
-				swordX2 = x + lengthdir_x(sprite_width*0.7,_dir) + 4;
-				swordY2 = y + lengthdir_y(sprite_height,_dir) - 25;
+				swordX2 = x + lengthdir_x(sprite_width*0.7,_dir) + 25;
+				swordY2 = y + lengthdir_y(sprite_height,_dir) + 25;
 				percent = 0;
 				timer = 2;
 				audio_play_sound(snSwordSwing,1,false);
@@ -122,7 +122,7 @@ if (dead) {
 			var _dir = point_direction(swordX1,swordY1,swordX2,swordY2)
 			repeat(50) {
 				var _dist = random(point_distance(_lastX,_lastY,oInventory.itemX,oInventory.itemY));
-				with(instance_create_depth(oInventory.itemX+random_range(-1,1)-4+lengthdir_x(_dist,_dir),oInventory.itemY+lengthdir_y(_dist,_dir)+random_range(-1,1)+25,depth-1,oTriangleParticle)) {
+				with(instance_create_depth(oInventory.itemX+random_range(-1,1)-25+lengthdir_x(_dist,_dir),oInventory.itemY+lengthdir_y(_dist,_dir)+random_range(-1,1)-25,depth-1,oTriangleParticle)) {
 					image_blend = merge_color(c_white,c_gray,random(1));
 					direction = point_direction(other.swordX2,other.swordY2,other.swordX1,other.swordY1) + random_range(-10,10);
 					image_angle = random(360);

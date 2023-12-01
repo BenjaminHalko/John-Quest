@@ -122,6 +122,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Nodes","folderPath":"folders/Level3/Nodes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Level4","folderPath":"folders/Level4.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Music","folderPath":"folders/Level3/Audio/Music.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -309,6 +310,7 @@
     {"id":{"name":"shFlash","path":"shaders/shFlash/shFlash.yy",},},
     {"id":{"name":"sHealth","path":"sprites/sHealth/sHealth.yy",},},
     {"id":{"name":"oBridge","path":"objects/oBridge/oBridge.yy",},},
+    {"id":{"name":"mMusicLvl3Boss","path":"sounds/mMusicLvl3Boss/mMusicLvl3Boss.yy",},},
     {"id":{"name":"snBlip","path":"sounds/snBlip/snBlip.yy",},},
     {"id":{"name":"oBombDrop","path":"objects/oBombDrop/oBombDrop.yy",},},
     {"id":{"name":"sBossLvl1Small","path":"sprites/sBossLvl1Small/sBossLvl1Small.yy",},},
@@ -342,6 +344,7 @@
     {"id":{"name":"sTextboxBg","path":"sprites/sTextboxBg/sTextboxBg.yy",},},
     {"id":{"name":"EnemyGeneralFunctions","path":"scripts/EnemyGeneralFunctions/EnemyGeneralFunctions.yy",},},
     {"id":{"name":"DialogueResponses","path":"scripts/DialogueResponses/DialogueResponses.yy",},},
+    {"id":{"name":"mMusicLvl3","path":"sounds/mMusicLvl3/mMusicLvl3.yy",},},
     {"id":{"name":"AfterImageFunctions","path":"scripts/AfterImageFunctions/AfterImageFunctions.yy",},},
     {"id":{"name":"sBossLvl1Intro","path":"sprites/sBossLvl1Intro/sBossLvl1Intro.yy",},},
     {"id":{"name":"sSlimeDie","path":"sprites/sSlimeDie/sSlimeDie.yy",},},

@@ -80,6 +80,7 @@
     {"name":"Nodes","order":3,"path":"folders/Level3/Nodes.yy",},
     {"name":"Level4","order":15,"path":"folders/Level4.yy",},
     {"name":"Title","order":12,"path":"folders/Title.yy",},
+    {"name":"Music","order":3,"path":"folders/Level3/Audio/Music.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
@@ -202,6 +203,7 @@
     {"name":"oCameraBoundary","order":2,"path":"objects/oCameraBoundary/oCameraBoundary.yy",},
     {"name":"Node","order":2,"path":"scripts/Node/Node.yy",},
     {"name":"sHealth","order":4,"path":"sprites/sHealth/sHealth.yy",},
+    {"name":"mMusicLvl3Boss","order":1,"path":"sounds/mMusicLvl3Boss/mMusicLvl3Boss.yy",},
     {"name":"snBlip","order":9,"path":"sounds/snBlip/snBlip.yy",},
     {"name":"oBombDrop","order":2,"path":"objects/oBombDrop/oBombDrop.yy",},
     {"name":"sBossLvl1Small","order":5,"path":"sprites/sBossLvl1Small/sBossLvl1Small.yy",},

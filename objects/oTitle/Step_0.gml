@@ -18,6 +18,7 @@ if (moveUpPercent > 0.1) {
 
 if (title) {
 	var _select = function() {
+		audio_play_sound(snItemGet, 1, false);
 		allowInput = false;
 		alarm[0] = blinkSpd;
 	}

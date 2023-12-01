@@ -10,7 +10,7 @@ for(var i = 0; i < array_length(stars); i++) {
 draw_set_alpha(1);
 
 if (title) {
-	//draw_sprite(sTitle,0,floor((room_width-180)/2),floor(room_height/3));
+	draw_sprite(sTitle,0,floor((room_width-180)/2),floor(room_height/3));
 	draw_sprite(sTitleBuilding, 0, room_width, room_height);
 	draw_sprite(sPlayerLvl1,0,350,room_height-buildingHeight+24);
 	
