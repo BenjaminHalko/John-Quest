@@ -120,8 +120,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Inventory","folderPath":"folders/Level3/Inventory.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"List","folderPath":"folders/Level3/Inventory/List.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Nodes","folderPath":"folders/Level3/Nodes.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Level4","folderPath":"folders/Level4.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},

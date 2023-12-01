@@ -19,7 +19,7 @@
     "name": "sCol",
     "path": "sprites/sCol/sCol.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "tgNoExport",
     "path": "texturegroups/tgNoExport",

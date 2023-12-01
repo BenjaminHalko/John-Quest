@@ -78,8 +78,8 @@
     {"name":"Inventory","order":5,"path":"folders/Level3/Inventory.yy",},
     {"name":"List","order":7,"path":"folders/Level3/Inventory/List.yy",},
     {"name":"Nodes","order":3,"path":"folders/Level3/Nodes.yy",},
-    {"name":"Title","order":12,"path":"folders/Title.yy",},
     {"name":"Level4","order":15,"path":"folders/Level4.yy",},
+    {"name":"Title","order":12,"path":"folders/Title.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},

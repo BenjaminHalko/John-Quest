@@ -19,7 +19,7 @@
     "name": "sWalls",
     "path": "sprites/sWalls/sWalls.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "tgLvl1",
     "path": "texturegroups/tgLvl1",
