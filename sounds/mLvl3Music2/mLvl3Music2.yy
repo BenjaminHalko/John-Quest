@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mLvl3Music2.ogg",
   "type": 1,
-  "volume": 0.55,
+  "volume": 0.6,
 }
