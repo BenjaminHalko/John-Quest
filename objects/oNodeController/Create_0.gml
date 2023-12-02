@@ -88,6 +88,7 @@ nextNode = global.currentNode;
 nextDir = global.currentDir;
 turnDir = 0;
 forceSlowTurn = false;
+onlyAllowUp = false;
 global.movePercent = 1;
 
 // Roar
@@ -103,4 +104,15 @@ var _node = global.nodes[global.currentNode];
 if (_node.hasPiece != -1 and !global.piecesCollected[_node.hasPiece] and _node.pieceDir == global.currentDir) {
 	global.isBattle = true;	
 	instance_create_layer(0,0,"Boss",oBossLvl3);
+}
+
+if (global.isBattle) {
+	music = audio_play_sound(mLvl3MusicBoss,1,true);
+} else {
+	var _music = [mLvl3Music,mLvl3Music2,mLvl3Music3];
+	var _amount = 0;
+	for(var i = 0; i < 3; i++) {
+		_amount += global.piecesCollected[i];	
+	}
+	music = audio_play_sound(_music[min(2,_amount)],1,true);
 }

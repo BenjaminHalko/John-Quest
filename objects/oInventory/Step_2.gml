@@ -57,6 +57,8 @@ var _target = (global.my > INVENTORY_Y or global.inHand != -1 or itemReturn != -
 if _target waitY = 20;
 else _target = (--waitY > 0);
 
+if (instance_exists(oTransition)) _target = 0;
+
 for(var i = 0; i < 5; i++) {
 	if (i == 0 or (_target ? (inventoryItemY[i-1] > 0.4) : (inventoryItemY[i-1] < 0.6))) {
 		inventoryItemY[i] = Approach(inventoryItemY[i],_target,0.1);

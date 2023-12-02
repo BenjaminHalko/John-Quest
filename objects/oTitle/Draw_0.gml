@@ -45,10 +45,10 @@ if (title) {
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+32+16*menuSelected);
 	} else {
 		draw_set_font(fRPG);
-		draw_text(_menuX-32,_menuY-4,"Programming - Benjamin\nLevel Design - Benjamin\nMusic & Sound FX - Benjamin\nCharacter Art - Morlan\nKey-Item Art - Morlan / Benjamin\nEnvironment Art\n  - Morlan / Haoxi / Benjamin");
+		draw_text(_menuX-32,_menuY+4,"Programming - Benjamin\nLevel Design - Benjamin\nMusic & Sound FX - Benjamin\nCharacter Art - Morlan\nKey-Item Art - Morlan / Benjamin\nEnvironment Art\n  - Morlan / Haoxi / Benjamin");
 		
 		draw_set_color(c_dkgray);
-		draw_text(_menuX-64,_menuY-20,"Thanks to everyone that made this possible");
+		draw_text(_menuX-64,_menuY-10,"Thanks to everyone that made this possible");
 	}
 } else {
 	draw_sprite(sTitleLandscape,0,0,room_height+smallerBuildingHeight*moveUpPercent * 1.7);

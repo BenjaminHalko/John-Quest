@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "mMusicLvl3",
+  "name": "mLvl3MusicBoss",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 80.0,
+  "duration": 96.0,
   "parent": {
     "name": "Music",
     "path": "folders/Level3/Audio/Music.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mMusicLvl3.ogg",
+  "soundFile": "mLvl3MusicBoss.ogg",
   "type": 1,
-  "volume": 0.8,
+  "volume": 0.6,
 }

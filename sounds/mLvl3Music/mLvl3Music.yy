@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snItemGet",
+  "name": "mLvl3Music",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.163605,
+  "duration": 80.0,
   "parent": {
-    "name": "SoundFX",
-    "path": "folders/Level2/Audio/SoundFX.yy",
+    "name": "Music",
+    "path": "folders/Level3/Audio/Music.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snItemGet.wav",
-  "type": 0,
-  "volume": 0.7,
+  "soundFile": "mLvl3Music.ogg",
+  "type": 1,
+  "volume": 0.55,
 }

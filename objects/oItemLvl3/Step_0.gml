@@ -33,6 +33,13 @@ if (global.my <= INVENTORY_Y) {
 					});
 				} else {
 					global.isBattle = false;
+					var _music = [mLvl3Music,mLvl3Music2,mLvl3Music3];
+					var _amount = 0;
+					for(var i = 0; i < 3; i++) {
+						_amount += global.piecesCollected[i];	
+					}
+					audio_stop_sound(oNodeController.music);
+					oNodeController.music = audio_play_sound(_music[min(2,_amount)],1,true);
 				}
 				global.clicked = false;
 				instance_destroy();

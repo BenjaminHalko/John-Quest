@@ -141,6 +141,7 @@ if (dead) {
 		}
 	} else {
 		if (!playedSound) {
+			audio_stop_sound(mLvl3MusicBoss);
 			audio_play_sound(snShopkeeperLeave,1,false,1,0.14);
 			playedSound = true;
 			oInventory.inventory[1] = -1;

@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 3.186937,
+  "duration": 1.906937,
   "parent": {
     "name": "Speech",
     "path": "folders/Level3/Audio/Speech.yy",
