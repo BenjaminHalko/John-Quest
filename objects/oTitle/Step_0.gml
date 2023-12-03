@@ -72,8 +72,8 @@ if (title) {
 						menuSelected += _vInput * 2;
 						if (menuSelected == -1 or menuSelected > 6) menuSelected = 0;
 						else if (menuSelected < 0) menuSelected = 5;
-						audio_play_sound(snBlip,1,false);
 					}
+					audio_play_sound(snBlip,1,false);
 					menuPressedV = _vInput;
 				}
 			} else {

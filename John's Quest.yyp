@@ -276,6 +276,7 @@
     {"id":{"name":"sTitle","path":"sprites/sTitle/sTitle.yy",},},
     {"id":{"name":"sHeartDrop","path":"sprites/sHeartDrop/sHeartDrop.yy",},},
     {"id":{"name":"GMLiveAPI_js","path":"scripts/GMLiveAPI_js/GMLiveAPI_js.yy",},},
+    {"id":{"name":"sBossLvl3Starbucks","path":"sprites/sBossLvl3Starbucks/sBossLvl3Starbucks.yy",},},
     {"id":{"name":"TransitionFunctions","path":"scripts/TransitionFunctions/TransitionFunctions.yy",},},
     {"id":{"name":"oBossLvl2UI","path":"objects/oBossLvl2UI/oBossLvl2UI.yy",},},
     {"id":{"name":"ActivateBombNPC","path":"scripts/ActivateBombNPC/ActivateBombNPC.yy",},},

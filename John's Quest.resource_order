@@ -179,6 +179,7 @@
     {"name":"sTitle","order":2,"path":"sprites/sTitle/sTitle.yy",},
     {"name":"sHeartDrop","order":2,"path":"sprites/sHeartDrop/sHeartDrop.yy",},
     {"name":"GMLiveAPI_js","order":4,"path":"scripts/GMLiveAPI_js/GMLiveAPI_js.yy",},
+    {"name":"sBossLvl3Starbucks","order":1,"path":"sprites/sBossLvl3Starbucks/sBossLvl3Starbucks.yy",},
     {"name":"TransitionFunctions","order":1,"path":"scripts/TransitionFunctions/TransitionFunctions.yy",},
     {"name":"oBossLvl2UI","order":1,"path":"objects/oBossLvl2UI/oBossLvl2UI.yy",},
     {"name":"ActivateBombNPC","order":3,"path":"scripts/ActivateBombNPC/ActivateBombNPC.yy",},
