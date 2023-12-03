@@ -146,7 +146,7 @@ if (title) {
 		if (textAlpha == _target) {
 			if (_target == 0) {
 				textNum++;
-				wait = 210;
+				wait = 240;
 			} else if (--wait <= 0) {
 				textTarget++;
 			}
