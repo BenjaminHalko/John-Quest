@@ -2,7 +2,7 @@
 
 enableLive;
 
-var _y = 0//Wave(-2,2,2,0);
+var _y = Wave(-2,2,2,0);
 var _spriteAngle = (x - xprevious) * -10;
 var _yscale = 1 + (y - yprevious) * -0.02;
 
