@@ -5,7 +5,8 @@ enum CURSOR {
 	LEFT,
 	RIGHT,
 	BACKWARD_LEFT,
-	BACKWARD_RIGHT
+	BACKWARD_RIGHT,
+	LVL4
 }
 
 function native_cursor(_ptr) constructor {
@@ -33,7 +34,8 @@ function createCursors() {
 		sCursorLeft,
 		sCursorRight,
 		sCursorBackwardLeft,
-		sCursorBackwardRight
+		sCursorBackwardRight,
+		sCursorLvl4
 	];
 	var _numCursors = array_length(_cursors);
 	if (array_length(global.cursors) != _numCursors) global.cursors = array_create(_numCursors);
