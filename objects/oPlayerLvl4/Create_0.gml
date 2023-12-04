@@ -5,7 +5,7 @@ enableLive;
 // spd
 hsp = 0;
 vsp = 0;
-movespd = 3;
+movespd = 4;
 
 // item
 shotTimer = 0;

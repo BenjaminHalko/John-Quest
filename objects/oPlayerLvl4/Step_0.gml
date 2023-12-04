@@ -3,16 +3,38 @@
 enableLive;
 
 Input()
-var _moveX = keyRight-keyLeft;
+var _moveX = keyRight - keyLeft;
 var _moveY = keyDown - keyUp;
 var _fire = mouse_check_button(mb_left);
 
-hsp = ApproachFade(hsp,_moveX*movespd,0.8,0.85);
-vsp = ApproachFade(vsp,_moveY*movespd,0.8,0.85);
+// Movement
+var _dir = point_direction(0,0,_moveX,_moveY);
+hsp = ApproachFade(hsp,lengthdir_x(movespd*abs(_moveX),_dir),0.8,0.85);
+vsp = ApproachFade(vsp,lengthdir_y(movespd*abs(_moveY),_dir),0.8,0.85);
 
-x += hsp;
-y += vsp;
-
+// Collision
+if (hsp != 0 or vsp != 0) {
+	var _xStart = x;
+	var _yStart = y;
+	MoveAndCollide(hsp,vsp,0,-sign(vsp));
+	var _testX1 = x;
+	var _testY1 = y;
+	repeat(3) MoveAndCollide(hsp,vsp,0,-sign(vsp));
+	var _dist = point_distance(x,y,_xStart,_yStart);
+	x = _xStart;
+	y = _yStart;
+	MoveAndCollide(hsp,vsp,-sign(hsp),0);
+	var _testX2 = x;
+	var _testY2 = y;
+	repeat(3) MoveAndCollide(hsp,vsp,-sign(hsp),0);
+	if (point_distance(x,y,_xStart,_yStart) < _dist+1) {
+		x = _testX1;
+		y = _testY1;
+	} else {
+		x = _testX2;
+		y = _testY2;
+	}
+}
 
 // shooting
 if (_fire) {
@@ -30,5 +52,3 @@ if (_fire) {
 
 // animation
 propellerIndex = (propellerIndex + propellerSpd) % propellerNum;
-image_angle = hsp * -10;
-image_yscale = 1 + vsp * -0.02;

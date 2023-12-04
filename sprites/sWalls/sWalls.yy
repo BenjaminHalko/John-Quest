@@ -65,8 +65,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "tgLvl1",
-    "path": "texturegroups/tgLvl1",
+    "name": "tgNoExport",
+    "path": "texturegroups/tgNoExport",
   },
   "type": 0,
   "VTile": false,
