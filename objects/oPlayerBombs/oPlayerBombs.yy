@@ -1,17 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oPlayerBulletsLvl4",
+  "name": "oPlayerBombs",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":40,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Laser",
-    "path": "folders/Level4/Items/Laser.yy",
+    "name": "Cannon",
+    "path": "folders/Level4/Items/Cannon.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -32,8 +32,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "sPlayerBullets",
-    "path": "sprites/sPlayerBullets/sPlayerBullets.yy",
+    "name": "sBombLvl4",
+    "path": "sprites/sBombLvl4/sBombLvl4.yy",
   },
   "spriteMaskId": {
     "name": "sPlayerBulletsLvl4Mask",

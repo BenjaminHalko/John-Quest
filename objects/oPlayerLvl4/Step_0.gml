@@ -6,11 +6,49 @@ Input()
 var _moveX = keyRight - keyLeft;
 var _moveY = keyDown - keyUp;
 var _fire = mouse_check_button(mb_left);
+var _changeItem = mouse_check_button_pressed(mb_right);
 
 // Movement
 var _dir = point_direction(0,0,_moveX,_moveY);
 hsp = ApproachFade(hsp,lengthdir_x(movespd*abs(_moveX),_dir),0.8,0.85);
 vsp = ApproachFade(vsp,lengthdir_y(movespd*abs(_moveY),_dir),0.8,0.85);
+
+// shooting
+if (_changeItem) changeItem = true;
+if (changeItem or itemPercent != 0) {
+	itemPercent = Approach(itemPercent, changeItem*2, 0.1);
+	if (itemPercent == 2) {
+		item = 1 - item;
+		changeItem = false;
+	}
+} else if (_fire) {
+	if (--shotTimer <= 0) {
+		var _shootDir = point_direction(x,y,mouse_x,mouse_y);
+		if (item == 0) {
+			with(instance_create_depth(x+random_range(-6,6)+lengthdir_x(20,_shootDir),y+random_range(-6,6)+lengthdir_y(20,_shootDir),depth-1,oPlayerBulletsLvl4)) {
+				image_angle = _shootDir;
+			}
+			ScreenShake(2,2);
+			shotTimer = 5;
+			knockBack = 5;
+			hsp -= lengthdir_x(0.2,_shootDir);
+			vsp -= lengthdir_y(0.2,_shootDir);
+		} else {
+			with(instance_create_depth(x+lengthdir_x(20,_shootDir),y+lengthdir_y(20,_shootDir),depth-1,oPlayerBombs)) {
+				hSpd = lengthdir_x(10,_shootDir);
+				vSpd = lengthdir_y(10,_shootDir);
+			}
+			
+			ScreenShake(2,2);
+			shotTimer = 15;
+			knockBack = 10;
+			hsp -= lengthdir_x(1,_shootDir);
+			vsp -= lengthdir_y(1,_shootDir);
+		}
+	}
+} else {
+	shotTimer = 0;
+}
 
 // Collision
 if (hsp != 0 or vsp != 0) {
@@ -36,19 +74,6 @@ if (hsp != 0 or vsp != 0) {
 	}
 }
 
-// shooting
-if (_fire) {
-	if (--shotTimer <= 0) {
-		with(instance_create_depth(x+random_range(-6,6),y+random_range(-6,6),depth-1,oPlayerBulletsLvl4)) {
-			direction = point_direction(x,y,mouse_x,mouse_y);
-			image_angle = direction;
-		}
-		ScreenShake(2,2);
-		shotTimer = 5;
-	}
-} else {
-	shotTimer = 0;
-}
-
 // animation
 propellerIndex = (propellerIndex + propellerSpd) % propellerNum;
+knockBack = Approach(knockBack,0,1-(item == 1)*0.4);

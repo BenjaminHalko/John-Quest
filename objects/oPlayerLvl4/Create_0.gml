@@ -5,11 +5,20 @@ enableLive;
 // spd
 hsp = 0;
 vsp = 0;
-movespd = 4;
+movespd = 4.5;
 
 // item
 shotTimer = 0;
 knockBack = 0;
+itemPercent = 0;
+changeItem = false;
+item = 0;
+itemSprites = [
+	sPlayerLaserGun,
+	sPlayerCannon
+];
+itemCircleNum = sprite_get_number(sPlayerItemCircle);
+itemCurve = animcurve_get_channel(PlayerItemCurves,"item");
 
 // sprite
 propellerSpd = sprite_get_speed(sPlayerPropeller) / 60;
