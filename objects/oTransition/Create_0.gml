@@ -26,10 +26,10 @@ switch (roomTo) {
 	} break;
 }
 
-playerX = undefined;
-playerY = undefined;
+behindPlayer = false;
 if (instance_exists(oPlayer) and (room == rLvl1 and roomTo == rLvl2)) {
 	depth = oPlayer.depth + 1;
+	behindPlayer = true;
 }
 
 global.atBoss = false;

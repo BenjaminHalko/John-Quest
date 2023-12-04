@@ -18,8 +18,8 @@ if (deadBeat >= 23) {
 		scale = animcurve_channel_evaluate(destroyCurve, _percent);
 		oBackground.finalSpd = 1 - _percent;
 	}
-	oPlayer.x = lerp(xstart,oCamera.boundary.x+240,deadFlash);
-	oPlayer.y = lerp(xstart,oCamera.boundary.y+96,deadFlash);
+	oPlayer.x = oCamera.boundary.x+240;
+	oPlayer.y = oCamera.boundary.y+96;
 	oPlayer.autoMove = oPlayer.x;
 } else if (deadBeat >= 12) {
 	deadFlash = clamp((oMusicController.thisBeat - 12) / 10, 0 ,1);
@@ -32,14 +32,14 @@ if (deadBeat >= 23) {
 			radius = 16 + other.deadFlash * 8;
 		}	
 	}
-	if (oPlayer.autoMove == -1) {
+	if (oPlayer.autoMove == undefined) {
 		oPlayer.hsp = 0;
 		oPlayer.vsp = 0;
-		oPlayer.xstart = x;
-		oPlayer.ystart = y;
+		oPlayer.xstart = oPlayer.x;
+		oPlayer.ystart = oPlayer.y;
 	}
-	oPlayer.x = lerp(xstart,oCamera.boundary.x+240,deadFlash);
-	oPlayer.y = lerp(xstart,oCamera.boundary.y+96,deadFlash);
+	oPlayer.x = lerp(oPlayer.xstart,oCamera.boundary.x+240,deadFlash);
+	oPlayer.y = lerp(oPlayer.ystart,oCamera.boundary.y+96,deadFlash);
 	oPlayer.autoMove = oPlayer.x;
 } else if (intro) {
 	if (introPhase == 0 and sprite_index == sBossLvl1Intro) image_speed = 1;

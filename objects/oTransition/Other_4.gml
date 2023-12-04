@@ -1,7 +1,9 @@
 /// @desc 
 
-if (!is_undefined(playerX) and instance_exists(oPlayer)) {
-	depth = oPlayer.depth + 1;
+if (behindPlayer and instance_exists(oPlayer)) {
+	depth = -100000;
+	oPlayer.depth = depth - 1;
+	oPlayer.changeDepth = false;
 }
 leading = false;
 percent = 1;

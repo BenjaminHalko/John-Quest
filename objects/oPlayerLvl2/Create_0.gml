@@ -54,6 +54,8 @@ flashCol = [1,0,0];
 autoMoveX = 0;
 autoMoveY = 0;
 
+changeDepth = true;
+
 // Hurt Player
 hurtPlayer = function(_direction,_force,_damage)
 {

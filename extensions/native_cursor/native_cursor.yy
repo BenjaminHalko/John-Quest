@@ -219,7 +219,7 @@
   "packageId": "",
   "parent": {
     "name": "Cursor",
-    "path": "folders/Level3/Global/Cursor.yy",
+    "path": "folders/Global/Cursor.yy",
   },
   "productId": "",
   "sourcedir": "",
