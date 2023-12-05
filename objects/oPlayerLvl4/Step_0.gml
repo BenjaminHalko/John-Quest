@@ -40,7 +40,7 @@ if (changeItem or itemPercent != 0) {
 			}
 			
 			ScreenShake(2,2);
-			shotTimer = 15;
+			shotTimer = 25;
 			knockBack = 10;
 			hsp -= lengthdir_x(1,_shootDir);
 			vsp -= lengthdir_y(1,_shootDir);
@@ -80,14 +80,23 @@ if (hurt > 0) {
 	yscale = random_range(0.5,1.8);
 } else {
 	yscale = 1;
-	var _enemy = instance_place(x,y,pLvl4Enemy);
-	if (_enemy != noone) {
+}
+
+var _enemy = instance_place(x,y,pLvl4Enemy);
+if (_enemy != noone) {
+	if (hurt <= 0) {
+		var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
+		hsp = lengthdir_x(movespd*2,_enemyDir);
+		vsp = lengthdir_y(movespd*2,_enemyDir);
+		with(_enemy) {
+			knockback = 6;
+			knockbackDir = _enemyDir+180;
+		}
+	} else {
 		hurt = 60;
 		audio_play_sound(snPlayerDie,1,false);
-		var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
-		hsp = lengthdir_x(movespd,_enemyDir);
-		vsp = lengthdir_y(movespd,_enemyDir);
-	}	
+	}
+	
 }
 
 // animation
