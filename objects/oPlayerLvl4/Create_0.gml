@@ -20,7 +20,12 @@ itemSprites = [
 itemCircleNum = sprite_get_number(sPlayerItemCircle);
 itemCurve = animcurve_get_channel(PlayerItemCurves,"item");
 
+// health
+hp = 6;
+hurt = 0;
+
 // sprite
 propellerSpd = sprite_get_speed(sPlayerPropeller) / 60;
 propellerNum = sprite_get_number(sPlayerPropeller);
 propellerIndex = 0;
+yscale = 1;

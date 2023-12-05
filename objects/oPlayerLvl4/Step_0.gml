@@ -74,6 +74,22 @@ if (hsp != 0 or vsp != 0) {
 	}
 }
 
+// hurt
+if (hurt > 0) {
+	hurt = Approach(hurt,0,1);
+	yscale = random_range(0.5,1.8);
+} else {
+	yscale = 1;
+	var _enemy = instance_place(x,y,pLvl4Enemy);
+	if (_enemy != noone) {
+		hurt = 60;
+		audio_play_sound(snPlayerDie,1,false);
+		var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
+		hsp = lengthdir_x(movespd,_enemyDir);
+		vsp = lengthdir_y(movespd,_enemyDir);
+	}	
+}
+
 // animation
 propellerIndex = (propellerIndex + propellerSpd) % propellerNum;
 knockBack = Approach(knockBack,0,1-(item == 1)*0.4);
