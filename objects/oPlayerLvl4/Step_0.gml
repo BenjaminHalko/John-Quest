@@ -34,7 +34,7 @@ if (changeItem or itemPercent != 0) {
 			hsp -= lengthdir_x(0.2,_shootDir);
 			vsp -= lengthdir_y(0.2,_shootDir);
 		} else {
-			with(instance_create_depth(x+lengthdir_x(20,_shootDir),y+lengthdir_y(20,_shootDir),depth-1,oPlayerBombs)) {
+			with(instance_create_depth(x+lengthdir_x(20,_shootDir),y+lengthdir_y(20,_shootDir),depth-1,oBombLvl4)) {
 				hSpd = lengthdir_x(10,_shootDir);
 				vSpd = lengthdir_y(10,_shootDir);
 			}
