@@ -35,8 +35,8 @@ if (changeItem or itemPercent != 0) {
 			vsp -= lengthdir_y(0.2,_shootDir);
 		} else {
 			with(instance_create_depth(x+lengthdir_x(20,_shootDir),y+lengthdir_y(20,_shootDir),depth-1,oBombLvl4)) {
-				hSpd = lengthdir_x(10,_shootDir);
-				vSpd = lengthdir_y(10,_shootDir);
+				hSpd = lengthdir_x(8,_shootDir);
+				vSpd = lengthdir_y(8,_shootDir);
 			}
 			
 			ScreenShake(2,2);
