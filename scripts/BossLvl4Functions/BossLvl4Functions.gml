@@ -33,3 +33,15 @@ function DrawLvl4BossEye(_focusX, _focusY) {
 	
 	draw_surface_ext(surf,x+lengthdir_x(_offsetLen,_offsetDir),y+lengthdir_y(_offsetLen,_offsetDir),image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 }
+
+function HomingEyeInit() {
+	if (live_call()) return live_result;
+	
+	targetDir = 0;
+	dir = random(360);
+	dirPercent = 0;
+	waitPercent = 0;
+	spd = 8;
+	targetX = 0;
+	targetY = 0;
+}

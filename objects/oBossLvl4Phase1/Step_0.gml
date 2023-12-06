@@ -3,18 +3,9 @@
 enableLive;
 event_inherited();
 
-/*
-if (--timer < 0 and count < 5) {
-	instance_create_depth(x,y,depth-1,oBossLvl4HomingEye);
-	timer = 10;
-	count++;
-}
-
-if (instance_number(oBossLvl4HomingEye) == 0) count = 0;
-*/
-
 if (keyboard_check_pressed(ord("H"))) attack = BOSSLVL4.HEXAGON;
 if (keyboard_check_pressed(ord("C"))) attack = BOSSLVL4.CHARGE;
+if (keyboard_check_pressed(ord("J"))) attack = BOSSLVL4.HOMING;
 
 var _switched = (lastAttack != attack);
 lastAttack = attack;
@@ -159,6 +150,27 @@ switch(attack) {
 			y = ystart + lengthdir_y(_len,chargeDir+180);
 		}
 	} break;
+	case BOSSLVL4.HOMING: {
+		if (_switched) {
+			
+		}
+		
+		
+		
+		if (homingPercent == 1) {
+			
+		} else {
+			homingPercent = ApproachFade(homingPercent,1,0.02,0.7);
+			if (homingPercent == 1) {
+				manageShield = false;
+				with(oBossLvl4ShieldEye) {
+					instance_change(oBossLvl4HomingEye,false);
+					HomingEyeInit();
+					dir = point_direction(other.x,other.y,x,y);
+				}
+			}
+		}
+	} break;
 }
 
 // Animation
@@ -183,7 +195,7 @@ if (stunned) {
 // Eyes Shield
 if (manageShield) {
 	var _eyeDist = lerp(eyeDist,Wave(64,72,2.5,0),stunPercent);
-	eyeRotation -= (3 + 7 * chargePercent) * (1-stunPercent);
+	eyeRotation -= (3 + 7 * chargePercent) * (1-stunPercent) * (1-homingPercent);
 	for(var i = 0; i < 6; i++) {
 		eyes[i].x = x + lengthdir_x(_eyeDist,360/6*i+eyeRotation);
 		eyes[i].y = y + lengthdir_y(_eyeDist,360/6*i+eyeRotation);
