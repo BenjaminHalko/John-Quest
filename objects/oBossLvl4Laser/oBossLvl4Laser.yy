@@ -1,16 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBossLvl4Phase1",
+  "name": "oBossLvl4Laser",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"allowKnockback","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"value":"False",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"hp","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"value":"500",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"hp","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"value":"infinity",},
   ],
   "parent": {
     "name": "Boss",
@@ -33,11 +32,14 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"eye1","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"noone","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"eye2","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"noone","varType":0,},
+  ],
   "solid": false,
   "spriteId": {
-    "name": "sBossLvl4Phase1",
-    "path": "sprites/sBossLvl4Phase1/sBossLvl4Phase1.yy",
+    "name": "sBossLvl4Laser",
+    "path": "sprites/sBossLvl4Laser/sBossLvl4Laser.yy",
   },
   "spriteMaskId": null,
   "visible": true,

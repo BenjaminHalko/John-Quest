@@ -15,8 +15,8 @@
     "path": "folders/Level4/Boss/Projectiles.yy",
   },
   "parentObjectId": {
-    "name": "pLvl4Enemy",
-    "path": "objects/pLvl4Enemy/pLvl4Enemy.yy",
+    "name": "oBossLvl4ShieldEye",
+    "path": "objects/oBossLvl4ShieldEye/oBossLvl4ShieldEye.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sBossLvl4HomingEye",
-    "path": "sprites/sBossLvl4HomingEye/sBossLvl4HomingEye.yy",
+    "name": "sBossLvl4ShieldEye",
+    "path": "sprites/sBossLvl4ShieldEye/sBossLvl4ShieldEye.yy",
   },
   "spriteMaskId": null,
   "visible": true,

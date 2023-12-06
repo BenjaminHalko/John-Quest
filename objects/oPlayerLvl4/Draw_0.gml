@@ -18,4 +18,4 @@ draw_sprite_ext(itemSprites[item],knockBack == 0 ? 0 : 1 + (knockBack % 2),xprev
 // Player
 _y = Wave(-2,2,2,0);
 draw_sprite_ext(sprite_index,image_index,x,y+_y,1/yscale,_yscale,_spriteAngle,image_blend,image_alpha);
-draw_sprite_ext(sPlayerPropeller,propellerIndex,x+lengthdir_x(12*yscale,90+_spriteAngle),y+lengthdir_y(12*yscale,90+_spriteAngle)+_y,1,1/(1-vsp/movespd*0.6),_spriteAngle,c_white,1);
+draw_sprite_ext(sPlayerPropeller,propellerIndex,x+lengthdir_x(12*yscale,90+_spriteAngle),y+lengthdir_y(12*yscale,90+_spriteAngle)+_y,1,1/(1-clamp(vsp/movespd,-1,1)*0.6),_spriteAngle,c_white,1);

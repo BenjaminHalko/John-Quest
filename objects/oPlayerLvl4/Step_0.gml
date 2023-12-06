@@ -84,15 +84,20 @@ if (hurt > 0) {
 
 var _enemy = instance_place(x,y,pLvl4Enemy);
 if (_enemy != noone) {
-	if (hurt <= 0) {
-		var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
-		hsp = lengthdir_x(movespd*2,_enemyDir);
-		vsp = lengthdir_y(movespd*2,_enemyDir);
+	var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
+	hsp = lengthdir_x(movespd*2,_enemyDir);
+	vsp = lengthdir_y(movespd*2,_enemyDir);
+	if (_enemy.allowKnockback) {
 		with(_enemy) {
 			knockback = 6;
 			knockbackDir = _enemyDir+180;
 		}
-	} else {
+	}
+	if (_enemy.object_index == oBossLvl4Laser) {
+		_enemy.destroy = true;	
+	}
+	
+	if (hurt <= 0) {
 		hurt = 60;
 		audio_play_sound(snPlayerDie,1,false);
 	}
