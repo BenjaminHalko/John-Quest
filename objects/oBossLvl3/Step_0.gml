@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (global.my <= INVENTORY_Y) {
 	var _hovered = false;
 	

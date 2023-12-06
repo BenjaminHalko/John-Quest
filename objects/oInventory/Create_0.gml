@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 enum INVENTORY {
 	LIST,
 	MONEY,

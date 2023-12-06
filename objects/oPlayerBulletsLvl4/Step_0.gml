@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 colNum = (colNum+1) % 3;
 image_blend = cols[colNum];
 

@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (global.inHand != -1) {
 	if (global.clicked) {
 		if (inventory[global.inHand] != INVENTORY.LIST or global.isBattle) {

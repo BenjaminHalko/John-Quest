@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (audio_is_playing(snBossLvl1Roar)) {
 	setCursor(CURSOR.NORMAL);
 	ScreenShake(3,5);

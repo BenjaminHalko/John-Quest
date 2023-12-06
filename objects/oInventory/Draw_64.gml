@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 for(var i = 0; i < inventorySlots; i++) {
 	var _x = 480/2 + (width - 32)/(inventorySlots-1)*(i-(inventorySlots-1)/2);
 	var _y = 1-animcurve_channel_evaluate(inventoryYCurve,inventoryItemY[i]);

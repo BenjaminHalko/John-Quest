@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (dead) {
 	if (type == INVENTORY.BOMB) {
 		if (count > 16) {

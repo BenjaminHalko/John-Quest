@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 Input();
 
 if (moveUpPercent > 0.1) {

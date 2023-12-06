@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 hovered = false;
 dead = false;
 timer = 0;
