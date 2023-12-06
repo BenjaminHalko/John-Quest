@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snBossLvl1Roar",
+  "name": "mTitle",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 3.464218,
+  "duration": 54.857143,
   "parent": {
-    "name": "SoundFXs",
-    "path": "folders/Level1/Audio/SoundFXs.yy",
+    "name": "Audio",
+    "path": "folders/Title/Audio.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snBossLvl1Roar.ogg",
+  "soundFile": "mTitle.ogg",
   "type": 1,
-  "volume": 0.8,
+  "volume": 0.65,
 }

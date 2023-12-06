@@ -18,6 +18,7 @@ if (moveUpPercent > 0.1) {
 
 if (title) {
 	var _select = function() {
+		audio_stop_sound(music);
 		audio_play_sound(snItemGet, 1, false);
 		allowInput = false;
 		alarm[0] = blinkSpd;
@@ -135,9 +136,11 @@ if (title) {
 		}
 	}
 } else {
-	if (keyAction) {
+	if (keyAction or !audio_is_playing(mOpening)) {
 		title = true;
 		moveUpPercent = 1;
+		audio_stop_sound(music);
+		music = audio_play_sound(mTitle,1,true);
 	}
 	if (textNum < 5) {
 		var _target = (textNum == textTarget);
@@ -146,17 +149,17 @@ if (title) {
 		if (textAlpha == _target) {
 			if (_target == 0) {
 				textNum++;
-				wait = 240;
+				wait = 264;
 			} else if (--wait <= 0) {
 				textTarget++;
 			}
 		}
+		startUpPos = audio_sound_get_track_position(music);
 	} else if (moveUpPercent == 1) {
 		if (--wait <= 0) title = true;
 	} else {
-		moveUpSpd = Approach(moveUpSpd, 0.004, 0.00005);
-		moveUpPercent = Approach(moveUpPercent, 1, moveUpSpd);
-		if moveUpPercent == 1 wait = 30;
+		var _pos = audio_sound_get_track_position(music);
+		moveUpPercent = animcurve_channel_evaluate(moveUpCurve,min(1,(_pos-startUpPos)/(musicLength-startUpPos)));
 	}
 }
 	
