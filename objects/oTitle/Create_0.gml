@@ -26,7 +26,7 @@ menuPressedH = 0;
 
 smallerBuildingHeight = sprite_get_height(sTitleLandscape);
 buildingHeight = sprite_get_height(sTitleBuilding);
-buildingScale = 18 * 144 / buildingHeight;
+buildingScale = 24 * 144 / buildingHeight;
 
 blink = 0;
 blinkSpd = 5;
@@ -75,3 +75,8 @@ text = [
 "WITH HIS SIX EVIL EYES, HE CORRUPTED\nTHE INHABITANTS OF THE LAND.",
 "JOHN, WITH HIS EXPERTISE IN GAMING,\nMUST RESTORE PEACE TO THE WORLD."
 ];
+
+startUpPos = 0;
+music = audio_play_sound(mOpening,1,false);
+musicLength = audio_sound_length(music)-0.3;
+moveUpCurve = animcurve_get_channel(TitleCurves,"moveUp");

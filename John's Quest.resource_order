@@ -92,6 +92,7 @@
     {"name":"Tilesets","order":4,"path":"folders/Level4/Tilesets.yy",},
     {"name":"Sprites","order":1,"path":"folders/Level4/Tilesets/Sprites.yy",},
     {"name":"Title","order":12,"path":"folders/Title.yy",},
+    {"name":"Audio","order":6,"path":"folders/Title/Audio.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
@@ -129,6 +130,7 @@
     {"name":"GMLive_vm_init","order":7,"path":"scripts/GMLive_vm_init/GMLive_vm_init.yy",},
     {"name":"sPlayerShadow","order":1,"path":"sprites/sPlayerShadow/sPlayerShadow.yy",},
     {"name":"shAlpha","order":1,"path":"shaders/shAlpha/shAlpha.yy",},
+    {"name":"TitleCurves","order":7,"path":"animcurves/TitleCurves/TitleCurves.yy",},
     {"name":"BatFunctions","order":2,"path":"scripts/BatFunctions/BatFunctions.yy",},
     {"name":"oBushWide","order":3,"path":"objects/oBushWide/oBushWide.yy",},
     {"name":"snAttemptDamage","order":8,"path":"sounds/snAttemptDamage/snAttemptDamage.yy",},
@@ -304,6 +306,7 @@
     {"name":"sRock","order":4,"path":"sprites/sRock/sRock.yy",},
     {"name":"oBossLvl1Small","order":7,"path":"objects/oBossLvl1Small/oBossLvl1Small.yy",},
     {"name":"oRockTrigger","order":1,"path":"objects/oRockTrigger/oRockTrigger.yy",},
+    {"name":"mTitle","order":1,"path":"sounds/mTitle/mTitle.yy",},
     {"name":"oRock","order":4,"path":"objects/oRock/oRock.yy",},
     {"name":"sCameraBoundary","order":3,"path":"sprites/sCameraBoundary/sCameraBoundary.yy",},
     {"name":"BossLvl2Curves","order":6,"path":"animcurves/BossLvl2Curves/BossLvl2Curves.yy",},
