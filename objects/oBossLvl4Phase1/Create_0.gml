@@ -40,6 +40,10 @@ chargePercent = 0;
 chargeDir = 0;
 chargeSpd = 0;
 
+// Homing
+homingPercent = 0;
+homingCount = 0;
+
 repeat(6) {
 	array_push(eyes,instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye));
 }
