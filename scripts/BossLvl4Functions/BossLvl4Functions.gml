@@ -38,7 +38,7 @@ function HomingEyeInit() {
 	if (live_call()) return live_result;
 	
 	targetDir = 0;
-	moveDir = random(360);
+	moveDir = 0;
 	dirPercent = 0;
 	waitPercent = 0;
 	spd = 8;

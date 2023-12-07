@@ -182,7 +182,7 @@ switch(attack) {
 				var _dirEye = random(360);
 				for(var i = 0; i < 6; i++) {
 					with(instance_create_depth(x,y,depth+1,oBossLvl4HomingEye)) {
-						dir = 360/6*i + _dirEye	
+						moveDir = 360/6*i + _dirEye	
 					}
 				}
 				homingCount++;
@@ -196,7 +196,7 @@ switch(attack) {
 				with(oBossLvl4ShieldEye) {
 					instance_change(oBossLvl4HomingEye,false);
 					HomingEyeInit();
-					dir = point_direction(other.x,other.y,x,y);
+					moveDir = point_direction(other.x,other.y,x,y);
 				}
 			}
 		}

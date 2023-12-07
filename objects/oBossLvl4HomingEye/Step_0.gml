@@ -2,9 +2,6 @@
 
 enableLive;
 
-// Inherit the parent event
-event_inherited();
-
 if (waitPercent == 1) {
 	if (dirPercent != 1) {
 		targetDir = point_direction(x,y,targetX,targetY);
@@ -19,3 +16,6 @@ if (waitPercent == 1) {
 
 spd = animcurve_channel_evaluate(curve,(waitPercent+dirPercent)/2) * 6;
 dir = moveDir - angle_difference(moveDir, targetDir) * dirPercent;
+
+// Inherit the parent event
+event_inherited();
