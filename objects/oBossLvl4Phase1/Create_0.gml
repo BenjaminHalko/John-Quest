@@ -7,7 +7,8 @@ enum BOSSLVL4 {
 	HOMING,
 	HEXAGON,
 	CHARGE,
-	BULLETHELL
+	BULLETHELL,
+	CHASE
 }
 
 scale = 1;
@@ -46,6 +47,19 @@ chargeSpd = 0;
 homingPercent = 0;
 homingCount = 0;
 
+// Movement
+spd = 0;
+dir = 0;
+
+var _boundary = oCamera.boundary;
+if (_boundary != noone) {
+	bLeft = _boundary.bbox_left+32;
+	bRight = _boundary.bbox_right-32;
+	bTop = _boundary.bbox_top+32;
+	bBottom = _boundary.bbox_bottom-32;
+}
+
+// Eyes
 repeat(6) {
 	array_push(eyes,instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye));
 }
