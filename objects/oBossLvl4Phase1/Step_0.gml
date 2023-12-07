@@ -6,6 +6,7 @@ event_inherited();
 if (keyboard_check_pressed(ord("H"))) attack = BOSSLVL4.HEXAGON;
 if (keyboard_check_pressed(ord("C"))) attack = BOSSLVL4.CHARGE;
 if (keyboard_check_pressed(ord("J"))) attack = BOSSLVL4.HOMING;
+if (keyboard_check_pressed(ord("K"))) attack = BOSSLVL4.BULLETHELL;
 
 var _switched = (lastAttack != attack);
 lastAttack = attack;
@@ -65,7 +66,7 @@ switch(attack) {
 
 			if (hexagonPercent == 1) {
 				hexagons[j].distSpd = Approach(hexagons[j].distSpd,(_playerDist + 64 < hexagons[j].dist),0.05,0.7);
-				hexagons[j].dist += lerp(1.5,5,hexagons[j].distSpd) * animcurve_channel_evaluate(hexagonCurve,1-hexagons[j].spinSpdPercent);
+				hexagons[j].dist += lerp(2,5,hexagons[j].distSpd) * animcurve_channel_evaluate(hexagonCurve,1-hexagons[j].spinSpdPercent);
 				hexagons[j].spinSpdPercent = ApproachFade(hexagons[j].spinSpdPercent,0,0.01,0.8);
 			}
 			
@@ -152,15 +153,44 @@ switch(attack) {
 	} break;
 	case BOSSLVL4.HOMING: {
 		if (_switched) {
-			
+			homingCount = 1;
+			timer = 30;
 		}
 		
-		
-		
 		if (homingPercent == 1) {
-			
+			if (homingCount > 5) {
+				if (homingCount == 6) {
+					homingCount++;
+					timer = 180;
+				} else if (--timer <= 0) {
+					if (!manageShield) {
+						eyes = [];
+						repeat(6) {
+							array_push(eyes,instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye));
+						}
+						eyeDist = 0;
+						eyeRotationSpd = 1;
+					}
+					manageShield = true;
+					eyeDist = ApproachFade(eyeDist,28,1,0.7);
+					if (eyeDist == 28) {
+						attack = -1;
+						homingPercent = 0;
+					}
+				}
+			} else if (--timer <= 0) {
+				var _dirEye = random(360);
+				for(var i = 0; i < 6; i++) {
+					with(instance_create_depth(x,y,depth+1,oBossLvl4HomingEye)) {
+						dir = 360/6*i + _dirEye	
+					}
+				}
+				homingCount++;
+				timer = 30;
+			}
 		} else {
 			homingPercent = ApproachFade(homingPercent,1,0.02,0.7);
+			eyeRotationSpd = 1-homingPercent;
 			if (homingPercent == 1) {
 				manageShield = false;
 				with(oBossLvl4ShieldEye) {
@@ -171,6 +201,32 @@ switch(attack) {
 			}
 		}
 	} break;
+	case BOSSLVL4.BULLETHELL: {
+		if (_switched) {
+			timer = 5;
+		}
+		
+		if (manageShield) {
+			eyeRotationSpd = 0;
+			eyeDist = ApproachFade(eyeDist,16,0.5,0.7);
+			if (eyeDist == 16) {
+				manageShield = false;
+				with(oBossLvl4ShieldEye) {
+					spd = 10;
+					dir = point_direction(other.x,other.y,x,y);
+				}
+			}
+		} else {
+			if (--timer < 0) {
+				with(instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye)) {
+					scale = random_range(0.4,0.6);
+					spd = 6;
+					dir = random(360);
+				}
+				timer = 5;
+			}
+		}
+	}
 }
 
 // Animation
@@ -195,7 +251,7 @@ if (stunned) {
 // Eyes Shield
 if (manageShield) {
 	var _eyeDist = lerp(eyeDist,Wave(64,72,2.5,0),stunPercent);
-	eyeRotation -= (3 + 7 * chargePercent) * (1-stunPercent) * (1-homingPercent);
+	eyeRotation -= (3 + 7 * chargePercent) * (1-stunPercent) * eyeRotationSpd;
 	for(var i = 0; i < 6; i++) {
 		eyes[i].x = x + lengthdir_x(_eyeDist,360/6*i+eyeRotation);
 		eyes[i].y = y + lengthdir_y(_eyeDist,360/6*i+eyeRotation);

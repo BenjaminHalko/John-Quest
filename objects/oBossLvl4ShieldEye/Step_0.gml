@@ -31,5 +31,24 @@ if (focusIsOnPlayer <= 0) {
 	focusY = lengthdir_y(16,_dir);
 }
 
-image_xscale = Wave(1.1,0.9,0.5,waveOffset);
-image_yscale = Wave(0.9,1.1,0.5,waveOffset);
+image_xscale = Wave(1.1,0.9,0.5,waveOffset)*scale;
+image_yscale = Wave(0.9,1.1,0.5,waveOffset)*scale;
+
+if (spd != 0) {
+	var _hsp = lengthdir_x(spd,dir);
+	var _vsp = lengthdir_y(spd,dir);
+	if (array_length(MoveAndCollide(_hsp,_vsp,0,0)) > 0) {
+		repeat(50) {
+			with(instance_create_depth(x+random_range(-8,8),y+random_range(-8,8),depth-1,oTriangleParticle)) {
+				radius = 7;
+				speed = random(4);
+				spd = 0.04;
+				direction = random(360);
+				image_angle = random(360);
+			}
+			ScreenShake(5,3);
+		}
+		
+		instance_destroy();
+	}
+}

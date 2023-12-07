@@ -3,6 +3,8 @@
 // Inherit the parent event
 event_inherited();
 
+scale = 1;
+spd = 0;
 size = sprite_get_width(sprite_index);
 surf = surface_create(size,size);
 xOffset = sprite_get_xoffset(sprite_index);

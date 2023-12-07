@@ -6,7 +6,8 @@ event_inherited();
 enum BOSSLVL4 {
 	HOMING,
 	HEXAGON,
-	CHARGE
+	CHARGE,
+	BULLETHELL
 }
 
 scale = 1;
@@ -18,6 +19,7 @@ timer = 0;
 
 eyes = [];
 eyeRotation = 0;
+eyeRotationSpd = 1;
 eyeDist = 28;
 manageShield = true;
 

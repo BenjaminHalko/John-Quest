@@ -38,10 +38,11 @@ function HomingEyeInit() {
 	if (live_call()) return live_result;
 	
 	targetDir = 0;
-	dir = random(360);
+	moveDir = random(360);
 	dirPercent = 0;
 	waitPercent = 0;
 	spd = 8;
 	targetX = 0;
 	targetY = 0;
+	curve = animcurve_get_channel(BossLvl4Curves,"hexagon");
 }
