@@ -107,6 +107,7 @@
     {"name":"sBossLvl1Iris","order":2,"path":"sprites/sBossLvl1Iris/sBossLvl1Iris.yy",},
     {"name":"sBossLvl1SmallIris","order":6,"path":"sprites/sBossLvl1SmallIris/sBossLvl1SmallIris.yy",},
     {"name":"snTriangleJump","order":2,"path":"sounds/snTriangleJump/snTriangleJump.yy",},
+    {"name":"bgMapping","order":10,"path":"sprites/bgMapping/bgMapping.yy",},
     {"name":"sSwordNPC","order":1,"path":"sprites/sSwordNPC/sSwordNPC.yy",},
     {"name":"sBossLvl2Eye","order":1,"path":"sprites/sBossLvl2Eye/sBossLvl2Eye.yy",},
     {"name":"oSquareParticle","order":2,"path":"objects/oSquareParticle/oSquareParticle.yy",},

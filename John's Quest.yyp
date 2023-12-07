@@ -172,6 +172,7 @@
     {"id":{"name":"sBossLvl1SmallIris","path":"sprites/sBossLvl1SmallIris/sBossLvl1SmallIris.yy",},},
     {"id":{"name":"snTriangleJump","path":"sounds/snTriangleJump/snTriangleJump.yy",},},
     {"id":{"name":"sSlime","path":"sprites/sSlime/sSlime.yy",},},
+    {"id":{"name":"bgMapping","path":"sprites/bgMapping/bgMapping.yy",},},
     {"id":{"name":"sSwordNPC","path":"sprites/sSwordNPC/sSwordNPC.yy",},},
     {"id":{"name":"sBossLvl2Eye","path":"sprites/sBossLvl2Eye/sBossLvl2Eye.yy",},},
     {"id":{"name":"oSquareParticle","path":"objects/oSquareParticle/oSquareParticle.yy",},},
