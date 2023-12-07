@@ -7,6 +7,7 @@ enum BOSSLVL4 {
 	HOMING,
 	HEXAGON,
 	CHARGE,
+	SPINCYCLE,
 	BULLETHELL,
 	CHASE
 }
@@ -46,6 +47,10 @@ chargeSpd = 0;
 // Homing
 homingPercent = 0;
 homingCount = 0;
+
+// Spin Cycle
+spinCyclePercent = 0;
+spinCycleSwitchPercent = 0;
 
 // Movement
 spd = 0;

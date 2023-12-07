@@ -7,6 +7,8 @@ if (keyboard_check_pressed(ord("H"))) attack = BOSSLVL4.HEXAGON;
 if (keyboard_check_pressed(ord("C"))) attack = BOSSLVL4.CHARGE;
 if (keyboard_check_pressed(ord("J"))) attack = BOSSLVL4.HOMING;
 if (keyboard_check_pressed(ord("K"))) attack = BOSSLVL4.BULLETHELL;
+if (keyboard_check_pressed(ord("V"))) attack = BOSSLVL4.CHASE;
+if (keyboard_check_pressed(ord("X"))) attack = BOSSLVL4.SPINCYCLE;
 
 var _boundary = oCamera.boundary;
 if (_boundary != noone) {
@@ -249,6 +251,69 @@ switch(attack) {
 	case BOSSLVL4.CHASE: {
 		if (_switched) {
 			timer = 60*5;
+			spd = 0;
+			dir = point_direction(x,y,oPlayer.x,oPlayer.y);
+		}
+		
+		var _spd = 2.5;
+		spd = ApproachFade(spd,(--timer > 0)*_spd,0.1,0.7);
+		eyeRotationSpd = 1 + (spd/_spd) * 2;
+		eyeDist = lerp(28,48,spd/_spd);
+		dir = ApproachCircleEase(dir,point_direction(x,y,oPlayer.x,oPlayer.y),3,0.7);
+		x += lengthdir_x(spd,dir);
+		y += lengthdir_y(spd,dir);
+		
+		if (spd == 0) attack = -1;
+	} break;
+	case BOSSLVL4.SPINCYCLE: {
+		if (_switched) {
+			hexagonPercent = 0;
+			for(var i = 0; i < 6; i++) {
+				instance_create_depth(eyes[i].x,eyes[i].y,depth+2,oBossLvl4Laser,{eye1: eyes[i], eye2: id});
+			}
+			timer = 60*6;
+			spinCycleSwitchPercent = 0;
+			spinCyclePercent = 0;
+			manageShield = false;
+		}
+		
+		if (timer <= 0) {
+			angle = ApproachFade(angle,0,10,0.5);
+			spinCyclePercent = ApproachFade(spinCyclePercent, 0, 0.05, 0.7);
+			eyeRotationSpd = ApproachFade(eyeRotationSpd,1,0.05,0.7);
+			if (spinCyclePercent <= 0.2) {
+				hexagonPercent = ApproachFade(hexagonPercent,0,0.05,0.7);
+				if (eyeDist == 28 and hexagonPercent == 0) {
+					manageShield = true;
+					instance_destroy(oBossLvl4Laser);
+					attack = -1;
+				}
+			}
+		} else if (hexagonPercent != 1) {
+			hexagonPercent = ApproachFade(hexagonPercent,1,0.02,0.7);
+			spinCyclePercent = ApproachFade(spinCyclePercent, 0.05, 0.001, 0.7);
+		} else {
+			spinCyclePercent = ApproachFade(spinCyclePercent, 1, 0.02, 0.7);
+			var _targetSpd = 0.3;
+			if (--timer <= 60 * 3) {
+				if (spinCycleSwitchPercent >= 1/3) {
+					spinCycleSwitchPercent = ApproachFade(spinCycleSwitchPercent,1,0.01,0.7);
+				} else {
+					spinCycleSwitchPercent = ApproachFade(spinCycleSwitchPercent,1/3,0.01,0.6);
+					_targetSpd = 0.5;
+				}
+			}
+			eyeRotationSpd = ApproachFade(eyeRotationSpd,_targetSpd,0.05,0.7);	
+			angle = Wrap(angle - 3 * eyeRotationSpd,0,360);
+		}
+		
+		eyeRotation -= 3 * eyeRotationSpd;
+		for(var i = 0; i < 6; i++) {
+			var _amount = max(0,spinCycleSwitchPercent-1/3)*3;
+			if (i % 2) _amount = 1 - min(1,spinCycleSwitchPercent*3);
+			var _eyeDist = lerp(eyeDist,lerp(Wave(48,56,0.5,0),500,_amount),spinCyclePercent);
+			eyes[i].x = x + lengthdir_x(_eyeDist,360/6*i+eyeRotation);
+			eyes[i].y = y + lengthdir_y(_eyeDist,360/6*i+eyeRotation);
 		}
 	} break;
 	default: {
@@ -256,6 +321,7 @@ switch(attack) {
 			timer = 30;	
 		}
 		
+		eyeRotationSpd = ApproachFade(eyeRotationSpd,1,0.1,0.7);
 		if (--timer <= 0) {
 			//attack = choose(BOSSLVL4.CHARGE, BOSSLVL4.HEXAGON, BOSSLVL4.HOMING);	
 		}
@@ -267,7 +333,7 @@ switch(attack) {
 var _hurtScale = random_range(0.5,1.8);
 scale = lerp(lerp(Wave(0.85,1.15,0.5,0),1,stunPercent),_hurtScale,min(1,flash*2));
 stunPercent = ApproachFade(stunPercent,stunned,0.1,0.7);
-angle = Wave(-10,10,2,0) * stunPercent;
+if (attack != BOSSLVL4.SPINCYCLE) angle = Wave(-10,10,2,0) * stunPercent;
 
 // Stun Particles
 if (stunned) {
@@ -285,7 +351,7 @@ if (stunned) {
 // Eyes Shield
 if (manageShield) {
 	var _eyeDist = lerp(eyeDist,Wave(64,72,2.5,0),stunPercent);
-	eyeRotation -= (3 + 7 * chargePercent) * (1-stunPercent) * eyeRotationSpd;
+	eyeRotation -= (3 + 10 * chargePercent) * (1-stunPercent) * eyeRotationSpd;
 	for(var i = 0; i < 6; i++) {
 		eyes[i].x = x + lengthdir_x(_eyeDist,360/6*i+eyeRotation);
 		eyes[i].y = y + lengthdir_y(_eyeDist,360/6*i+eyeRotation);
