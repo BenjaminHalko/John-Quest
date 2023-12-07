@@ -15,6 +15,7 @@ if (room == rLvl3) {
 }
 
 // Update coords to follows
+boundary = noone;
 snapToFollow = function() {
 	if (instance_exists(follow)) {
 		x = follow.x;

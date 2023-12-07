@@ -8,6 +8,14 @@ if (keyboard_check_pressed(ord("C"))) attack = BOSSLVL4.CHARGE;
 if (keyboard_check_pressed(ord("J"))) attack = BOSSLVL4.HOMING;
 if (keyboard_check_pressed(ord("K"))) attack = BOSSLVL4.BULLETHELL;
 
+var _boundary = oCamera.boundary;
+if (_boundary != noone) {
+	bLeft = _boundary.bbox_left+32;
+	bRight = _boundary.bbox_right-32;
+	bTop = _boundary.bbox_top+32;
+	bBottom = _boundary.bbox_bottom-32;
+}
+
 var _switched = (lastAttack != attack);
 lastAttack = attack;
 switch(attack) {
@@ -120,12 +128,19 @@ switch(attack) {
 		}
 		
 		if (stunned) {
+			spd = ApproachFade(spd,0,0.5,0.7);
+			dir = point_direction(x,y,(bLeft+bRight)/2,(bTop+bBottom)/2);
+			
+			x += lengthdir_x(spd,dir);
+			y += lengthdir_y(spd,dir);
+			
 			if (--timer <= 0) {
 				chargePercent = 0;
 				stunned = false;
 				attack = -1;
 			}
 		} else if (chargePercent == 1) {
+			spd = 8;
 			chargeSpd = Approach(chargeSpd,20,1);
 			var _hSpd = lengthdir_x(chargeSpd,chargeDir);
 			var _vSpd = lengthdir_y(chargeSpd,chargeDir);
@@ -203,7 +218,7 @@ switch(attack) {
 	} break;
 	case BOSSLVL4.BULLETHELL: {
 		if (_switched) {
-			timer = 5;
+			timer = 15;
 		}
 		
 		if (manageShield) {
@@ -212,22 +227,41 @@ switch(attack) {
 			if (eyeDist == 16) {
 				manageShield = false;
 				with(oBossLvl4ShieldEye) {
-					spd = 10;
+					spd = 8;
 					dir = point_direction(other.x,other.y,x,y);
 				}
 			}
 		} else {
 			if (--timer < 0) {
-				with(instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye)) {
-					scale = random_range(0.4,0.6);
-					spd = 6;
-					dir = random(360);
+				var _dir = random(60);
+				var _scale = random_range(0.5,0.8);
+				for(var i = 0; i < 6; i++) {
+					with(instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye)) {
+						scale = _scale;
+						spd = 6-_scale*3;
+						dir = 360/6*i+_dir;
+					}
 				}
-				timer = 5;
+				timer = 20 - flash * 10;
 			}
 		}
-	}
+	} break;
+	case BOSSLVL4.CHASE: {
+		if (_switched) {
+			timer = 60*5;
+		}
+	} break;
+	default: {
+		if (_switched) {
+			timer = 30;	
+		}
+		
+		if (--timer <= 0) {
+			//attack = choose(BOSSLVL4.CHARGE, BOSSLVL4.HEXAGON, BOSSLVL4.HOMING);	
+		}
+	} break;
 }
+
 
 // Animation
 var _hurtScale = random_range(0.5,1.8);
