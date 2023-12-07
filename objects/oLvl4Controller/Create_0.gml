@@ -41,7 +41,7 @@ for(var i = 0; i < array_length(_elements); i++) {
 		sprite_index: layer_sprite_get_sprite(_ele),
 		image_xscale: layer_sprite_get_xscale(_ele),
 		image_yscale: layer_sprite_get_yscale(_ele),
-		image_angle: layer_sprite_get_angle(_ele),
+		image_angle: layer_sprite_get_angle(_ele)
 	});
 }
 layer_destroy(_layerEnv);

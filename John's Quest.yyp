@@ -132,7 +132,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Laser","folderPath":"folders/Level4/Items/Laser.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Level4/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tilesets","folderPath":"folders/Level4/Tilesets.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Level4/Tilesets/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Title/Audio.yy",},
   ],
@@ -150,7 +149,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.0.121",
   },
   "resources": [
     {"id":{"name":"oBossLvl1Crusher","path":"objects/oBossLvl1Crusher/oBossLvl1Crusher.yy",},},
@@ -172,7 +171,7 @@
     {"id":{"name":"sBossLvl1SmallIris","path":"sprites/sBossLvl1SmallIris/sBossLvl1SmallIris.yy",},},
     {"id":{"name":"snTriangleJump","path":"sounds/snTriangleJump/snTriangleJump.yy",},},
     {"id":{"name":"sSlime","path":"sprites/sSlime/sSlime.yy",},},
-    {"id":{"name":"bgMapping","path":"sprites/bgMapping/bgMapping.yy",},},
+    {"id":{"name":"sBgMapping","path":"sprites/sBgMapping/sBgMapping.yy",},},
     {"id":{"name":"sSwordNPC","path":"sprites/sSwordNPC/sSwordNPC.yy",},},
     {"id":{"name":"sBossLvl2Eye","path":"sprites/sBossLvl2Eye/sBossLvl2Eye.yy",},},
     {"id":{"name":"oSquareParticle","path":"objects/oSquareParticle/oSquareParticle.yy",},},
