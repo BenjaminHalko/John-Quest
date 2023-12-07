@@ -1,5 +1,5 @@
 function MoveAndCollide(_hsp, _vsp,_xoff,_yoff) {
-	return move_and_collide(_hsp,_vsp,global.collisionMap,4,_xoff,_yoff);
+	return move_and_collide(_hsp,_vsp,pCollision,4,_xoff,_yoff);
 }
 
 function HurtEnemyLvl4(_obj, _damage, _knockbackX, _knockbackY) {

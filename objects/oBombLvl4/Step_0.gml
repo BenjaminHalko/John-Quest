@@ -5,7 +5,7 @@ enableLive;
 vSpd += grv;
 image_angle -= 2 * hSpd;
 
-var _collide = [global.collisionMap,pLvl4Enemy];
+var _collide = [pCollision,pLvl4Enemy];
 
 if (array_length(move_and_collide(hSpd,vSpd,_collide)) > 0 or place_meeting(x+hSpd,y+vSpd,_collide)) {
 	var _enemy = instance_place(x+hSpd,y+vSpd,pLvl4Enemy);

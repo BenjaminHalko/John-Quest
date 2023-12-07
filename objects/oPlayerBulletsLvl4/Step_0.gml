@@ -3,7 +3,7 @@
 colNum = (colNum+1) % 3;
 image_blend = cols[colNum];
 
-var _collide = [global.collisionMap, pLvl4Enemy];
+var _collide = [pCollision, pLvl4Enemy];
 
 var _spdX = lengthdir_x(spd,image_angle);
 var _spdY = lengthdir_y(spd,image_angle);
