@@ -9,7 +9,7 @@
   "managed": true,
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"allowKnockback","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"value":"False",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"hp","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"value":"infinity",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"hp","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"value":"20",},
   ],
   "parent": {
     "name": "Boss",

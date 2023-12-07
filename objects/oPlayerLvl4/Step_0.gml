@@ -85,6 +85,9 @@ if (hurt > 0) {
 var _enemy = instance_place(x,y,pLvl4Enemy);
 if (_enemy != noone) {
 	var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
+	if (_enemy.object_index == oBossLvl4Laser) {
+		_enemyDir = _enemy.image_angle - 90;
+	}
 	hsp = lengthdir_x(movespd*2,_enemyDir);
 	vsp = lengthdir_y(movespd*2,_enemyDir);
 	if (_enemy.allowKnockback) {

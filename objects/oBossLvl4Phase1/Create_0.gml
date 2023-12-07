@@ -9,7 +9,8 @@ enum BOSSLVL4 {
 	CHARGE,
 	SPINCYCLE,
 	BULLETHELL,
-	CHASE
+	CHASE,
+	DVD
 }
 
 scale = 1;
@@ -33,8 +34,11 @@ stunParticleRotation = 0;
 // Attack
 attack = -1;
 lastAttack = -1;
+actualLastAttack = -1;
+tempNoAttack = true;
 
 // Hexagon
+hexagonLastStart = -1;
 hexagonPercent = 0;
 hexagons = [];
 hexagonCurve = animcurve_get_channel(BossLvl4Curves,"hexagon");
@@ -52,9 +56,15 @@ homingCount = 0;
 spinCyclePercent = 0;
 spinCycleSwitchPercent = 0;
 
+// DVD
+dvdShootTimer = 0;
+dvdShootDir = 0;
+
 // Movement
 spd = 0;
 dir = 0;
+targetX = 0;
+targetY = 0;
 
 var _boundary = oCamera.boundary;
 if (_boundary != noone) {
@@ -62,6 +72,8 @@ if (_boundary != noone) {
 	bRight = _boundary.bbox_right-32;
 	bTop = _boundary.bbox_top+32;
 	bBottom = _boundary.bbox_bottom-32;
+	bCenterX = (bLeft+bRight)/2;
+	bCenterY = (bTop+bBottom)/2;
 }
 
 // Eyes

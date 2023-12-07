@@ -3,28 +3,45 @@
 enableLive;
 event_inherited();
 
-if (keyboard_check_pressed(ord("H"))) attack = BOSSLVL4.HEXAGON;
-if (keyboard_check_pressed(ord("C"))) attack = BOSSLVL4.CHARGE;
-if (keyboard_check_pressed(ord("J"))) attack = BOSSLVL4.HOMING;
-if (keyboard_check_pressed(ord("K"))) attack = BOSSLVL4.BULLETHELL;
-if (keyboard_check_pressed(ord("V"))) attack = BOSSLVL4.CHASE;
-if (keyboard_check_pressed(ord("X"))) attack = BOSSLVL4.SPINCYCLE;
-
+// Temp
 var _boundary = oCamera.boundary;
 if (_boundary != noone) {
 	bLeft = _boundary.bbox_left+32;
 	bRight = _boundary.bbox_right-32;
 	bTop = _boundary.bbox_top+32;
 	bBottom = _boundary.bbox_bottom-32;
+	bCenterX = (bLeft+bRight)/2;
+	bCenterY = (bTop+bBottom)/2;
 }
+
+// Move to point
+function moveToPoint(_x,_y) {
+	dir = point_direction(x,y,_x,_y);
+	var _dist = point_distance(x,y,_x,_y);
+	spd = ApproachFade(spd,min(_dist/8,4),0.3,0.7);
+	if (_dist < spd) {
+		x = _x;
+		y = _y;
+	} else {
+		x += lengthdir_x(spd, dir);
+		y += lengthdir_y(spd, dir);
+	}	
+}
+
 
 var _switched = (lastAttack != attack);
 lastAttack = attack;
 switch(attack) {
 	case BOSSLVL4.HEXAGON: {
 		if (_switched) {
+			var _dir = random(360);
+			var _len = random(144);
+			targetX = round(bCenterX+lengthdir_x(_len,_dir));
+			targetY = round(bCenterY+lengthdir_y(_len,_dir));
+			
 			timer = 90;
 			hexagonPercent = 0;
+			hexagonLastStart = -1;
 			var _spin = [1,-1,2,-2];
 			
 			// Create Hexagons
@@ -37,7 +54,10 @@ switch(attack) {
 				spinSpd: _spin[0],
 				distSpd: 0,
 				spinSpdPercent: 1,
-				lasers: []
+				lasers: [],
+				x: x,
+				y: y,
+				num: 0
 			}];
 			for(var i = 1; i < array_length(_spin); i++) {
 				var _eyes = [];
@@ -51,14 +71,17 @@ switch(attack) {
 					spinSpd: _spin[i],
 					distSpd: 0,
 					spinSpdPercent: 1,
-					lasers: []
+					lasers: [],
+					x: x,
+					y: y,
+					num: i
 				});
 			}
 			
 			var _eyeList = [];
 			for(var j = 0; j < array_length(hexagons); j++) {
 				if (j < 2) {
-					_eyeList = [[0,1],[0,5],[3,2],[3,4]];
+					_eyeList = [[0,1],[5,0],[2,3],[3,4]];
 				} else {
 					_eyeList = [[0,1],[2,3],[4,5]];	
 				}
@@ -72,6 +95,17 @@ switch(attack) {
 		var _playerDist = point_distance(x,y,oPlayer.x,oPlayer.y);
 		var _lastDist = 0;
 		for(var j = 0; j < array_length(hexagons); j++) {
+			if (hexagons[j].dist < 96) {
+				hexagons[j].x = x;	
+				hexagons[j].y = y;	
+			} else if (hexagons[j].num > hexagonLastStart) {
+				var _dir = random(360);
+				var _len = random(144);
+				targetX = round(bCenterX+lengthdir_x(_len,_dir));
+				targetY = round(bCenterY+lengthdir_y(_len,_dir));
+				hexagonLastStart = hexagons[j].num;
+			}
+			
 			if (j != 0 and hexagons[j-1].dist <= 144) continue;
 
 			if (hexagonPercent == 1) {
@@ -80,11 +114,12 @@ switch(attack) {
 				hexagons[j].spinSpdPercent = ApproachFade(hexagons[j].spinSpdPercent,0,0.01,0.8);
 			}
 			
+			
 			hexagons[j].rotation -= lerp(3,0.5,hexagonPercent)*hexagons[j].spinSpd*lerp(0.5,1,hexagons[j].spinSpdPercent);
 			var _isOnScreen = false;
 			for(var i = 0; i < 6; i++) {
-				hexagons[j].eyes[i].x = x + lengthdir_x(hexagons[j].dist,360/6*i+hexagons[j].rotation);
-				hexagons[j].eyes[i].y = y + lengthdir_y(hexagons[j].dist,360/6*i+hexagons[j].rotation);
+				hexagons[j].eyes[i].x = hexagons[j].x + lengthdir_x(hexagons[j].dist,360/6*i+hexagons[j].rotation);
+				hexagons[j].eyes[i].y = hexagons[j].y + lengthdir_y(hexagons[j].dist,360/6*i+hexagons[j].rotation);
 				with(hexagons[j].eyes[i]) {
 					_isOnScreen = _isOnScreen or isOnScreen();
 				}
@@ -111,14 +146,19 @@ switch(attack) {
 				j--;
 			}
 		}
+	
+		moveToPoint(targetX,targetY);
 		
 		if (array_length(hexagons) <= 1 and --timer <= 0) {
 			manageShield = true;
-			eyeDist = ApproachFade(eyeDist,28,1,0.7);		
+			eyeDist = ApproachFade(eyeDist,28,1,0.5);	
 		}
 
 		if (array_length(hexagons) == 0) {
-			if (eyeDist == 28) attack = -1;
+			if (eyeDist > 27.99) {
+				attack = -1;
+				eyeDist = 28;
+			}
 		}
 	} break;
 	case BOSSLVL4.CHARGE: {
@@ -172,9 +212,16 @@ switch(attack) {
 		if (_switched) {
 			homingCount = 1;
 			timer = 30;
+			var _dir = random(360);
+			var _len = random(128);
+			targetX = round(bCenterX+lengthdir_x(_len,_dir));
+			targetY = round(bCenterY+lengthdir_y(_len,_dir));
+			spd = 0;
 		}
 		
-		if (homingPercent == 1) {
+		if (x != targetX or y != targetY) {
+			moveToPoint(targetX,targetY);
+		} else if (homingPercent == 1) {
 			if (homingCount > 5) {
 				if (homingCount == 6) {
 					homingCount++;
@@ -223,7 +270,9 @@ switch(attack) {
 			timer = 15;
 		}
 		
-		if (manageShield) {
+		if (x != bCenterX or y != bCenterY) {
+			moveToPoint(bCenterX,bCenterY);
+		} else if (manageShield) {
 			eyeRotationSpd = 0;
 			eyeDist = ApproachFade(eyeDist,16,0.5,0.7);
 			if (eyeDist == 16) {
@@ -242,6 +291,7 @@ switch(attack) {
 						scale = _scale;
 						spd = 6-_scale*3;
 						dir = 360/6*i+_dir;
+						hp = 3;
 					}
 				}
 				timer = 20 - flash * 10;
@@ -250,7 +300,7 @@ switch(attack) {
 	} break;
 	case BOSSLVL4.CHASE: {
 		if (_switched) {
-			timer = 60*5;
+			timer = 60*6;
 			spd = 0;
 			dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 		}
@@ -259,7 +309,7 @@ switch(attack) {
 		spd = ApproachFade(spd,(--timer > 0)*_spd,0.1,0.7);
 		eyeRotationSpd = 1 + (spd/_spd) * 2;
 		eyeDist = lerp(28,48,spd/_spd);
-		dir = ApproachCircleEase(dir,point_direction(x,y,oPlayer.x,oPlayer.y),3,0.7);
+		dir = ApproachCircleEase(dir,point_direction(x,y,oPlayer.x,oPlayer.y),2,0.7);
 		x += lengthdir_x(spd,dir);
 		y += lengthdir_y(spd,dir);
 		
@@ -269,7 +319,7 @@ switch(attack) {
 		if (_switched) {
 			hexagonPercent = 0;
 			for(var i = 0; i < 6; i++) {
-				instance_create_depth(eyes[i].x,eyes[i].y,depth+2,oBossLvl4Laser,{eye1: eyes[i], eye2: id});
+				instance_create_depth(eyes[i].x,eyes[i].y,depth+2,oBossLvl4Laser,{eye1: id, eye2: eyes[i]});
 			}
 			timer = 60*6;
 			spinCycleSwitchPercent = 0;
@@ -277,13 +327,15 @@ switch(attack) {
 			manageShield = false;
 		}
 		
-		if (timer <= 0) {
+		if (x != bCenterX or y != bCenterY) {
+			moveToPoint(bCenterX,bCenterY);
+		} else if (timer <= 0) {
 			angle = ApproachFade(angle,0,10,0.5);
 			spinCyclePercent = ApproachFade(spinCyclePercent, 0, 0.05, 0.7);
-			eyeRotationSpd = ApproachFade(eyeRotationSpd,1,0.05,0.7);
+			eyeRotationSpd = ApproachFade(eyeRotationSpd,1,0.05,0.5);
 			if (spinCyclePercent <= 0.2) {
-				hexagonPercent = ApproachFade(hexagonPercent,0,0.05,0.7);
-				if (eyeDist == 28 and hexagonPercent == 0) {
+				hexagonPercent = ApproachFade(hexagonPercent,0,0.05,0.5);
+				if (spinCyclePercent == 0 and hexagonPercent == 0) {
 					manageShield = true;
 					instance_destroy(oBossLvl4Laser);
 					attack = -1;
@@ -316,14 +368,59 @@ switch(attack) {
 			eyes[i].y = y + lengthdir_y(_eyeDist,360/6*i+eyeRotation);
 		}
 	} break;
+	case BOSSLVL4.DVD: {
+		if (_switched) {
+			dir = random(360);
+			timer = 60*10;
+			dvdShootTimer = 30;
+			dvdShootDir = random(360);
+			spd = 0;
+		}
+		
+		var _spd = 2;
+		spd = ApproachFade(spd,(--timer > 0)*_spd,0.05,0.7);
+		eyeRotationSpd = 1 + (spd/_spd) * 3;
+		eyeDist = lerp(28,64,spd/_spd);
+		
+		var _hsp = lengthdir_x(spd,dir);
+		var _vsp = lengthdir_y(spd,dir);
+		
+		if (array_length(MoveAndCollide(_hsp,_vsp,0,0)) > 0) {
+			dir = point_direction(x,y,bCenterX,bCenterY) + random_range(-40,40);	
+		}
+		
+		if (--dvdShootTimer < 0 and timer > 0) {
+			var _scale = random_range(0.4,0.8);
+			for(var i = 0; i < 2; i++) {
+				with(instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye)) {
+					scale = _scale;
+					spd = 5-_scale*3;
+					dir = other.dvdShootDir + i * 180;
+					hp = 2;
+				}
+			}
+			dvdShootTimer = 15;
+			dvdShootDir -= 30;
+		}
+		
+		if (spd == 0) attack = -1;
+	} break;
 	default: {
 		if (_switched) {
 			timer = 30;	
 		}
 		
 		eyeRotationSpd = ApproachFade(eyeRotationSpd,1,0.1,0.7);
+		if (tempNoAttack) {
+			if (keyboard_check_pressed(vk_space)) tempNoAttack = false;
+			break;	
+		}
+		
 		if (--timer <= 0) {
-			//attack = choose(BOSSLVL4.CHARGE, BOSSLVL4.HEXAGON, BOSSLVL4.HOMING);	
+			do {
+				attack = choose(BOSSLVL4.CHARGE, BOSSLVL4.HEXAGON, BOSSLVL4.HOMING, BOSSLVL4.CHASE, BOSSLVL4.DVD, BOSSLVL4.SPINCYCLE);	
+			} until (attack != actualLastAttack);
+			actualLastAttack = attack;
 		}
 	} break;
 }

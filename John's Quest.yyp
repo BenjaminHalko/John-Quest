@@ -134,6 +134,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tilesets","folderPath":"folders/Level4/Tilesets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Title/Audio.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Level4/Tilesets/Backgrounds.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Level4/Boss/UI.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -342,6 +344,7 @@
     {"id":{"name":"GMLive_builder","path":"scripts/GMLive_builder/GMLive_builder.yy",},},
     {"id":{"name":"Node","path":"scripts/Node/Node.yy",},},
     {"id":{"name":"shFlash","path":"shaders/shFlash/shFlash.yy",},},
+    {"id":{"name":"sBossLvl4UIArrow","path":"sprites/sBossLvl4UIArrow/sBossLvl4UIArrow.yy",},},
     {"id":{"name":"sHealth","path":"sprites/sHealth/sHealth.yy",},},
     {"id":{"name":"oBridge","path":"objects/oBridge/oBridge.yy",},},
     {"id":{"name":"mLvl3MusicBoss","path":"sounds/mLvl3MusicBoss/mLvl3MusicBoss.yy",},},
