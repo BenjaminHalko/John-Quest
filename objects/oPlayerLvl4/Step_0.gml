@@ -83,7 +83,7 @@ if (hurt > 0) {
 }
 
 var _enemy = instance_place(x,y,pLvl4Enemy);
-if (_enemy != noone) {
+if (_enemy != noone and hurt <= 0) {
 	var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
 	if (_enemy.object_index == oBossLvl4Laser) {
 		_enemyDir = _enemy.image_angle - 90;
@@ -99,12 +99,8 @@ if (_enemy != noone) {
 	if (_enemy.object_index == oBossLvl4Laser) {
 		_enemy.destroy = true;	
 	}
-	
-	if (hurt <= 0) {
-		hurt = 60;
-		audio_play_sound(snPlayerDie,1,false);
-	}
-	
+	hurt = 60;
+	audio_play_sound(snPlayerDie,1,false);
 }
 
 // animation
