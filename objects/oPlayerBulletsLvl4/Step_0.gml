@@ -18,6 +18,9 @@ if (array_length(move_and_collide(_spdX,_spdY,_collide)) > 0 or place_meeting(x,
 		_enemy = instance_place(x,y,pLvl4Enemy);
 		if (_enemy != noone) {
 			HurtEnemyLvl4(_enemy,1,lengthdir_x(5,image_angle),lengthdir_y(5,image_angle));
+		} else {
+			var _activator = instance_place(x,y,oDoorActivator);
+			if (_activator != noone) _activator.activated = true;
 		}
 	}
 	
