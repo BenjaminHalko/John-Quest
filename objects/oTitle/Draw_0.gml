@@ -9,7 +9,7 @@ draw_set_alpha(1);
 
 if (title) {
 	draw_sprite(sTitle,0,floor((room_width-180)/2),floor(room_height/3));
-	draw_sprite(sTitleBuilding, 0, room_width, room_height);
+	draw_sprite_ext(sTitleBuilding, 0, room_width, room_height,1,1,0,blend,1);
 	draw_sprite(sPlayerLvl1,0,350,room_height-buildingHeight+24);
 	
 	draw_set_font(fRetro);
@@ -52,7 +52,7 @@ if (title) {
 	draw_sprite(sTitleLandscape,0,0,room_height-48+smallerBuildingHeight*moveUpPercent * 1.7);
 	
 	var _buildingScale = floor(lerp(buildingScale, 1, moveUpPercent) * 144) / 144;
-	draw_sprite_ext(sTitleBuilding, 0, room_width, room_height, 1, _buildingScale, 0, c_white, 1);
+	draw_sprite_ext(sTitleBuilding, 0, room_width, room_height, 1, _buildingScale, 0, blend, 1);
 
 	draw_sprite(sPlayerLvl1,0,350,room_height-_buildingScale*buildingHeight+24);
 

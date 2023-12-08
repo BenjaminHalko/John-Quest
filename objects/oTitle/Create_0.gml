@@ -76,9 +76,8 @@ text = [
 "JOHN, WITH HIS EXPERTISE IN GAMING,\nMUST RESTORE PEACE TO THE WORLD."
 ];
 
-startUpPos = 0;
-music = audio_play_sound(mOpening,1,false);
+startUpPos = 30;
+music = audio_play_sound(mOpening,1,false,1,30);
 musicLength = audio_sound_length(music)-0.5;
 moveUpCurve = animcurve_get_channel(TitleCurves,"moveUp");
-
-layer_destroy("temp");
+blend = c_white;
