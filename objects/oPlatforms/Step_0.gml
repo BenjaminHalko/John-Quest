@@ -15,7 +15,7 @@ if (percent != clamp(timer,0,1)) {
 	}
 	
 	// After images
-	if (_onScreen) {
+	if (_onScreen and !instance_exists(oIntroLvl1)) {
 		for(var i = 0; i < array_length(attachedObjects); i++) {
 			CreateAfterImage(attachedObjects[i]);	
 		}
