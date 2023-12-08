@@ -139,7 +139,7 @@ if (title) {
 		moveUpPercent = 1;
 		audio_stop_sound(music);
 		music = audio_play_sound(mTitle,1,true);
-	} else if (textNum < 5 and false) {
+	} else if (textNum < 5) {
 		var _target = (textNum == textTarget);
 		textAlpha = Approach(textAlpha, _target, 0.03);
 
@@ -156,7 +156,7 @@ if (title) {
 		var _pos = audio_sound_get_track_position(music);
 		moveUpPercent = animcurve_channel_evaluate(moveUpCurve,min(1,(_pos-startUpPos)/(musicLength-startUpPos)));
 	}
-	var _amount = clamp((moveUpPercent-0.5)*2,0,1);
-	layer_background_blend(layer_background_get_id("Background"),merge_color(#240F38,c_black,_amount));
+	blend = clamp((moveUpPercent-0.5)*2,0,1);
+	if (blend != 0) layer_background_blend(layer_background_get_id("Background"),merge_color(#240F38,c_black,blend));
 }
 	
