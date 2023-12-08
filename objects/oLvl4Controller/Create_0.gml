@@ -29,5 +29,22 @@ for(var i = 0; i < array_length(_layers); i++) {
 	}
 }
 
+// Add collision to sprites
+var _layerEnv = layer_get_id("Environment");
+var _layer = layer_create(layer_get_depth(_layerEnv)-1,"Collision");
+var _elements = layer_get_all_elements(_layerEnv);
+for(var i = 0; i < array_length(_elements); i++) {
+	var _ele = _elements[i];
+	var _x = layer_sprite_get_x(_ele);
+	var _y = layer_sprite_get_y(_ele);
+	instance_create_layer(_x,_y,"Collision",pCollision,{
+		sprite_index: layer_sprite_get_sprite(_ele),
+		image_xscale: layer_sprite_get_xscale(_ele),
+		image_yscale: layer_sprite_get_yscale(_ele),
+		image_angle: layer_sprite_get_angle(_ele)
+	});
+}
+layer_destroy(_layerEnv);
+
 // Save
 Save("global","lvl",3);

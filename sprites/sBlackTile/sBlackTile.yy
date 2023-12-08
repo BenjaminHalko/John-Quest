@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Level4/Tilesets/Sprites.yy",
+    "name": "Tilesets",
+    "path": "folders/Level4/Tilesets.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -65,8 +65,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgLvl4",
+    "path": "texturegroups/tgLvl4",
   },
   "type": 0,
   "VTile": false,

@@ -3,10 +3,10 @@
 enableLive;
 
 Input()
-var _moveX = keyRight - keyLeft;
-var _moveY = keyDown - keyUp;
-var _fire = mouse_check_button(mb_left);
-var _changeItem = mouse_check_button_pressed(mb_right);
+var _moveX = (keyRight - keyLeft) * allowMovement;
+var _moveY = (keyDown - keyUp) * allowMovement;
+var _fire = mouse_check_button(mb_left) * allowMovement;
+var _changeItem = mouse_check_button_pressed(mb_right) * allowMovement;
 
 // Movement
 var _dir = point_direction(0,0,_moveX,_moveY);
@@ -40,7 +40,7 @@ if (changeItem or itemPercent != 0) {
 			}
 			
 			ScreenShake(2,2);
-			shotTimer = 25;
+			shotTimer = 20;
 			knockBack = 10;
 			hsp -= lengthdir_x(1,_shootDir);
 			vsp -= lengthdir_y(1,_shootDir);
@@ -83,8 +83,11 @@ if (hurt > 0) {
 }
 
 var _enemy = instance_place(x,y,pLvl4Enemy);
-if (_enemy != noone) {
+if (_enemy != noone and hurt <= 0 and allowMovement) {
 	var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
+	if (_enemy.object_index == oBossLvl4Laser) {
+		_enemyDir = _enemy.image_angle - 90;
+	}
 	hsp = lengthdir_x(movespd*2,_enemyDir);
 	vsp = lengthdir_y(movespd*2,_enemyDir);
 	if (_enemy.allowKnockback) {
@@ -96,12 +99,8 @@ if (_enemy != noone) {
 	if (_enemy.object_index == oBossLvl4Laser) {
 		_enemy.destroy = true;	
 	}
-	
-	if (hurt <= 0) {
-		hurt = 60;
-		audio_play_sound(snPlayerDie,1,false);
-	}
-	
+	hurt = 60;
+	audio_play_sound(snPlayerDie,1,false);
 }
 
 // animation
