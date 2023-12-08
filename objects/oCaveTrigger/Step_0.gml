@@ -10,7 +10,7 @@ if (place_meeting(x,y,oPlayer) and active == 0) {
 
 if (active == 1 and audio_sound_get_gain(oLvl2Controller.music) <= 0 and !audio_is_playing(snBossLvl1Roar)) {
 	audio_stop_sound(mLvl2Music);
-	audio_play_sound(snBossLvl1Roar,1,false,0.5,0,0.9);
+	audio_play_sound(snBossLvl1Roar,1,false,0.7,0,0.9);
 	ScreenShake(6,230);
 	active = 2;
 	layer_set_visible("TilesReallyAbove",false);

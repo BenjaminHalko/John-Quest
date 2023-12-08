@@ -30,6 +30,10 @@ if(instance_exists(oPlayer))
 	}
 }
 
+if (global.playerHealth <= 0) {
+	visible = false;	
+}
+
 //Bounce
 if (bounceCount != 0)
 {

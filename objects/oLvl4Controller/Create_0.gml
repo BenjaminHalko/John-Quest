@@ -57,6 +57,3 @@ for(var i = 0; i < array_length(_elements); i++) {
 	});
 }
 layer_destroy(_layerEnv);
-
-// Save
-Save("global","lvl",3);

@@ -173,6 +173,7 @@
     {"id":{"name":"sTimedSpike","path":"sprites/sTimedSpike/sTimedSpike.yy",},},
     {"id":{"name":"sBossLvl1Iris","path":"sprites/sBossLvl1Iris/sBossLvl1Iris.yy",},},
     {"id":{"name":"sBossLvl1SmallIris","path":"sprites/sBossLvl1SmallIris/sBossLvl1SmallIris.yy",},},
+    {"id":{"name":"oLvl3Intro","path":"objects/oLvl3Intro/oLvl3Intro.yy",},},
     {"id":{"name":"snTriangleJump","path":"sounds/snTriangleJump/snTriangleJump.yy",},},
     {"id":{"name":"sSlime","path":"sprites/sSlime/sSlime.yy",},},
     {"id":{"name":"sBgMapping","path":"sprites/sBgMapping/sBgMapping.yy",},},
@@ -264,6 +265,7 @@
     {"id":{"name":"oAfterImage","path":"objects/oAfterImage/oAfterImage.yy",},},
     {"id":{"name":"sGround1","path":"sprites/sGround1/sGround1.yy",},},
     {"id":{"name":"oHeartDrop","path":"objects/oHeartDrop/oHeartDrop.yy",},},
+    {"id":{"name":"rLvl3Intro","path":"rooms/rLvl3Intro/rLvl3Intro.yy",},},
     {"id":{"name":"sCheckmark","path":"sprites/sCheckmark/sCheckmark.yy",},},
     {"id":{"name":"sBossLvl1Shock","path":"sprites/sBossLvl1Shock/sBossLvl1Shock.yy",},},
     {"id":{"name":"GMLive_http","path":"scripts/GMLive_http/GMLive_http.yy",},},
@@ -542,6 +544,7 @@
     {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
     {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
     {"roomId":{"name":"rLvl3","path":"rooms/rLvl3/rLvl3.yy",},},
+    {"roomId":{"name":"rLvl3Intro","path":"rooms/rLvl3Intro/rLvl3Intro.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
