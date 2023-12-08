@@ -24,6 +24,7 @@ if (global.my <= INVENTORY_Y) {
 				audio_play_sound(snItemGet,1,false,0.6);
 				Save("lvl3",$"item{type}",true);
 				global.piecesCollected[type] = true;
+				audio_stop_sound(oNodeController.music);
 				if (array_equals(global.piecesCollected, [1,1,1])) {
 					global.allowInput = false;
 					call_later(60, time_source_units_frames, function() {
@@ -36,7 +37,6 @@ if (global.my <= INVENTORY_Y) {
 					for(var i = 0; i < 3; i++) {
 						_amount += global.piecesCollected[i];	
 					}
-					audio_stop_sound(oNodeController.music);
 					oNodeController.music = audio_play_sound(_music[min(2,_amount)],1,true);
 				}
 				global.clicked = false;
