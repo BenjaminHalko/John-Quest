@@ -76,7 +76,7 @@ for(var i = 0; i < array_length(global.nodes); i++) {
 }
 
 // Load
-global.currentNode = Load("lvl3","node",10);
+global.currentNode = Load("lvl3","node",7);
 global.currentDir = Load("lvl3","dir",1);
 global.piecesCollected = [
 	Load("lvl3","item0",false),
