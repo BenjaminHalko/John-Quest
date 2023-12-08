@@ -85,5 +85,5 @@ if (_boundary != noone) {
 
 // Eyes
 repeat(6) {
-	//array_push(eyes,instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye));
+	array_push(eyes,instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye));
 }
