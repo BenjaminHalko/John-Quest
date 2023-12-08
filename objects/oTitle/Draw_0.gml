@@ -49,7 +49,7 @@ if (title) {
 		draw_text(_menuX-64,_menuY-10,"Thanks to everyone that made this possible");
 	}
 } else {
-	draw_sprite(sTitleLandscape,0,0,room_height+smallerBuildingHeight*moveUpPercent * 1.7);
+	draw_sprite(sTitleLandscape,0,0,room_height-48+smallerBuildingHeight*moveUpPercent * 1.7);
 	
 	var _buildingScale = floor(lerp(buildingScale, 1, moveUpPercent) * 144) / 144;
 	draw_sprite_ext(sTitleBuilding, 0, room_width, room_height, 1, _buildingScale, 0, c_white, 1);

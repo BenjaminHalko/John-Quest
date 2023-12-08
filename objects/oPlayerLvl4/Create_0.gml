@@ -2,6 +2,8 @@
 
 enableLive;
 
+allowMovement = true;
+
 // spd
 hsp = 0;
 vsp = 0;

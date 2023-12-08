@@ -3,10 +3,10 @@
 enableLive;
 
 Input()
-var _moveX = keyRight - keyLeft;
-var _moveY = keyDown - keyUp;
-var _fire = mouse_check_button(mb_left);
-var _changeItem = mouse_check_button_pressed(mb_right);
+var _moveX = (keyRight - keyLeft) * allowMovement;
+var _moveY = (keyDown - keyUp) * allowMovement;
+var _fire = mouse_check_button(mb_left) * allowMovement;
+var _changeItem = mouse_check_button_pressed(mb_right) * allowMovement;
 
 // Movement
 var _dir = point_direction(0,0,_moveX,_moveY);
@@ -83,7 +83,7 @@ if (hurt > 0) {
 }
 
 var _enemy = instance_place(x,y,pLvl4Enemy);
-if (_enemy != noone and hurt <= 0) {
+if (_enemy != noone and hurt <= 0 and allowMovement) {
 	var _enemyDir = point_direction(_enemy.x,_enemy.y,x,y);
 	if (_enemy.object_index == oBossLvl4Laser) {
 		_enemyDir = _enemy.image_angle - 90;

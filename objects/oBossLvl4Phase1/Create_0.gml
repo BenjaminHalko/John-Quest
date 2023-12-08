@@ -17,6 +17,7 @@ scale = 1;
 angle = 0;
 
 maxHp = hp;
+dead = false;
 
 timer = 0;
 
