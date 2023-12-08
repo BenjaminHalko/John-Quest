@@ -224,6 +224,7 @@
     {"id":{"name":"oCheckpoint","path":"objects/oCheckpoint/oCheckpoint.yy",},},
     {"id":{"name":"snEyeTouch","path":"sounds/snEyeTouch/snEyeTouch.yy",},},
     {"id":{"name":"GMLiveAPI","path":"scripts/GMLiveAPI/GMLiveAPI.yy",},},
+    {"id":{"name":"sBossLvl4Mushroom","path":"sprites/sBossLvl4Mushroom/sBossLvl4Mushroom.yy",},},
     {"id":{"name":"sBossLvl2EyeSmall","path":"sprites/sBossLvl2EyeSmall/sBossLvl2EyeSmall.yy",},},
     {"id":{"name":"oText","path":"objects/oText/oText.yy",},},
     {"id":{"name":"oCameraSafeFall","path":"objects/oCameraSafeFall/oCameraSafeFall.yy",},},
@@ -539,8 +540,8 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"roomId":{"name":"rLvl4","path":"rooms/rLvl4/rLvl4.yy",},},
+    {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
     {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
     {"roomId":{"name":"rLvl3","path":"rooms/rLvl3/rLvl3.yy",},},

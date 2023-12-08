@@ -17,7 +17,7 @@ global.uFlashColor = shader_get_uniform(shFlash, "color");
 global.uAlphaPercent = shader_get_uniform(shAlpha, "alpha");
 
 // Saving
-global.introLvl3 = false;
+global.introLvl3 = 0;
 global.noSave = false;
 global.atBoss = false;
 

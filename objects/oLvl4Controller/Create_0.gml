@@ -5,7 +5,13 @@ windowWidth = window_get_width();
 windowHeight = window_get_height();
 global.cursors = [];
 global.currentCursorType = CURSOR.LVL4;
-createCursors();
+if (global.introLvl3 != 2 and !Load("lvl4","seenIntro",false)) {
+	global.introLvl3 = 1;
+	Transition(rLvl3Intro,1);
+	room_goto(rLvl3Intro);
+} else {
+	createCursors();
+}
 
 // Get all sprite backgrounds
 bgElements = [];

@@ -145,6 +145,7 @@
     {"name":"GMLive_token","order":7,"path":"scripts/GMLive_token/GMLive_token.yy",},
     {"name":"snEyeTouch","order":5,"path":"sounds/snEyeTouch/snEyeTouch.yy",},
     {"name":"GMLiveAPI","order":3,"path":"scripts/GMLiveAPI/GMLiveAPI.yy",},
+    {"name":"sBossLvl4Mushroom","order":4,"path":"sprites/sBossLvl4Mushroom/sBossLvl4Mushroom.yy",},
     {"name":"sBossLvl2EyeSmall","order":2,"path":"sprites/sBossLvl2EyeSmall/sBossLvl2EyeSmall.yy",},
     {"name":"oCameraSafeFall","order":4,"path":"objects/oCameraSafeFall/oCameraSafeFall.yy",},
     {"name":"snShopkeeperLeave","order":2,"path":"sounds/snShopkeeperLeave/snShopkeeperLeave.yy",},

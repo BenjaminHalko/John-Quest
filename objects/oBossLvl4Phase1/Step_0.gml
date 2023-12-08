@@ -3,7 +3,16 @@
 enableLive;
 event_inherited();
 
-if (keyboard_check_pressed(ord("G"))) hp = 20;
+// Temp
+var _boundary = oCamera.boundary;
+if (_boundary != noone) {
+	bLeft = _boundary.bbox_left+32;
+	bRight = _boundary.bbox_right-32;
+	bTop = _boundary.bbox_top+32;
+	bBottom = _boundary.bbox_bottom-32;
+	bCenterX = (bLeft+bRight)/2;
+	bCenterY = (bTop+bBottom)/2;
+}
 
 // Move to point
 function moveToPoint(_x,_y) {
@@ -20,23 +29,115 @@ function moveToPoint(_x,_y) {
 }
 
 if (dead) {
-	oCamera.follow = id;
-	oPlayer.allowMovement = false;
+	if (explosionCount < maxExplosions) {
+		if (oCamera.follow != id) {
+			manageShield = false;
+			oCamera.follow = id;
+			oPlayer.allowMovement = false;
+			timer = 0;
+			x = bCenterX;
+			y = bCenterY;
+			vSpd = -16;
+		}
+		
+		x = bCenterX + random_range(-8,8);
+		y = bCenterY + random_range(-8,8);
+		scale = random_range(0.5,1.8);
+		if (--timer <= 0) {
+			var _x = random_range(bbox_left-10,bbox_right+10);
+			var _y = random_range(bbox_top-10,bbox_bottom+10);
+			
+			
+			repeat(100) {
+				with(instance_create_depth(_x+random_range(-4,4),_y+random_range(-4,4),depth-1,oTriangleParticle)) {
+					radius = 10;
+					speed = random(8);
+					spd = 0.03;
+					direction = random(360);
+					image_angle = random(360);
+				}
+			}
+			
+			ScreenShake(10,5);
+			
+			audio_play_sound(snExplosion,1,false);
+			
+			explosionCount++;
+			timer = 10;
+		}
+		
+		if (explosionCount == maxExplosions) {
+			timer = 30;
+			scale = 1;
+		}
+	} else if (y >= bCenterY + 170) {
+		if (explosionCount == maxExplosions) {
+			mushroomY = bCenterY-150;
+			y = bCenterY + 170;
+			
+			repeat(100) {
+				with(instance_create_depth(x+random_range(-4,4),y+random_range(-4,4),depth+1,oSquareParticle)) {
+					radius = 3;
+					speed = random(4);
+					spd = 0.018;
+					direction = random(180-80)+40;
+					image_angle = random(360);
+					image_blend = #122029;
+				}
+			}
+				
+			ScreenShake(2,30);
+			explosionCount = maxExplosions+1;
+			vSpd = 1;
+			timer = 90;
+		}
+		
+		if (mushroomY >= y) {
+			if (--timer <= 0) {
+				oCamera.follow = oPlayer;
+				oPlayer.allowMovement = true;
+				instance_destroy(oBossLvl4Laser);
+				instance_destroy(oBossLvl4ShieldEye);
+				instance_destroy();
+			}
+		} else if (--timer <= 0) {
+			mushroomY += vSpd;
+			vSpd += 0.1;
+			if (mushroomY >= y) {
+				// audio_play_sound(snMushroom,1,false);
+				timer = 90;
+			}
 	
-	scale = random_range(0.5,1.8);
-} else {
-	// Temp
-	var _boundary = oCamera.boundary;
-	if (_boundary != noone) {
-		bLeft = _boundary.bbox_left+32;
-		bRight = _boundary.bbox_right-32;
-		bTop = _boundary.bbox_top+32;
-		bBottom = _boundary.bbox_bottom-32;
-		bCenterX = (bLeft+bRight)/2;
-		bCenterY = (bTop+bBottom)/2;
+		}
+	} else {
+		oCamera.follow = noone;
+		
+		if (--timer <= 0) {
+			if (timer == 0) {
+				repeat(200) {
+					with(instance_create_depth(x+random_range(-4,4),y+random_range(-4,4),depth+1,oTriangleParticle)) {
+						radius = 10;
+						speed = random(8);
+						spd = 0.02;
+						direction = random(360);
+						image_angle = random(360);
+					}
+				}
+				
+				ScreenShake(10,60);
+			}
+			angle -= 20;
+			y += vSpd;
+			vSpd = min(vSpd+0.1,4);
+			if (vSpd < 0 and vSpd > -12.5) {
+				vSpd = 4;
+				scale = 0.5;
+				image_blend = c_dkgray;
+				depth = layer_get_depth("Vignette")+1;
+			}
+		}
 	}
-	
-	
+} else {
 	if (hp <= 0) dead = true;
 	var _switched = (lastAttack != attack);
 	lastAttack = attack;

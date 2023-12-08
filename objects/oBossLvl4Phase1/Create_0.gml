@@ -67,6 +67,12 @@ dir = 0;
 targetX = 0;
 targetY = 0;
 
+// Dead
+mushroomY = 0;
+explosionCount = 0;
+maxExplosions = 16;
+vSpd = 0;
+
 var _boundary = oCamera.boundary;
 if (_boundary != noone) {
 	bLeft = _boundary.bbox_left+32;
@@ -79,5 +85,5 @@ if (_boundary != noone) {
 
 // Eyes
 repeat(6) {
-	array_push(eyes,instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye));
+	//array_push(eyes,instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye));
 }
