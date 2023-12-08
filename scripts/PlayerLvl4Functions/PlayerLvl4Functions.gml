@@ -1,5 +1,9 @@
-function MoveAndCollide(_hsp, _vsp,_xoff,_yoff) {
-	return move_and_collide(_hsp,_vsp,pCollision,4,_xoff,_yoff);
+function MoveAndCollide(_hsp, _vsp,_xoff,_yoff,_alsoCollideWithPlayer=false) {
+	var _collide = pCollision;
+	if (_alsoCollideWithPlayer) {
+		_collide = [pCollision,oPlayer];
+	}
+	return move_and_collide(_hsp,_vsp,_collide,4,_xoff,_yoff);
 }
 
 function HurtEnemyLvl4(_obj, _damage, _knockbackX, _knockbackY) {

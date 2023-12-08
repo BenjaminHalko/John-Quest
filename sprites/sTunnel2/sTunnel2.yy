@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sTunnel2",
-  "bbox_bottom": 495,
+  "bbox_bottom": 719,
   "bbox_left": 0,
   "bbox_right": 719,
   "bbox_top": 0,

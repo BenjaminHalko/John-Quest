@@ -15,7 +15,7 @@ for(var i = 0; i < array_length(bgElements); i++) {
 	var _y = bgElements[i].y + (oCamera.y - bgElements[i].y) * bgElements[i].depth / 100;
 	if (bgElements[i].isBG) {
 		layer_x(bgElements[i].element, _x);
-		layer_y(bgElements[i].element, _y);
+		layer_y(bgElements[i].element, _y+816);
 	} else {
 		layer_sprite_x(bgElements[i].element, _x);
 		layer_sprite_y(bgElements[i].element, _y);
