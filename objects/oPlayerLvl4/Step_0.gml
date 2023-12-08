@@ -40,7 +40,7 @@ if (changeItem or itemPercent != 0) {
 			}
 			
 			ScreenShake(2,2);
-			shotTimer = 25;
+			shotTimer = 20;
 			knockBack = 10;
 			hsp -= lengthdir_x(1,_shootDir);
 			vsp -= lengthdir_y(1,_shootDir);

@@ -8,5 +8,8 @@ repeat(50) {
 		direction = random(360);
 		image_angle = random(360);
 	}
-	ScreenShake(5,3);
+	
 }
+
+ScreenShake(5,3);
+audio_play_sound(snExplosionShort,1,false,0.5);

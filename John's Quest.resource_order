@@ -94,6 +94,8 @@
     {"name":"Audio","order":6,"path":"folders/Title/Audio.yy",},
     {"name":"Backgrounds","order":9,"path":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"name":"UI","order":8,"path":"folders/Level4/Boss/UI.yy",},
+    {"name":"Audio","order":6,"path":"folders/Level4/Audio.yy",},
+    {"name":"SoundFXs","order":1,"path":"folders/Level4/Audio/SoundFXs.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
@@ -283,6 +285,7 @@
     {"name":"PlayerStateSword","order":5,"path":"scripts/PlayerStateSword/PlayerStateSword.yy",},
     {"name":"sInventoryBack","order":3,"path":"sprites/sInventoryBack/sInventoryBack.yy",},
     {"name":"DropItems","order":3,"path":"scripts/DropItems/DropItems.yy",},
+    {"name":"snLaserImpact","order":1,"path":"sounds/snLaserImpact/snLaserImpact.yy",},
     {"name":"sWillow","order":5,"path":"sprites/sWillow/sWillow.yy",},
     {"name":"sHat","order":4,"path":"sprites/sHat/sHat.yy",},
     {"name":"PlayerStateLocked","order":1,"path":"scripts/PlayerStateLocked/PlayerStateLocked.yy",},

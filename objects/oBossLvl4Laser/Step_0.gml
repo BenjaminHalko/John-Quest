@@ -24,5 +24,6 @@ if (destroy or hp <= 0) {
 			speed = random(2);
 		}
 	}
+	audio_play_sound(snBreak,1,false,0.5);
 	instance_destroy();	
 }

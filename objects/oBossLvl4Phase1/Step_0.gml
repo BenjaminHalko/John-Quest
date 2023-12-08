@@ -135,11 +135,11 @@ switch(attack) {
 			if (hexagons[j].dist > 560 and !_isOnScreen) {
 				if (eyes[0] != hexagons[j].eyes[0]) {
 					for(var i = 0; i < 6; i++) {
-						instance_destroy(hexagons[j].eyes[i]);
+						instance_destroy(hexagons[j].eyes[i],false);
 					}
 				}
 				for(var i = 0; i < array_length(hexagons[j].lasers); i++) {
-					instance_destroy(hexagons[j].lasers[i]);
+					instance_destroy(hexagons[j].lasers[i],false);
 				}
 				
 				array_delete(hexagons,j,1);
@@ -183,13 +183,14 @@ switch(attack) {
 			}
 		} else if (chargePercent == 1) {
 			spd = 8;
-			chargeSpd = Approach(chargeSpd,20,1);
+			chargeSpd = Approach(chargeSpd,20-(chargeSpd != 20 and place_meeting(x,y,pCollision)),1);
 			var _hSpd = lengthdir_x(chargeSpd,chargeDir);
 			var _vSpd = lengthdir_y(chargeSpd,chargeDir);
 			if (chargeSpd == 20) {
 				if (array_length(MoveAndCollide(_hSpd,_vSpd,0,0)) > 0) {
 					stunned = true;
 					ScreenShake(10,10);
+					audio_play_sound(snExplosion,1,false,1,0,0.8);
 				}
 			} else {
 				x += _hSpd;
@@ -417,10 +418,14 @@ switch(attack) {
 		}
 		
 		if (--timer <= 0) {
-			do {
-				attack = choose(BOSSLVL4.CHARGE, BOSSLVL4.HEXAGON, BOSSLVL4.HOMING, BOSSLVL4.CHASE, BOSSLVL4.DVD, BOSSLVL4.SPINCYCLE);	
-			} until (attack != actualLastAttack);
-			actualLastAttack = attack;
+			if (hp <= maxHp * 0.2) {
+				attack = BOSSLVL4.BULLETHELL;
+			} else {
+				do {
+					attack = choose(BOSSLVL4.CHARGE, BOSSLVL4.HEXAGON, BOSSLVL4.HOMING, BOSSLVL4.CHASE, BOSSLVL4.DVD, BOSSLVL4.SPINCYCLE);	
+				} until (attack != actualLastAttack);
+				actualLastAttack = attack;
+			}
 		}
 	} break;
 }
@@ -443,6 +448,11 @@ if (stunned) {
 			radius = 1;
 		}
 	}
+}
+
+// HP
+if (attack != BOSSLVL4.BULLETHELL) {
+	hp = max(hp,maxHp*0.2);	
 }
 
 // Eyes Shield
