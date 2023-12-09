@@ -15,27 +15,36 @@ if (intro) {
 			oCamera.follow = id;
 			timer = 60;
 			introPhase++;
+			eyeRotationSpd = 10;
 		} else if (introPhase == 2) {
+			if (eyeDist == 0) eyeDist = 400;
+			eyeDist = ApproachFade(eyeDist,100,3,0.7);
+			eyeRotationSpd = ApproachFade(eyeRotationSpd,2,0.05,0.8);
+			if (eyeDist == 100) {
+				timer = 30;
+				introPhase++;
+			}
+		} else if (introPhase == 3) {
 			if (introPercent == 0) {
 				ScreenShake(2,80);
+				audio_play_sound(snBossLvl1Roar,1,false,1,1);
+				audio_play_sound(snBossLvl4Roar,1,false);
 			}
 			
 			introPercent = ApproachFade(introPercent,1,0.05,0.8);
 			image_blend = merge_color(c_black,c_white,introPercent);
-			x = bCenterX+random_range(-1,1);
-			y = bCenterY+random_range(-1,1);
 			if (introPercent == 1) {
-				introPhase++;	
-			}
-		} else if (introPhase == 3) {
-			eyeDist = ApproachFade(eyeDist,28,1,0.7);
-			x = bCenterX+random_range(-1,1);
-			y = bCenterY+random_range(-1,1);
-			if (eyeDist == 28) {
 				introPhase++;
-				timer = 30;
+				timer = 40;
 			}
 		} else if (introPhase == 4) {
+			eyeRotationSpd = ApproachFade(eyeRotationSpd,1,0.05,0.8);
+			eyeDist = ApproachFade(eyeDist,28,5,0.7);
+			if (eyeDist == 28) {
+				introPhase++;
+				timer = 60;
+			}
+		} else if (introPhase == 5) {
 			oCamera.follow = oPlayer;
 			oPlayer.allowMovement = true;
 			intro = false;
@@ -54,10 +63,15 @@ if (intro) {
 		}
 	}
 	
+	if (introPhase > 3 and eyeDist != 28) {
+		x = bCenterX+random_range(-1,1);
+		y = bCenterY+random_range(-1,1);	
+	}
+	
 	scale = Wave(0.85,1.15,3-introPercent*2.5,0);
 	
 	// Shield
-	eyeRotation -= 3;
+	eyeRotation -= lerp(0.1,3,introPercent)*eyeRotationSpd;
 	for(var i = 0; i < 6; i++) {
 		eyes[i].x = x + lengthdir_x(eyeDist,360/6*i+eyeRotation);
 		eyes[i].y = y + lengthdir_y(eyeDist,360/6*i+eyeRotation);
@@ -336,7 +350,7 @@ if (intro) {
 					if (array_length(MoveAndCollide(_hSpd,_vSpd,0,0)) > 0) {
 						stunned = true;
 						ScreenShake(10,10);
-						audio_play_sound(snExplosion,1,false,1,0,0.8);
+						audio_play_sound(snExplosion,1,false,0.7,0,0.8);
 					}
 				} else {
 					x += _hSpd;

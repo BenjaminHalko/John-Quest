@@ -22,7 +22,7 @@ dead = false;
 timer = 0;
 
 eyes = [];
-eyeRotation = 0;
+eyeRotation = 30;
 eyeRotationSpd = 1;
 eyeDist = 28;
 manageShield = true;

@@ -138,6 +138,7 @@
     {"name":"sBossLvl1HomingTrail","order":3,"path":"sprites/sBossLvl1HomingTrail/sBossLvl1HomingTrail.yy",},
     {"name":"snPropellerDesc","order":3,"path":"sounds/snPropellerDesc/snPropellerDesc.yy",},
     {"name":"GMLive_exec","order":1,"path":"scripts/GMLive_exec/GMLive_exec.yy",},
+    {"name":"snBossLvl4Roar","order":3,"path":"sounds/snBossLvl4Roar/snBossLvl4Roar.yy",},
     {"name":"PlayerStateAutoMove","order":8,"path":"scripts/PlayerStateAutoMove/PlayerStateAutoMove.yy",},
     {"name":"GMLive_nodeTools","order":3,"path":"scripts/GMLive_nodeTools/GMLive_nodeTools.yy",},
     {"name":"GMLive_vm_init","order":7,"path":"scripts/GMLive_vm_init/GMLive_vm_init.yy",},

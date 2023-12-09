@@ -212,6 +212,7 @@
     {"id":{"name":"rLvl4","path":"rooms/rLvl4/rLvl4.yy",},},
     {"id":{"name":"snPropellerDesc","path":"sounds/snPropellerDesc/snPropellerDesc.yy",},},
     {"id":{"name":"GMLive_exec","path":"scripts/GMLive_exec/GMLive_exec.yy",},},
+    {"id":{"name":"snBossLvl4Roar","path":"sounds/snBossLvl4Roar/snBossLvl4Roar.yy",},},
     {"id":{"name":"PlayerStateAutoMove","path":"scripts/PlayerStateAutoMove/PlayerStateAutoMove.yy",},},
     {"id":{"name":"GMLive_nodeTools","path":"scripts/GMLive_nodeTools/GMLive_nodeTools.yy",},},
     {"id":{"name":"GMLive_vm_init","path":"scripts/GMLive_vm_init/GMLive_vm_init.yy",},},
