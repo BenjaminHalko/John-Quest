@@ -1,6 +1,6 @@
 /// @desc
 
-if (Load("lvl4","defeatedBoss",false)) {
+if (global.defeatedBoss) {
 	instance_create_layer(2464,768,"Rocks",oBigRock);
 	instance_destroy();
 } else if (oPlayer.x > x) {
