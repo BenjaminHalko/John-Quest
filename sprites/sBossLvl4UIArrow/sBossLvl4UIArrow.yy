@@ -26,7 +26,7 @@
   "origin": 5,
   "parent": {
     "name": "UI",
-    "path": "folders/Level4/Boss/UI.yy",
+    "path": "folders/Level4/Boss Phase 1/UI.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

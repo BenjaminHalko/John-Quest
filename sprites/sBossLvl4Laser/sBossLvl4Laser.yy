@@ -52,7 +52,7 @@
   "origin": 4,
   "parent": {
     "name": "BossSprites",
-    "path": "folders/Level4/Boss/BossSprites.yy",
+    "path": "folders/Level4/Boss Phase 1/BossSprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

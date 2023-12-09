@@ -12,7 +12,7 @@
   ],
   "parent": {
     "name": "Projectiles",
-    "path": "folders/Level4/Boss/Projectiles.yy",
+    "path": "folders/Level4/Boss Phase 1/Projectiles.yy",
   },
   "parentObjectId": {
     "name": "oBossLvl4ShieldEye",

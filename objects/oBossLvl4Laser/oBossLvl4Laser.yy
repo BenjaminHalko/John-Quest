@@ -12,8 +12,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"hp","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"value":"20",},
   ],
   "parent": {
-    "name": "Boss",
-    "path": "folders/Level4/Boss.yy",
+    "name": "Boss Phase 1",
+    "path": "folders/Level4/Boss Phase 1.yy",
   },
   "parentObjectId": {
     "name": "pLvl4Enemy",

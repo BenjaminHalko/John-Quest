@@ -15,7 +15,7 @@
   ],
   "function": 2,
   "parent": {
-    "name": "Boss",
-    "path": "folders/Level4/Boss.yy",
+    "name": "Boss Phase 1",
+    "path": "folders/Level4/Boss Phase 1.yy",
   },
 }
