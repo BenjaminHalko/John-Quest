@@ -10,7 +10,7 @@ var _mouseDir = point_direction(x,y,mouse_x,mouse_y);
 // Item
 var _itemDist = -knockBack*0.5;
 var _amount = itemCircleNum*clamp(itemPercent,0,1);
-var _cols = [ #65FFA9, #65D4FF];
+var _cols = [ #7665FF, #65D4FF];
 if (_amount != itemCircleNum) draw_sprite_ext(sPlayerItemCircle,_amount,xprevious+lengthdir_x(_itemDist,_mouseDir),yprevious+_y+lengthdir_y(_itemDist,_mouseDir),1,1,_mouseDir,_cols[item],0.3);
 _itemDist = lerp(-8,14+Wave(-2,2,1.8,1.1)-knockBack*1.4,animcurve_channel_evaluate(itemCurve,min(1,1.5-itemPercent)));
 draw_sprite_ext(itemSprites[item],knockBack == 0 ? 0 : 1 + (knockBack % 2),xprevious+lengthdir_x(_itemDist,_mouseDir),yprevious+_y+lengthdir_y(_itemDist,_mouseDir),1,1,_mouseDir,c_white,1);
