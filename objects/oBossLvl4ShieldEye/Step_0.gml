@@ -10,7 +10,8 @@ if (!surface_exists(surf)) surf = surface_create(size,size);
 focusPercent = ApproachFade(focusPercent,1,0.05,0.7);
 
 if (--focusTimer <= 0) {
-	focusTimer = irandom_range(30,60) - 15 * oBossLvl4Phase1.stunned;
+	focusTimer = irandom_range(30,60);
+	if (instance_exists(oBossLvl4Phase1) and oBossLvl4Phase1.stunned) focusTimer -= 15;
 	focusPercent = 0;
 	lastFocusX = focusX;
 	lastFocusY = focusY;
@@ -20,7 +21,7 @@ if (--focusTimer <= 0) {
 	focusX = lengthdir_x(_len,_dir);
 	focusY = lengthdir_y(_len,_dir);
 	
-	if (--focusIsOnPlayer < 0 and (irandom(5) == 0)) or oBossLvl4Phase1.stunned {
+	if (--focusIsOnPlayer < 0 and (irandom(5) == 0)) or (instance_exists(oBossLvl4Phase1) and oBossLvl4Phase1.stunned) {
 		focusIsOnPlayer = irandom_range(1,3);
 	}
 }

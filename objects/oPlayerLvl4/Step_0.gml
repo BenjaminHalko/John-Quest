@@ -100,7 +100,47 @@ if (_enemy != noone and hurt <= 0 and allowMovement) {
 		_enemy.destroy = true;	
 	}
 	hurt = 60;
+	hp--;
+	if (hp == 0) allowMovement = false;
 	audio_play_sound(snPlayerDie,1,false);
+}
+
+// explode
+if (hp <= 0) {
+	if (--explosionWait <= 0) {
+		if (++explosions == 16) {
+			repeat(200) {
+				with(instance_create_depth(x+random_range(-4,4),y+random_range(-4,4),depth-1,oTriangleParticle)) {
+					radius = 10;
+					speed = random(8);
+					spd = 0.02;
+					direction = random(360);
+					image_angle = random(360);
+				}
+			}
+			visible = false;
+			audio_play_sound(snExplosion,1,false,1,0,0.7);
+			explosionWait = 60;
+		} else if (explosions >= 17) {
+			Transition(rLvl4);
+		} else {
+			var _x = random_range(bbox_left-10,bbox_right+10);
+			var _y = random_range(bbox_top-10,bbox_bottom+10);
+
+			repeat(20) {
+				with(instance_create_depth(_x+random_range(-4,4),_y+random_range(-4,4),depth-1,oTriangleParticle)) {
+					radius = 8;
+					speed = random(8);
+					spd = 0.08;
+					direction = random(360);
+					image_angle = random(360);
+				}
+			}
+			ScreenShake(10,5);
+			audio_play_sound(snExplosionShort,1,false,0.8,0,0.8);
+			explosionWait = 5;
+		}
+	}
 }
 
 // animation

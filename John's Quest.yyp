@@ -128,6 +128,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"BossSprites","folderPath":"folders/Level4/Boss/BossSprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Projectiles","folderPath":"folders/Level4/Boss/Projectiles.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Level4/Boss/UI.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Level4/Enemies.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Global","folderPath":"folders/Level4/Global.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Cursor","folderPath":"folders/Level4/Global/Cursor.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Items","folderPath":"folders/Level4/Items.yy",},
@@ -143,7 +144,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Title/Audio.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Level4/Enemies.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -196,6 +196,7 @@
     {"id":{"name":"GMLive_tools","path":"scripts/GMLive_tools/GMLive_tools.yy",},},
     {"id":{"name":"sBush","path":"sprites/sBush/sBush.yy",},},
     {"id":{"name":"sPlayerLaserGun","path":"sprites/sPlayerLaserGun/sPlayerLaserGun.yy",},},
+    {"id":{"name":"sPlayerHealth","path":"sprites/sPlayerHealth/sPlayerHealth.yy",},},
     {"id":{"name":"oBossLvl4HomingEye","path":"objects/oBossLvl4HomingEye/oBossLvl4HomingEye.yy",},},
     {"id":{"name":"sCeiling2","path":"sprites/sCeiling2/sCeiling2.yy",},},
     {"id":{"name":"oTimedSpike","path":"objects/oTimedSpike/oTimedSpike.yy",},},

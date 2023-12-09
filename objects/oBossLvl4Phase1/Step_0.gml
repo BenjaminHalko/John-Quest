@@ -3,18 +3,66 @@
 enableLive;
 event_inherited();
 
-// Temp
-var _boundary = oCamera.boundary;
-if (_boundary != noone) {
-	bLeft = _boundary.bbox_left+32;
-	bRight = _boundary.bbox_right-32;
-	bTop = _boundary.bbox_top+32;
-	bBottom = _boundary.bbox_bottom-32;
-	bCenterX = (bLeft+bRight)/2;
-	bCenterY = (bTop+bBottom)/2;
-}
-
-if (dead) {
+if (intro) {
+	if (--timer <= 0) {
+		if (introPhase == -1) {
+			timer = 70;
+			introPhase++;
+		} else if (introPhase == 0) {
+			timer = 40;
+			introPhase++;
+		} else if (introPhase == 1) {
+			oCamera.follow = id;
+			timer = 60;
+			introPhase++;
+		} else if (introPhase == 2) {
+			if (introPercent == 0) {
+				ScreenShake(2,80);
+			}
+			
+			introPercent = ApproachFade(introPercent,1,0.05,0.8);
+			image_blend = merge_color(c_black,c_white,introPercent);
+			x = bCenterX+random_range(-1,1);
+			y = bCenterY+random_range(-1,1);
+			if (introPercent == 1) {
+				introPhase++;	
+			}
+		} else if (introPhase == 3) {
+			eyeDist = ApproachFade(eyeDist,28,1,0.7);
+			x = bCenterX+random_range(-1,1);
+			y = bCenterY+random_range(-1,1);
+			if (eyeDist == 28) {
+				introPhase++;
+				timer = 30;
+			}
+		} else if (introPhase == 4) {
+			oCamera.follow = oPlayer;
+			oPlayer.allowMovement = true;
+			intro = false;
+		}
+	}
+	
+	if (introPhase > 0) {
+		var _len = point_distance(oPlayer.x,oPlayer.y,x-160,y-32);
+		var _dir = point_direction(oPlayer.x,oPlayer.y,x-160,y-32);
+		if (_len < oPlayer.movespd) {
+			oPlayer.hsp = ApproachFade(oPlayerLvl4.hsp,0,0.05,0.7);
+			oPlayer.vsp = ApproachFade(oPlayerLvl4.vsp,0,0.05,0.7);
+		} else {
+			oPlayer.hsp = ApproachFade(oPlayer.hsp,lengthdir_x(oPlayer.movespd,_dir),0.5,0.7);
+			oPlayer.vsp = ApproachFade(oPlayer.vsp,lengthdir_y(oPlayer.movespd,_dir),0.5,0.7);
+		}
+	}
+	
+	scale = Wave(0.85,1.15,3-introPercent*2.5,0);
+	
+	// Shield
+	eyeRotation -= 3;
+	for(var i = 0; i < 6; i++) {
+		eyes[i].x = x + lengthdir_x(eyeDist,360/6*i+eyeRotation);
+		eyes[i].y = y + lengthdir_y(eyeDist,360/6*i+eyeRotation);
+	}
+} else if (dead) {
 	if (explosionCount < maxExplosions) {
 		if (oCamera.follow != id) {
 			manageShield = false;
@@ -77,7 +125,7 @@ if (dead) {
 			audio_play_sound(snExplosion,1,false,1,0,0.6);
 			explosionCount = maxExplosions+1;
 			vSpd = 1;
-			timer = 90;
+			timer = 120;
 		}
 		
 		if (mushroomY >= y) {
@@ -302,7 +350,7 @@ if (dead) {
 			} else {
 				chargePercent = ApproachFade(chargePercent,1,0.02,0.7);
 				chargeDir = point_direction(x,y,oPlayer.x,oPlayer.y);
-				var _len = chargePercent * 20;
+				var _len = chargePercent * 32;
 				x = xstart + lengthdir_x(_len,chargeDir+180);
 				y = ystart + lengthdir_y(_len,chargeDir+180);
 			}
@@ -310,7 +358,7 @@ if (dead) {
 		case BOSSLVL4.HOMING: {
 			if (_switched) {
 				homingCount = 1;
-				timer = 30;
+				timer = 60;
 				var _dir = random(360);
 				var _len = random(128);
 				targetX = round(bCenterX+lengthdir_x(_len,_dir));
@@ -321,8 +369,8 @@ if (dead) {
 			if (x != targetX or y != targetY) {
 				moveToPoint(targetX,targetY);
 			} else if (homingPercent == 1) {
-				if (homingCount > 5) {
-					if (homingCount == 6) {
+				if (homingCount > 3) {
+					if (homingCount == 4) {
 						homingCount++;
 						timer = 180;
 					} else if (--timer <= 0) {
@@ -511,13 +559,9 @@ if (dead) {
 			}
 		
 			eyeRotationSpd = ApproachFade(eyeRotationSpd,1,0.1,0.7);
-			if (tempNoAttack) {
-				if (keyboard_check_pressed(vk_space)) tempNoAttack = false;
-				break;	
-			}
 		
 			if (--timer <= 0) {
-				if (hp <= maxHp * 0.2) {
+				if (hp <= maxHp * 0.15) {
 					attack = BOSSLVL4.BULLETHELL;
 				} else {
 					do {
@@ -550,7 +594,7 @@ if (dead) {
 
 	// HP
 	if (attack != BOSSLVL4.BULLETHELL) {
-		hp = max(hp,maxHp*0.2);	
+		hp = max(hp,maxHp*0.15);	
 	}
 
 	// Eyes Shield

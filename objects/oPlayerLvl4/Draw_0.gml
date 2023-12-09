@@ -19,3 +19,20 @@ draw_sprite_ext(itemSprites[item],knockBack == 0 ? 0 : 1 + (knockBack % 2),xprev
 _y = Wave(-2,2,2,0);
 draw_sprite_ext(sprite_index,image_index,x,y+_y,1/yscale,_yscale,_spriteAngle,image_blend,image_alpha);
 draw_sprite_ext(sPlayerPropeller,propellerIndex,x+lengthdir_x(12*yscale,90+_spriteAngle),y+lengthdir_y(12*yscale,90+_spriteAngle)+_y,1,1/(1-clamp(vsp/movespd,-1,1)*0.6),_spriteAngle,c_white,1);
+
+// Draw Health
+for(var i = 0; i < 4; i++) {
+	var _xHealth = 4*(i-2)+1;
+	var _yHealth = 8*_yscale;
+	var _dist = point_distance(0,0,_xHealth,_yHealth);	
+	var _dir = point_direction(0,0,_xHealth,_yHealth)+_spriteAngle;
+	_xHealth = x+lengthdir_x(_dist,_dir);
+	_yHealth = y+_y+lengthdir_y(_dist,_dir);
+	
+	var _blend = #65FFA9;
+	if (i*2 >= hp) _blend = #FF3232;
+	else if (i*2+1 >= hp) _blend = #FFDC31;
+	 
+	
+	draw_sprite_ext(sPlayerHealth,0,_xHealth,_yHealth,1,1,_spriteAngle,_blend,1);
+}

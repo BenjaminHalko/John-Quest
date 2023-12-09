@@ -32,7 +32,7 @@ if (healthDisplay > 0) {
 	draw_rectangle(_barInnerX1,_barInnerY1,lerp(_barInnerX1,_barInnerX2,healthDisplay),_barInnerY2,false);
 }
 
-if (!point_in_rectangle(oBossLvl4Phase1.x,oBossLvl4Phase1.y,_x-32,_y-32,_x+480+32,_y+270+32)) {
+if (percent == 1 and !point_in_rectangle(oBossLvl4Phase1.x,oBossLvl4Phase1.y,_x-32,_y-32,_x+480+32,_y+270+32)) {
 	var _dir = point_direction(oCamera.x,oCamera.y,oBossLvl4Phase1.x,oBossLvl4Phase1.y);
 	var _slope = dtan(_dir);
 

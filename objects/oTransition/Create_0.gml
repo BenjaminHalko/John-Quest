@@ -2,7 +2,8 @@
 
 enum TRANSITION {
 	SQUARES,
-	SPIRAL
+	SPIRAL,
+	FADE
 }
 
 leading = true;
@@ -23,6 +24,10 @@ switch (roomTo) {
 			_heightLeft -= 30;
 		}
 		transitionSpd = 0.02;
+	} break;
+	case rLvl4: {
+		if (roomTo == rLvl4) transitionType = TRANSITION.FADE;
+		else transitionType = TRANSITION.SQUARES;
 	} break;
 }
 

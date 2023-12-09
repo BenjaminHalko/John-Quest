@@ -33,10 +33,9 @@ stunPercent = 0;
 stunParticleRotation = 0;
 
 // Attack
-attack = -1;
+attack = BOSSLVL4.CHARGE;
 lastAttack = -1;
 actualLastAttack = -1;
-tempNoAttack = true;
 
 // Hexagon
 hexagonLastStart = -1;
@@ -74,14 +73,22 @@ maxExplosions = 16;
 vSpd = 0;
 
 var _boundary = oCamera.boundary;
-if (_boundary != noone) {
-	bLeft = _boundary.bbox_left+32;
-	bRight = _boundary.bbox_right-32;
-	bTop = _boundary.bbox_top+32;
-	bBottom = _boundary.bbox_bottom-32;
-	bCenterX = (bLeft+bRight)/2;
-	bCenterY = (bTop+bBottom)/2;
-}
+bLeft = _boundary.bbox_left+32;
+bRight = _boundary.bbox_right-32;
+bTop = _boundary.bbox_top+32;
+bBottom = _boundary.bbox_bottom-32;
+bCenterX = (bLeft+bRight)/2;
+bCenterY = (bTop+bBottom)/2;
+x = bCenterX;
+y = bCenterY;
+
+// Intro
+intro = true;
+introPhase = -1;
+image_blend = c_black;
+eyeDist = 0;
+introPercent = 0;
+
 
 // Eyes
 repeat(6) {

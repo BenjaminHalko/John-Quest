@@ -23,8 +23,10 @@ itemCircleNum = sprite_get_number(sPlayerItemCircle);
 itemCurve = animcurve_get_channel(PlayerItemCurves,"item");
 
 // health
-hp = 6;
+hp = 8;
 hurt = 0;
+explosions = 0;
+explosionWait = 30;
 
 // sprite
 propellerSpd = sprite_get_speed(sPlayerPropeller) / 60;

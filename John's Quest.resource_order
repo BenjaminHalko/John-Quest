@@ -85,6 +85,7 @@
     {"name":"BossSprites","order":1,"path":"folders/Level4/Boss/BossSprites.yy",},
     {"name":"Projectiles","order":2,"path":"folders/Level4/Boss/Projectiles.yy",},
     {"name":"UI","order":8,"path":"folders/Level4/Boss/UI.yy",},
+    {"name":"Enemies","order":8,"path":"folders/Level4/Enemies.yy",},
     {"name":"Global","order":2,"path":"folders/Level4/Global.yy",},
     {"name":"Cursor","order":1,"path":"folders/Level4/Global/Cursor.yy",},
     {"name":"Items","order":3,"path":"folders/Level4/Items.yy",},
@@ -100,7 +101,6 @@
     {"name":"Backgrounds","order":6,"path":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"name":"Title","order":12,"path":"folders/Title.yy",},
     {"name":"Audio","order":6,"path":"folders/Title/Audio.yy",},
-    {"name":"Enemies","order":8,"path":"folders/Level4/Enemies.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
@@ -125,6 +125,7 @@
     {"name":"GMLive_tools","order":1,"path":"scripts/GMLive_tools/GMLive_tools.yy",},
     {"name":"sBush","order":2,"path":"sprites/sBush/sBush.yy",},
     {"name":"sPlayerLaserGun","order":1,"path":"sprites/sPlayerLaserGun/sPlayerLaserGun.yy",},
+    {"name":"sPlayerHealth","order":4,"path":"sprites/sPlayerHealth/sPlayerHealth.yy",},
     {"name":"sCeiling2","order":1,"path":"sprites/sCeiling2/sCeiling2.yy",},
     {"name":"oTimedSpike","order":3,"path":"objects/oTimedSpike/oTimedSpike.yy",},
     {"name":"sBigRock","order":1,"path":"sprites/sBigRock/sBigRock.yy",},
