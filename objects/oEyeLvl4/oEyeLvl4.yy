@@ -7,7 +7,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"hp","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"value":"5",},
+  ],
   "parent": {
     "name": "Enemies",
     "path": "folders/Level4/Enemies.yy",
