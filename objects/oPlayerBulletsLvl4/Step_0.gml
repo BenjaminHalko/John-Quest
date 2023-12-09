@@ -8,7 +8,7 @@ var _collide = [pCollision, pLvl4Enemy];
 var _spdX = lengthdir_x(spd,image_angle);
 var _spdY = lengthdir_y(spd,image_angle);
 if (array_length(move_and_collide(_spdX,_spdY,_collide)) > 0 or place_meeting(x,y,_collide)) {
-	audio_play_sound(snLaserImpact,2,false,1,0,random_range(0.7,1.3));
+	if (isOnScreen()) audio_play_sound(snLaserImpact,2,false,1,0,random_range(0.7,1.3));
 	
 	mask_index = -1;
 	var _enemy = instance_place(x,y,oBossLvl4ShieldEye);
@@ -18,7 +18,7 @@ if (array_length(move_and_collide(_spdX,_spdY,_collide)) > 0 or place_meeting(x,
 		_enemy = instance_place(x,y,pLvl4Enemy);
 		if (_enemy != noone) {
 			HurtEnemyLvl4(_enemy,1,lengthdir_x(5,image_angle),lengthdir_y(5,image_angle));
-		} else {
+		} else if (isOnScreen()) {
 			var _activator = instance_place(x,y,oDoorActivator);
 			if (_activator != noone) _activator.activated = true;
 		}
