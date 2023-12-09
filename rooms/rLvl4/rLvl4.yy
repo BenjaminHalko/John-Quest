@@ -50,7 +50,6 @@
     {"name":"inst_3EEBA302","path":"rooms/rLvl4/rLvl4.yy",},
     {"name":"inst_370737C2","path":"rooms/rLvl4/rLvl4.yy",},
     {"name":"inst_163B1840","path":"rooms/rLvl4/rLvl4.yy",},
-    {"name":"inst_61FF27BE","path":"rooms/rLvl4/rLvl4.yy",},
     {"name":"inst_734E9FE7","path":"rooms/rLvl4/rLvl4.yy",},
     {"name":"inst_61EBA58A","path":"rooms/rLvl4/rLvl4.yy",},
     {"name":"inst_61182D85","path":"rooms/rLvl4/rLvl4.yy",},
@@ -85,7 +84,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3EEBA302","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEyeLvl4","path":"objects/oEyeLvl4/oEyeLvl4.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1661.0,"y":2071.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_370737C2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEyeLvl4","path":"objects/oEyeLvl4/oEyeLvl4.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1550.0,"y":1394.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_163B1840","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEyeLvl4","path":"objects/oEyeLvl4/oEyeLvl4.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1817.0,"y":1286.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_61FF27BE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oEyeLvl4","path":"objects/oEyeLvl4/oEyeLvl4.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1792.0,"y":1131.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Vignette","depth":600,"effectEnabled":true,"effectType":"_filter_vignette","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_VignetteEdges","type":0,"value":"0.2",},
