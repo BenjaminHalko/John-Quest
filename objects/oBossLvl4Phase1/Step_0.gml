@@ -47,7 +47,6 @@ if (intro) {
 		} else if (introPhase == 5) {
 			oCamera.follow = oPlayer;
 			oPlayer.allowMovement = true;
-			oPlayer.restoreHealth = true;
 			intro = false;
 		}
 	}
@@ -151,6 +150,7 @@ if (intro) {
 			if (--timer <= 0) {
 				oCamera.follow = oPlayer;
 				oPlayer.allowMovement = true;
+				oPlayer.restoreHealth = true;
 				Save("lvl4","defeatedBoss",true);
 				Save("lvl4","x",bCenterX);
 				Save("lvl4","y",bCenterY);
@@ -464,7 +464,7 @@ if (intro) {
 							hp = 3;
 						}
 					}
-					timer = 20 - flash * 10;
+					timer = 20;
 				}
 			}
 		} break;
