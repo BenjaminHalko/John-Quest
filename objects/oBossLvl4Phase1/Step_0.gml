@@ -47,6 +47,7 @@ if (intro) {
 		} else if (introPhase == 5) {
 			oCamera.follow = oPlayer;
 			oPlayer.allowMovement = true;
+			oPlayer.restoreHealth = true;
 			intro = false;
 		}
 	}
@@ -77,6 +78,9 @@ if (intro) {
 		eyes[i].y = y + lengthdir_y(eyeDist,360/6*i+eyeRotation);
 	}
 } else if (dead) {
+	with(oBossLvl4ShieldEye) {
+		explode = true;
+	}
 	if (explosionCount < maxExplosions) {
 		if (oCamera.follow != id) {
 			manageShield = false;
@@ -87,6 +91,7 @@ if (intro) {
 			y = bCenterY;
 			vSpd = -16;
 			audio_play_sound(snBossLvl1Roar,1,false);
+			audio_play_sound(snBossLvl4Roar,1,false);
 		}
 		
 		x = bCenterX + random_range(-8,8);
@@ -112,7 +117,7 @@ if (intro) {
 			audio_play_sound(snExplosion,1,false,0.5,0,0.8);
 			
 			explosionCount++;
-			timer = 10;
+			timer = 30;
 		}
 		
 		if (explosionCount == maxExplosions) {
@@ -146,6 +151,9 @@ if (intro) {
 			if (--timer <= 0) {
 				oCamera.follow = oPlayer;
 				oPlayer.allowMovement = true;
+				Save("lvl4","defeatedBoss",true);
+				Save("lvl4","x",bCenterX);
+				Save("lvl4","y",bCenterY);
 				instance_destroy(oBossLvl4Laser);
 				instance_destroy(oBossLvl4ShieldEye);
 				instance_destroy();

@@ -24,7 +24,7 @@ if (wandering) {
 		spd2 = 0;
 	}
 	
-	if (point_distance(x,y,oPlayer.x,oPlayer.y) < 128) wandering = false;
+	if (point_distance(x,y,oPlayer.x,oPlayer.y) < 128 and point_distance(x,y,xstart,ystart) <= 400) wandering = false;
 } else {
 	var _dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 	var _move = (oPlayer.hp > 0);
@@ -32,4 +32,6 @@ if (wandering) {
 	spd2 = ApproachFade(spd2,2*_move,0.3,0.7);
 	x += lengthdir_x(spd2, dir);
 	y += lengthdir_y(spd2, dir);
+	
+	if (point_distance(x,y,xstart,ystart) > 500) wandering = true;
 }

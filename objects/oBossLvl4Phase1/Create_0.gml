@@ -17,7 +17,7 @@ scale = 1;
 angle = 0;
 
 maxHp = hp;
-dead = false;
+dead = true;
 
 timer = 0;
 
@@ -69,7 +69,7 @@ targetY = 0;
 // Dead
 mushroomY = 0;
 explosionCount = 0;
-maxExplosions = 16;
+maxExplosions = 12;
 vSpd = 0;
 
 var _boundary = oCamera.boundary;

@@ -146,3 +146,9 @@ if (hp <= 0) {
 // animation
 propellerIndex = (propellerIndex + propellerSpd) % propellerNum;
 knockBack = Approach(knockBack,0,1-(item == 1)*0.4);
+
+// restore health
+if (restoreHealth) {
+	hp = Approach(hp,8,0.1);
+	if (hp == 8) restoreHealth = false;
+}

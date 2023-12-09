@@ -27,6 +27,7 @@ hp = 8;
 hurt = 0;
 explosions = 0;
 explosionWait = 30;
+restoreHealth = false;
 
 // sprite
 propellerSpd = sprite_get_speed(sPlayerPropeller) / 60;

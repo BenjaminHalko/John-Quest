@@ -35,16 +35,15 @@ if (focusIsOnPlayer <= 0) {
 image_xscale = Wave(1.1,0.9,0.5,waveOffset)*scale;
 image_yscale = Wave(0.9,1.1,0.5,waveOffset)*scale;
 
-var _explode = false;
 if (spd != 0) {
 	var _hsp = lengthdir_x(spd,dir);
 	var _vsp = lengthdir_y(spd,dir);
 	if (array_length(MoveAndCollide(_hsp,_vsp,0,0)) > 0 or place_meeting(x,y,pCollision)) {
-		_explode = true;
+		explode = true;
 	}
 }
 
-if (hp <= 0 or _explode) {
+if (hp <= 0 or explode) {
 	repeat(50) {
 		with(instance_create_depth(x+random_range(-8,8),y+random_range(-8,8),depth-1,oTriangleParticle)) {
 			radius = 7;
@@ -56,7 +55,9 @@ if (hp <= 0 or _explode) {
 	
 	}
 
-	ScreenShake(5,3);
-	audio_play_sound(snExplosionShort,1,false,0.5);	
+	if (!oBossLvl4Phase1.dead) {
+		ScreenShake(5,3);
+		audio_play_sound(snExplosionShort,1,false,0.5);
+	}
 	instance_destroy();
 }

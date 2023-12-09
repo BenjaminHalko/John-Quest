@@ -19,3 +19,4 @@ focusTimer = 0;
 focusIsOnPlayer = false;
 
 waveOffset = random(1);
+explode = false;

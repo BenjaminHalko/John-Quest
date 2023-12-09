@@ -57,3 +57,11 @@ for(var i = 0; i < array_length(_elements); i++) {
 	});
 }
 layer_destroy(_layerEnv);
+
+// Move Player
+global.saveX = Load("lvl4","x",-1);
+global.saveY = Load("lvl4","y",-1);
+if (global.saveX != -1) {
+	oPlayer.x = global.saveX;
+	oPlayer.y = global.saveY;
+}
