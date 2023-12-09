@@ -124,6 +124,12 @@ if (title) {
 			Transition(rLvl1);
 		} else {
 			global.noSave = true;
+			ini_open(SAVEFILE);
+			ini_section_delete("lvl1_temp");
+			ini_section_delete("lvl2_temp");
+			ini_section_delete("lvl3_temp");
+			ini_section_delete("lvl4_temp");
+			ini_close();
 			
 			if (menuSelected <= 2) Transition(rLvl1);
 			else if (menuSelected <= 4) Transition(rLvl2);

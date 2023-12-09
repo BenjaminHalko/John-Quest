@@ -143,6 +143,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Title/Audio.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Level4/Enemies.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -182,6 +183,7 @@
     {"id":{"name":"oLvl3Intro","path":"objects/oLvl3Intro/oLvl3Intro.yy",},},
     {"id":{"name":"snTriangleJump","path":"sounds/snTriangleJump/snTriangleJump.yy",},},
     {"id":{"name":"sSlime","path":"sprites/sSlime/sSlime.yy",},},
+    {"id":{"name":"oEyeLvl4","path":"objects/oEyeLvl4/oEyeLvl4.yy",},},
     {"id":{"name":"sBgMapping","path":"sprites/sBgMapping/sBgMapping.yy",},},
     {"id":{"name":"sSwordNPC","path":"sprites/sSwordNPC/sSwordNPC.yy",},},
     {"id":{"name":"sBossLvl2Eye","path":"sprites/sBossLvl2Eye/sBossLvl2Eye.yy",},},
@@ -380,6 +382,7 @@
     {"id":{"name":"sItemUI","path":"sprites/sItemUI/sItemUI.yy",},},
     {"id":{"name":"snAttemptTakePropellers","path":"sounds/snAttemptTakePropellers/snAttemptTakePropellers.yy",},},
     {"id":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},},
+    {"id":{"name":"snMushroom","path":"sounds/snMushroom/snMushroom.yy",},},
     {"id":{"name":"sItemLvl3","path":"sprites/sItemLvl3/sItemLvl3.yy",},},
     {"id":{"name":"oBossLvl2Eye","path":"objects/oBossLvl2Eye/oBossLvl2Eye.yy",},},
     {"id":{"name":"tWalls","path":"tilesets/tWalls/tWalls.yy",},},

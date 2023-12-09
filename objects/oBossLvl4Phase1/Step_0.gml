@@ -14,20 +14,6 @@ if (_boundary != noone) {
 	bCenterY = (bTop+bBottom)/2;
 }
 
-// Move to point
-function moveToPoint(_x,_y) {
-	dir = point_direction(x,y,_x,_y);
-	var _dist = point_distance(x,y,_x,_y);
-	spd = ApproachFade(spd,min(_dist/8,4),0.3,0.7);
-	if (_dist < spd) {
-		x = _x;
-		y = _y;
-	} else {
-		x += lengthdir_x(spd, dir);
-		y += lengthdir_y(spd, dir);
-	}	
-}
-
 if (dead) {
 	if (explosionCount < maxExplosions) {
 		if (oCamera.follow != id) {
@@ -38,6 +24,7 @@ if (dead) {
 			x = bCenterX;
 			y = bCenterY;
 			vSpd = -16;
+			audio_play_sound(snBossLvl1Roar,1,false);
 		}
 		
 		x = bCenterX + random_range(-8,8);
@@ -60,14 +47,14 @@ if (dead) {
 			
 			ScreenShake(10,5);
 			
-			audio_play_sound(snExplosion,1,false);
+			audio_play_sound(snExplosion,1,false,0.5,0,0.8);
 			
 			explosionCount++;
 			timer = 10;
 		}
 		
 		if (explosionCount == maxExplosions) {
-			timer = 30;
+			timer = 60;
 			scale = 1;
 		}
 	} else if (y >= bCenterY + 170) {
@@ -87,6 +74,7 @@ if (dead) {
 			}
 				
 			ScreenShake(2,30);
+			audio_play_sound(snExplosion,1,false,1,0,0.6);
 			explosionCount = maxExplosions+1;
 			vSpd = 1;
 			timer = 90;
@@ -104,7 +92,7 @@ if (dead) {
 			mushroomY += vSpd;
 			vSpd += 0.1;
 			if (mushroomY >= y) {
-				// audio_play_sound(snMushroom,1,false);
+				audio_play_sound(snMushroom,1,false,1,0,0.6);
 				timer = 90;
 			}
 	
@@ -123,7 +111,7 @@ if (dead) {
 						image_angle = random(360);
 					}
 				}
-				
+				audio_play_sound(snExplosion,1,false);
 				ScreenShake(10,60);
 			}
 			angle -= 20;
@@ -245,11 +233,11 @@ if (dead) {
 				if (hexagons[j].dist > 560 and !_isOnScreen) {
 					if (eyes[0] != hexagons[j].eyes[0]) {
 						for(var i = 0; i < 6; i++) {
-							instance_destroy(hexagons[j].eyes[i],false);
+							instance_destroy(hexagons[j].eyes[i]);
 						}
 					}
 					for(var i = 0; i < array_length(hexagons[j].lasers); i++) {
-						instance_destroy(hexagons[j].lasers[i],false);
+						instance_destroy(hexagons[j].lasers[i]);
 					}
 				
 					array_delete(hexagons,j,1);

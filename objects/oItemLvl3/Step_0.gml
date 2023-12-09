@@ -28,7 +28,8 @@ if (global.my <= INVENTORY_Y) {
 				if (array_equals(global.piecesCollected, [1,1,1])) {
 					global.allowInput = false;
 					call_later(60, time_source_units_frames, function() {
-						Transition(rLvl4);	
+						global.introLvl3 = true;
+						Transition(rLvl3Intro);	
 					});
 				} else {
 					global.isBattle = false;

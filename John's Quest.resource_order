@@ -100,6 +100,7 @@
     {"name":"Backgrounds","order":6,"path":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"name":"Title","order":12,"path":"folders/Title.yy",},
     {"name":"Audio","order":6,"path":"folders/Title/Audio.yy",},
+    {"name":"Enemies","order":8,"path":"folders/Level4/Enemies.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
@@ -259,6 +260,7 @@
     {"name":"snBombTalk","order":2,"path":"sounds/snBombTalk/snBombTalk.yy",},
     {"name":"sItemUI","order":1,"path":"sprites/sItemUI/sItemUI.yy",},
     {"name":"snAttemptTakePropellers","order":14,"path":"sounds/snAttemptTakePropellers/snAttemptTakePropellers.yy",},
+    {"name":"snMushroom","order":2,"path":"sounds/snMushroom/snMushroom.yy",},
     {"name":"sItemLvl3","order":1,"path":"sprites/sItemLvl3/sItemLvl3.yy",},
     {"name":"oBossLvl2Eye","order":5,"path":"objects/oBossLvl2Eye/oBossLvl2Eye.yy",},
     {"name":"tWalls","order":2,"path":"tilesets/tWalls/tWalls.yy",},

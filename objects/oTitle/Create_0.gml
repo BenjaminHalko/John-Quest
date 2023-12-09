@@ -1,5 +1,7 @@
 /// @desc 
 
+global.noSave = false;
+
 enum MENU {
 	MAIN,
 	NEWGAME,

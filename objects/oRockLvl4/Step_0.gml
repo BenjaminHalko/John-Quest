@@ -10,17 +10,17 @@ if (!place_meeting(x,y,oRockNoCollision)) collidable = true;
 if (collidable) {
 	var _xStart = x;
 	var _yStart = y;
-	MoveAndCollide(hsp,vsp,-1,-sign(vsp));
+	MoveAndCollide(hsp,vsp,-1,-sign(vsp),true);
 	var _testX1 = x;
 	var _testY1 = y;
-	repeat(3) MoveAndCollide(hsp,vsp,-1,-sign(vsp));
+	repeat(3) MoveAndCollide(hsp,vsp,-1,-sign(vsp),true);
 	var _dist = point_distance(x,y,_xStart,_yStart);
 	x = _xStart;
 	y = _yStart;
-	MoveAndCollide(hsp,vsp,1,-sign(vsp));
+	MoveAndCollide(hsp,vsp,1,-sign(vsp),true);
 	var _testX2 = x;
 	var _testY2 = y;
-	repeat(3) MoveAndCollide(hsp,vsp,1,-sign(vsp));
+	repeat(3) MoveAndCollide(hsp,vsp,1,-sign(vsp),true);
 	if (point_distance(x,y,_xStart,_yStart) < _dist+1) {
 		x = _testX1;
 		y = _testY1;
