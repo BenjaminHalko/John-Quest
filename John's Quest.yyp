@@ -232,6 +232,7 @@
     {"id":{"name":"oSpike","path":"objects/oSpike/oSpike.yy",},},
     {"id":{"name":"PlayerStateHook","path":"scripts/PlayerStateHook/PlayerStateHook.yy",},},
     {"id":{"name":"snExplosionShort","path":"sounds/snExplosionShort/snExplosionShort.yy",},},
+    {"id":{"name":"Sprite135","path":"sprites/Sprite135/Sprite135.yy",},},
     {"id":{"name":"sCursorRight","path":"sprites/sCursorRight/sCursorRight.yy",},},
     {"id":{"name":"sCeiling1","path":"sprites/sCeiling1/sCeiling1.yy",},},
     {"id":{"name":"oLvl2Controller","path":"objects/oLvl2Controller/oLvl2Controller.yy",},},

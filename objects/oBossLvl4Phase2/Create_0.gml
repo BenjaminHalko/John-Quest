@@ -21,6 +21,7 @@ yStepBegin = y;
 // Mouth
 instance_create_depth(x,y,depth-2,oBossLvl4Mouth);
 fireball = noone;
+mouthBurnPercent = 0;
 mouthYPercent = 0;
 mouthY = 0;
 openMouth = false;

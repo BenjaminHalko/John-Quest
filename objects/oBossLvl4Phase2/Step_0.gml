@@ -33,29 +33,33 @@ if (openMouth) {
 	repeat(2) {
 		var _len = 48;
 		var _dir = 180 + random_range(-120,120);
-		with(instance_create_depth(x+128+lengthdir_x(_len,_dir),y+72+lengthdir_y(_len,_dir),depth-2,oSquareParticle)) {
+		with(instance_create_depth(x+128+random_range(-2,2)+lengthdir_x(_len,_dir),y+72+random_range(-2,2)+lengthdir_y(_len,_dir),depth-2,oSquareParticle)) {
 			image_blend = merge_color(#EE371B,#EEA01B,random(1));
 			direction = _dir+180+random_range(-5,5);
-			speed = random(3);
-			spd = 0.05;
+			speed = random(4);
+			spd = 0.02;
 		}
 	}
-	if (mouthYPercent == 1) {
+	var _fireballLeft = (!instance_exists(fireball) or fireball.go);
+	mouthBurnPercent = ApproachFade(mouthBurnPercent,0.5+createdFireball*(!_fireballLeft),0.05,0.7);
+	if (mouthYPercent >= 0.8) {
 		if (!createdFireball) {
 			createdFireball = true;
-			mouthWait = 30;
+			mouthWait = 60;
 			fireball = instance_create_depth(x+124,y+74,depth-1,oBossLvl4Fireball);
 		} else if (--mouthWait <= 0) {
-			if (!instance_exists(fireball) or fireball.go) {
+			if (_fireballLeft) {
 				openMouth = false;
 			} else {
+				ScreenShake(5,10);
 				fireball.go = true;
 				mouthWait = 30;
 			}
 		}
 	}
 } else {
-	createdFireball = false;	
+	createdFireball = false;
+	mouthBurnPercent = 0.5;
 }
 
 // Kill Player

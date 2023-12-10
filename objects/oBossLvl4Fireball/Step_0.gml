@@ -5,9 +5,9 @@ if (!go) {
 	direction = point_direction(x,y,oPlayer.x,oPlayer.y);
 	image_angle = 0;
 } else {
-	speed = ApproachFade(max(1,speed),4,0.4,0.7);	
+	speed = ApproachFade(max(2,speed),5,1,0.7);	
 }
-image_xscale = ApproachFade(image_xscale,1,0.1,0.7);
+image_xscale = ApproachFade(image_xscale,1,0.02,0.7);
 image_yscale = image_xscale;
 
 var _len = random(40);
