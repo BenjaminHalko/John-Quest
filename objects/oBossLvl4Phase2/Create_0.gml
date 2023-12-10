@@ -27,3 +27,8 @@ openMouth = false;
 createdFireball = false;
 shotFireball = false;
 mouthWait = 0;
+
+// Eyes
+shootEyes = false;
+eye1 = noone;
+eye2 = noone;
