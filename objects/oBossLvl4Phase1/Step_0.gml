@@ -3,6 +3,8 @@
 enableLive;
 event_inherited();
 
+if (keyboard_check_pressed(ord("P"))) dead = true;
+
 if (intro) {
 	if (--timer <= 0) {
 		if (introPhase == -1) {

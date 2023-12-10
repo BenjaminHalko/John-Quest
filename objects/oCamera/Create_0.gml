@@ -3,6 +3,7 @@ cam = view_camera[0];
 viewWidthHalf = 480 * 0.5;
 viewHeightHalf = 270 * 0.5;
 follow = oPlayer;
+xOffset = 0;
 
 shakeLength = 0;
 shakeMagnitude = 0;
