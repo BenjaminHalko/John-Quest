@@ -180,6 +180,7 @@
     {"name":"oPot","order":3,"path":"objects/oPot/oPot.yy",},
     {"name":"PlayerAnimateSprite","order":6,"path":"scripts/PlayerAnimateSprite/PlayerAnimateSprite.yy",},
     {"name":"sTriangleJump","order":1,"path":"sprites/sTriangleJump/sTriangleJump.yy",},
+    {"name":"sBossLvl4Fireball","order":1,"path":"sprites/sBossLvl4Fireball/sBossLvl4Fireball.yy",},
     {"name":"fRPG","order":1,"path":"fonts/fRPG/fRPG.yy",},
     {"name":"GMLive","order":4,"path":"scripts/GMLive/GMLive.yy",},
     {"name":"PlayerStateBonk","order":4,"path":"scripts/PlayerStateBonk/PlayerStateBonk.yy",},

@@ -270,6 +270,7 @@
     {"id":{"name":"sTriangleJump","path":"sprites/sTriangleJump/sTriangleJump.yy",},},
     {"id":{"name":"oBossLvl1SpiralSnake","path":"objects/oBossLvl1SpiralSnake/oBossLvl1SpiralSnake.yy",},},
     {"id":{"name":"sBossLvl2","path":"sprites/sBossLvl2/sBossLvl2.yy",},},
+    {"id":{"name":"sBossLvl4Fireball","path":"sprites/sBossLvl4Fireball/sBossLvl4Fireball.yy",},},
     {"id":{"name":"oBossLvl1Snake","path":"objects/oBossLvl1Snake/oBossLvl1Snake.yy",},},
     {"id":{"name":"oItemLvl3","path":"objects/oItemLvl3/oItemLvl3.yy",},},
     {"id":{"name":"pSemiSolid","path":"objects/pSemiSolid/pSemiSolid.yy",},},
