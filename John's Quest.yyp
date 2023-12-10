@@ -312,6 +312,7 @@
     {"id":{"name":"sCursorBackwardRight","path":"sprites/sCursorBackwardRight/sCursorBackwardRight.yy",},},
     {"id":{"name":"oBush","path":"objects/oBush/oBush.yy",},},
     {"id":{"name":"sBombLvl4","path":"sprites/sBombLvl4/sBombLvl4.yy",},},
+    {"id":{"name":"sRightClick","path":"sprites/sRightClick/sRightClick.yy",},},
     {"id":{"name":"oPines","path":"objects/oPines/oPines.yy",},},
     {"id":{"name":"UseItemFuncs","path":"scripts/UseItemFuncs/UseItemFuncs.yy",},},
     {"id":{"name":"snCoin","path":"sounds/snCoin/snCoin.yy",},},

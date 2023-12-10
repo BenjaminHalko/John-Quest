@@ -206,6 +206,7 @@
     {"name":"sCursorBackwardRight","order":2,"path":"sprites/sCursorBackwardRight/sCursorBackwardRight.yy",},
     {"name":"oBush","order":4,"path":"objects/oBush/oBush.yy",},
     {"name":"sBombLvl4","order":2,"path":"sprites/sBombLvl4/sBombLvl4.yy",},
+    {"name":"sRightClick","order":3,"path":"sprites/sRightClick/sRightClick.yy",},
     {"name":"oPines","order":7,"path":"objects/oPines/oPines.yy",},
     {"name":"UseItemFuncs","order":7,"path":"scripts/UseItemFuncs/UseItemFuncs.yy",},
     {"name":"oFragRock","order":4,"path":"objects/oFragRock/oFragRock.yy",},

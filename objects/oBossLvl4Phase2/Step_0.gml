@@ -27,3 +27,8 @@ if (place_meeting(x,y,oPlayer) and oPlayer.hurt > 0) {
 	oPlayer.hsp = oPlayer.movespd;	
 }
 y = lerp(yStepTarget,yStepBegin,stepPercent);
+
+if (oPlayer.x < x) {
+	oPlayer.hp = 0;
+	oPlayer.allowMovement = false;
+}
