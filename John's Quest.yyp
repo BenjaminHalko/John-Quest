@@ -146,6 +146,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Title/Audio.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extra","folderPath":"folders/Level4/Boss Phase 2/Extra.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -170,6 +171,7 @@
     {"id":{"name":"oBossLvl2","path":"objects/oBossLvl2/oBossLvl2.yy",},},
     {"id":{"name":"oTextQueued","path":"objects/oTextQueued/oTextQueued.yy",},},
     {"id":{"name":"oRockPile","path":"objects/oRockPile/oRockPile.yy",},},
+    {"id":{"name":"oBossLvl4Fireball","path":"objects/oBossLvl4Fireball/oBossLvl4Fireball.yy",},},
     {"id":{"name":"sHookChain","path":"sprites/sHookChain/sHookChain.yy",},},
     {"id":{"name":"sBomb","path":"sprites/sBomb/sBomb.yy",},},
     {"id":{"name":"snBombDesc","path":"sounds/snBombDesc/snBombDesc.yy",},},
@@ -418,6 +420,7 @@
     {"id":{"name":"oCircleParticle","path":"objects/oCircleParticle/oCircleParticle.yy",},},
     {"id":{"name":"snCannonDesc","path":"sounds/snCannonDesc/snCannonDesc.yy",},},
     {"id":{"name":"nativeCursorFunctions","path":"scripts/nativeCursorFunctions/nativeCursorFunctions.yy",},},
+    {"id":{"name":"oBossLvl4Mouth","path":"objects/oBossLvl4Mouth/oBossLvl4Mouth.yy",},},
     {"id":{"name":"PlayerItemCurves","path":"animcurves/PlayerItemCurves/PlayerItemCurves.yy",},},
     {"id":{"name":"oSword","path":"objects/oSword/oSword.yy",},},
     {"id":{"name":"oBossLvl1Shock","path":"objects/oBossLvl1Shock/oBossLvl1Shock.yy",},},

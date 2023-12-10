@@ -19,11 +19,11 @@ yStepTarget = y - 20;
 yStepBegin = y;
 
 // Mouth
+instance_create_depth(x,y,depth-2,oBossLvl4Mouth);
+fireball = noone;
 mouthYPercent = 0;
 mouthY = 0;
 openMouth = false;
-
-// Fireball
-
-// temp
-instance_destroy(oBigRock);
+createdFireball = false;
+shotFireball = false;
+mouthWait = 0;

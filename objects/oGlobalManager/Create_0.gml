@@ -22,6 +22,6 @@ global.noSave = false;
 global.atBoss = false;
 
 // Change volume
-audio_master_gain(0.5);
+audio_master_gain(0);
 
 room_goto_next();
