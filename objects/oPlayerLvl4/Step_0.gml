@@ -100,7 +100,7 @@ if (_enemy != noone and hurt <= 0 and allowMovement) {
 		_enemy.destroy = true;	
 	}
 	hurt = 60;
-	hp--;
+	//hp--;
 	if (hp == 0) allowMovement = false;
 	audio_play_sound(snPlayerDie,1,false);
 }

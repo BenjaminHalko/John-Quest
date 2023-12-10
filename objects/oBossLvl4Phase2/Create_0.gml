@@ -30,6 +30,8 @@ shotFireball = false;
 mouthWait = 0;
 
 // Eyes
+instance_create_depth(x,y,depth-4,oBossLvl4Eyes);
 shootEyes = false;
+shootEyesPercent = 0;
 eye1 = noone;
 eye2 = noone;

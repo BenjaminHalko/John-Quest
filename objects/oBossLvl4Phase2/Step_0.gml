@@ -62,6 +62,51 @@ if (openMouth) {
 	mouthBurnPercent = 0.5;
 }
 
+// Shoot eyes
+if (keyboard_check_pressed(ord("E"))) shootEyes = !shootEyes;
+shootEyesPercent = ApproachFade(shootEyesPercent,shootEyes,0.2,0.6);
+if (eye1 == noone) {
+	if (shootEyes) {
+		eye1 = instance_create_depth(x+96,y-30,depth-3,oBossLvl4ShieldEye);
+		eye1.scale = 0;
+		eye1.red = true;
+		eye1.image_xscale = 0;
+		eye1.image_yscale = 0;
+		eye1.hp = 5;
+	}
+} else {
+	eye1.x = x+96;
+	eye1.y = y-30;
+	eye1.scale = Approach(eye1.scale,0.8,0.05);
+	if (eye1.scale == 0.8) {
+		eye1.depth = depth-5;
+		eye1.spd = 4;
+		eye1.dir = point_direction(eye1.x,eye1.y,oPlayer.x,oPlayer.y)+random_range(-50,50);
+		eye1 = noone;
+	}
+}
+	
+if (eye2 == noone) {
+	if (shootEyes and eye1 != noone and eye1.scale > 0.4) {
+		eye2 = instance_create_depth(x+162,y-26,depth-3,oBossLvl4ShieldEye);
+		eye2.scale = 0;
+		eye2.red = true;
+		eye2.image_xscale = 0;
+		eye2.image_yscale = 0;
+		eye2.hp = 5;
+	}
+} else {
+	eye2.scale = Approach(eye2.scale,0.8,0.05);
+	eye2.x = x+162;
+	eye2.y = y-26;
+	if (eye2.scale == 0.8) {
+		eye2.depth = depth-5;
+		eye2.spd = 4;
+		eye2.dir = point_direction(eye2.x,eye2.y,oPlayer.x,oPlayer.y)+random_range(-50,50);
+		eye2 = noone;
+	}
+}
+
 // Kill Player
 if (oPlayer.x < x) {
 	oPlayer.hp = 0;

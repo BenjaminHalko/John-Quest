@@ -8,7 +8,7 @@ function DrawLvl4BossEye(_focusX, _focusY) {
 		shader_set_uniform_f(global.uFlashPercent,flash);
 		shader_set_uniform_f(global.uFlashColor, 237 / 255, 0, 100 / 255);
 	}
-	draw_sprite(sprite_index,0,xOffset,yOffset);
+	draw_sprite_ext(sprite_index,0,xOffset,yOffset,1,1,0,red ? c_black : c_white,1);
 	if (flash != 0) shader_reset();
 	
 	gpu_set_colorwriteenable(1,1,1,0);
@@ -22,7 +22,7 @@ function DrawLvl4BossEye(_focusX, _focusY) {
 		var _col = make_color_hsv(random(255),255,255);
 		shader_set_uniform_f(global.uFlashColor, color_get_red(_col)/255, color_get_green(_col)/255, color_get_blue(_col)/255);
 	}
-	draw_sprite_ext(sprite_index,1,xOffset+lengthdir_x(_dist,_angle),yOffset+lengthdir_y(_dist,_angle),1-flash*0.25,1+flash*0.5,0,c_white,1);
+	draw_sprite_ext(sprite_index,1,xOffset+lengthdir_x(_dist,_angle),yOffset+lengthdir_y(_dist,_angle),(1-flash*0.25)/(1+red),1+flash*0.5,0,red ? c_red : c_black,1);
 	if (flash != 0) shader_reset();
 	
 	gpu_set_colorwriteenable(1,1,1,1);
