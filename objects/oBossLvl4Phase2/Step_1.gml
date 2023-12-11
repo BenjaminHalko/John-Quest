@@ -2,8 +2,6 @@
 
 enableLive;
 
-event_inherited();
-
 // Intro
 if (intro) {
 	if (stepCounter == 5) {
@@ -39,8 +37,8 @@ if (fall) {
 	if (!intro and x < oCamera.x-300) x += 2.5;
 }
 y = lerp(yStepTarget,yStepBegin,stepPercent);
-x = min(x,12970);
-if (x == 12970 and stepPercent == 0) {
+x = min(x,stopX);
+if (x == stopX and stepPercent == 0) {
 	step = false;
 }
 
@@ -159,5 +157,5 @@ if (oPlayer.x < x) {
 }
 
 if (place_meeting(x,y,oPlayer) and oPlayer.hurt > 0) {
-	oPlayer.hsp = oPlayer.movespd;	
+	oPlayer.hsp = oPlayer.movespd * 2;	
 }

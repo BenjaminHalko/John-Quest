@@ -6,9 +6,7 @@ event_inherited();
 
 oCamera.xOffset = -50;
 
-if (oCamera.boundary != noone) {
-	x = (oCamera.boundary.bbox_left + oCamera.boundary.bbox_right)/2 - 820;
-}
+x = 2944-820;//(oCamera.boundary.bbox_left + oCamera.boundary.bbox_right)/2 - 820;
 y = oPlayer.y;
 
 instance_destroy(oCameraBoundary);
@@ -48,3 +46,4 @@ intro = true;
 
 // Outro
 noAttackX = 12200;
+stopX = 12964;
