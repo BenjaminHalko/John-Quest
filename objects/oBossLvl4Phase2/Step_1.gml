@@ -2,6 +2,8 @@
 
 enableLive;
 
+if (keyboard_check_pressed(ord("P"))) dead = true;
+
 // Intro
 if (intro) {
 	if (stepCounter == 5) {
@@ -47,38 +49,40 @@ mouthYPercent = ApproachFade(mouthYPercent,openMouth,0.1,0.7);
 mouthY = mouthYPercent * 64;
 
 if (openMouth) {
-	repeat(2) {
-		var _len = 48;
-		var _dir = 180 + random_range(-120,120);
-		with(instance_create_depth(x+128+random_range(-2,2)+lengthdir_x(_len,_dir),y+72+random_range(-2,2)+lengthdir_y(_len,_dir),depth-2,oSquareParticle)) {
-			image_blend = merge_color(#EE371B,#EEA01B,random(1));
-			direction = _dir+180+random_range(-5,5);
-			speed = random(4);
-			speed += other.x - other.xprevious;
-			spd = 0.02;
-		}
-	}
-	var _fireballLeft = (!instance_exists(fireball) or fireball.go);
-	mouthBurnPercent = ApproachFade(mouthBurnPercent,0.5+createdFireball*(!_fireballLeft),0.05,0.7);
-	if (mouthYPercent >= 0.8) {
-		if (!createdFireball) {
-			createdFireball = true;
-			mouthWait = 60;
-			fireball = instance_create_depth(x+124,y+74,depth-1,oBossLvl4Fireball);
-		} else if (--mouthWait <= 0) {
-			if (_fireballLeft) {
-				openMouth = false;
-			} else {
-				ScreenShake(5,10);
-				fireball.go = true;
-				fireball.depth = depth - 5;
-				mouthWait = 30;
+	if (!dead) {
+		repeat(2) {
+			var _len = 48;
+			var _dir = 180 + random_range(-120,120);
+			with(instance_create_depth(x+128+random_range(-2,2)+lengthdir_x(_len,_dir),y+72+random_range(-2,2)+lengthdir_y(_len,_dir),depth-2,oSquareParticle)) {
+				image_blend = merge_color(#EE371B,#EEA01B,random(1));
+				direction = _dir+180+random_range(-5,5);
+				speed = random(4);
+				speed += other.x - other.xprevious;
+				spd = 0.02;
 			}
 		}
+		var _fireballLeft = (!instance_exists(fireball) or fireball.go);
+		mouthBurnPercent = ApproachFade(mouthBurnPercent,0.5+createdFireball*(!_fireballLeft),0.05,0.7);
+		if (mouthYPercent >= 0.8) {
+			if (!createdFireball) {
+				createdFireball = true;
+				mouthWait = 60;
+				fireball = instance_create_depth(x+124,y+74,depth-1,oBossLvl4Fireball);
+			} else if (--mouthWait <= 0) {
+				if (_fireballLeft) {
+					openMouth = false;
+				} else {
+					ScreenShake(5,10);
+					fireball.go = true;
+					fireball.depth = depth - 5;
+					mouthWait = 30;
+				}
+			}
 		
-		if (instance_exists(fireball) and !fireball.go) {
-			fireball.x = x+124;
-			fireball.y = y+74;
+			if (instance_exists(fireball) and !fireball.go) {
+				fireball.x = x+124;
+				fireball.y = y+74;
+			}
 		}
 	}
 } else {
@@ -158,4 +162,37 @@ if (oPlayer.x < x) {
 
 if (place_meeting(x,y,oPlayer) and oPlayer.hurt > 0) {
 	oPlayer.hsp = oPlayer.movespd * 2;	
+}
+
+// Dead
+if (dead) {
+	if (deadPercent == 0) {
+		step = false;
+		openMouth = true;
+		shootEyes = false;
+		instance_destroy(oBossLvl4Fireball);
+		xstart = x;
+		ystart = y;
+	}
+	deadPercent = ApproachFade(deadPercent,1,0.1,0.7);
+	x = xstart + random_range(-4,4);
+	y = ystart + random_range(-4,4);
+	
+	
+	if (--deadWait <= 0) {
+		var _num = instance_number(oBossLvl4LightBeam);
+		if (_num < 16) {
+			var _index = _num % 2;
+			var _pos = [[x+168,y-20],[x+96,y-24]];
+			instance_create_depth(_pos[_index][0],_pos[_index][1],depth-8,oBossLvl4LightBeam);
+			deadWait = 8;
+		} else {
+			var _x = random_range(bbox_left+32,bbox_right-32);	
+			var _y = random_range(bbox_top+32,bbox_bottom-32);
+			var _beam = instance_create_depth(_x,_y,depth-8,oBossLvl4LightBeam);
+			_beam.image_angle = point_direction((bbox_right+bbox_left)/2,(bbox_bottom+bbox_top)/2,_x,_y) + random_range(-10,10);
+			deadWait = 2;
+		}
+		
+	}
 }
