@@ -87,6 +87,7 @@
     {"name":"UI","order":8,"path":"folders/Level4/Boss Phase 1/UI.yy",},
     {"name":"Boss Phase 2","order":9,"path":"folders/Level4/Boss Phase 2.yy",},
     {"name":"BossSprites","order":1,"path":"folders/Level4/Boss Phase 2/BossSprites.yy",},
+    {"name":"Extra","order":5,"path":"folders/Level4/Boss Phase 2/Extra.yy",},
     {"name":"Enemies","order":7,"path":"folders/Level4/Enemies.yy",},
     {"name":"Global","order":2,"path":"folders/Level4/Global.yy",},
     {"name":"Cursor","order":1,"path":"folders/Level4/Global/Cursor.yy",},
@@ -103,7 +104,6 @@
     {"name":"Backgrounds","order":6,"path":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"name":"Title","order":12,"path":"folders/Title.yy",},
     {"name":"Audio","order":6,"path":"folders/Title/Audio.yy",},
-    {"name":"Extra","order":5,"path":"folders/Level4/Boss Phase 2/Extra.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},

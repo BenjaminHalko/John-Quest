@@ -156,6 +156,7 @@ if (intro) {
 				Save("lvl4","defeatedBoss",true);
 				Save("lvl4","x",bCenterX);
 				Save("lvl4","y",bCenterY);
+				instance_create_layer(0,0,"Boss",oBossLvl4Phase2);
 				instance_destroy(oBossLvl4Laser);
 				instance_destroy(oBossLvl4ShieldEye);
 				instance_destroy();

@@ -61,3 +61,5 @@ if (hp <= 0 or explode) {
 	}
 	instance_destroy();
 }
+
+if (x > oCamera.x + 300 and red) instance_destroy();

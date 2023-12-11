@@ -4,6 +4,15 @@ enableLive;
 
 event_inherited();
 
+// Intro
+if (intro) {
+	if (stepCounter == 5) {
+		step = false;
+		stepCounter++;
+		openMouth = true;
+	}
+}
+
 // Stepping
 if (fall) {
 	stepPercent = Approach(stepPercent,0,0.1);
@@ -11,21 +20,31 @@ if (fall) {
 		ScreenShake(5,15);
 		fall = false;
 		stepWait = 30;
-		yStepBegin = y-30;
+		if (x < oCamera.x-300 and !intro) stepWait = 10;
+		yStepBegin = y-50;
+		stepCounter++;
 	}
-	//x += 2;
+	x += 3.5;
+	if (!intro and x < oCamera.x-300) x += 2.5;
 } else if (--stepWait <= 0 and step) {
 	stepPercent = Approach(stepPercent,1,0.02);
 	if (stepPercent == 1) {
 		yStepTarget = oCamera.y+20;
+		if (x > 12900) {
+			yStepTarget = 1664;
+		}
 		fall = true;
 	}
-	//x += 1.5;
+	x += 3;
+	if (!intro and x < oCamera.x-300) x += 2.5;
 }
 y = lerp(yStepTarget,yStepBegin,stepPercent);
+x = min(x,12970);
+if (x == 12970 and stepPercent == 0) {
+	step = false;
+}
 
-// Mouth Fireball
-if (keyboard_check_pressed(ord("M"))) openMouth = !openMouth; 
+// Mouth Fireball 
 mouthYPercent = ApproachFade(mouthYPercent,openMouth,0.1,0.7);
 mouthY = mouthYPercent * 64;
 
@@ -37,6 +56,7 @@ if (openMouth) {
 			image_blend = merge_color(#EE371B,#EEA01B,random(1));
 			direction = _dir+180+random_range(-5,5);
 			speed = random(4);
+			speed += other.x - other.xprevious;
 			spd = 0.02;
 		}
 	}
@@ -53,17 +73,33 @@ if (openMouth) {
 			} else {
 				ScreenShake(5,10);
 				fireball.go = true;
+				fireball.depth = depth - 5;
 				mouthWait = 30;
 			}
+		}
+		
+		if (instance_exists(fireball) and !fireball.go) {
+			fireball.x = x+124;
+			fireball.y = y+74;
 		}
 	}
 } else {
 	createdFireball = false;
 	mouthBurnPercent = 0.5;
+	if (!step and intro) {
+		intro = false;
+		stepWait = 30;
+		step = true;
+		fall = false;
+	}
+	
+	if (!intro and --mouthOpenWait <= 0 and x < noAttackX) {
+		openMouth = true;
+		mouthOpenWait = random(60*2.5);
+	}
 }
 
 // Shoot eyes
-if (keyboard_check_pressed(ord("E"))) shootEyes = !shootEyes;
 shootEyesPercent = ApproachFade(shootEyesPercent,shootEyes,0.2,0.6);
 if (eye1 == noone) {
 	if (shootEyes) {
@@ -74,20 +110,20 @@ if (eye1 == noone) {
 		eye1.image_yscale = 0;
 		eye1.hp = 5;
 	}
-} else {
+} else if (instance_exists(eye1)) {
 	eye1.x = x+96;
 	eye1.y = y-30;
-	eye1.scale = Approach(eye1.scale,0.8,0.05);
+	eye1.scale = Approach(eye1.scale,0.8,0.06);
 	if (eye1.scale == 0.8) {
 		eye1.depth = depth-5;
-		eye1.spd = 4;
-		eye1.dir = point_direction(eye1.x,eye1.y,oPlayer.x,oPlayer.y)+random_range(-50,50);
+		eye1.spd = 8;
+		eye1.dir = point_direction(eye1.x,eye1.y,oPlayer.x,oPlayer.y)+random_range(-30,30);
 		eye1 = noone;
 	}
 }
 	
 if (eye2 == noone) {
-	if (shootEyes and eye1 != noone and eye1.scale > 0.4) {
+	if (shootEyes and instance_exists(eye1) and eye1.scale > 0.4) {
 		eye2 = instance_create_depth(x+162,y-26,depth-3,oBossLvl4ShieldEye);
 		eye2.scale = 0;
 		eye2.red = true;
@@ -95,15 +131,24 @@ if (eye2 == noone) {
 		eye2.image_yscale = 0;
 		eye2.hp = 5;
 	}
-} else {
-	eye2.scale = Approach(eye2.scale,0.8,0.05);
+} else if (instance_exists(eye2)) {
+	eye2.scale = Approach(eye2.scale,0.8,0.06);
 	eye2.x = x+162;
 	eye2.y = y-26;
 	if (eye2.scale == 0.8) {
 		eye2.depth = depth-5;
-		eye2.spd = 4;
-		eye2.dir = point_direction(eye2.x,eye2.y,oPlayer.x,oPlayer.y)+random_range(-50,50);
+		eye2.spd = 8;
+		eye2.dir = point_direction(eye2.x,eye2.y,oPlayer.x,oPlayer.y)+random_range(-30,30);
 		eye2 = noone;
+	}
+}
+
+if (--shootEyesWait <= 0 and !intro and (x < noAttackX or shootEyes)) {
+	shootEyes = !shootEyes;
+	if (shootEyes) shootEyesWait = 60*3;
+	else {
+		shootEyesWait = random(60*2.5);
+		if (x < noAttackX) openMouth = true;
 	}
 }
 

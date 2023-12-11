@@ -130,6 +130,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Level4/Boss Phase 1/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Boss Phase 2","folderPath":"folders/Level4/Boss Phase 2.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"BossSprites","folderPath":"folders/Level4/Boss Phase 2/BossSprites.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extra","folderPath":"folders/Level4/Boss Phase 2/Extra.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Level4/Enemies.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Global","folderPath":"folders/Level4/Global.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Cursor","folderPath":"folders/Level4/Global/Cursor.yy",},
@@ -146,7 +147,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Title/Audio.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extra","folderPath":"folders/Level4/Boss Phase 2/Extra.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
