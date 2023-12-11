@@ -46,4 +46,4 @@ intro = true;
 
 // Outro
 noAttackX = 12200;
-stopX = 12964;
+stopX = 12940;

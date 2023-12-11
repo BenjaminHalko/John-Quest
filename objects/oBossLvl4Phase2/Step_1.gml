@@ -29,7 +29,7 @@ if (fall) {
 	if (stepPercent == 1) {
 		yStepTarget = oCamera.y+20;
 		if (x > 12900) {
-			yStepTarget = 1664;
+			yStepTarget = 1660;
 		}
 		fall = true;
 	}
