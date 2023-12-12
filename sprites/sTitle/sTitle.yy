@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"48c641ad-d3f0-4905-ad8e-ca679bd8fd72","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 1,
   "parent": {
     "name": "Title",
     "path": "folders/Title.yy",
@@ -60,7 +60,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 134,
-    "yorigin": 58,
+    "yorigin": 0,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

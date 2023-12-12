@@ -8,7 +8,7 @@ for(var i = 0; i < array_length(stars); i++) {
 draw_set_alpha(1);
 
 if (title) {
-	draw_sprite(sTitle,0,floor((room_width-180)/2),floor(room_height/3));
+	draw_sprite(sTitle,0,floor((room_width-180)/2),32);
 	draw_sprite(sTitleBuilding, 1, room_width, room_height);
 	draw_sprite(sPlayerLvl1,0,350,room_height-buildingHeight+24);
 	
@@ -43,10 +43,10 @@ if (title) {
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+32+16*menuSelected);
 	} else {
 		draw_set_font(fRPG);
-		draw_text(_menuX-32,_menuY+4,"Programming - Benjamin\nLevel Design - Benjamin\nMusic & Sound FX - Benjamin\nCharacter Art - Morlan\nKey-Item Art - Morlan / Benjamin\nEnvironment Art\n  - Morlan / Haoxi / Benjamin");
+		draw_text(_menuX-32,_menuY-10,"Programming - Benjamin\nLevel Design - Benjamin\nMusic & Sound FX - Benjamin\nCharacter Art - Morlan\nKey-Item Art\n  - Morlan / Haoxi / Benjamin\nEnvironmental Art\n  - Morlan / Haoxi / Benjamin");
 		
 		draw_set_color(c_dkgray);
-		draw_text(_menuX-64,_menuY-10,"Thanks to everyone that made this possible");
+		draw_text(_menuX-32,_menuY-28,"Thanks to everyone that made this possible");
 	}
 } else {
 	draw_sprite(sTitleLandscape,0,0,room_height-48+smallerBuildingHeight*moveUpPercent * 1.7);

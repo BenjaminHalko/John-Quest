@@ -1,5 +1,6 @@
 {
   "FolderOrderSettings": [
+    {"name":"Credits","order":16,"path":"folders/Credits.yy",},
     {"name":"Global","order":10,"path":"folders/Global.yy",},
     {"name":"Camera","order":1,"path":"folders/Global/Camera.yy",},
     {"name":"Checkpoints","order":11,"path":"folders/Global/Checkpoints.yy",},
@@ -93,6 +94,7 @@
     {"name":"Cursor","order":1,"path":"folders/Level4/Global/Cursor.yy",},
     {"name":"Items","order":3,"path":"folders/Level4/Items.yy",},
     {"name":"Cannon","order":2,"path":"folders/Level4/Items/Cannon.yy",},
+    {"name":"Final Weapon","order":5,"path":"folders/Level4/Items/Final Weapon.yy",},
     {"name":"Level Objects","order":6,"path":"folders/Level4/Level Objects.yy",},
     {"name":"Door","order":1,"path":"folders/Level4/Level Objects/Door.yy",},
     {"name":"Sprites","order":1,"path":"folders/Level4/Level Objects/Door/Sprites.yy",},
@@ -103,8 +105,6 @@
     {"name":"Backgrounds","order":6,"path":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"name":"Title","order":12,"path":"folders/Title.yy",},
     {"name":"Audio","order":6,"path":"folders/Title/Audio.yy",},
-    {"name":"Final Weapon","order":5,"path":"folders/Level4/Items/Final Weapon.yy",},
-    {"name":"Credits","order":16,"path":"folders/Credits.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
@@ -405,6 +405,7 @@
     {"name":"sCursorForward","order":3,"path":"sprites/sCursorForward/sCursorForward.yy",},
     {"name":"EntityHitSolid","order":1,"path":"scripts/EntityHitSolid/EntityHitSolid.yy",},
     {"name":"snFireballShoot","order":8,"path":"sounds/snFireballShoot/snFireballShoot.yy",},
+    {"name":"sGameMaker","order":2,"path":"sprites/sGameMaker/sGameMaker.yy",},
     {"name":"oBossLvl2List","order":8,"path":"objects/oBossLvl2List/oBossLvl2List.yy",},
     {"name":"PlayerCollision","order":2,"path":"scripts/PlayerCollision/PlayerCollision.yy",},
     {"name":"TriangleJumpCurve","order":4,"path":"animcurves/TriangleJumpCurve/TriangleJumpCurve.yy",},
