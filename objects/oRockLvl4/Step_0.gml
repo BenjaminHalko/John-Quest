@@ -1,5 +1,7 @@
 /// @desc
 
+enableLive;
+
 vsp += 0.1;
 
 if (!place_meeting(x,y,oRockNoCollision)) collidable = true;
@@ -31,6 +33,10 @@ if (collidable) {
 
 	var _dir = point_direction(0,0,hsp,vsp);
 	if (place_meeting(x+lengthdir_x(1,_dir),y+lengthdir_y(1,_dir),[pCollision,oPlayer])) {
+		if (vsp > 1+(object_index == oBigRock)) {
+			if (isOnScreen()) audio_play_sound(snThud,1,false,1);
+			if (object_index == oBigRock) ScreenShake(5,10);
+		}
 		vsp = 0;
 	}
 	hsp = Approach(hsp,0,0.005);
