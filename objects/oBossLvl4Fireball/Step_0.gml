@@ -12,7 +12,7 @@ if (!go) {
 } else {
 	speed = ApproachFade(max(5,speed),8,1,0.7);	
 }
-image_xscale = ApproachFade(image_xscale,1,0.02,0.7);
+image_xscale = ApproachFade(image_xscale,1,0.02-0.01*(oBossLvl4Phase2.x >= oBossLvl4Phase2.stopMouthX),0.7);
 image_yscale = image_xscale;
 
 var _len = random(40);

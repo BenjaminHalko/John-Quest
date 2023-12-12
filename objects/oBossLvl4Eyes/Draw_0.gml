@@ -9,5 +9,5 @@ if (oBossLvl4Phase2.shootEyesPercent != 0) {
 }
 
 if (oBossLvl4Phase2.deadPercent != 0) {
-	draw_sprite_ext(sprite_index,7,round(x),round(y),1,1,0,c_white,oBossLvl4Phase2.deadPercent);	
+	draw_sprite_ext(sprite_index,7,round(x),round(y),1,1,0,choose(c_white,make_color_hsv(random(360),50,255)),oBossLvl4Phase2.deadPercent);	
 }

@@ -23,6 +23,7 @@ if (percent == 1)  {
 		createdTriangles = true;
 		instance_destroy(oBossLvl4Mouth);
 		instance_destroy(oBossLvl4Eyes);
+		instance_destroy(oFinalWeapon);
 		instance_destroy(oBossLvl4Phase2);
 		destroyCursors();
 		wait = 15;

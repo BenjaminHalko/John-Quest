@@ -45,7 +45,7 @@ if (x == stopX and stepPercent == 0) {
 }
 
 // Mouth Fireball 
-mouthYPercent = ApproachFade(mouthYPercent,openMouth,0.1,0.7);
+mouthYPercent = ApproachFade(mouthYPercent,openMouth,0.1-0.088*(x >= stopMouthX),0.7);
 mouthY = mouthYPercent * 64;
 
 if (openMouth) {
@@ -63,12 +63,12 @@ if (openMouth) {
 		}
 		var _fireballLeft = (!instance_exists(fireball) or fireball.go);
 		mouthBurnPercent = ApproachFade(mouthBurnPercent,0.5+createdFireball*(!_fireballLeft),0.05,0.7);
-		if (mouthYPercent >= 0.8) {
+		if (mouthYPercent >= 0.8-0.5*(x >= stopMouthX)) {
 			if (!createdFireball) {
 				createdFireball = true;
 				mouthWait = 60;
 				fireball = instance_create_depth(x+124,y+74,depth-1,oBossLvl4Fireball);
-			} else if (--mouthWait <= 0 and x != stopX) {
+			} else if (--mouthWait <= 0 and x < stopMouthX) {
 				if (_fireballLeft) {
 					openMouth = false;
 				} else {
@@ -95,7 +95,7 @@ if (openMouth) {
 		fall = false;
 	}
 	
-	if (!intro and --mouthOpenWait <= 0 and (x < noAttackX or (x == stopX and !step))) {
+	if (!intro and --mouthOpenWait <= 0 and x < noAttackX) or (x >= stopMouthX) {
 		openMouth = true;
 		mouthOpenWait = random(60*2.5);
 	}
@@ -175,18 +175,19 @@ if (dead) {
 		depth = oPlayer.depth + 10;
 		oBossLvl4Eyes.depth = depth-4;
 		oBossLvl4Mouth.depth = depth-2;
+		ScreenShake(50,40);
 	}
 	deadPercent = ApproachFade(deadPercent,1,0.1,0.7);
 	
 	var _num = instance_number(oBossLvl4LightBeam);
-	ScreenShake(_num/48*5+2,20);
+	ScreenShake(_num/48*3+7,20);
 	
-	if (--deadWait <= 0 and _num < 64) {
+	if (--deadWait <= 0 and _num < 72) {
 		if (_num < 16) {
 			var _index = _num % 2;
 			var _pos = [[x+168,y-20],[x+96,y-24]];
 			instance_create_depth(_pos[_index][0],_pos[_index][1],depth-8,oBossLvl4LightBeam);
-			deadWait = 8;
+			deadWait = 14;
 		} else {
 			var _x = random_range(bbox_left+32,bbox_right-32);	
 			var _y = random_range(bbox_top+32,bbox_bottom-32);
@@ -195,7 +196,7 @@ if (dead) {
 			deadWait = 2;
 		}
 		
-		if (_num > 30 and !instance_exists(oBossLvl4Outro)) {
+		if (_num > 64 and !instance_exists(oBossLvl4Outro)) {
 			instance_create_depth(0,0,oPlayer.depth-5,oBossLvl4Outro);	
 		}
 	}

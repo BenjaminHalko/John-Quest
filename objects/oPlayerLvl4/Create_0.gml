@@ -17,7 +17,8 @@ changeItem = false;
 item = 0;
 itemSprites = [
 	sPlayerLaserGun,
-	sPlayerCannon
+	sPlayerCannon,
+	sFinalWeapon
 ];
 itemCircleNum = sprite_get_number(sPlayerItemCircle);
 itemCurve = animcurve_get_channel(PlayerItemCurves,"item");
@@ -35,3 +36,6 @@ propellerNum = sprite_get_number(sPlayerPropeller);
 propellerIndex = 0;
 yscale = 1;
 wavePercent = 1;
+
+// finalSpin
+finalSpin = 0;

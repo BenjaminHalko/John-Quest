@@ -264,6 +264,7 @@
     {"name":"sBossLvl1Small","order":5,"path":"sprites/sBossLvl1Small/sBossLvl1Small.yy",},
     {"name":"fAmmo","order":2,"path":"fonts/fAmmo/fAmmo.yy",},
     {"name":"PlayerThrow","order":1,"path":"scripts/PlayerThrow/PlayerThrow.yy",},
+    {"name":"sFinalWeaponLightBeam","order":2,"path":"sprites/sFinalWeaponLightBeam/sFinalWeaponLightBeam.yy",},
     {"name":"oCaveTrigger","order":2,"path":"objects/oCaveTrigger/oCaveTrigger.yy",},
     {"name":"PlayerDropItem","order":3,"path":"scripts/PlayerDropItem/PlayerDropItem.yy",},
     {"name":"sBossLvl1Snake","order":1,"path":"sprites/sBossLvl1Snake/sBossLvl1Snake.yy",},

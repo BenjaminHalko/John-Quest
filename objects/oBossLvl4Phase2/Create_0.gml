@@ -47,7 +47,8 @@ intro = false;
 // Outro
 noAttackX = 12000;
 stopX = 12940;
+stopMouthX = stopX-16;
 
 dead = false;
 deadPercent = 0;
-deadWait = 120;
+deadWait = 60;
