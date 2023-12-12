@@ -10,6 +10,7 @@ if (intro) {
 		step = false;
 		stepCounter++;
 		openMouth = true;
+		depth = oPlayer.depth + 10;
 	}
 }
 

@@ -147,6 +147,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Title/Audio.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Final Weapon","folderPath":"folders/Level4/Items/Final Weapon.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -189,6 +190,7 @@
     {"id":{"name":"sSlime","path":"sprites/sSlime/sSlime.yy",},},
     {"id":{"name":"oEyeLvl4","path":"objects/oEyeLvl4/oEyeLvl4.yy",},},
     {"id":{"name":"sBgMapping","path":"sprites/sBgMapping/sBgMapping.yy",},},
+    {"id":{"name":"sFinalWeapon","path":"sprites/sFinalWeapon/sFinalWeapon.yy",},},
     {"id":{"name":"sSwordNPC","path":"sprites/sSwordNPC/sSwordNPC.yy",},},
     {"id":{"name":"sBossLvl2Eye","path":"sprites/sBossLvl2Eye/sBossLvl2Eye.yy",},},
     {"id":{"name":"oSquareParticle","path":"objects/oSquareParticle/oSquareParticle.yy",},},
@@ -199,6 +201,7 @@
     {"id":{"name":"oTitle","path":"objects/oTitle/oTitle.yy",},},
     {"id":{"name":"oBossLvl1HomingTrail","path":"objects/oBossLvl1HomingTrail/oBossLvl1HomingTrail.yy",},},
     {"id":{"name":"GMLive_tools","path":"scripts/GMLive_tools/GMLive_tools.yy",},},
+    {"id":{"name":"oBossLvl4Outro","path":"objects/oBossLvl4Outro/oBossLvl4Outro.yy",},},
     {"id":{"name":"sBush","path":"sprites/sBush/sBush.yy",},},
     {"id":{"name":"sPlayerLaserGun","path":"sprites/sPlayerLaserGun/sPlayerLaserGun.yy",},},
     {"id":{"name":"sPlayerHealth","path":"sprites/sPlayerHealth/sPlayerHealth.yy",},},

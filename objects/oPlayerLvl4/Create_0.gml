@@ -34,3 +34,4 @@ propellerSpd = sprite_get_speed(sPlayerPropeller) / 60;
 propellerNum = sprite_get_number(sPlayerPropeller);
 propellerIndex = 0;
 yscale = 1;
+wavePercent = 1;
