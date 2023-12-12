@@ -34,4 +34,6 @@ function ActivateBombNPC()
 
 function ActivateBombNPCItemGot() {
 	NewTextBox("Legends has it, you can\npress [SHIFT] to swap items.",2);
+	NewTextBox("By the way, have you seen that big\nrock blocking the cave in the village?",2);
+	NewTextBox("People say it was blocked due to the\nexcessive amount of evil coming from inside...",2);
 }

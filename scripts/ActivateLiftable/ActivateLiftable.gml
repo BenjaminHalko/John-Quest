@@ -8,7 +8,6 @@ function ActivateLiftable(argument0) {
 		with(global.iLifted)
 		{
 			lifted = true;
-			persistent = true;
 		}
 	}
 }
