@@ -44,6 +44,7 @@ function destroyCursors() {
 			sprite_delete(global.cursors[i]);
 		}
 	}
+	global.cursors = [];
 }
 
 function createCursors() {

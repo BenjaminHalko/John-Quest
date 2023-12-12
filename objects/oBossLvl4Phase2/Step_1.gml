@@ -10,7 +10,6 @@ if (intro) {
 		step = false;
 		stepCounter++;
 		openMouth = true;
-		depth = oPlayer.depth + 10;
 	}
 }
 
@@ -174,14 +173,16 @@ if (dead) {
 		instance_destroy(oBossLvl4Fireball);
 		xstart = x;
 		ystart = y;
+		depth = oPlayer.depth + 10;
+		oBossLvl4Eyes.depth = depth-4;
+		oBossLvl4Mouth.depth = depth-2;
 	}
 	deadPercent = ApproachFade(deadPercent,1,0.1,0.7);
-	x = xstart + random_range(-4,4);
-	y = ystart + random_range(-4,4);
 	
+	var _num = instance_number(oBossLvl4LightBeam);
+	ScreenShake(_num/48*5+2,20);
 	
-	if (--deadWait <= 0) {
-		var _num = instance_number(oBossLvl4LightBeam);
+	if (--deadWait <= 0 and _num < 64) {
 		if (_num < 16) {
 			var _index = _num % 2;
 			var _pos = [[x+168,y-20],[x+96,y-24]];
@@ -195,5 +196,8 @@ if (dead) {
 			deadWait = 2;
 		}
 		
+		if (_num > 30 and !instance_exists(oBossLvl4Outro)) {
+			instance_create_depth(0,0,oPlayer.depth-5,oBossLvl4Outro);	
+		}
 	}
 }
