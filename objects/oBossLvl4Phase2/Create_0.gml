@@ -6,7 +6,7 @@ event_inherited();
 
 oCamera.xOffset = -50;
 
-x = 2944-820;
+//x = 2944-820;
 y = oPlayer.y;
 
 instance_destroy(oCameraBoundary);
@@ -42,10 +42,10 @@ eye2 = noone;
 shootEyesWait = -1;
 
 // Intro
-intro = true;
+intro = false;
 
 // Outro
-noAttackX = 12200;
+noAttackX = 12000;
 stopX = 12940;
 
 dead = false;

@@ -29,6 +29,10 @@ switch (roomTo) {
 		if (roomTo == rLvl4) transitionType = TRANSITION.FADE;
 		else transitionType = TRANSITION.SQUARES;
 	} break;
+	case rCredits: {
+		transitionType = TRANSITION.FADE;
+		transitionSpd = 0.02;
+	} break;
 }
 
 behindPlayer = false;

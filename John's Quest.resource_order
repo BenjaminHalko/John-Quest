@@ -104,6 +104,7 @@
     {"name":"Title","order":12,"path":"folders/Title.yy",},
     {"name":"Audio","order":6,"path":"folders/Title/Audio.yy",},
     {"name":"Final Weapon","order":5,"path":"folders/Level4/Items/Final Weapon.yy",},
+    {"name":"Credits","order":16,"path":"folders/Credits.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},
@@ -248,6 +249,7 @@
     {"name":"oBossLvl1ShockFade","order":2,"path":"objects/oBossLvl1ShockFade/oBossLvl1ShockFade.yy",},
     {"name":"sPlantB","order":2,"path":"sprites/sPlantB/sPlantB.yy",},
     {"name":"snExplosion","order":3,"path":"sounds/snExplosion/snExplosion.yy",},
+    {"name":"oFinalWeapon","order":1,"path":"objects/oFinalWeapon/oFinalWeapon.yy",},
     {"name":"InventoryFunctions","order":6,"path":"scripts/InventoryFunctions/InventoryFunctions.yy",},
     {"name":"sRockPile","order":1,"path":"sprites/sRockPile/sRockPile.yy",},
     {"name":"sGround2","order":8,"path":"sprites/sGround2/sGround2.yy",},
@@ -325,6 +327,7 @@
     {"name":"snCoinDesc","order":1,"path":"sounds/snCoinDesc/snCoinDesc.yy",},
     {"name":"oBossLvl4Trigger","order":9,"path":"objects/oBossLvl4Trigger/oBossLvl4Trigger.yy",},
     {"name":"sLvl2Tiles","order":1,"path":"sprites/sLvl2Tiles/sLvl2Tiles.yy",},
+    {"name":"oCredits","order":1,"path":"objects/oCredits/oCredits.yy",},
     {"name":"sPlayerBulletsLvl4Mask","order":2,"path":"sprites/sPlayerBulletsLvl4Mask/sPlayerBulletsLvl4Mask.yy",},
     {"name":"snLaserDesc","order":16,"path":"sounds/snLaserDesc/snLaserDesc.yy",},
     {"name":"sTunnel2","order":2,"path":"sprites/sTunnel2/sTunnel2.yy",},

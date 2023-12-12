@@ -60,3 +60,17 @@ if (_rock != noone and isOnScreen()) {
 	instance_destroy(_rock);
 	instance_destroy();
 }
+
+if (oBossLvl4Phase2.dead) {
+	repeat(50) {
+		_len = random(40);
+		_dir = random(360);
+		with(instance_create_depth(x+lengthdir_x(_len,_dir),y+lengthdir_y(_len,_dir),depth-1,oSquareParticle)) {
+			image_blend = merge_color(#EE371B,#EEA01B,random(1));
+			direction = random(360);
+			speed = random(3);
+			spd = 0.05;
+		}
+	}
+	instance_destroy();
+}

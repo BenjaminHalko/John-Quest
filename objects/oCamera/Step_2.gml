@@ -15,14 +15,20 @@ if(instance_exists(follow)) {
 x += (xTo - x) / 12;
 y += (yTo - y) / 12;
 
+//Keep Camera center inside room
+x = clamp(x, viewWidthHalf, room_width-viewWidthHalf);
+y = clamp(y, viewHeightHalf, room_height-viewHeightHalf);
+
 //Screenshake
 x += random_range(-shakeRemain,shakeRemain);
 y += random_range(-shakeRemain,shakeRemain);
 
 shakeRemain = max(0, shakeRemain - ((1/shakeLength) * shakeMagnitude));
 
-//Keep Camera center inside room
-x = clamp(x, viewWidthHalf, room_width-viewWidthHalf);
-y = clamp(y, viewHeightHalf, room_height-viewHeightHalf);
+if (room == rLvl3) {
+	//Keep Camera center inside room
+	x = clamp(x, viewWidthHalf, room_width-viewWidthHalf);
+	y = clamp(y, viewHeightHalf, room_height-viewHeightHalf);	
+}
 
 camera_set_view_pos(cam,round(x) - viewWidthHalf,round(y) - viewHeightHalf);

@@ -68,7 +68,7 @@ if (openMouth) {
 				createdFireball = true;
 				mouthWait = 60;
 				fireball = instance_create_depth(x+124,y+74,depth-1,oBossLvl4Fireball);
-			} else if (--mouthWait <= 0) {
+			} else if (--mouthWait <= 0 and x != stopX) {
 				if (_fireballLeft) {
 					openMouth = false;
 				} else {
@@ -95,7 +95,7 @@ if (openMouth) {
 		fall = false;
 	}
 	
-	if (!intro and --mouthOpenWait <= 0 and x < noAttackX) {
+	if (!intro and --mouthOpenWait <= 0 and (x < noAttackX or (x == stopX and !step))) {
 		openMouth = true;
 		mouthOpenWait = random(60*2.5);
 	}
@@ -170,7 +170,6 @@ if (dead) {
 		step = false;
 		openMouth = true;
 		shootEyes = false;
-		instance_destroy(oBossLvl4Fireball);
 		xstart = x;
 		ystart = y;
 		depth = oPlayer.depth + 10;
