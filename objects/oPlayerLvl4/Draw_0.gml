@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 var _y = Wave(-2,2,2,0.8);
 var _spriteAngle = (x - xprevious) * -10;
 var _yscale = (1 + (y - yprevious) * -0.02) * yscale;

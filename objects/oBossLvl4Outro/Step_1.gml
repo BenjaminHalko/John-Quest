@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 percent = ApproachFade(percent,1,0.005,0.7);
 oPlayer.wavePercent = 1 - percent;
 

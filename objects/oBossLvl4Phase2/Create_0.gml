@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 event_inherited();
 
 oCamera.xOffset = -50;

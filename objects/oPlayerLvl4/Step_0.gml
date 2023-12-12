@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 Input()
 var _moveX = (keyRight - keyLeft) * allowMovement;
 var _moveY = (keyDown - keyUp) * allowMovement;

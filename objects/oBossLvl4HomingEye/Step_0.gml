@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (waitPercent == 1) {
 	if (dirPercent != 1) {
 		targetDir = point_direction(x,y,targetX,targetY);

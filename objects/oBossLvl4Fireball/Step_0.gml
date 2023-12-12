@@ -1,6 +1,5 @@
 /// @desc 
 
-enableLive;
 if (!go) {
 	if (intro) {
 		var _rock = instance_nearest(x,y,oBigRock);

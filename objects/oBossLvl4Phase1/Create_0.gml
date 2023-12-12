@@ -1,6 +1,5 @@
 /// @desc 
 
-enableLive;
 event_inherited();
 
 enum BOSSLVL4 {

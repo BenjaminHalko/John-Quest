@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 if (draw) {
 	image_angle -= 1;
 

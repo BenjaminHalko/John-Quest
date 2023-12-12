@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 percent = 0;
 playerMovePercent = 0;
 oPlayer.allowMovement = false;

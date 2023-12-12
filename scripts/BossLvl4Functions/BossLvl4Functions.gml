@@ -1,6 +1,4 @@
 function DrawLvl4BossEye(_focusX, _focusY) {
-	if (live_call(_focusX, _focusY)) return live_result;
-	
 	surface_set_target(surf);
 	draw_clear_alpha(c_black,0);
 	if (flash != 0) {
@@ -35,8 +33,6 @@ function DrawLvl4BossEye(_focusX, _focusY) {
 }
 
 function HomingEyeInit() {
-	if (live_call()) return live_result;
-	
 	targetDir = 0;
 	moveDir = 0;
 	dirPercent = 0;

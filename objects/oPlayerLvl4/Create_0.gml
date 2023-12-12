@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 allowMovement = true;
 
 // spd

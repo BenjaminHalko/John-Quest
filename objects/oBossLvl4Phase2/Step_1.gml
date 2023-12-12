@@ -1,9 +1,5 @@
 /// @desc 
 
-enableLive;
-
-if (keyboard_check_pressed(ord("P"))) dead = true;
-
 // Intro
 if (intro) {
 	if (stepCounter == 5) {
