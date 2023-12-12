@@ -10,6 +10,7 @@ if (global.audioTick) {
 	
 	if (global.audioBeat % 4 == beatOffset and !instance_exists(oIntroLvl1)) {
 		spike = instance_create_depth(x,y,depth+1,oSpike);
+		spike.visible = visible;
 		with(spike) {
 			image_angle = other.image_angle;
 			image_xscale = other.image_xscale;

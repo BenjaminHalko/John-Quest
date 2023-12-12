@@ -72,9 +72,6 @@ hurtPlayer = function() {
 			respawnPercent = -1;
 			allowDash = true;
 			audio_play_sound(snPlayerDie,1,false);
-			with (oDebug) {
-				deathCounter++;
-			}
 		}
 	}
 }
