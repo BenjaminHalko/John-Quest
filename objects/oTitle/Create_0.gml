@@ -79,7 +79,7 @@ text = [
 ];
 
 startUpPos = 0;
-music = audio_play_sound(mOpening,1,false);
+music = -1;
 musicLength = audio_sound_length(music)-0.5;
 moveUpCurve = animcurve_get_channel(TitleCurves,"moveUp");
 blend = 0;

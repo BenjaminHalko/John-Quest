@@ -14,7 +14,11 @@ if (moveUpPercent > 0.1) {
 	}
 }
 
-if (title) {
+if (music == -1) {
+	if (!instance_exists(oTransition)) {
+		music = audio_play_sound(mOpening,1,false);	
+	}
+} else if (title) {
 	var _select = function() {
 		audio_stop_sound(music);
 		audio_play_sound(snItemGet, 1, false);

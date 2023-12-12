@@ -583,13 +583,13 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rCredits","path":"rooms/rCredits/rCredits.yy",},},
     {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"roomId":{"name":"rLvl1","path":"rooms/rLvl1/rLvl1.yy",},},
     {"roomId":{"name":"rLvl2","path":"rooms/rLvl2/rLvl2.yy",},},
     {"roomId":{"name":"rLvl3","path":"rooms/rLvl3/rLvl3.yy",},},
     {"roomId":{"name":"rLvl3Intro","path":"rooms/rLvl3Intro/rLvl3Intro.yy",},},
     {"roomId":{"name":"rLvl4","path":"rooms/rLvl4/rLvl4.yy",},},
+    {"roomId":{"name":"rCredits","path":"rooms/rCredits/rCredits.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

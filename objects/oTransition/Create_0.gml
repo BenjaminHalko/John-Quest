@@ -33,6 +33,9 @@ switch (roomTo) {
 		transitionType = TRANSITION.FADE;
 		transitionSpd = 0.02;
 	} break;
+	case rTitle: {
+		transitionType = TRANSITION.FADE;
+	} break;
 }
 
 behindPlayer = false;
