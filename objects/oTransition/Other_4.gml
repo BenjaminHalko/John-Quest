@@ -1,5 +1,7 @@
 /// @desc 
 
+if (room == rInit) exit;
+
 if (behindPlayer and instance_exists(oPlayer)) {
 	depth = -100000;
 	oPlayer.depth = depth - 1;

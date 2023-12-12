@@ -444,7 +444,6 @@
     {"id":{"name":"snSwordDesc","path":"sounds/snSwordDesc/snSwordDesc.yy",},},
     {"id":{"name":"PlayerStateDead","path":"scripts/PlayerStateDead/PlayerStateDead.yy",},},
     {"id":{"name":"oFragment","path":"objects/oFragment/oFragment.yy",},},
-    {"id":{"name":"oDebug","path":"objects/oDebug/oDebug.yy",},},
     {"id":{"name":"oBossLvl3","path":"objects/oBossLvl3/oBossLvl3.yy",},},
     {"id":{"name":"sSpike","path":"sprites/sSpike/sSpike.yy",},},
     {"id":{"name":"oBoulder","path":"objects/oBoulder/oBoulder.yy",},},

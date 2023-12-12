@@ -305,7 +305,6 @@
     {"name":"snSwordDesc","order":15,"path":"sounds/snSwordDesc/snSwordDesc.yy",},
     {"name":"PlayerStateDead","order":6,"path":"scripts/PlayerStateDead/PlayerStateDead.yy",},
     {"name":"oFragment","order":1,"path":"objects/oFragment/oFragment.yy",},
-    {"name":"oDebug","order":9,"path":"objects/oDebug/oDebug.yy",},
     {"name":"oIntroLvl1","order":4,"path":"objects/oIntroLvl1/oIntroLvl1.yy",},
     {"name":"snSignTalk","order":1,"path":"sounds/snSignTalk/snSignTalk.yy",},
     {"name":"PlayerStateGetItem","order":7,"path":"scripts/PlayerStateGetItem/PlayerStateGetItem.yy",},

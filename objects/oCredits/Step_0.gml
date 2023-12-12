@@ -16,3 +16,8 @@ if (!surface_exists(surf)) surf = surface_create(surfWidth,surfHeight);
 
 // Scroll Credits
 scrollPercent = Approach(scrollPercent,1,0.00025);
+
+if (scrollPercent == 1) {
+	Input();
+	if (keyAction) Transition(rTitle);
+}

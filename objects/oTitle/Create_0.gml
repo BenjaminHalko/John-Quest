@@ -80,6 +80,6 @@ text = [
 
 startUpPos = 0;
 music = -1;
-musicLength = audio_sound_length(music)-0.5;
+musicLength = audio_sound_length(mOpening)-0.5;
 moveUpCurve = animcurve_get_channel(TitleCurves,"moveUp");
 blend = 0;
