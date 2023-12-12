@@ -11,7 +11,7 @@ global.saveDir = Load("lvl2","dir",270,false);
 
 // Items
 global.playerEquipped = Load("lvl2","equipped",ITEM.SWORD,false);
-global.playerBombAmmo = Load("lvl2","bombAmmo",10,false);
+global.playerBombAmmo = Load("lvl2","bombAmmo",20,false);
 global.playerItemUnlocked = array_create(ITEM.TYPE_COUNT, false);
 global.playerItemUnlocked[ITEM.SWORD] = Load("lvl2","unlockedSword",false,false);
 global.playerItemUnlocked[ITEM.BOMB] = Load("lvl2","unlockedBomb",false,false);

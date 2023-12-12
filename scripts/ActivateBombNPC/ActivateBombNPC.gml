@@ -7,10 +7,10 @@ function ActivateBombNPC()
 		if (global.playerBombAmmo == 0) {
 			if (global.ranOutOfBombs == 0) {
 				NewTextBox("You used up all my precious bombs!!!\nI am so sad.\nLuckily, I have a few more...",2);
-				global.playerBombAmmo = 10;
+				global.playerBombAmmo = 20;
 			} else if (global.ranOutOfBombs == 1) {
 				NewTextBox("Again??? Are you wasting my\nbombs on purpose?!?\nI still have a few more...",2);
-				global.playerBombAmmo = 20;
+				global.playerBombAmmo = 30;
 			} else if (global.ranOutOfBombs == 2) {
 				NewTextBox("Why are you doing this...\nHere, take my entire stock! If you run\nout after this, I am not helping anymore.",2);
 				global.playerBombAmmo = 50;

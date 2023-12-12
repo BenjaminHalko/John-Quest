@@ -8,7 +8,7 @@
   },
   "bitDepth": 1,
   "bitRate": 128,
-  "compression": 0,
+  "compression": 2,
   "conversionMode": 0,
   "duration": 57.6,
   "parent": {
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mLvl2MusicCave.ogg",
   "type": 1,
-  "volume": 0.85,
+  "volume": 0.9,
 }
