@@ -35,6 +35,7 @@ switch (roomTo) {
 	} break;
 	case rTitle: {
 		transitionType = TRANSITION.FADE;
+		transitionSpd = 0.03;
 	} break;
 }
 
