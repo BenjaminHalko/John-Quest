@@ -1,9 +1,5 @@
 /// @desc Initialize Game
 
-// GMLive
-#macro enableLive if (live_call()) return live_result
-instance_create_layer(0,0,layer,obj_gmlive);
-
 // Lock resolution
 surface_resize(application_surface,480,270);
 

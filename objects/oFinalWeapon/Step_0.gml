@@ -10,6 +10,9 @@ if (draw) {
 		draw = false;
 		oPlayer.allowMovement = false;
 		oPlayer.item = 2;
+		audio_sound_loop(oBossLvl4Phase2.music, false);
+		audio_sound_set_track_position(oBossLvl4Phase2.music,60/150*44*4);
+		
 		destroyCursors();
 		ScreenShake(15,30);
 		
@@ -24,6 +27,10 @@ if (draw) {
 		}
 	}
 } else if (oBossLvl4Phase2.dead) {
+	if (!playedSound) {
+		audio_play_sound(snBossLvl1Roar,1,false,0.7,0);
+		playedSound = true;
+	}
 	if (oPlayer.knockBack == 0) oPlayer.knockBack = 5;
 	with(instance_create_depth(oPlayer.x-24-random(16),oPlayer.y+random_range(-16,16),depth-1,oSquareParticle)) {
 		direction = 180;
@@ -32,6 +39,7 @@ if (draw) {
 		spd = 0.09;
 		radius = 10;
 	}
+	
 } else {
 	var _len = point_distance(oPlayer.x,oPlayer.y,xstart,ystart);
 	var _dir = point_direction(oPlayer.x,oPlayer.y,xstart,ystart);

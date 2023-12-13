@@ -28,8 +28,10 @@ if (intro) {
 		} else if (introPhase == 3) {
 			if (introPercent == 0) {
 				ScreenShake(2,80);
-				audio_play_sound(snBossLvl1Roar,1,false,1,1);
-				audio_play_sound(snBossLvl4Roar,1,false);
+				audio_play_sound(snBossLvl1Roar,1,false,0.5,1);
+				audio_stop_sound(snLvl4Ambience);
+				music = audio_play_sound(mLvl4MusicBoss1,1,true);
+				audio_sound_loop_start(music,60/140*4*4);
 			}
 			
 			introPercent = ApproachFade(introPercent,1,0.05,0.8);
@@ -91,7 +93,7 @@ if (intro) {
 			y = bCenterY;
 			vSpd = -16;
 			audio_play_sound(snBossLvl1Roar,1,false);
-			audio_play_sound(snBossLvl4Roar,1,false);
+			audio_stop_sound(music);
 		}
 		
 		x = bCenterX + random_range(-8,8);

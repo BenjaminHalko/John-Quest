@@ -29,7 +29,7 @@ openMouth = false;
 createdFireball = false;
 shotFireball = false;
 mouthWait = 0;
-mouthOpenWait = 60*3;
+mouthOpenWait = 60/150*6*4;
 
 // Eyes
 instance_create_depth(x,y,depth-4,oBossLvl4Eyes);
@@ -50,3 +50,7 @@ stopMouthX = stopX-16;
 dead = false;
 deadPercent = 0;
 deadWait = 60;
+
+// Music
+music = audio_play_sound(mLvl4MusicBoss2,1,true,1,60/150*2*4);
+audio_sound_loop_start(music, 60/150*8*4);

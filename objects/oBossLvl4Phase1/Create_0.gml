@@ -93,3 +93,6 @@ introPercent = 0;
 repeat(6) {
 	array_push(eyes,instance_create_depth(x,y,depth+1,oBossLvl4ShieldEye));
 }
+
+// Music
+music = -1;

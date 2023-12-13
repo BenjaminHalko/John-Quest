@@ -41,7 +41,7 @@ if (x == stopX and stepPercent == 0) {
 }
 
 // Mouth Fireball 
-mouthYPercent = ApproachFade(mouthYPercent,openMouth,0.1-0.088*(x >= stopMouthX),0.7);
+mouthYPercent = ApproachFade(mouthYPercent,openMouth,0.1-0.088*(x >= stopMouthX or intro),0.7);
 mouthY = mouthYPercent * 64;
 
 if (openMouth) {

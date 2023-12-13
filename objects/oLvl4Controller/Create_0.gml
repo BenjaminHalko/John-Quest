@@ -66,3 +66,8 @@ if (global.saveX != -1) {
 	oPlayer.x = global.saveX;
 	oPlayer.y = global.saveY;
 }
+
+if (!global.defeatedBoss) {
+	music = audio_play_sound(snLvl4Ambience,1,true);
+}
+	
