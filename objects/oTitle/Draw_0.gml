@@ -46,7 +46,7 @@ if (title) {
 		draw_text(_menuX-32,_menuY-10,"Programming - Benjamin\nLevel Design - Benjamin\nMusic & Sound FX - Benjamin\nCharacter Art - Morlan\nKey-Item Art\n  - Morlan / Haoxi / Benjamin\nEnvironmental Art\n  - Morlan / Haoxi / Benjamin");
 		
 		draw_set_color(c_dkgray);
-		draw_text(_menuX-24,_menuY-28,"Thanks to everyone that made this possible");
+		draw_text(_menuX-32,_menuY-28,"Thanks to everyone that made this possible");
 	}
 } else {
 	draw_sprite(sTitleLandscape,0,0,room_height-48+smallerBuildingHeight*moveUpPercent * 1.7);
