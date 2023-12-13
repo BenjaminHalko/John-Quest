@@ -24,4 +24,4 @@ global.atBoss = false;
 // Change volume
 audio_master_gain(0.5);
 
-Transition(rCredits,1);
+Transition(rTitle,1);

@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 // Draw Stars
 for(var i = 0; i < array_length(stars); i++) {
 	draw_set_alpha(0.5 - cos(stars[i].alpha * pi) / 2);

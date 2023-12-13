@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 scrollPercent = 0;
 surf = -1;
 

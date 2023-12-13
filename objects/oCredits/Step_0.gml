@@ -1,7 +1,5 @@
 /// @desc 
 
-enableLive;
-
 for(var i = 0; i < array_length(stars); i++) {
 	stars[i].alpha += stars[i].spd;
 	if (stars[i].alpha >= 2) {

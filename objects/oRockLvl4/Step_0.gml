@@ -1,7 +1,5 @@
 /// @desc
 
-enableLive;
-
 vsp += 0.1;
 
 if (!place_meeting(x,y,oRockNoCollision)) collidable = true;

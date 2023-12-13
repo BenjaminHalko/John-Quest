@@ -1,5 +1,7 @@
 /// @desc 
 
+image_angle -= 5;
+
 if (!go) {
 	if (intro) {
 		var _rock = instance_nearest(x,y,oBigRock);
