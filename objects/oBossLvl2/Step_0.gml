@@ -4,11 +4,6 @@ if (global.playerHealth == 0) exit;
 
 depth = -y;
 
-if (keyboard_check_pressed(ord("D"))) {
-	shouldDie = true;
-	isTeleporting = true;
-}
-
 // Intro
 if (intro) {
 	if (disappearPercent == 0) {

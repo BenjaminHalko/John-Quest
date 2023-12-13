@@ -2,7 +2,7 @@
 
 percent = Approach(percent, leading, transitionSpd);
 if (percent == 1) {
-	audio_stop_all();
+	if (roomTo == rTitle or roomTo == rLvl4) audio_stop_all();
 	room_goto(roomTo);	
 } else if (percent == 0) {
 	if (behindPlayer) {

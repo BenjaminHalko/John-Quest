@@ -2,8 +2,6 @@
 
 event_inherited();
 
-if (keyboard_check_pressed(ord("P"))) dead = true;
-
 if (intro) {
 	if (--timer <= 0) {
 		if (introPhase == -1) {
@@ -454,7 +452,6 @@ if (intro) {
 						spd = 8;
 						dir = point_direction(other.x,other.y,x,y);
 					}
-					if (keyboard_check(vk_space)) dead = true;
 				}
 			} else {
 				if (--timer < 0) {
