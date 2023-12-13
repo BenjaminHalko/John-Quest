@@ -149,6 +149,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Title.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Title/Audio.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Audio","folderPath":"folders/Credits/Audio.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
@@ -290,6 +291,7 @@
     {"id":{"name":"sWallBack","path":"sprites/sWallBack/sWallBack.yy",},},
     {"id":{"name":"oAfterImage","path":"objects/oAfterImage/oAfterImage.yy",},},
     {"id":{"name":"sBossLvl4Phase2","path":"sprites/sBossLvl4Phase2/sBossLvl4Phase2.yy",},},
+    {"id":{"name":"mCredits","path":"sounds/mCredits/mCredits.yy",},},
     {"id":{"name":"sGround1","path":"sprites/sGround1/sGround1.yy",},},
     {"id":{"name":"oHeartDrop","path":"objects/oHeartDrop/oHeartDrop.yy",},},
     {"id":{"name":"rLvl3Intro","path":"rooms/rLvl3Intro/rLvl3Intro.yy",},},

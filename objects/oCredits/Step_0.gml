@@ -15,7 +15,8 @@ for(var i = 0; i < array_length(stars); i++) {
 if (!surface_exists(surf)) surf = surface_create(surfWidth,surfHeight);
 
 // Scroll Credits
-scrollPercent = Approach(scrollPercent,1,0.00025);
+if (audio_is_playing(mCredits)) scrollPercent = min(1,audio_sound_get_track_position(music) / musicLen);
+else scrollPercent = 1;
 
 if (scrollPercent == 1) {
 	Input();

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "mOpening",
+  "name": "mCredits",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 2,
   "conversionMode": 0,
-  "duration": 36.055874,
+  "duration": 85.111115,
   "parent": {
     "name": "Audio",
-    "path": "folders/Title/Audio.yy",
+    "path": "folders/Credits/Audio.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mOpening.ogg",
+  "soundFile": "mCredits.ogg",
   "type": 1,
-  "volume": 0.75,
+  "volume": 1.0,
 }

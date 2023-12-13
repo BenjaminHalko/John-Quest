@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mTitle.ogg",
   "type": 1,
-  "volume": 0.8,
+  "volume": 0.75,
 }

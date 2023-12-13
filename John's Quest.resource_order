@@ -105,6 +105,7 @@
     {"name":"Backgrounds","order":6,"path":"folders/Level4/Tilesets/Backgrounds.yy",},
     {"name":"Title","order":12,"path":"folders/Title.yy",},
     {"name":"Audio","order":6,"path":"folders/Title/Audio.yy",},
+    {"name":"Audio","order":3,"path":"folders/Credits/Audio.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBossLvl2","order":2,"path":"objects/oBossLvl2/oBossLvl2.yy",},

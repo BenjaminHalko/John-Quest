@@ -10,6 +10,9 @@ for(var i = 0; i < array_length(stars); i++) {
 }
 draw_set_alpha(1);
 
+// Draw Building
+draw_sprite(sTitleBuilding,1,room_width,room_height);
+
 var _x = surfWidth / 2;
 var _y = lerp(startY,endY,scrollPercent);
 

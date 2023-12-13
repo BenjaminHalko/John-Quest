@@ -21,13 +21,13 @@ repeat(100) {
 }
 
 // Credits
-titleOffset = 144;
+titleOffset = 128;
 firstOffset = 64;
 headerOffsetAfter = 0;
 headerOffset = 48;
 sectionOffset = 24;
 nameOffset = 16;
-logoOffsetBefore = 16;
+logoOffsetBefore = 32;
 finalCreditsOffset = 96;
 
 credits = [
@@ -66,7 +66,7 @@ credits = [
 	"Benjamin"],
 	
 	["Boss design",
-	"Morlan & Benjamin"],
+	"Morlan"],
 	
 	["Additional player art",
 	"Dall-E 2"],
@@ -127,5 +127,9 @@ for(var i = 0; i < array_length(credits); i++) {
 	}
 }
 
-startY = 300;
-endY = startY-creditsHeight+6;
+startY = 280;
+endY = startY-creditsHeight+24;
+
+// Music
+musicLen = audio_sound_length(mCredits)-0.3;
+music = audio_play_sound(mCredits,1,false);
