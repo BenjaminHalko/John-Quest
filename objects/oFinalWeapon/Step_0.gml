@@ -28,7 +28,8 @@ if (draw) {
 	}
 } else if (oBossLvl4Phase2.dead) {
 	if (!playedSound) {
-		audio_play_sound(snBossLvl1Roar,1,false,0.7,0);
+		audio_play_sound(snBossLvl1Roar,1,false,0.7);
+		audio_play_sound(snExplosionShort,1,false);
 		playedSound = true;
 	}
 	if (oPlayer.knockBack == 0) oPlayer.knockBack = 5;
