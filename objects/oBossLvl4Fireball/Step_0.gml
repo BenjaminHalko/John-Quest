@@ -56,7 +56,7 @@ if (_rock != noone and isOnScreen()) {
 			radius = 10;
 		}
 	}
-	audio_play_sound(snBreak,1,false);
+	audio_play_sound(snExplosionShort,1,false);
 	
 	instance_destroy(_rock);
 	instance_destroy();

@@ -52,5 +52,6 @@ deadPercent = 0;
 deadWait = 60;
 
 // Music
-music = audio_play_sound(mLvl4MusicBoss2,1,true,1,60/150*2*4);
-audio_sound_loop_start(music, 60/150*8*4);
+music = audio_play_sound(mLvl4MusicBoss2,1,true);
+audio_sound_loop_start(music, 60/150*26*4);
+audio_sound_loop_end(music, 60/150*34*4);

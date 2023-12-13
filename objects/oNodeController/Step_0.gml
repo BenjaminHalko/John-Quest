@@ -42,7 +42,7 @@ if (global.movePercent != 1) {
 						if (_nextNode.hasPiece != -1) {
 							var _piece = _nextNode.hasPiece;
 							if (!global.piecesCollected[_piece] and !bossRoared[_piece]) {
-								audio_play_sound(snBossLvl1Roar,1,false,0.5);
+								audio_play_sound(snBossLvl1Roar,1,false,0.8);
 								audio_stop_sound(music);
 								onlyAllowUp = true;
 								bossRoared[_piece] = true;

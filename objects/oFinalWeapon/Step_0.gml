@@ -11,7 +11,7 @@ if (draw) {
 		oPlayer.allowMovement = false;
 		oPlayer.item = 2;
 		audio_sound_loop(oBossLvl4Phase2.music, false);
-		audio_sound_set_track_position(oBossLvl4Phase2.music,60/150*44*4);
+		audio_sound_set_track_position(oBossLvl4Phase2.music,60/150*34*4);
 		
 		destroyCursors();
 		ScreenShake(15,30);
@@ -28,7 +28,7 @@ if (draw) {
 	}
 } else if (oBossLvl4Phase2.dead) {
 	if (!playedSound) {
-		audio_play_sound(snBossLvl1Roar,1,false,0.7);
+		audio_play_sound(snBossLvl1Roar,1,false);
 		audio_play_sound(snExplosionShort,1,false);
 		playedSound = true;
 	}

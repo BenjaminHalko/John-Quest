@@ -55,7 +55,7 @@ if (hp <= 0 or explode) {
 
 	if (!instance_exists(oBossLvl4Phase1) or !oBossLvl4Phase1.dead) {
 		ScreenShake(5,3);
-		audio_play_sound(snExplosionShort,1,false,0.5);
+		audio_play_sound(snExplosionShort,1,false,(object_index == oEyeLvl4) ? 1 : 0.7);
 	}
 	instance_destroy();
 }

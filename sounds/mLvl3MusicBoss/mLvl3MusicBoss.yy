@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mLvl3MusicBoss.ogg",
   "type": 1,
-  "volume": 0.6,
+  "volume": 0.7,
 }

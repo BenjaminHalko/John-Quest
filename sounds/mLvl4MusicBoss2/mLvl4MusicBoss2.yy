@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 2,
   "conversionMode": 0,
-  "duration": 83.2,
+  "duration": 67.20002,
   "parent": {
     "name": "Music",
     "path": "folders/Level4/Audio/Music.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mLvl4MusicBoss2.ogg",
   "type": 1,
-  "volume": 0.8,
+  "volume": 1.0,
 }
