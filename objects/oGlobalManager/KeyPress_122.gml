@@ -1,3 +1,4 @@
 /// @desc 
 
+if (os_type != os_operagx)
 window_set_fullscreen(!window_get_fullscreen());
