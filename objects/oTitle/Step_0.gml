@@ -73,8 +73,8 @@ if (music == -1) {
 					if (menuSelected == 0 and _vInput == 1) menuSelected = 1;
 					else {
 						menuSelected += _vInput * 2;
-						if (menuSelected == -1 or menuSelected > 6) menuSelected = 0;
-						else if (menuSelected < 0) menuSelected = 5;
+						if (menuSelected == -1 or menuSelected > 8) menuSelected = 0;
+						else if (menuSelected < 0) menuSelected = 7;
 					}
 					audio_play_sound(snBlip,1,false);
 					menuPressedV = _vInput;
@@ -140,7 +140,8 @@ if (music == -1) {
 			else if (menuSelected == 5) Transition(rLvl3);
 			else Transition(rLvl4);
 			
-			global.atBoss = (menuSelected == 2 or menuSelected == 4);
+			global.atBoss = (menuSelected == 2 or menuSelected == 4 or menuSelected == 7);
+			if (menuSelected == 8) global.atBoss = 2;
 		}
 	}
 } else {

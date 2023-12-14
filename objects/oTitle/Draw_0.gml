@@ -28,7 +28,7 @@ if (title) {
 		}
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
 	} else if (menu == MENU.LEVELSELECT) {
-		for(var i = 0; i < 7; i++) {
+		for(var i = 0; i < 9; i++) {
 			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
 		}
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY+(floor(max(0,menuSelected+1) / 2))*16);

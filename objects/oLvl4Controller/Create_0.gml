@@ -67,7 +67,20 @@ if (global.saveX != -1) {
 	oPlayer.y = global.saveY;
 }
 
+if (global.atBoss == 1) {
+	oPlayer.x = 2446;
+	oPlayer.y = 1024;
+	global.atBoss = 0;
+} else if (global.atBoss == 2) {
+	global.defeatedBoss = true;
+	oPlayer.x = 2976;
+	oPlayer.y = 1088;
+	Save("lvl4","x",oPlayer.x);
+	Save("lvl4","y",oPlayer.y);
+	Save("lvl4","defeatedBoss",true);
+	global.atBoss = 0;
+}
+
 if (!global.defeatedBoss) {
 	music = audio_play_sound(snLvl4Ambience,1,true);
 }
-	
