@@ -29,12 +29,12 @@ if (title) {
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
 	} else if (menu == MENU.LEVELSELECT) {
 		for(var i = 0; i < 9; i++) {
-			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
+			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY-16+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
 		}
-		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY+(floor(max(0,menuSelected+1) / 2))*16);
+		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY-16+(floor(max(0,menuSelected+1) / 2))*16);
 		
 		draw_set_color(c_dkgray);
-		draw_text(_menuX+48,_menuY-8,"GAME ISNT SAVED\nIN LEVEL SELECT");
+		draw_text(_menuX+48,_menuY-24,"GAME ISNT SAVED\nIN LEVEL SELECT");
 	} else if (menu == MENU.NEWGAME) {
 		draw_text(_menuX-16,_menuY,"ARE YOU SURE YOU\nWANT TO START OVER?");
 		for(var i = 0; i < 2; i++) {
