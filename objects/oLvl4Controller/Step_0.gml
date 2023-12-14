@@ -19,3 +19,9 @@ for(var i = 0; i < array_length(bgElements); i++) {
 		layer_sprite_y(bgElements[i].element, _y);
 	}
 }
+
+// Collision
+instance_deactivate_object(pCollision);
+instance_deactivate_object(oRockLvl4);
+
+instance_activate_region(oCamera.x-400,oCamera.y-400,480+800,270+800,true);
