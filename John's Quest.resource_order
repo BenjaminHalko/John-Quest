@@ -178,6 +178,7 @@
     {"name":"pCollision","order":3,"path":"objects/pCollision/pCollision.yy",},
     {"name":"oPot","order":3,"path":"objects/oPot/oPot.yy",},
     {"name":"PlayerAnimateSprite","order":6,"path":"scripts/PlayerAnimateSprite/PlayerAnimateSprite.yy",},
+    {"name":"sWorld","order":8,"path":"sprites/sWorld/sWorld.yy",},
     {"name":"sTriangleJump","order":1,"path":"sprites/sTriangleJump/sTriangleJump.yy",},
     {"name":"sBossLvl4Fireball","order":1,"path":"sprites/sBossLvl4Fireball/sBossLvl4Fireball.yy",},
     {"name":"fRPG","order":1,"path":"fonts/fRPG/fRPG.yy",},

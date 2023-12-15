@@ -35,7 +35,13 @@ for(var i = 0; i < array_length(credits); i++) {
 			draw_sprite(sGameMaker,0,_x,_y);
 		} else {
 			draw_set_font(fRetro);
-			draw_text_ext(_x,_y,string_upper(_text[0]),10,500);
+			if (string_starts_with(_text[0],"~ World")) {
+				var _index = real(string_split(_text," ")[3]);
+				draw_text_ext(_x,_y,string_upper("~ World   ~"),10,500);
+				draw_sprite(sWorld,_index,_x-string_width(_text[0])/2+string_width("~ WORLD "),_y);
+			} else {
+				draw_text_ext(_x,_y,string_upper(_text[0]),10,500);
+			}
 		}
 		if (i >= array_length(credits) - 3) _y += finalCreditsOffset;
 		_y += headerOffsetAfter;

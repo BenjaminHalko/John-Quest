@@ -31,7 +31,7 @@ if (music == -1) {
 			var _input = keyDown - keyUp;
 			if (_input != 0) {
 				if (menuPressedV != _input) {
-					menuSelected = Wrap(menuSelected+_input,lastLevel == -1,3);
+					menuSelected = Wrap(menuSelected+_input,lastLevel == -1,array_length(mainMenu)-1);
 					menuPressedV = _input;
 					audio_play_sound(snBlip,1,false);
 				}
@@ -40,14 +40,14 @@ if (music == -1) {
 			}
 			
 			if (keyAction) {
-				if (menuSelected == 2) {
+				if (menuSelected == 1) {
 					menu = MENU.LEVELSELECT;
-					menuSelected = 0;
 					audio_play_sound(snBlip,1,false);
-				} else if (menuSelected == 3) {
+					menuSelected = 0;
+				} else if (menuSelected == 2) {
 					menu = MENU.CREDITS;
 					audio_play_sound(snBlip,1,false);
-				} else if (menuSelected == 1 and lastLevel != -1) {
+				} else if false and (menuSelected == 1 and lastLevel != -1) {
 					menu = MENU.NEWGAME;
 					menuSelected = 1;
 					audio_play_sound(snBlip,1,false);
@@ -86,7 +86,7 @@ if (music == -1) {
 			if (keyAction) {
 				if (menuSelected == 0) {
 					menu = MENU.MAIN;
-					menuSelected = 2;
+					menuSelected = 1;
 					audio_play_sound(snBlip,1,false);
 				} else _select();
 			}
@@ -127,6 +127,7 @@ if (music == -1) {
 			file_delete(SAVEFILE);
 			Transition(rLvl1);
 		} else {
+			/*
 			global.noSave = true;
 			ini_open(SAVEFILE);
 			ini_section_delete("lvl1_temp");
@@ -134,6 +135,8 @@ if (music == -1) {
 			ini_section_delete("lvl3_temp");
 			ini_section_delete("lvl4_temp");
 			ini_close();
+			*/
+			file_delete(SAVEFILE);
 			
 			if (menuSelected <= 2) Transition(rLvl1);
 			else if (menuSelected <= 4) Transition(rLvl2);

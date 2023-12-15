@@ -42,23 +42,25 @@ stars = [];
 
 mainMenu = [
 	"CONTINUE",
-	"NEW GAME",
-	"LEVEL SELECT",
+	//"NEW GAME",
+	"WORLD SELECT",
 	"CREDITS"
 ];
 
 levelSelect = [
 	"BACK",
-	"LEVEL 1", "BOSS 1",
-	"LEVEL 2", "BOSS 2",
-	"LEVEL 3", "LEVEL 4",
-	"BOSS 3", "BOSS 4",
+	"WORLD 0", "BOSS 0",
+	"WORLD 1", "BOSS 1",
+	"WORLD 2", "WORLD 3",
+	"BOSS 3", "BOSS ?",
 ];
+
+
 
 newGame = [
 	"NEW GAME",
 	"BACK",
-]
+];
 
 repeat(100) {
 	array_push(stars, {

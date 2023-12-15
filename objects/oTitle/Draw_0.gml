@@ -22,23 +22,35 @@ if (title) {
 	draw_set_color(c_white);
 	if (menu != MENU.CREDITS) draw_text(_menuX-16,_menuY+80,"PRESS ENTER");
 	if (menu == MENU.MAIN) {
-		for(var i = 0; i < 4; i++) {
+		for(var i = 0; i < array_length(mainMenu); i++) {
 			draw_set_color(i != 0 or lastLevel != -1 ? c_white : c_dkgray);
 			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX,_menuY+16*i,mainMenu[i]);
 		}
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
 	} else if (menu == MENU.LEVELSELECT) {
 		for(var i = 0; i < 9; i++) {
-			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY-16+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
+			if (allowInput or menuSelected != i or blink % 2) {
+				if (i == 0 or i == 8) {
+					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY-16+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
+				} else {
+					var _split = string_split(levelSelect[i]," ");
+					var _text = _split[0];
+					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY-16+(floor(max(0,i+1) / 2))*16,_text);
+					var _index = real(_split[1]);
+					draw_sprite(sWorld,_index,_menuX+(max(0,i-1) % 2)*80+string_width(_text+" "),_menuY-16+(floor(max(0,i+1) / 2))*16);
+				}
+			}
 		}
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY-16+(floor(max(0,menuSelected+1) / 2))*16);
 		
-		draw_set_color(c_dkgray);
-		draw_text(_menuX+48,_menuY-24,"GAME ISNT SAVED\nIN LEVEL SELECT");
+		//draw_set_color(c_dkgray);
+		//draw_text(_menuX+48,_menuY-24,"GAME ISNT SAVED\nIN WORLD SELECT");
 	} else if (menu == MENU.NEWGAME) {
 		draw_text(_menuX-16,_menuY,"ARE YOU SURE YOU\nWANT TO START OVER?");
 		for(var i = 0; i < 2; i++) {
-			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX,_menuY+32+16*i,newGame[i]);
+			if (allowInput or menuSelected != i or blink % 2) {
+				draw_text(_menuX,_menuY+32+16*i,newGame[i]);
+			}
 		}
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+32+16*menuSelected);
 	} else {

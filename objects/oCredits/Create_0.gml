@@ -41,7 +41,7 @@ credits = [
 	["Music & Sound FX",
 	"Benjamin"],
 	
-	["~ Level 1 ~"],
+	["~ World 0 ~"],
 	
 	["Level design\ntweaked & playtested by",
 	"Haoxi & Morlan"],
@@ -52,7 +52,7 @@ credits = [
 	["Boss design",
 	"Morlan"],
 	
-	["~ Level 2 ~"],
+	["~ World 1 ~"],
 	
 	["Environmental art",
 	"Morlan & Haoxi"],
@@ -69,7 +69,7 @@ credits = [
 	["Additional player art",
 	"Dall-E 2"],
 	
-	["~ Level 3 ~"],
+	["~ World 2 ~"],
 	
 	["Photos",
 	"Benjamin"],
@@ -83,7 +83,7 @@ credits = [
 	["Boss design",
 	"Morlan"],
 	
-	["~ Level 4 ~"],
+	["~ World 3 ~"],
 	
 	["Environmental art",
 	"Morlan"],
