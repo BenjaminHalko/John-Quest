@@ -25,3 +25,6 @@ instance_deactivate_object(pCollision);
 instance_deactivate_object(oRockLvl4);
 
 instance_activate_region(oCamera.x-400,oCamera.y-400,480+800,270+800,true);
+if (instance_exists(oCamera.boundary)) {
+	instance_activate_region(oCamera.boundary.x-200,oCamera.boundary.y-200,oCamera.boundary.sprite_width+400,oCamera.boundary.sprite_height+400,true);
+}
