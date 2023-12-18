@@ -17,11 +17,11 @@
   "option_operagx_mod_team_id": "",
   "option_operagx_mod_team_name": "",
   "option_operagx_mod_version": "1.0.0.0",
-  "option_operagx_next_version": "1.0.0.17",
+  "option_operagx_next_version": "1.0.0.18",
   "option_operagx_publicShareUrl": "",
   "option_operagx_scale": 0,
   "option_operagx_team_id": "001cf107-345b-4227-b45e-d54580fe019c",
   "option_operagx_team_name": "Benjamin Halko",
   "option_operagx_texture_page": "2048x2048",
-  "option_operagx_version": "1.0.0.16",
+  "option_operagx_version": "1.0.0.17",
 }
