@@ -1,10 +1,12 @@
 {
-  "resourceType": "GMShader",
-  "resourceVersion": "1.0",
-  "name": "shBlur",
-  "parent": {
-    "name": "Bloom",
-    "path": "folders/Global/Effects/Bloom.yy",
+  "$GMShader":"",
+  "%Name":"shBlur",
+  "name":"shBlur",
+  "parent":{
+    "name":"Bloom",
+    "path":"folders/Global/Effects/Bloom.yy",
   },
-  "type": 1,
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "EntityHitDestroy",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Entity Hit",
-    "path": "folders/Level2/Entities/Scripts/Entity Hit.yy",
+  "$GMScript":"v1",
+  "%Name":"EntityHitDestroy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EntityHitDestroy",
+  "parent":{
+    "name":"Entity Hit",
+    "path":"folders/Level2/Entities/Scripts/Entity Hit.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

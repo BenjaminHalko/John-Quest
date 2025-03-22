@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ActivateSwordNPC",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Dialogue",
-    "path": "folders/Level2/Text/Dialogue.yy",
+  "$GMScript":"v1",
+  "%Name":"ActivateSwordNPC",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ActivateSwordNPC",
+  "parent":{
+    "name":"Dialogue",
+    "path":"folders/Level2/Text/Dialogue.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SlimeFunctions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Slime",
-    "path": "folders/Level2/Entities/Enemies/Slime.yy",
+  "$GMScript":"v1",
+  "%Name":"SlimeFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SlimeFunctions",
+  "parent":{
+    "name":"Slime",
+    "path":"folders/Level2/Entities/Enemies/Slime.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

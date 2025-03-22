@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "InventoryFunctions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Inventory",
-    "path": "folders/Level3/Inventory.yy",
+  "$GMScript":"v1",
+  "%Name":"InventoryFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"InventoryFunctions",
+  "parent":{
+    "name":"Inventory",
+    "path":"folders/Level3/Inventory.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

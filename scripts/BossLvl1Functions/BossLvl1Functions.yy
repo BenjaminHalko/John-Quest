@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "BossLvl1Functions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Boss",
-    "path": "folders/Level1/Boss.yy",
+  "$GMScript":"v1",
+  "%Name":"BossLvl1Functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossLvl1Functions",
+  "parent":{
+    "name":"Boss",
+    "path":"folders/Level1/Boss.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

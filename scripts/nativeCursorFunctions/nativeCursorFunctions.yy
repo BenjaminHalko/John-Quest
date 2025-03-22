@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "nativeCursorFunctions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Cursor",
-    "path": "folders/Global/Cursor.yy",
+  "$GMScript":"v1",
+  "%Name":"nativeCursorFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"nativeCursorFunctions",
+  "parent":{
+    "name":"Cursor",
+    "path":"folders/Global/Cursor.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

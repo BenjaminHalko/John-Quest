@@ -1,35 +1,35 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "pEntity",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
+  "$GMObject":"",
+  "%Name":"pEntity",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
-  "managed": true,
-  "overriddenProperties": [],
-  "parent": {
-    "name": "Entities",
-    "path": "folders/Level2/Entities.yy",
+  "managed":true,
+  "name":"pEntity",
+  "overriddenProperties":[],
+  "parent":{
+    "name":"Entities",
+    "path":"folders/Level2/Entities.yy",
   },
-  "parentObjectId": null,
-  "persistent": false,
-  "physicsAngularDamping": 0.1,
-  "physicsDensity": 0.5,
-  "physicsFriction": 0.2,
-  "physicsGroup": 0,
-  "physicsKinematic": false,
-  "physicsLinearDamping": 0.1,
-  "physicsObject": false,
-  "physicsRestitution": 0.1,
-  "physicsSensor": false,
-  "physicsShape": 1,
-  "physicsShapePoints": [],
-  "physicsStartAwake": true,
-  "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityActivateScript","filters":[
+  "parentObjectId":null,
+  "persistent":false,
+  "physicsAngularDamping":0.1,
+  "physicsDensity":0.5,
+  "physicsFriction":0.2,
+  "physicsGroup":0,
+  "physicsKinematic":false,
+  "physicsLinearDamping":0.1,
+  "physicsObject":false,
+  "physicsRestitution":0.1,
+  "physicsSensor":false,
+  "physicsShape":1,
+  "physicsShapePoints":[],
+  "physicsStartAwake":true,
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"entityActivateScript","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -40,8 +40,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"-1","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityActivateArgs","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityActivateScript","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"entityActivateArgs","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -52,8 +52,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"[-1]","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityCollision","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityActivateArgs","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[-1]","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"entityCollision","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -64,8 +64,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"False","varType":3,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityNPC","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityCollision","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"entityNPC","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -76,8 +76,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"False","varType":3,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityShadow","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityNPC","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"entityShadow","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -88,8 +88,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityHitScript","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityShadow","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"entityHitScript","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -100,8 +100,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"-1","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityFragmentCount","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityHitScript","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"entityFragmentCount","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -112,8 +112,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityFragment","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityFragmentCount","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"entityFragment","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -124,8 +124,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"-1","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityThrowBreak","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityFragment","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"entityThrowBreak","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -136,8 +136,8 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"False","varType":3,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityThrowDistance","filters":[
+      ],"listItems":null,"multiselect":false,"name":"entityThrowBreak","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"entityThrowDistance","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -148,11 +148,13 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"52","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityHookable","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":true,"rangeMax":2.0,"rangeMin":0.0,"value":"0","varType":1,},
+      ],"listItems":null,"multiselect":false,"name":"entityThrowDistance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"52","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"entityHookable","filters":[],"listItems":[],"multiselect":false,"name":"entityHookable","rangeEnabled":true,"rangeMax":2.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
-  "solid": false,
-  "spriteId": null,
-  "spriteMaskId": null,
-  "visible": true,
+  "resourceType":"GMObject",
+  "resourceVersion":"2.0",
+  "solid":false,
+  "spriteId":null,
+  "spriteMaskId":null,
+  "visible":true,
 }

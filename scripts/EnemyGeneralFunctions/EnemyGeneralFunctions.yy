@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "EnemyGeneralFunctions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Enemies",
-    "path": "folders/Level2/Entities/Enemies.yy",
+  "$GMScript":"v1",
+  "%Name":"EnemyGeneralFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnemyGeneralFunctions",
+  "parent":{
+    "name":"Enemies",
+    "path":"folders/Level2/Entities/Enemies.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CameraFunctions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Camera",
-    "path": "folders/Global/Camera.yy",
+  "$GMScript":"v1",
+  "%Name":"CameraFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CameraFunctions",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Global/Camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

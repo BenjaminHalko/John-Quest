@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "BatFunctions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Bat",
-    "path": "folders/Level2/Entities/Enemies/Bat.yy",
+  "$GMScript":"v1",
+  "%Name":"BatFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BatFunctions",
+  "parent":{
+    "name":"Bat",
+    "path":"folders/Level2/Entities/Enemies/Bat.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

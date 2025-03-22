@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ActivateLiftable",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Activation",
-    "path": "folders/Level2/Entities/Scripts/Activation.yy",
+  "$GMScript":"v1",
+  "%Name":"ActivateLiftable",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ActivateLiftable",
+  "parent":{
+    "name":"Activation",
+    "path":"folders/Level2/Entities/Scripts/Activation.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

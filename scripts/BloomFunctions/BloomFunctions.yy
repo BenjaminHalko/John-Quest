@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "BloomFunctions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Bloom",
-    "path": "folders/Global/Effects/Bloom.yy",
+  "$GMScript":"v1",
+  "%Name":"BloomFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BloomFunctions",
+  "parent":{
+    "name":"Bloom",
+    "path":"folders/Global/Effects/Bloom.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
