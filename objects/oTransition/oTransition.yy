@@ -29,8 +29,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"roomTo","filters":[],"listItems":[],"multiselect":false,"name":"roomTo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rTitle","varType":5,},
-    {"$GMObjectProperty":"v1","%Name":"percent","filters":[],"listItems":[],"multiselect":false,"name":"percent","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"roomTo","filters":[],"listItems":[],"multiselect":false,"name":"roomTo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rTitle","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"percent","filters":[],"listItems":[],"multiselect":false,"name":"percent","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sSwordNPC",
   "bboxMode":2,
   "bbox_bottom":30,
@@ -12,22 +12,22 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a3a14f9b-94f8-4d17-b09b-c80aa9317623","name":"a3a14f9b-94f8-4d17-b09b-c80aa9317623","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"be4977b2-7d88-4a86-959e-6425f330346f","name":"be4977b2-7d88-4a86-959e-6425f330346f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c95b8b85-4096-4765-b24c-742061a365a2","name":"c95b8b85-4096-4765-b24c-742061a365a2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7b886e9b-ef78-400c-8baf-65e766563ea5","name":"7b886e9b-ef78-400c-8baf-65e766563ea5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f4a72122-1d43-4b16-87a3-0e386cb651c9","name":"f4a72122-1d43-4b16-87a3-0e386cb651c9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f27f2ba2-f9b9-4eab-9db5-b54d5ff1e312","name":"f27f2ba2-f9b9-4eab-9db5-b54d5ff1e312","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d7a347b1-3cbc-4fb1-9382-0aca217810f8","name":"d7a347b1-3cbc-4fb1-9382-0aca217810f8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bdd4a92d-1629-4710-8906-2571b24e451a","name":"bdd4a92d-1629-4710-8906-2571b24e451a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a66eaf1a-16d4-4fdc-a4cd-2fbe3696dede","name":"a66eaf1a-16d4-4fdc-a4cd-2fbe3696dede","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2d8bd972-0903-4a28-af78-0c563107147c","name":"2d8bd972-0903-4a28-af78-0c563107147c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a2437827-ee0d-492a-a0c3-72f34cf4e1ba","name":"a2437827-ee0d-492a-a0c3-72f34cf4e1ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"abdad7c3-4321-4a18-9d02-e24def83ec4c","name":"abdad7c3-4321-4a18-9d02-e24def83ec4c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c3b1e91e-bab4-4406-9db1-355d041b2771","name":"c3b1e91e-bab4-4406-9db1-355d041b2771","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"49611311-bf12-4c89-aa23-178d2e1df798","name":"49611311-bf12-4c89-aa23-178d2e1df798","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4eeb3436-8511-408d-a974-f341ac97c322","name":"4eeb3436-8511-408d-a974-f341ac97c322","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"92452c46-f709-444b-ad66-3853c47d2f1f","name":"92452c46-f709-444b-ad66-3853c47d2f1f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a3a14f9b-94f8-4d17-b09b-c80aa9317623","name":"a3a14f9b-94f8-4d17-b09b-c80aa9317623","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"be4977b2-7d88-4a86-959e-6425f330346f","name":"be4977b2-7d88-4a86-959e-6425f330346f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c95b8b85-4096-4765-b24c-742061a365a2","name":"c95b8b85-4096-4765-b24c-742061a365a2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7b886e9b-ef78-400c-8baf-65e766563ea5","name":"7b886e9b-ef78-400c-8baf-65e766563ea5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f4a72122-1d43-4b16-87a3-0e386cb651c9","name":"f4a72122-1d43-4b16-87a3-0e386cb651c9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f27f2ba2-f9b9-4eab-9db5-b54d5ff1e312","name":"f27f2ba2-f9b9-4eab-9db5-b54d5ff1e312","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d7a347b1-3cbc-4fb1-9382-0aca217810f8","name":"d7a347b1-3cbc-4fb1-9382-0aca217810f8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bdd4a92d-1629-4710-8906-2571b24e451a","name":"bdd4a92d-1629-4710-8906-2571b24e451a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a66eaf1a-16d4-4fdc-a4cd-2fbe3696dede","name":"a66eaf1a-16d4-4fdc-a4cd-2fbe3696dede","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2d8bd972-0903-4a28-af78-0c563107147c","name":"2d8bd972-0903-4a28-af78-0c563107147c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a2437827-ee0d-492a-a0c3-72f34cf4e1ba","name":"a2437827-ee0d-492a-a0c3-72f34cf4e1ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"abdad7c3-4321-4a18-9d02-e24def83ec4c","name":"abdad7c3-4321-4a18-9d02-e24def83ec4c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c3b1e91e-bab4-4406-9db1-355d041b2771","name":"c3b1e91e-bab4-4406-9db1-355d041b2771","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"49611311-bf12-4c89-aa23-178d2e1df798","name":"49611311-bf12-4c89-aa23-178d2e1df798","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4eeb3436-8511-408d-a974-f341ac97c322","name":"4eeb3436-8511-408d-a974-f341ac97c322","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"92452c46-f709-444b-ad66-3853c47d2f1f","name":"92452c46-f709-444b-ad66-3853c47d2f1f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -47,7 +47,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"sSwordNPC",
     "autoRecord":true,
     "backdropHeight":768,
@@ -83,54 +83,22 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a3a14f9b-94f8-4d17-b09b-c80aa9317623","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0d005c4e-80c6-4741-8123-9b2f332ceb7b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"be4977b2-7d88-4a86-959e-6425f330346f","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c58cd7af-74e4-45e7-b82a-fe2237933f20","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c95b8b85-4096-4765-b24c-742061a365a2","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bae3bf6e-9b08-4399-938e-ecd733da946c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7b886e9b-ef78-400c-8baf-65e766563ea5","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5a7acabf-84dc-405e-be31-2f11fa6c52e5","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4a72122-1d43-4b16-87a3-0e386cb651c9","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c9240546-08ce-4d96-ab3b-1e1cb965ec6b","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f27f2ba2-f9b9-4eab-9db5-b54d5ff1e312","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"770c3abf-ecdd-4e20-8515-55a62bcadce1","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d7a347b1-3cbc-4fb1-9382-0aca217810f8","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c3475f36-fe29-4c7e-8985-fe2ac95a034a","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bdd4a92d-1629-4710-8906-2571b24e451a","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b4c14f53-3dd1-41cd-bfd4-13055ef39974","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a66eaf1a-16d4-4fdc-a4cd-2fbe3696dede","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4d80df7a-cd73-4ef4-bd5a-80ff9246cc37","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d8bd972-0903-4a28-af78-0c563107147c","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9aa6871e-75b7-4b43-9f85-de17d01486c3","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a2437827-ee0d-492a-a0c3-72f34cf4e1ba","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bfe2a2cd-88f9-4494-bf76-e74708c2be9f","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"abdad7c3-4321-4a18-9d02-e24def83ec4c","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"37e0d773-8b6d-4f7a-bbdd-a4dbb80a2ba3","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3b1e91e-bab4-4406-9db1-355d041b2771","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f7812cc6-c298-4c1c-92c5-4c8952b6e21c","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"49611311-bf12-4c89-aa23-178d2e1df798","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"98a3ffe7-bd6a-4961-a834-34a9715d32b0","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4eeb3436-8511-408d-a974-f341ac97c322","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1518e71a-cefd-455e-8e44-054f25ef3fb0","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"92452c46-f709-444b-ad66-3853c47d2f1f","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1290111d-3c93-4462-952b-a3447bac2817","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a3a14f9b-94f8-4d17-b09b-c80aa9317623","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0d005c4e-80c6-4741-8123-9b2f332ceb7b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"be4977b2-7d88-4a86-959e-6425f330346f","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c58cd7af-74e4-45e7-b82a-fe2237933f20","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c95b8b85-4096-4765-b24c-742061a365a2","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"bae3bf6e-9b08-4399-938e-ecd733da946c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7b886e9b-ef78-400c-8baf-65e766563ea5","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5a7acabf-84dc-405e-be31-2f11fa6c52e5","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4a72122-1d43-4b16-87a3-0e386cb651c9","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c9240546-08ce-4d96-ab3b-1e1cb965ec6b","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f27f2ba2-f9b9-4eab-9db5-b54d5ff1e312","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"770c3abf-ecdd-4e20-8515-55a62bcadce1","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d7a347b1-3cbc-4fb1-9382-0aca217810f8","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c3475f36-fe29-4c7e-8985-fe2ac95a034a","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bdd4a92d-1629-4710-8906-2571b24e451a","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b4c14f53-3dd1-41cd-bfd4-13055ef39974","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a66eaf1a-16d4-4fdc-a4cd-2fbe3696dede","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4d80df7a-cd73-4ef4-bd5a-80ff9246cc37","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d8bd972-0903-4a28-af78-0c563107147c","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9aa6871e-75b7-4b43-9f85-de17d01486c3","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a2437827-ee0d-492a-a0c3-72f34cf4e1ba","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"bfe2a2cd-88f9-4494-bf76-e74708c2be9f","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"abdad7c3-4321-4a18-9d02-e24def83ec4c","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"37e0d773-8b6d-4f7a-bbdd-a4dbb80a2ba3","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3b1e91e-bab4-4406-9db1-355d041b2771","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f7812cc6-c298-4c1c-92c5-4c8952b6e21c","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"49611311-bf12-4c89-aa23-178d2e1df798","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"98a3ffe7-bd6a-4961-a834-34a9715d32b0","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4eeb3436-8511-408d-a974-f341ac97c322","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1518e71a-cefd-455e-8e44-054f25ef3fb0","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"92452c46-f709-444b-ad66-3853c47d2f1f","path":"sprites/sSwordNPC/sSwordNPC.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1290111d-3c93-4462-952b-a3447bac2817","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

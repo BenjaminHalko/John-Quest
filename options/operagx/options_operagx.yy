@@ -1,5 +1,5 @@
 {
-  "$GMOperaGXOptions":"",
+  "$GMOperaGXOptions":"v1",
   "%Name":"operagx",
   "name":"operagx",
   "option_operagx_display_cursor":false,
@@ -23,6 +23,7 @@
   "option_operagx_team_id":"001cf107-345b-4227-b45e-d54580fe019c",
   "option_operagx_team_name":"Benjamin Halko",
   "option_operagx_texture_page":"2048x2048",
+  "option_operagx_transparent_background":false,
   "option_operagx_version":"1.0.0.17",
   "resourceType":"GMOperaGXOptions",
   "resourceVersion":"2.0",

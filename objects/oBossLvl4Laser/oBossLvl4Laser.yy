@@ -33,8 +33,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"eye1","filters":[],"listItems":[],"multiselect":false,"name":"eye1","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"eye2","filters":[],"listItems":[],"multiselect":false,"name":"eye2","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"eye1","filters":[],"listItems":[],"multiselect":false,"name":"eye1","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"eye2","filters":[],"listItems":[],"multiselect":false,"name":"eye2","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

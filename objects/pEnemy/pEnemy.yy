@@ -31,7 +31,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"enemyWanderDistance","filters":[
+    {"$GMObjectProperty":"v2","%Name":"enemyWanderDistance","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -43,7 +43,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"enemyWanderDistance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"48","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"enemySpeed","filters":[
+    {"$GMObjectProperty":"v2","%Name":"enemySpeed","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -55,8 +55,8 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"enemySpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.75","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"enemyAggroMaxDistance","filters":[],"listItems":[],"multiselect":false,"name":"enemyAggroMaxDistance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"128","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"enemyAggroRadius","filters":[
+    {"$GMObjectProperty":"v2","%Name":"enemyAggroMaxDistance","filters":[],"listItems":[],"multiselect":false,"name":"enemyAggroMaxDistance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"128","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"enemyAggroRadius","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -68,10 +68,10 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"enemyAggroRadius","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"48","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"enemyAttackRadius","filters":[],"listItems":[],"multiselect":false,"name":"enemyAttackRadius","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"24","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"enemyHP","filters":[],"listItems":[],"multiselect":false,"name":"enemyHP","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"enemyForceTouch","filters":[],"listItems":[],"multiselect":false,"name":"enemyForceTouch","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"32","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"enemyDamageTouch","filters":[],"listItems":[],"multiselect":false,"name":"enemyDamageTouch","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.5","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"enemyAttackRadius","filters":[],"listItems":[],"multiselect":false,"name":"enemyAttackRadius","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"24","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"enemyHP","filters":[],"listItems":[],"multiselect":false,"name":"enemyHP","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"enemyForceTouch","filters":[],"listItems":[],"multiselect":false,"name":"enemyForceTouch","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"32","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"enemyDamageTouch","filters":[],"listItems":[],"multiselect":false,"name":"enemyDamageTouch","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.5","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
