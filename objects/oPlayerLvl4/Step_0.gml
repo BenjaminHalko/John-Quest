@@ -1,17 +1,22 @@
 /// @desc 
 
-Input()
-var _moveX = (keyRight - keyLeft) * allowMovement;
-var _moveY = (keyDown - keyUp) * allowMovement;
-var _fire = mouse_check_button(mb_left) * allowMovement;
-var _changeItem = mouse_check_button_pressed(mb_right) * allowMovement;
+var _moveX = InputX(INPUT_CLUSTER.NAVIGATION) * allowMovement;
+var _moveY = InputY(INPUT_CLUSTER.NAVIGATION) * allowMovement;
+var _fire = InputCheck(INPUT_VERB.ATTACK) * allowMovement;
+var _changeItem = InputPressed(INPUT_VERB.SWITCH) * allowMovement;
 
 // Movement
-var _dir = point_direction(0,0,_moveX,_moveY);
-hsp = ApproachFade(hsp,lengthdir_x(movespd*abs(_moveX),_dir),0.8,0.85);
-vsp = ApproachFade(vsp,lengthdir_y(movespd*abs(_moveY),_dir),0.8,0.85);
+hsp = ApproachFade(hsp,movespd * _moveX,0.8,0.85);
+vsp = ApproachFade(vsp,movespd * _moveY,0.8,0.85);
 
 // shooting
+if (InputPlayerUsingGamepad()) {
+    weaponDir = InputDirection(weaponDir, INPUT_CLUSTER.AIM);
+} else {
+    var _mx = InputMouseRoomX();
+    var _my = InputMouseRoomY();
+    weaponDir = point_direction(x,y,_mx,_my);
+}
 if (_changeItem) changeItem = true;
 if (changeItem or itemPercent != 0) {
 	itemPercent = Approach(itemPercent, changeItem*2, 0.1);
@@ -21,27 +26,26 @@ if (changeItem or itemPercent != 0) {
 	}
 } else if (_fire) {
 	if (--shotTimer <= 0) {
-		var _shootDir = point_direction(x,y,mouse_x,mouse_y);
 		if (item == 0) {
-			with(instance_create_depth(x+random_range(-6,6)+lengthdir_x(20,_shootDir),y+random_range(-6,6)+lengthdir_y(20,_shootDir),depth-1,oPlayerBulletsLvl4)) {
-				image_angle = _shootDir;
+			with(instance_create_depth(x+random_range(-6,6)+lengthdir_x(20,weaponDir),y+random_range(-6,6)+lengthdir_y(20,weaponDir),depth-1,oPlayerBulletsLvl4)) {
+				image_angle = other.weaponDir;
 			}
 			ScreenShake(2,2);
 			shotTimer = 5;
 			knockBack = 5;
-			hsp -= lengthdir_x(0.2,_shootDir);
-			vsp -= lengthdir_y(0.2,_shootDir);
+			hsp -= lengthdir_x(0.2,weaponDir);
+			vsp -= lengthdir_y(0.2,weaponDir);
 		} else {
-			with(instance_create_depth(x+lengthdir_x(20,_shootDir),y+lengthdir_y(20,_shootDir),depth-1,oBombLvl4)) {
-				hSpd = lengthdir_x(8,_shootDir);
-				vSpd = lengthdir_y(8,_shootDir);
+			with(instance_create_depth(x+lengthdir_x(20,weaponDir),y+lengthdir_y(20,weaponDir),depth-1,oBombLvl4)) {
+				hSpd = lengthdir_x(8,other.weaponDir);
+				vSpd = lengthdir_y(8,other.weaponDir);
 			}
 			
 			ScreenShake(2,2);
 			shotTimer = 20;
 			knockBack = 10;
-			hsp -= lengthdir_x(1,_shootDir);
-			vsp -= lengthdir_y(1,_shootDir);
+			hsp -= lengthdir_x(1,weaponDir);
+			vsp -= lengthdir_y(1,weaponDir);
 		}
 	}
 } else {

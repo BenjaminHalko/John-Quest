@@ -1,8 +1,7 @@
 /// @desc
 
-Input()
-var _move = keyRight-keyLeft;
-var _duck = keyUp - keyDown;
+var _move = InputOpposing(INPUT_VERB.LEFT, INPUT_VERB.RIGHT);
+var _duck = InputOpposing(INPUT_VERB.UP, INPUT_VERB.DOWN);
 
 if (respawnPercent == 1) {
 	if dash == 0 {
@@ -48,7 +47,7 @@ if (respawnPercent == 1) {
 			}
 	
 			// Dashing
-			if keyAction or keySecondary {
+			if InputPressed(INPUT_VERB.DASH) {
 				if canJump > 0 {
 					if(savedJumpID.collect()) {
 						vsp = jumpSpd;

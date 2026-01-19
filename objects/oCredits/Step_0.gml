@@ -17,6 +17,5 @@ if (audio_is_playing(mCredits)) scrollPercent = min(1,audio_sound_get_track_posi
 else scrollPercent = 1;
 
 if (scrollPercent == 1) {
-	Input();
-	if (keyAction) Transition(rTitle);
+	if (InputPressed(INPUT_VERB.ACCEPT)) Transition(rTitle);
 }

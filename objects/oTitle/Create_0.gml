@@ -4,7 +4,6 @@ global.noSave = false;
 
 enum MENU {
 	MAIN,
-	NEWGAME,
 	LEVELSELECT,
 	CREDITS
 }
@@ -16,15 +15,12 @@ moveUpSpd = 0;
 
 lastLevel = Load("global","lvl",-1);
 
-menuSelected = (lastLevel == -1);
+menuSelected = 0;
 
 textNum = -1;
 textTarget = -1;
 textAlpha = 1;
 wait = 0;
-
-menuPressedV = 0;
-menuPressedH = 0;
 
 smallerBuildingHeight = sprite_get_height(sTitleLandscape);
 buildingHeight = sprite_get_height(sTitleBuilding);
@@ -41,10 +37,10 @@ menu = MENU.MAIN;
 stars = [];
 
 mainMenu = [
-	"CONTINUE",
-	//"NEW GAME",
+	lastLevel == -1 ? "NEW GAME" : "CONTINUE",
 	"WORLD SELECT",
-	"CREDITS"
+	"CREDITS",
+    "QUIT",
 ];
 
 levelSelect = [
@@ -53,13 +49,6 @@ levelSelect = [
 	"WORLD 1", "BOSS 1",
 	"WORLD 2", "WORLD 3",
 	"BOSS 3", "BOSS ?",
-];
-
-
-
-newGame = [
-	"NEW GAME",
-	"BACK",
 ];
 
 repeat(100) {

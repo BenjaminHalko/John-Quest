@@ -3,7 +3,7 @@
 var _y = Wave(-2,2,2,0.8);
 var _spriteAngle = (x - xprevious) * -10;
 var _yscale = (1 + (y - yprevious) * -0.02) * yscale;
-var _mouseDir = item == 2 ? finalSpin : point_direction(x,y,mouse_x,mouse_y);
+var _mouseDir = item == 2 ? finalSpin : weaponDir;
 
 // Item
 var _itemDist = -knockBack*0.5;

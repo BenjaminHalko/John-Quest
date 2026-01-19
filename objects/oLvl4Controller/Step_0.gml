@@ -7,6 +7,14 @@ if (windowWidth != window_get_width() or windowHeight != window_get_height()) {
 	createCursors();
 }
 
+// Hide cursor if gamepad
+if (InputPlayerUsingGamepad()) {
+    if (global.currentCursorType == CURSOR.LVL4)
+        setCursor(-1);
+} else if (global.currentCursorType == -1) {
+    setCursor(CURSOR.LVL4);
+}
+
 // Backgrounds
 for(var i = 0; i < array_length(bgElements); i++) {
 	var _x = bgElements[i].x + (oCamera.x - bgElements[i].x) * bgElements[i].depth / 100;

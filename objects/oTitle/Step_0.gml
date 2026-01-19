@@ -1,7 +1,5 @@
  /// @desc 
 
-Input();
-
 if (moveUpPercent > 0.1) {
 	for(var i = 0; i < array_length(stars); i++) {
 		stars[i].alpha += stars[i].spd;
@@ -28,18 +26,13 @@ if (music == -1) {
 	if (allowInput) {
 		blinkWave = Wave(0,2,0.5,0);
 		if (menu == MENU.MAIN) {
-			var _input = keyDown - keyUp;
+			var _input = InputOpposingRepeat(INPUT_VERB.UP, INPUT_VERB.DOWN);
 			if (_input != 0) {
-				if (menuPressedV != _input) {
-					menuSelected = Wrap(menuSelected+_input,lastLevel == -1,array_length(mainMenu)-1);
-					menuPressedV = _input;
-					audio_play_sound(snBlip,1,false);
-				}
-			} else {
-				menuPressedV = 0;
+                menuSelected = Wrap(menuSelected+_input, 0, array_length(mainMenu)-1);
+                audio_play_sound(snBlip,1,false);
 			}
 			
-			if (keyAction) {
+			if (InputPressed(INPUT_VERB.ACCEPT)) {
 				if (menuSelected == 1) {
 					menu = MENU.LEVELSELECT;
 					audio_play_sound(snBlip,1,false);
@@ -47,70 +40,39 @@ if (music == -1) {
 				} else if (menuSelected == 2) {
 					menu = MENU.CREDITS;
 					audio_play_sound(snBlip,1,false);
-				} else if false and (menuSelected == 1 and lastLevel != -1) {
-					menu = MENU.NEWGAME;
-					menuSelected = 1;
-					audio_play_sound(snBlip,1,false);
-				} else {
+				} else if (menuSelected == 3) {
+                    game_end();
+                } else {
 					_select();	
 				}
 			}
 		} else if (menu == MENU.LEVELSELECT) {
-			var _hInput = keyRight - keyLeft;
-			var _vInput = keyDown - keyUp;
+			var _hInput = InputOpposingRepeat(INPUT_VERB.LEFT, INPUT_VERB.RIGHT);
+			var _vInput = InputOpposingRepeat(INPUT_VERB.UP, INPUT_VERB.DOWN);
 			if (_hInput != 0) {
-				if (menuPressedH != _hInput) {
-					if (menuSelected == 0) menuSelected = 1+(_hInput == 1);
-					else menuSelected = (menuSelected - 1 + (menuSelected % 2)*2);
-					menuPressedH = _hInput;
-					audio_play_sound(snBlip,1,false);
-				}
-			} else {
-				menuPressedH = 0;	
+                if (menuSelected == 0) menuSelected = 1+(_hInput == 1);
+                else menuSelected = (menuSelected - 1 + (menuSelected % 2)*2);
+                audio_play_sound(snBlip,1,false);
 			}
+            
 			if (_vInput != 0) {
-				if (menuPressedV != _vInput) {
-					if (menuSelected == 0 and _vInput == 1) menuSelected = 1;
-					else {
-						menuSelected += _vInput * 2;
-						if (menuSelected == -1 or menuSelected > 8) menuSelected = 0;
-						else if (menuSelected < 0) menuSelected = 7;
-					}
-					audio_play_sound(snBlip,1,false);
-					menuPressedV = _vInput;
-				}
-			} else {
-				menuPressedV = 0;
+                if (menuSelected == 0 and _vInput == 1) menuSelected = 1;
+                else {
+                    menuSelected += _vInput * 2;
+                    if (menuSelected == -1 or menuSelected > 8) menuSelected = 0;
+                    else if (menuSelected < 0) menuSelected = 7;
+                }
+                audio_play_sound(snBlip,1,false);
 			}
 			
-			if (keyAction) {
+			if (InputPressed(INPUT_VERB.ACCEPT)) {
 				if (menuSelected == 0) {
 					menu = MENU.MAIN;
 					menuSelected = 1;
 					audio_play_sound(snBlip,1,false);
 				} else _select();
 			}
-		} else if (menu == MENU.NEWGAME) {
-			var _input = keyDown - keyUp;
-			if (_input != 0) {
-				if (menuPressedV != _input) {
-					menuSelected = 1 - menuSelected;
-					menuPressedV = _input;
-					audio_play_sound(snBlip,1,false);
-				}
-			} else {
-				menuPressedV = 0;
-			}
-			
-			if (keyAction) {
-				if (menuSelected == 0) _select();
-				else {
-					menu = MENU.MAIN;
-					menuSelected = 1;
-					audio_play_sound(snBlip,1,false);
-				}
-			}
-		} else if (keyAction) {
+		} else if (InputPressed(INPUT_VERB.ACCEPT)) {
 			menu = MENU.MAIN;
 			audio_play_sound(snBlip,1,false);
 		}
@@ -118,24 +80,12 @@ if (music == -1) {
 		if (menu == MENU.MAIN) {
 			if (menuSelected == 0) {
 				var _levels = [rLvl1,rLvl2,rLvl3,rLvl4];
-				Transition(_levels[lastLevel]);
+				Transition(_levels[max(0, lastLevel)]);
 			} else {
 				file_delete(SAVEFILE);
 				Transition(rLvl1);
 			}
-		} else if (menu == MENU.NEWGAME) {
-			file_delete(SAVEFILE);
-			Transition(rLvl1);
 		} else {
-			/*
-			global.noSave = true;
-			ini_open(SAVEFILE);
-			ini_section_delete("lvl1_temp");
-			ini_section_delete("lvl2_temp");
-			ini_section_delete("lvl3_temp");
-			ini_section_delete("lvl4_temp");
-			ini_close();
-			*/
 			file_delete(SAVEFILE);
 			
 			if (menuSelected <= 2) Transition(rLvl1);
@@ -148,7 +98,7 @@ if (music == -1) {
 		}
 	}
 } else {
-	if (keyAction or !audio_is_playing(mOpening)) {
+	if (InputPressed(INPUT_VERB.ACCEPT) or !audio_is_playing(mOpening)) {
 		title = true;
 		moveUpPercent = 1;
 		audio_stop_sound(music);

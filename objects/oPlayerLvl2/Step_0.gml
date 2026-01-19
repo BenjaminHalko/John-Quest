@@ -1,9 +1,7 @@
 /// @desc 
 
-Input();
-
-inputMagnitude = (keyRight - keyLeft != 0) or (keyDown - keyUp != 0);
-inputDirection = point_direction(0,0,keyRight-keyLeft,keyDown-keyUp);
+inputMagnitude = InputDistance(INPUT_CLUSTER.NAVIGATION);
+inputDirection = InputDirection(0, INPUT_CLUSTER.NAVIGATION);
 
 state();
 invulnerable = max(invulnerable-1,0);

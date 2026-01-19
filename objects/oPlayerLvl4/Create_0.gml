@@ -20,6 +20,7 @@ itemSprites = [
 ];
 itemCircleNum = sprite_get_number(sPlayerItemCircle);
 itemCurve = animcurve_get_channel(PlayerItemCurves,"item");
+weaponDir = -90;
 
 // health
 hp = 8;

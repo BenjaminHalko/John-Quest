@@ -15,7 +15,7 @@ function PlayerStateFree() {
 	PlayerAnimateSprite();
 
 	//Activate Key Logic
-	if (keyAction)
+	if (InputPressed(INPUT_VERB.ATTACK))
 	{
 		var _activateX = x;
 		var _activateY = y;
@@ -66,12 +66,12 @@ function PlayerStateFree() {
 	//Cycle Items
 	if(global.playerHasAnyItems)
 	{
-		if(keySecondary != 0)
+		if(InputPressed(INPUT_VERB.SWITCH))
 		{
 			var _start = global.playerEquipped;
 			do
 			{
-				global.playerEquipped += keySecondary;
+				global.playerEquipped += 1;
 				if(global.playerEquipped < 0) global.playerEquipped = ITEM.TYPE_COUNT-1;
 				if(global.playerEquipped >= ITEM.TYPE_COUNT) global.playerEquipped = 0;
 			}

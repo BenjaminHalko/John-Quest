@@ -25,15 +25,13 @@ x1 = lerp(x1, x1Target, lerpProgress);
 x2 = lerp(x2, x2Target, lerpProgress);
 
 //Cycle Through Responses
-keyUp = keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W"));
-keyDown = keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S"));
-responseSelected += (keyDown - keyUp);
+responseSelected += InputOpposingRepeat(INPUT_VERB.UP, INPUT_VERB.DOWN);
 var _max = array_length(responses)-1;
 var _min = 0;
 if (responseSelected > _max) responseSelected = _min;
 if (responseSelected < _min) responseSelected = _max;
 
-if (oPlayer.keyAction)
+if (InputPressed(INPUT_VERB.ACCEPT))
 {
 	var _textLength = string_length(text);
 	if (textProgress >= _textLength)
@@ -56,7 +54,7 @@ if (oPlayer.keyAction)
 			}	
 			with(oPlayer) {
 				state = lastState;
-				keyAction = false;
+				InputVerbConsume(INPUT_VERB.ACCEPT);
 			}
 		}
 	}

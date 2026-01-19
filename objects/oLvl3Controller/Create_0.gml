@@ -5,8 +5,11 @@
 
 
 // Cursor
+global.mx = RESOLUTION_W / 2;
+global.my = RESOLUTION_H / 2;
 windowWidth = window_get_width();
 windowHeight = window_get_height();
+window_mouse_set(windowWidth * 0.5, windowHeight * 0.5);
 global.cursors = [];
 global.currentCursorType = 0;
 

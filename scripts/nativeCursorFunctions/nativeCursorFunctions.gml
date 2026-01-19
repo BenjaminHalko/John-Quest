@@ -27,8 +27,13 @@ function native_cursor(_ptr) constructor {
 function setCursor(_type) {
 	if (global.currentCursorType != _type) {
 		global.currentCursorType = _type;
-		if (global.hasNativeCursor) native_cursor_set(global.cursors[_type]);
-		else cursor_sprite = global.cursors[_type];
+        if (_type == -1) {
+            if (global.hasNativeCursor) native_cursor_reset();
+            else cursor_sprite = -1;
+        } else {
+            if (global.hasNativeCursor) native_cursor_set(global.cursors[_type]);
+            else cursor_sprite = global.cursors[_type];
+        }
 	}
 }
 
