@@ -61,7 +61,7 @@ jobs:
           modules: mac
           cache: true
       - name: Build with Igor
-        uses: bscotch/igor-build@v1
+        uses: BenjaminHalko/igor-build@cbe80103db5467293aa85e5d62eb193969627c91
         id: build
         with:
           yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
