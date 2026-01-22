@@ -71,6 +71,7 @@ jobs:
       - name: Extract Build
         run: |
           unzip "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" -d extracted
+          mv John_s_Quest.app "John's Quest.app"
       - name: Upload Build
         uses: actions/upload-artifact@v4
         with:
