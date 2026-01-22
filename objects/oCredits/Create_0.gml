@@ -66,16 +66,13 @@ credits = [
 	["Boss design",
 	"Morlan"],
 	
-	["Additional player art",
-	"Dall-E 2"],
-	
 	["~ World 2 ~"],
 	
 	["Photos",
 	"Benjamin"],
 	
 	["Voice over",
-	"Eleven Labs"],
+	"John Appleby"],
 	
 	["Key item design",
 	"Morlan"],
@@ -93,9 +90,6 @@ credits = [
 	
 	["Boss design",
 	"Benjamin"],
-	
-	["Additional boss art",
-	"Dall-E 2"],
 	
 	["~ Title ~"],
 	

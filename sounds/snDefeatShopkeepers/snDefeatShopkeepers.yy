@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.619563,
+  "duration":1.2857143,
   "exportDir":"",
   "name":"snDefeatShopkeepers",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snDefeatShopkeepers.mp3",
+  "soundFile":"snDefeatShopkeepers.wav",
   "volume":1.0,
 }

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.291375,
+  "duration":2.7917688,
   "exportDir":"",
   "name":"snAttemptTakePropellers",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snAttemptTakePropellers.mp3",
+  "soundFile":"snAttemptTakePropellers.wav",
   "volume":1.0,
 }

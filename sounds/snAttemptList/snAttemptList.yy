@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.709375,
+  "duration":2.8440137,
   "exportDir":"",
   "name":"snAttemptList",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snAttemptList.mp3",
+  "soundFile":"snAttemptList.wav",
   "volume":1.0,
 }

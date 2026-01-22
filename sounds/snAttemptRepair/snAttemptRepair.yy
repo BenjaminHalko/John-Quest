@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.324875,
+  "duration":1.6837188,
   "exportDir":"",
   "name":"snAttemptRepair",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snAttemptRepair.mp3",
+  "soundFile":"snAttemptRepair.wav",
   "volume":1.0,
 }

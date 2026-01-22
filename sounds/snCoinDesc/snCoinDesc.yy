@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.186937,
+  "duration":3.074603,
   "exportDir":"",
   "name":"snCoinDesc",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snCoinDesc.mp3",
+  "soundFile":"snCoinDesc.wav",
   "volume":1.0,
 }

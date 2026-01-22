@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":7.10525,
+  "duration":4.224218,
   "exportDir":"",
   "name":"snEyeTouch",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snEyeTouch.mp3",
+  "soundFile":"snEyeTouch.wav",
   "volume":1.0,
 }

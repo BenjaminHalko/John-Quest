@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.906937,
+  "duration":1.6466213,
   "exportDir":"",
   "name":"snLaserDesc",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snLaserDesc.mp3",
+  "soundFile":"snLaserDesc.wav",
   "volume":1.0,
 }

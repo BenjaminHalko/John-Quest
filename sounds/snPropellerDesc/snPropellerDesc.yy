@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.768937,
+  "duration":2.2963266,
   "exportDir":"",
   "name":"snPropellerDesc",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snPropellerDesc.mp3",
+  "soundFile":"snPropellerDesc.wav",
   "volume":1.0,
 }

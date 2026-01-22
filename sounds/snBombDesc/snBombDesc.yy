@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.40325,
+  "duration":2.3575964,
   "exportDir":"",
   "name":"snBombDesc",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snBombDesc.mp3",
+  "soundFile":"snBombDesc.wav",
   "volume":1.0,
 }
