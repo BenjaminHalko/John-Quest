@@ -295,6 +295,7 @@
     {"id":{"name":"oRockLvl4","path":"objects/oRockLvl4/oRockLvl4.yy",},},
     {"id":{"name":"oRockNoCollision","path":"objects/oRockNoCollision/oRockNoCollision.yy",},},
     {"id":{"name":"oRockPile","path":"objects/oRockPile/oRockPile.yy",},},
+    {"id":{"name":"oRockPuzzle","path":"objects/oRockPuzzle/oRockPuzzle.yy",},},
     {"id":{"name":"oRockTrigger","path":"objects/oRockTrigger/oRockTrigger.yy",},},
     {"id":{"name":"oRoof","path":"objects/oRoof/oRoof.yy",},},
     {"id":{"name":"oSignpost","path":"objects/oSignpost/oSignpost.yy",},},

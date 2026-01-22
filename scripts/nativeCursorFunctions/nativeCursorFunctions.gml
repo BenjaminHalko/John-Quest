@@ -26,6 +26,9 @@ function native_cursor(_ptr) constructor {
 
 function setCursor(_type) {
 	if (global.currentCursorType != _type) {
+        if (!global.hasNativeCursor) {
+            window_set_cursor(cr_none);
+        }
 		global.currentCursorType = _type;
         if (_type == -1) {
             if (global.hasNativeCursor) native_cursor_reset();

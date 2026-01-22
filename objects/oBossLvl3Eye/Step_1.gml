@@ -160,6 +160,12 @@ if (dead) {
 			audio_stop_sound(oInventory.talking);
 			oInventory.talking = audio_play_sound(snDefeatShopkeepers,1,false);
 			oInventory.subtitles = "Well that was easy...";
+            
+            if (STEAM_ENABLED) {
+                call_later(audio_sound_length(snDefeatShopkeepers), time_source_units_seconds, function() {
+                    steam_set_achievement("world3_bribery");
+                });
+            }
 			instance_destroy(oBossLvl3Eye);
 		}
 	}

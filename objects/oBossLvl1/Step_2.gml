@@ -11,6 +11,11 @@ if (deadBeat >= 23) {
 		oPlayer.hsp = 0;
 		oPlayer.vsp = 0;
 		oBackground.finalSpd = 0;
+        
+        if (STEAM_ENABLED) {
+            steam_set_achievement("world1_complete");
+        }
+        
 		instance_destroy(oPlayerGun);
 		instance_destroy();
 	} else {

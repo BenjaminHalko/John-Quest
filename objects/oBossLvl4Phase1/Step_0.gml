@@ -118,6 +118,10 @@ if (intro) {
 			
 			explosionCount++;
 			timer = 30;
+            
+            if (explosionCount == 4 and STEAM_ENABLED and !steam_get_achievement("world4_boss1_defeated")) {
+                steam_set_achievement("world4_complete");
+            }
 		}
 		
 		if (explosionCount == maxExplosions) {
@@ -149,6 +153,10 @@ if (intro) {
 		
 		if (mushroomY >= y) {
 			if (--timer <= 0) {
+                if (STEAM_ENABLED and !steam_get_achievement("world4_boss1_defeated")) {
+                    steam_clear_achievement("world4_complete");
+                    steam_set_achievement("world4_boss1_defeated");
+                }
 				oCamera.follow = oPlayer;
 				oPlayer.allowMovement = true;
 				oPlayer.restoreHealth = true;

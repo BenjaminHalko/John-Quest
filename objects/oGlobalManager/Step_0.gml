@@ -12,6 +12,6 @@ if (InputPressed(INPUT_VERB.BACK)) {
     }
 }
 
-if (keyboard_check_pressed(vk_f11) and os_type != os_operagx) {
+if (os_type != os_operagx and (keyboard_check_pressed(vk_f4) or keyboard_check_pressed(vk_f11))) {
     window_set_fullscreen(!window_get_fullscreen());
 }

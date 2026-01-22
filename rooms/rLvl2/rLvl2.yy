@@ -124,7 +124,6 @@
     {"name":"inst_116F450F","path":"rooms/rLvl2/rLvl2.yy",},
     {"name":"inst_3F7CDC70","path":"rooms/rLvl2/rLvl2.yy",},
     {"name":"inst_176EE04A","path":"rooms/rLvl2/rLvl2.yy",},
-    {"name":"inst_5A0D9232","path":"rooms/rLvl2/rLvl2.yy",},
     {"name":"inst_61878890","path":"rooms/rLvl2/rLvl2.yy",},
     {"name":"inst_56B6288E","path":"rooms/rLvl2/rLvl2.yy",},
     {"name":"inst_704ADD58","path":"rooms/rLvl2/rLvl2.yy",},
@@ -1838,6 +1837,7 @@
     {"name":"inst_2FDF8BD1","path":"rooms/rLvl2/rLvl2.yy",},
     {"name":"inst_4EF0E9FF","path":"rooms/rLvl2/rLvl2.yy",},
     {"name":"inst_24523A5","path":"rooms/rLvl2/rLvl2.yy",},
+    {"name":"inst_38E3FC6E","path":"rooms/rLvl2/rLvl2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -2039,7 +2039,6 @@
         {"$GMRInstance":"v4","%Name":"inst_116F450F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_116F450F","objectId":{"name":"oRock","path":"objects/oRock/oRock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2440.0,"y":3344.0,},
         {"$GMRInstance":"v4","%Name":"inst_3F7CDC70","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3F7CDC70","objectId":{"name":"oRock","path":"objects/oRock/oRock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2464.0,"y":3384.0,},
         {"$GMRInstance":"v4","%Name":"inst_176EE04A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_176EE04A","objectId":{"name":"oRock","path":"objects/oRock/oRock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2440.0,"y":3368.0,},
-        {"$GMRInstance":"v4","%Name":"inst_5A0D9232","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5A0D9232","objectId":{"name":"oRock","path":"objects/oRock/oRock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2552.0,"y":3368.0,},
         {"$GMRInstance":"v4","%Name":"inst_61878890","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_61878890","objectId":{"name":"oPlant","path":"objects/oPlant/oPlant.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2472.0,"y":2904.0,},
         {"$GMRInstance":"v4","%Name":"inst_56B6288E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_56B6288E","objectId":{"name":"oPlant","path":"objects/oPlant/oPlant.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2520.0,"y":2904.0,},
         {"$GMRInstance":"v4","%Name":"inst_704ADD58","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_704ADD58","objectId":{"name":"oPlant","path":"objects/oPlant/oPlant.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2520.0,"y":2920.0,},
@@ -2419,6 +2418,7 @@
         {"$GMRInstance":"v4","%Name":"inst_24523A5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24523A5","objectId":{"name":"oHeartDrop","path":"objects/oHeartDrop/oHeartDrop.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oHeartDrop","path":"objects/oHeartDrop/oHeartDrop.yy",},"propertyId":{"name":"forceHeart","path":"objects/oHeartDrop/oHeartDrop.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2472.0,"y":2184.0,},
+        {"$GMRInstance":"v4","%Name":"inst_38E3FC6E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_38E3FC6E","objectId":{"name":"oRockPuzzle","path":"objects/oRockPuzzle/oRockPuzzle.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2552.0,"y":3368.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Trees","depth":-10300,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_871A347","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_871A347","objectId":{"name":"oBonsai","path":"objects/oBonsai/oBonsai.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1512.0,"y":2408.0,},

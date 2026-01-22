@@ -19,6 +19,10 @@ if (lastTextIndex != floor(textProgress) and textProgress < string_length(text))
 	} else {
 		audio_stop_sound(talkSound[background]);	
 	}
+    
+    if (background == 3 and STEAM_ENABLED and !instance_exists(oTextQueued) and lastTextIndex >= string_length(text)-ceil(global.textSpeed)) {
+        steam_set_achievement("world2_evil");
+    }
 }
 
 x1 = lerp(x1, x1Target, lerpProgress);

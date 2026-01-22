@@ -99,6 +99,10 @@ if dead {
 			instance_create_depth(eyes[0].obj.x,eyes[0].obj.y,depth+1,oBossLvl2List);
 			audio_play_sound(snExplosion,1,false);
 			ScreenShake(15,90);
+            
+            if (STEAM_ENABLED) {
+                steam_set_achievement("world2_complete");
+            }
 		}
 	}
 	

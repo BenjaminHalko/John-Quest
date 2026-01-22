@@ -27,6 +27,10 @@ if (percent == 1)  {
 		destroyCursors();
 		wait = 15;
 		playerMovePercent = 1;
+        
+        if (STEAM_ENABLED) {
+            steam_set_achievement("world4_complete");
+        }
 	}
 	
 	if (createdTriangles) {

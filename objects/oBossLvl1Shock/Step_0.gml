@@ -15,7 +15,7 @@ if (oBossLvl1.inBetweenPhases) {
 		instance_destroy(spikes);
 		instance_destroy();
 	}
-} else if (image_yscale != targetYscale) {
+} else if (spikes == noone) {
 	image_yscale = ApproachFade(image_yscale, targetYscale, 4, 0.6);
 	
 	if (image_yscale >= targetYscale-0.01 and global.audioTick) {

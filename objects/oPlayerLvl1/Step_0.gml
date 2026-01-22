@@ -1,7 +1,7 @@
 /// @desc
 
 var _move = InputOpposing(INPUT_VERB.LEFT, INPUT_VERB.RIGHT);
-var _duck = InputOpposing(INPUT_VERB.UP, INPUT_VERB.DOWN);
+var _duck = InputOpposing(INPUT_VERB.DOWN, INPUT_VERB.UP);
 
 if (respawnPercent == 1) {
 	if dash == 0 {
