@@ -13,7 +13,7 @@
   "option_windows_display_cursor":false,
   "option_windows_display_name":"John's Quest",
   "option_windows_enable_steam":false,
-  "option_windows_executable_name":"${project_name}.exe",
+  "option_windows_executable_name":"John's Quest.exe",
   "option_windows_icon":"${options_dir}/windows/icons/icon.ico",
   "option_windows_installer_finished":"${options_dir}/windows/installer/finished.bmp",
   "option_windows_installer_header":"${options_dir}/windows/installer/header.bmp",
