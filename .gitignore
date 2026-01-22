@@ -1,3 +1,6 @@
 # GameMaker temporary files
 *.resource_order
 *.old.*
+
+# MacOS
+.DS_Store

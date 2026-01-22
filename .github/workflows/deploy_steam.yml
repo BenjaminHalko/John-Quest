@@ -1,0 +1,149 @@
+name: Deploy Steam
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get Project Path
+        id: find_yyp
+        run: |
+          $yyp = Get-ChildItem -Path ${{ github.workspace }} -Filter *.yyp | Select-Object -First 1
+          $newName = $yyp.Name -replace '[^a-zA-Z0-9.]', '_'
+          $newPath = Join-Path $yyp.DirectoryName $newName
+          Rename-Item -Path $yyp.FullName -NewName $newName
+          "yyp-path=$newPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      - name: Setup Igor
+        uses: bscotch/igor-setup@v3
+        id: igor
+        with:
+          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
+          modules: windows
+          cache: true
+      - name: Build with Igor
+        uses: bscotch/igor-build@v1
+        id: build
+        with:
+          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          user-dir: "${{ steps.igor.outputs.user-dir }}"
+          platform: windows
+          config: Steam
+      - name: Extract Build
+        run: |
+          Expand-Archive -Path "${{ steps.build.outputs.out-dir }}\${{ steps.build.outputs.out-name }}" -DestinationPath extracted
+      - name: Upload Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-windows-steam
+          path: extracted
+          retention-days: 1
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get Project Path
+        id: find_yyp
+        run: |
+          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
+          echo "YYP file found at: $yyp"
+          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
+      - name: Setup Igor
+        uses: bscotch/igor-setup@v3
+        id: igor
+        with:
+          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
+          modules: mac
+          cache: true
+      - name: Build with Igor
+        uses: bscotch/igor-build@v1
+        id: build
+        with:
+          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          user-dir: "${{ steps.igor.outputs.user-dir }}"
+          platform: mac
+          config: Steam
+      - name: Extract Build
+        run: |
+          unzip "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" -d extracted
+      - name: Upload Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-macos-steam
+          path: extracted
+          retention-days: 1
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable unprivileged user namespaces
+        run: |
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - name: Get Project Path
+        id: find_yyp
+        run: |
+          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
+          echo "YYP file found at: $yyp"
+          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
+      - name: Set up ffmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        with:
+          ffmpeg-version: "6.1.0"
+      - name: Install Steam Runtime
+        run: |
+          sudo mkdir -p /opt/steam-runtime/
+          curl https://repo.steampowered.com/steamrt-images-scout/snapshots/latest-steam-client-general-availability/com.valvesoftware.SteamRuntime.Sdk-amd64,i386-scout-sysroot.tar.gz | sudo tar -xzf - -C /opt/steam-runtime/
+      - name: Setup Igor
+        uses: bscotch/igor-setup@v3
+        id: igor
+        with:
+          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
+          modules: linux
+          cache: true
+      - name: Build with Igor
+        uses: bscotch/igor-build@v1
+        id: build
+        with:
+          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          user-dir: ${{ steps.igor.outputs.user-dir }}
+          platform: linux
+          config: Steam
+      - name: Extract Build
+        run: |
+          unzip "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" -d extracted
+      - name: Upload Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-linux-steam
+          path: extracted
+          retention-days: 1
+
+  deploy:
+    needs: [build-windows, build-macos, build-linux]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Builds
+        uses: actions/download-artifact@v4
+        with:
+          pattern: build-*-steam
+          path: build
+
+      - name: Deploy to Steam
+        uses: game-ci/steam-deploy@v3
+        with:
+          username: ${{ secrets.STEAM_USERNAME }}
+          configVdf: ${{ secrets.STEAM_CONFIG_VDF }}
+          appId: ${{ secrets.STEAM_APP_ID }}
+          buildDescription: ${{ github.sha }}
+          rootPath: build
+          depot1Path: build-windows-steam
+          depot2Path: build-macos-steam
+          depot3Path: build-linux-steam
+          releaseBranch: staging
