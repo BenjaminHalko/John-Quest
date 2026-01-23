@@ -5,6 +5,8 @@
 #macro Steam:STEAM_ENABLED true
 
 // Lock resolution
+window_enable_borderless_fullscreen(true);
+window_set_fullscreen(true);
 surface_resize(application_surface,480,270);
 
 // Shaders
