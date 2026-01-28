@@ -1,16 +1,18 @@
 /// @desc 
 
+var _yOffset = (window_get_height() / window_get_width() * 480 - 270) * 0.5;
+
 for(var i = 0; i < inventorySlots; i++) {
 	var _x = 480/2 + (width - 32)/(inventorySlots-1)*(i-(inventorySlots-1)/2);
 	var _y = 1-animcurve_channel_evaluate(inventoryYCurve,inventoryItemY[i]);
 	
-	draw_sprite_ext(sInventoryBack,i,_x+8,inventoryY + _y * 96+Wave(-5,0,5,waveOffsets[i]-0.2)+8,1,1,0,c_black,0.5);
-	draw_sprite(sInventoryBack,i,_x,inventoryY + _y * 96+Wave(-5,0,5,waveOffsets[i]-0.2));
+	draw_sprite_ext(sInventoryBack,i,_x+8,inventoryY + _y * (96+_yOffset)+Wave(-5,0,5,waveOffsets[i]-0.2)+8,1,1,0,c_black,0.5);
+	draw_sprite(sInventoryBack,i,_x,inventoryY + _y * (96+_yOffset)+Wave(-5,0,5,waveOffsets[i]-0.2));
 	if (inventory[i] != -1) {
 		if (global.inHand != i and itemReturn != i) {
 			var _hovering = (point_in_rectangle(global.mx,global.my,_x-24,inventoryY-48,_x+24,inventoryY)) and (global.inHand == -1);
-			if (_hovering) DrawOutline(sInventoryItems,inventory[i],_x,inventoryY-16+Wave(-5,0,5,waveOffsets[i])+_y*64);
-			else draw_sprite(sInventoryItems,inventory[i],_x,inventoryY-16+Wave(-5,0,5,waveOffsets[i])+_y*64);
+			if (_hovering) DrawOutline(sInventoryItems,inventory[i],_x,inventoryY-16+Wave(-5,0,5,waveOffsets[i])+_y*(64+_yOffset));
+			else draw_sprite(sInventoryItems,inventory[i],_x,inventoryY-16+Wave(-5,0,5,waveOffsets[i])+_y*(64+_yOffset));
 		}
 	}
 }
