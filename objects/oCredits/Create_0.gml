@@ -65,6 +65,9 @@ credits = [
 	
 	["Boss design",
 	"Morlan"],
+    
+    ["ARPG template",
+    "@SaraJS"]
 	
 	["~ World 2 ~"],
 	

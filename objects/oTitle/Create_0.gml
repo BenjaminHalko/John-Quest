@@ -40,8 +40,10 @@ mainMenu = [
 	lastLevel == -1 ? "NEW GAME" : "CONTINUE",
 	"WORLD SELECT",
 	"CREDITS",
-    "QUIT",
 ];
+
+if (os_type != os_operagx)
+    array_push(mainMenu, "QUIT");
 
 levelSelect = [
 	"BACK",
