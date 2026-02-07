@@ -18,19 +18,19 @@ function ActivateSwordNPC()
 			{
 				//complete quest
 				RemoveHat();
-				NewTextBox("Wow, you found my hat without\nme even asking you to!",1);
-				NewTextBox("You are a true hero indeed!",1);
-				NewTextBox("Here, take this sword.\nI hear it is dangerous to go without it.",1);
+				NewTextBox("lvl2.sword.questcomplete.foundhatwithoutasking",1);
+				NewTextBox("lvl2.sword.questcomplete.hero",1);
+				NewTextBox("lvl2.sword.questcomplete.getsword",1);
 				oPlayer.lastState = PlayerStateGetItem;
 			}
 			else
 			{
 				//offer quest
 				if (global.questStatusHat == 0) {
-					NewTextBox("Hello there! You look like a brave adventurer.",1);
-					NewTextBox("Could you help me find my missing hat?",1,["0:Of course!","1:This task is beneath me"]);
+					NewTextBox("lvl2.sword.getquest.request0",1);
+					NewTextBox("lvl2.sword.getquest.request1",1,[ $"0:lvl2.sword.getquest.response.accept","1:lvl2.sword.getquest.response.reject"]);
 				} else {
-					NewTextBox("Did you change your mind about helping me?",1,["0:Sure, I can help.","1:Haha! I don't care about your stinky hat!"]);
+					NewTextBox("lvl2.sword.changedmind.request",1,["0:lvl2.sword.changedmind.accept","1:lvl2.sword.changedmind.reject"]);
 				}
 				
 			}
@@ -41,29 +41,29 @@ function ActivateSwordNPC()
 			{
 				//complete quest
 				RemoveHat();
-				NewTextBox("Wow, you found my hat!",1);
-				NewTextBox("You are a true hero indeed!",1);
-				NewTextBox("Here, take this sword.\nI hear it is dangerous to go without it.",1);
+				NewTextBox("lvl2.sword.questcomplete.foundhat",1);
+				NewTextBox("lvl2.sword.questcomplete.hero",1);
+				NewTextBox("lvl2.sword.questcomplete.getsword",1);
 				oPlayer.lastState = PlayerStateGetItem;
 			}
 			else
 			{
 				//clue reminder
-				NewTextBox("Did you forget where I left my hat?\nI think it was in the Evil Slime Base.",1);
+				NewTextBox("lvl2.sword.clue",1);
 			}
 		}break;
 		case 2: //quest already completed
 		{
 			if (!global.playerItemUnlocked[ITEM.SWORD]) {
-				NewTextBox("Here, take this sword.\nI hear it dangerous to go without it.",1);
+				NewTextBox("lvl2.sword.questcomplete.getsword",1);
 				oPlayer.lastState = PlayerStateGetItem;
 			} else {
-				NewTextBox("I am glad I got my hat back,\nnow I can see again.",1);
+				NewTextBox("lvl2.sword.gothat",1);
 			}
 		}break;
 	}
 }
 
 function ActivateSwordNPCItemGot() {
-	NewTextBox("Thanks again!\nI hope you find that sword useful!",1);
+	NewTextBox("lvl2.sword.gothat",1);
 }

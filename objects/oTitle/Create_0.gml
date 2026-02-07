@@ -1,7 +1,5 @@
 /// @desc 
 
-global.noSave = false;
-
 enum MENU {
 	MAIN,
 	LEVELSELECT,
@@ -36,22 +34,28 @@ menu = MENU.MAIN;
 
 stars = [];
 
-mainMenu = [
-	lastLevel == -1 ? "NEW GAME" : "CONTINUE",
-	"WORLD SELECT",
-	"CREDITS",
-];
+loadMenuText = function() {
+    mainMenu = [
+    	lastLevel == -1 ? lexicon_text("menu.newgame") : lexicon_text("menu.continue"),
+    	lexicon_text("menu.worldselect"),
+    	lexicon_text("menu.credits"),
+    ];
+    
+    if (os_type != os_operagx)
+        array_push(mainMenu, lexicon_text("menu.quit"));
+    
+    var _world = lexicon_text("menu.world");
+    var _boss = lexicon_text("menu.boss");
+    levelSelect = [
+    	lexicon_text("menu.back"),
+    	$"{_world} 0", $"{_boss} 0",
+    	$"{_world} 1", $"{_boss} 1",
+    	$"{_world} 2", $"{_world} 3",
+    	$"{_boss} 3", $"{_boss} ?",
+    ];
+}
 
-if (os_type != os_operagx)
-    array_push(mainMenu, "QUIT");
-
-levelSelect = [
-	"BACK",
-	"WORLD 0", "BOSS 0",
-	"WORLD 1", "BOSS 1",
-	"WORLD 2", "WORLD 3",
-	"BOSS 3", "BOSS ?",
-];
+loadMenuText();
 
 repeat(100) {
 	array_push(stars, {
@@ -65,11 +69,11 @@ repeat(100) {
 }
 
 text = [
-"IN THE MYSTICAL REALMS,\nA TALE OF TWO RIVALS UNFOLDED.",
-"JOHN, THE WARRIOR OF LIGHT,\nAND EVIL JOHN, HIS SHADOW TWIN.",
-"EVIL JOHN, CONSUMED BY ENVY,\nSOUGHT TO CONQUER BOTH REALMS.",
-"WITH HIS SIX EVIL EYES, HE CORRUPTED\nTHE INHABITANTS OF THE LAND.",
-"JOHN, WITH HIS EXPERTISE IN GAMING,\nMUST RESTORE PEACE TO THE WORLD."
+    lexicon_text("intro0"),
+    lexicon_text("intro1"),
+    lexicon_text("intro2"),
+    lexicon_text("intro3"),
+    lexicon_text("intro4")
 ];
 
 startUpPos = 0;

@@ -43,12 +43,12 @@ stopReturn = false;
 
 // Speech
 dialog = [];
-dialog[INVENTORY.SWORD] = {audio: snSwordDesc, subtitles: "It is my trusty sword."};
-dialog[INVENTORY.BOMB] = {audio: snBombDesc, subtitles: "It's a bomb! Very explosive!"};
-dialog[INVENTORY.MONEY] = {audio: snCoinDesc, subtitles: "That's all the coins I collected\nfrom those evil monsters!"};
-dialog[INVENTORY.PROPELLER] = {audio: snPropellerDesc, subtitles: "It's the propeller I repaired with my sword."};
-dialog[INVENTORY.CANNON] = {audio: snCannonDesc, subtitles: "The cannon is loaded with explosive bombs!"};
-dialog[INVENTORY.LASER] = {audio: snLaserDesc, subtitles: "It's the deadly laser shooter."};
+dialog[INVENTORY.SWORD] = {audio: snSwordDesc, subtitles: lexicon_text("lvl3.desc.sword")};
+dialog[INVENTORY.BOMB] = {audio: snBombDesc, subtitles: lexicon_text("lvl3.desc.bomb")};
+dialog[INVENTORY.MONEY] = {audio: snCoinDesc, subtitles: lexicon_text("lvl3.desc.coin")};
+dialog[INVENTORY.PROPELLER] = {audio: snPropellerDesc, subtitles: lexicon_text("lvl3.desc.propeller")};
+dialog[INVENTORY.CANNON] = {audio: snCannonDesc, subtitles: lexicon_text("lvl3.desc.cannon")};
+dialog[INVENTORY.LASER] = {audio: snLaserDesc, subtitles: lexicon_text("lvl3.desc.laser")};
 talking = -1;
 subtitles = "";
 
@@ -63,9 +63,9 @@ for(var i = 0; i < _number; i++) {
 
 // Collected items
 itemListDesc = [
-	"propeller\nblades",
-	"explosive\ncannon",
-	"laser\nblaster"
+	lexicon_text("lvl3.listItem.propeller"),
+	lexicon_text("lvl3.listItem.cannon"),
+	lexicon_text("lvl3.listItem.laser")
 ];
 
 if (global.piecesCollected[2]) inventory[1] = INVENTORY.LASER;

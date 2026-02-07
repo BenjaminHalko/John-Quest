@@ -12,7 +12,7 @@ if (title) {
 	draw_sprite(sTitleBuilding, 1, room_width, room_height);
 	draw_sprite(sPlayerLvl1,0,350,room_height-buildingHeight+24);
 	
-	draw_set_font(fRetro);
+	draw_set_font(global.fontRetro);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	
@@ -41,11 +41,11 @@ if (title) {
 		}
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY-16+(floor(max(0,menuSelected+1) / 2))*16);
 	} else {
-		draw_set_font(fRPG);
-		draw_text(_menuX-32,_menuY-10,"Programming - Benjamin\nLevel Design - Benjamin\nMusic & Sound FX - Benjamin\nCharacter Art - Morlan\nKey-Item Art\n  - Morlan / Haoxi / Benjamin\nEnvironmental Art\n  - Morlan / Haoxi / Benjamin");
+		draw_set_font(global.fontRPG);
+		draw_text(_menuX-32,_menuY-28,$"{lexicon_text("credits.programming")} - Benjamin\n{lexicon_text("credits.level")} - Benjamin\n{lexicon_text("credits.music")} - Benjamin\n{lexicon_text("credits.character")} - Morlan\n{lexicon_text("credits.keyitem")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.environment")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.face")} - John Appleby");
 		
 		draw_set_color(c_dkgray);
-		draw_text(_menuX-32,_menuY-28,"Thanks to everyone that made this possible");
+		draw_text(_menuX-32,_menuY-28,lexicon_text("credits.thanks1Alt"));
 	}
 } else {
 	draw_sprite(sTitleLandscape,0,0,room_height-48+smallerBuildingHeight*moveUpPercent * 1.7);
@@ -64,7 +64,7 @@ if (title) {
 		if (textAlpha > 0 and textNum >= 0) {
 			draw_set_alpha(floor(textAlpha * 3) / 3);
 			draw_set_color(c_white);
-			draw_set_font(fRetro);
+			draw_set_font(global.fontRetro);
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_middle);
 			draw_text_ext(room_width/2,room_height-_rectHeight/2,text[textNum],16,400);

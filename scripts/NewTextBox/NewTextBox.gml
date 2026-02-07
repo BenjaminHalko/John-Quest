@@ -10,7 +10,7 @@ function NewTextBox() {
 	if(instance_exists(oText)) _obj = oTextQueued; else _obj = oText;
 	with(instance_create_layer(0,0,"Instances",_obj))
 	{
-		text = argument[0];
+		text = argument[0] == ":(" ?  ":(" : lexicon_text(argument[0]);
 		lerpProgress = 0;
 		if(instance_exists(other)) originInstance = other.id; else originInstance = noone;
 		if(argument_count > 1) background = argument[1]; else background = 1;
@@ -23,7 +23,7 @@ function NewTextBox() {
 				var _markerPosition = string_pos(":",responses[i]);
 				responseScripts[i] = string_copy(responses[i],1,_markerPosition-1);
 				responseScripts[i] = real(responseScripts[i]);
-				responses[i] = string_delete(responses[i],1,_markerPosition);
+				responses[i] = lexicon_text(string_delete(responses[i],1,_markerPosition));
 			}
 		}
 		else

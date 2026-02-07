@@ -1,0 +1,146 @@
+{
+  "language": "English",
+  "locale": "en-US",
+  "text": {
+    "menu": {
+      "newgame": "NEW GAME",
+      "continue": "CONTINUE",
+      "worldselect": "WORLD SELECT",
+      "options": "OPTIONS",
+      "credits": "CREDITS",
+      "quit": "QUIT",
+      "back": "BACK",
+      "world": "WORLD",
+      "boss": "BOSS",
+      "audio": "AUDIO",
+      "language": "LANGUAGE"
+    },
+    "intro": [
+      "IN THE MYSTICAL REALMS,\nA TALE OF TWO RIVALS UNFOLDED.",
+      "JOHN, THE WARRIOR OF LIGHT,\nAND EVIL JOHN, HIS SHADOW TWIN.",
+      "EVIL JOHN, CONSUMED BY ENVY,\nSOUGHT TO CONQUER BOTH REALMS.",
+      "WITH HIS SIX EVIL EYES, HE CORRUPTED\nTHE INHABITANTS OF THE LAND.",
+      "JOHN, WITH HIS EXPERTISE IN GAMING,\nMUST RESTORE PEACE TO THE WORLD."
+    ],
+    "lvl2": {
+      "signs": {
+        "interactionHint": "Press [SPACE] to interact\nwith signs.",
+        "vaseStorage": "Vase Storage:\nWe keep your vases\nsafe and secure.",
+        "village": "Village ahead.\n(It's 12 tiles to your right,\nyou can't miss it...)",
+        "doomCave": [
+          "WEST: Forest\nEAST: Bigger Forest\nSOUTH: Evil Slime Base",
+          "NORTH: Evil Cave of Doom!\nDO NOT ENTER AT ALL COSTS!!!"
+        ],
+        "garden": "Keep out of the garden!",
+        "rockFormation": "Ya ha ha!",
+        "slimeBase": "Slime Base Ahead!\nEvil Members Only!",
+        "rockWarning": "Watch for Falling Rocks"
+      },
+      "sword": {
+        "getquest": {
+          "request": [
+            "Hello there! You look like a brave adventurer.",
+            "Could you help me find my missing hat?"
+          ],
+          "response": {
+            "accept": "Of course!",
+            "reject": "This task is beneath me"
+          },
+          "questaccepted": [
+            "Thanks!",
+            "I think I left it in the evil\nSlime base to the South!"
+          ]
+        },
+        "changedmind": {
+          "request": "Did you change your mind about helping me?",
+          "accept": "Sure, I can help.",
+          "reject": "Haha! I don't care about your stinky hat!"
+        },
+        "clue": "Did you forget where I left my hat?\nI think it was in the Evil Slime Base.",
+        "questcomplete": {
+          "foundhat": "Wow, you found my hat!",
+          "foundhatwithoutasking": "Wow, you found my hat without\nme even asking you to!",
+          "hero": "You are a true hero indeed!",
+          "getsword": "Here, take this sword.\nI hear it is dangerous to go without it."
+        },
+        "gothat": "I am glad I got my hat back,\nnow I can see again."
+      },
+      "bomb": {
+        "preitem": "Here, take this bomb.\nI hear it is dangerous to go without bombs.",
+        "postitem": [
+          "Legends has it, you can\npress [SHIFT] to swap items.",
+          "By the way, have you seen that big\nrock blocking the cave in the village?",
+          "People say it was blocked due to the\nexcessive amount of evil coming from inside..."
+        ],
+        "advice": {
+          "0": "Word of advice:\nDon't go wasting your bombs,\nyou only have a limited number.",
+          "1": "Be more careful next time.",
+          "2": "I'm watching you...",
+          "3": "...why?"
+        },
+        "refill": {
+          "0": "You used up all my precious bombs!!!\nI am so sad.\nLuckily, I have a few more...",
+          "1": "Again??? Are you wasting my\nbombs on purpose?!?\nI still have a few more...",
+          "2": "Why are you doing this...\nHere, take my entire stock! If you run\nout after this, I am not helping anymore.",
+          "3": "R.I.P. Bomb Dude\nHe died very confused."
+        }
+      },
+      "eyes": [
+        "i am very evil",
+        "i am so evil, that people say\n\"wow dude, you sure are evil!\""
+      ]
+    },
+    "lvl3": {
+      "desc": {
+        "sword": "It is my trusty sword.",
+        "bomb": "It's a bomb! Very explosive!",
+        "coin": "That's all the coins I collected\nfrom those evil monsters!",
+        "propeller": "It's the propeller I repaired with my sword.",
+        "cannon": "The cannon is loaded with explosive bombs!",
+        "laser": "It's the deadly laser shooter."
+      },
+      "listItem": {
+        "required": "Required Parts",
+        "propeller": "propeller\nblades",
+        "cannon": "explosive\ncannon",
+        "laser": "laser\nblaster"
+      },
+      "itemPickup": {
+        "takePropeller": "The propellers need to be\nrepaired before I can take them.",
+        "takeCannon": "The cannon needs to be loaded\nbefore I can take it.",
+        "repairPropeller": "I don't think I can\nrepair them with that.",
+        "loadCannon": "I don't think I can use\nthat to load the cannon.",
+        "combineLaser": "I don't think I can\ncombine those together."
+      },
+      "eyeInteract": {
+        "touch": "Ouch! Aaaah the pain!\nThere must be a way to defeat it...",
+        "useList": "What am I going to do with this?\nGive it paper cuts?",
+        "usePickup": "I am supposed to be collecting these!\nNot giving them away...",
+        "useMoney": "I don't think bribing it with\nmoney would be of any help.",
+        "useWeapon": "Unfortunately, they seemed to have figured\nout that shopkeepers are immune to damage!",
+        "defeatShopkeeper": "Well that was easy..."
+      }
+    },
+    "credits": {
+      "createdby": "A game by",
+      "programming": "Programming",
+      "level": "Level design",
+      "music": "Music & Sound FX",
+      "leveltweaks": "Level design\ntweaked & playtested by",
+      "environment": "Environmental art",
+      "character": "Character design",
+      "keyitem": "Key item design",
+      "boss": "Boss design",
+      "rpgtemplate": "ARPG template",
+      "pictures": "Photos",
+      "voice": "Voice over",
+      "translations": "TRANSLATIONS",
+      "title": "TITLE",
+      "logo": "Logo",
+      "face": "Face",
+      "thanks1": "THANKS TO EVERYONE\nTHAT MADE THIS GAME POSSIBLE",
+      "thanks1Alt": "Thanks to everyone that made this possible",
+      "thanks2": "THANK YOU FOR\nPLAYING"
+    }
+  }
+}

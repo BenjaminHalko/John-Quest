@@ -159,7 +159,7 @@ if (dead) {
 			oBossLvl3.showingAnimation = false;
 			audio_stop_sound(oInventory.talking);
 			oInventory.talking = audio_play_sound(snDefeatShopkeepers,1,false);
-			oInventory.subtitles = "Well that was easy...";
+			oInventory.subtitles = lexicon_text("lvl3.eyeInteract.defeatShopkeeper")
             
             if (STEAM_ENABLED) {
                 call_later(audio_sound_length(snDefeatShopkeepers), time_source_units_seconds, function() {

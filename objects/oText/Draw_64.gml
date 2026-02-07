@@ -1,7 +1,7 @@
 /// @desc Draw Textbox
 
 draw_sprite_ext(sTextboxBg, background, x1, y1, (x2 - x1) / 24, (y2 - y1) / 24, 0, c_white, 1);
-draw_set_font(fRPG);
+draw_set_font(global.fontRPG);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 draw_set_colour(c_black);

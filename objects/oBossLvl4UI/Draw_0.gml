@@ -15,7 +15,7 @@ var _barInnerY2 = _barY2-3;
 
 var _col = c_white;
 
-draw_set_font(fRetro);
+draw_set_font(global.fontRetro);
 draw_set_color(_col);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
@@ -60,7 +60,7 @@ if (percent == 1 and !point_in_rectangle(oBossLvl4Phase1.x,oBossLvl4Phase1.y,_x-
 	
 	draw_sprite_ext(sBossLvl4UIArrow,0,_xDraw,_yDraw,1,1,_dir,c_white,1);
 	draw_set_color(#f6071e);
-	draw_set_font(fRetro);
+	draw_set_font(global.fontRetro);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 	

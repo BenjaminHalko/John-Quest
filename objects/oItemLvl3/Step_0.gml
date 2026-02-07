@@ -49,9 +49,9 @@ if (global.my <= INVENTORY_Y) {
 					snAttemptCombine
 				];
 				var _subtitles = [
-					(global.inHand == -1) ? "The propellers need to be\nrepaired before I can take them." : "I don't think I can\nrepair them with that.",
-					(global.inHand == -1) ? "The cannon needs to be loaded\nbefore I can take it." : "I don't think I can use\nthat to load the cannon.",
-					"I don't think I can\ncombine those together."
+					lexicon_text(global.inHand == -1 ? "lvl3.itemPickup.takePropeller" : "lvl3.itemPickup.repairPropeller"),
+					lexicon_text(global.inHand == -1 ? "lvl3.itemPickup.takeCannon" : "lvl3.itemPickup.loadCannon"),
+					lexicon_text("lvl3.itemPickup.combineLaser")
 				];
 				with(oInventory) {
 					audio_stop_sound(talking);

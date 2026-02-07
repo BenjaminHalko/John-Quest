@@ -28,85 +28,87 @@ nameOffset = 16;
 logoOffsetBefore = 32;
 finalCreditsOffset = 96;
 
+worldText = lexicon_text("menu.world");
+
 credits = [
-	["A game by",
+	[lexicon_text("credits.createdby"),
 	"Benjamin, Haoxi, & Morlan"],
 	
-	["Programming",
+	[lexicon_text("credits.programming"),
 	"Benjamin"],
 	
-	["Level design",
+	[lexicon_text("credits.level"),
 	"Benjamin"],
 	
-	["Music & Sound FX",
+	[lexicon_text("credits.music"),
 	"Benjamin"],
 	
-	["~ World 0 ~"],
+	[0],
 	
-	["Level design\ntweaked & playtested by",
+	[lexicon_text("credits.leveltweaks"),
 	"Haoxi & Morlan"],
 	
-	["Environmental art",
+	[lexicon_text("credits.environment"),
 	"Benjamin"],
 	
-	["Boss design",
+	[lexicon_text("credits.boss"),
 	"Morlan"],
 	
-	["~ World 1 ~"],
+	[1],
 	
-	["Environmental art",
+	[lexicon_text("credits.environment"),
 	"Morlan & Haoxi"],
 	
-	["Character design",
+	[lexicon_text("credits.character"),
 	"Morlan"],
 	
-	["Key item design",
+	[lexicon_text("credits.keyitem"),
 	"Benjamin"],
 	
-	["Boss design",
+	[lexicon_text("credits.boss"),
 	"Morlan"],
     
-    ["ARPG template",
-    "@SaraJS"]
+    [lexicon_text("credits.rpgtemplate"),
+    "@SaraJS"],
 	
-	["~ World 2 ~"],
+	[2],
 	
-	["Photos",
+	[lexicon_text("credits.pictures"),
 	"Benjamin"],
 	
-	["Voice over",
+	[lexicon_text("credits.voice"),
 	"John Appleby"],
 	
-	["Key item design",
+	[lexicon_text("credits.keyitem"),
 	"Morlan"],
 	
-	["Boss design",
+	[lexicon_text("credits.boss"),
 	"Morlan"],
 	
-	["~ World 3 ~"],
+	[3],
 	
-	["Environmental art",
+	[lexicon_text("credits.environment"),
 	"Morlan"],
 	
-	["Key item design",
+	[lexicon_text("credits.keyitem"),
 	"Haoxi & Morlan"],
 	
-	["Boss design",
+	[lexicon_text("credits.boss"),
 	"Benjamin"],
 	
-	["~ Title ~"],
+	[ $"~ {worldText} ~"],
 	
-	["Logo",
+	[lexicon_text("credits.logo"),
 	"Benjamin"],
 	
-	["Environmental art",
+	[lexicon_text("credits.environment"),
 	"Morlan"],
 	
 	["_gamemaker_"],
 	
-	["Thanks to everyone\nthat made this game possible"],
-	
-	["Thank you for\nplaying"],
+	[lexicon_text("credits.thanks1")],
+    
+	[lexicon_text("credits.thanks2")]
 ];
 
 // Calc Height

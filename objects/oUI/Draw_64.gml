@@ -28,7 +28,7 @@ draw_sprite(sCoinUI,0,_xx,_yy);
 
 //Coin Text
 draw_set_colour(c_black);
-draw_set_font(fRPG);
+draw_set_font(global.fontRPG);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 _xx += sprite_get_width(sCoinUI)+4;

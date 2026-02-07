@@ -34,11 +34,10 @@ for(var i = 0; i < array_length(credits); i++) {
 			_y += logoOffsetBefore;
 			draw_sprite(sGameMaker,0,_x,_y);
 		} else {
-			draw_set_font(fRetro);
-			if (string_starts_with(_text[0],"~ World")) {
-				var _index = real(string_split(_text," ")[3]);
-				draw_text_ext(_x,_y,string_upper("~ World   ~"),10,500);
-				draw_sprite(sWorld,_index,_x-string_width(_text[0])/2+string_width("~ WORLD "),_y);
+			draw_set_font(global.fontRetro);
+			if (is_numeric(_text[0])) {
+				draw_text_ext(_x,_y,$"~ {worldText}   ~",10,500);
+				draw_sprite(sWorld,_text[0],_x-string_width($"~ {worldText} 0 ~")/2+string_width($"~ {worldText} "),_y);
 			} else {
 				draw_text_ext(_x,_y,string_upper(_text[0]),10,500);
 			}
@@ -46,10 +45,10 @@ for(var i = 0; i < array_length(credits); i++) {
 		if (i >= array_length(credits) - 3) _y += finalCreditsOffset;
 		_y += headerOffsetAfter;
 	} else {
-		draw_set_font(fRPG);
+		draw_set_font(global.fontRPG);
 		draw_text_ext(_x,_y,_text[0],10,500);
 		
-		draw_set_font(fRetro);
+		draw_set_font(global.fontRetro);
 		_y += nameOffset + (string_count("\n",credits[i][0])*10);
 		draw_text(_x,_y,string_upper(_text[1]));
 	}

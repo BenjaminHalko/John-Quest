@@ -20,12 +20,12 @@ for(var i = 0; i < inventorySlots; i++) {
 if (global.inHand != -1) {
 	if (global.inHand != INVENTORY.LIST or global.isBattle) DrawOutline(sInventoryItems,inventory[global.inHand],global.mx,global.my);
 	else {
-		draw_set_font(fRetro);
+		draw_set_font(global.fontRetro);
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_middle);
 		draw_set_color(c_black);
 		draw_sprite(sList,0,240,INVENTORY_Y/2+16);
-		draw_text(236,INVENTORY_Y/2-36,"Required Parts");
+		draw_text(236,INVENTORY_Y/2-36,lexicon_text("lvl3.listItem.required"));
 		draw_line_width(180,INVENTORY_Y/2-30,290,INVENTORY_Y/2-30,2);
 		draw_set_halign(fa_left);
 		var _x = 240 - 44;
@@ -47,7 +47,7 @@ if (audio_is_playing(talking)) {
 	var _margin = 6;
 	
 	draw_set_color(c_black);
-	draw_set_font(fRetro);
+	draw_set_font(global.fontRetro);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 	draw_set_alpha(0.6);

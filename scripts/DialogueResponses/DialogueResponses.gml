@@ -5,8 +5,8 @@ function DialogueResponses(argument0) {
 	{
 		case 0:
 		{
-			NewTextBox("Thanks!",1);
-			NewTextBox("I think I left it in the evil\nSlime base to the South!",1);
+			NewTextBox("lvl2.sword.getquest.questaccepted0",1);
+			NewTextBox("lvl2.sword.getquest.questaccepted1",1);
 			global.questStatusHat = 1;
 			Save("lvl2","questHat",global.questStatusHat);
 		}break;

@@ -19,5 +19,5 @@ if (!thrown and inRightSpot) {
         steam_set_achievement("world2_secretsign");
     }
     
-    NewTextBox("Ya ha ha!", 0);
+    NewTextBox("lvl2.signs.rockFormation", 0);
 }
