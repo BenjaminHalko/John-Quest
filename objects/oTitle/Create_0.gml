@@ -3,6 +3,7 @@
 enum MENU {
 	MAIN,
 	LEVELSELECT,
+    OPTIONS,
 	CREDITS
 }
 
@@ -34,10 +35,13 @@ menu = MENU.MAIN;
 
 stars = [];
 
+locales = lexicon_languages_get_array();
+
 loadMenuText = function() {
     mainMenu = [
     	lastLevel == -1 ? lexicon_text("menu.newgame") : lexicon_text("menu.continue"),
     	lexicon_text("menu.worldselect"),
+    	lexicon_text("menu.options"),
     	lexicon_text("menu.credits"),
     ];
     
@@ -53,6 +57,15 @@ loadMenuText = function() {
     	$"{_world} 2", $"{_world} 3",
     	$"{_boss} 3", $"{_boss} ?",
     ];
+    
+    options = [
+        lexicon_text("menu.back"),
+        lexicon_text("menu.language"),
+        lexicon_text("menu.audio")
+    ];
+    
+    langIndex = lexicon_language_get_index();
+    currentLang = lexicon_language_get();
 }
 
 loadMenuText();

@@ -38,9 +38,13 @@ if (music == -1) {
 					audio_play_sound(snBlip,1,false);
 					menuSelected = 0;
 				} else if (menuSelected == 2) {
+                    menu = MENU.OPTIONS;
+					audio_play_sound(snBlip,1,false);
+					menuSelected = 0;
+                } else if (menuSelected == 3) {
 					menu = MENU.CREDITS;
 					audio_play_sound(snBlip,1,false);
-				} else if (menuSelected == 3) {
+				} else if (menuSelected == 4) {
                     game_end();
                 } else {
 					_select();	
@@ -72,11 +76,36 @@ if (music == -1) {
 					audio_play_sound(snBlip,1,false);
 				} else _select();
 			}
+        } else if (menu == MENU.OPTIONS) {
+            var _hInput = InputOpposingRepeat(INPUT_VERB.LEFT, INPUT_VERB.RIGHT);
+            var _vInput = InputOpposingRepeat(INPUT_VERB.UP, INPUT_VERB.DOWN);
+            if (_vInput != 0) {
+                menuSelected = Wrap(menuSelected+_vInput, 0, array_length(options)-1);
+                audio_play_sound(snBlip,1,false);
+            }
+            
+            if (_hInput != 0) {
+                if (menuSelected == 1) {
+                    langIndex = Wrap(langIndex, 0, array_length(langIndex)-1);
+                    LexiconSetLanguage(locales[langIndex][1]);
+                    audio_play_sound(snBlip,1,false);
+                } else if (menuSelected == 2) {
+                    audio_play_sound(snBlip,1,false);
+                }
+            }
+            
+            if (InputPressed(INPUT_VERB.ACCEPT)) {
+                if (menuSelected == 0) {
+                    menu = MENU.MAIN;
+                    menuSelected = 2;
+                    audio_play_sound(snBlip,1,false);
+                }
+            }
 		} else if (InputPressed(INPUT_VERB.ACCEPT)) {
 			menu = MENU.MAIN;
 			audio_play_sound(snBlip,1,false);
 		}
-	} else if (blink > 12) {
+    } else if (blink > 12) {
 		if (menu == MENU.MAIN) {
 			if (menuSelected == 0) {
 				var _levels = [rLvl1,rLvl2,rLvl3,rLvl4];

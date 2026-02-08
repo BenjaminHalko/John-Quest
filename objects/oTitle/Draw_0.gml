@@ -29,23 +29,30 @@ if (title) {
 		for(var i = 0; i < 9; i++) {
 			if (allowInput or menuSelected != i or blink % 2) {
 				if (i == 0 or i == 8) {
-					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY-16+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
+					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
 				} else {
 					var _split = string_split(levelSelect[i]," ");
 					var _text = _split[0];
-					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY-16+(floor(max(0,i+1) / 2))*16,_text);
+					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16,_text);
 					var _index = real(_split[1]);
-					draw_sprite(sWorld,_index,_menuX+(max(0,i-1) % 2)*80+string_width(_text+" "),_menuY-16+(floor(max(0,i+1) / 2))*16);
+					draw_sprite(sWorld,_index,_menuX+(max(0,i-1) % 2)*80+string_width(_text+" "),_menuY+(floor(max(0,i+1) / 2))*16);
 				}
 			}
 		}
-		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY-16+(floor(max(0,menuSelected+1) / 2))*16);
-	} else {
+		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY+(floor(max(0,menuSelected+1) / 2))*16);
+	} else if (menu == MENU.OPTIONS) {
+        for(var i = 0; i < array_length(options); i++) {
+			draw_text(_menuX,_menuY+16*i,options[i]);
+		}
+		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
+        
+        draw_text(_menuX + 80, _menuY + 16, currentLang);
+    } else {
 		draw_set_font(global.fontRPG);
-		draw_text(_menuX-32,_menuY-28,$"{lexicon_text("credits.programming")} - Benjamin\n{lexicon_text("credits.level")} - Benjamin\n{lexicon_text("credits.music")} - Benjamin\n{lexicon_text("credits.character")} - Morlan\n{lexicon_text("credits.keyitem")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.environment")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.face")} - John Appleby");
+		draw_text(_menuX-32,_menuY-18,$"{lexicon_text("credits.programming")} - Benjamin\n{lexicon_text("credits.level")} - Benjamin\n{lexicon_text("credits.music")} - Benjamin\n{lexicon_text("credits.character")} - Morlan\n{lexicon_text("credits.keyitem")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.environment")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.face")} - John Appleby");
 		
 		draw_set_color(c_dkgray);
-		draw_text(_menuX-32,_menuY-28,lexicon_text("credits.thanks1Alt"));
+		draw_text(_menuX-32,_menuY-36,lexicon_text("credits.thanks1Alt"));
 	}
 } else {
 	draw_sprite(sTitleLandscape,0,0,room_height-48+smallerBuildingHeight*moveUpPercent * 1.7);
