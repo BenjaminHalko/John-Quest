@@ -22,6 +22,9 @@
       "WITH HIS SIX EVIL EYES, HE CORRUPTED\nTHE INHABITANTS OF THE LAND.",
       "JOHN, WITH HIS EXPERTISE IN GAMING,\nMUST RESTORE PEACE TO THE WORLD."
     ],
+    "lvl1": {
+      "ready": "READY?"
+    },
     "lvl2": {
       "signs": {
         "interactionHint": "Press [SPACE] to interact\nwith signs.",

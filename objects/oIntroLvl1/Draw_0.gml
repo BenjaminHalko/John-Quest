@@ -8,7 +8,7 @@ if (counter > 0 and counter % 2 == 1) {
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text(_x, _y, "READY?");
+	draw_text(_x, _y, lexicon_text("lvl1.ready"));
 }
 
 if (counter <= 0) {
