@@ -86,7 +86,7 @@ if (music == -1) {
             
             if (_hInput != 0) {
                 if (menuSelected == 1) {
-                    langIndex = Wrap(langIndex, 0, array_length(langIndex)-1);
+                    langIndex = Wrap(langIndex + _hInput, 0, array_length(locales)-1);
                     LexiconSetLanguage(locales[langIndex][1]);
                     audio_play_sound(snBlip,1,false);
                 } else if (menuSelected == 2) {
