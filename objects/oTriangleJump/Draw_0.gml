@@ -2,8 +2,8 @@
 
 function drawTriangle(_length) {
 	var _rot = -outlineRotation/2;
-	var _x = x;
-	var _y = y;
+	var _x = x-1;
+	var _y = y-1;
 	
 	draw_triangle(
 		_x + lengthdir_x(_length, _rot), _y + lengthdir_y(_length, _rot),

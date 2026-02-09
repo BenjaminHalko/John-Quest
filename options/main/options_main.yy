@@ -3,7 +3,7 @@
   "%Name":"Main",
   "ConfigValues":{
     "Steam":{
-      "option_legacy_primitive_drawing":"false",
+      "option_legacy_primitive_drawing":"true",
     },
   },
   "name":"Main",

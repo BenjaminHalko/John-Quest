@@ -48,10 +48,10 @@ if (title) {
         
         draw_text(_menuX + 80, _menuY + 16, currentLang);
         
-        draw_line(_menuX + 80, _menuY + 35, _menuX + 124, _menuY + 35);
+        draw_line(_menuX + 79, _menuY + 34, _menuX + 123, _menuY + 34);
         
-        var _lineX = round(lerp(_menuX + 80, _menuX + 124, global.audioVol));
-        draw_line(_lineX, _menuY + 32, _lineX, _menuY + 37);
+        var _lineX = round(lerp(_menuX + 80, _menuX + 123, global.audioVol));
+        draw_line(_lineX, _menuY + 31, _lineX, _menuY + 36);
         
         draw_sprite(sTitleAudio, 0, _menuX + 127, _menuY + 34);
     } else {
