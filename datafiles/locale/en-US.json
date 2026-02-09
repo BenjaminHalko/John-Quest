@@ -64,7 +64,8 @@
           "foundhat": "Wow, you found my hat!",
           "foundhatwithoutasking": "Wow, you found my hat without\nme even asking you to!",
           "hero": "You are a true hero indeed!",
-          "getsword": "Here, take this sword.\nI hear it is dangerous to go without it."
+          "getsword": "Here, take this sword.\nI hear it is dangerous to go without it.",
+          "gotsword": "Thanks again!\nI hope you find that sword useful!"
         },
         "gothat": "I am glad I got my hat back,\nnow I can see again."
       },

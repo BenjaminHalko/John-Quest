@@ -65,5 +65,5 @@ function ActivateSwordNPC()
 }
 
 function ActivateSwordNPCItemGot() {
-	NewTextBox("lvl2.sword.gothat",1);
+	NewTextBox("lvl2.sword.questcomplete.gotsword",1);
 }
