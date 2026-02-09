@@ -90,6 +90,10 @@ if (music == -1) {
                     LexiconSetLanguage(locales[langIndex][1]);
                     audio_play_sound(snBlip,1,false);
                 } else if (menuSelected == 2) {
+                    global.audioVol = clamp(global.audioVol + _hInput * 0.1, 0, 1);
+                    var _vol = log10(global.audioVol + 1) / log10(2);
+                    audio_master_gain(_vol);
+                    Save("global", "audio", global.audioVol);
                     audio_play_sound(snBlip,1,false);
                 }
             }

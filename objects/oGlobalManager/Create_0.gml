@@ -19,7 +19,9 @@ global.introLvl3 = 0;
 global.atBoss = false;
 
 // Change volume
-audio_master_gain(0.5);
+global.audioVol = Load("global", "audio", 0.5);
+var _vol = log10(global.audioVol + 1) / log10(2);
+audio_master_gain(_vol);
 
 // Load Translations
 LexiconLoad();

@@ -47,6 +47,13 @@ if (title) {
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
         
         draw_text(_menuX + 80, _menuY + 16, currentLang);
+        
+        draw_line(_menuX + 80, _menuY + 35, _menuX + 124, _menuY + 35);
+        
+        var _lineX = round(lerp(_menuX + 80, _menuX + 124, global.audioVol));
+        draw_line(_lineX, _menuY + 32, _lineX, _menuY + 37);
+        
+        draw_sprite(sTitleAudio, 0, _menuX + 127, _menuY + 34);
     } else {
 		draw_set_font(global.fontRPG);
 		draw_text(_menuX-32,_menuY-18,$"{lexicon_text("credits.programming")} - Benjamin\n{lexicon_text("credits.level")} - Benjamin\n{lexicon_text("credits.music")} - Benjamin\n{lexicon_text("credits.character")} - Morlan\n{lexicon_text("credits.keyitem")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.environment")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.face")} - John Appleby");

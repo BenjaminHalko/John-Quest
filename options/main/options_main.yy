@@ -1,6 +1,11 @@
 {
   "$GMMainOptions":"v5",
   "%Name":"Main",
+  "ConfigValues":{
+    "Steam":{
+      "option_legacy_primitive_drawing":"false",
+    },
+  },
   "name":"Main",
   "option_allow_instance_change":true,
   "option_audio_error_behaviour":true,
