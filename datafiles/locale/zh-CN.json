@@ -118,33 +118,33 @@
       },
       "eyeInteract": {
         "touch": "啊啊！好痛！\n一定有方法战胜它……",
-        "useList": "What am I going to do with this?\nGive it paper cuts?",
-        "usePickup": "I am supposed to be collecting these!\nNot giving them away...",
-        "useMoney": "I don't think bribing it with\nmoney would be of any help.",
-        "useWeapon": "Unfortunately, they seemed to have figured\nout that shopkeepers are immune to damage!",
-        "defeatShopkeeper": "Well that was easy..."
+        "useList": "我们拿这个怎么办？\n用纸割伤它？",
+        "usePickup": "我应该收集这些！\n而不是拿出去……",
+        "useMoney": "我不认为我们可以用金钱收买它。",
+        "useWeapon": "很可惜，他们发现了他们是不会受伤的商店店主！",
+        "defeatShopkeeper": "最简单的一集……"
       }
     },
     "credits": {
-      "createdby": "A game by",
-      "programming": "Programming",
-      "level": "Level design",
-      "music": "Music & Sound FX",
-      "leveltweaks": "Level design\ntweaked & playtested by",
-      "environment": "Environmental art",
-      "character": "Character design",
-      "keyitem": "Key item design",
-      "boss": "Boss design",
-      "rpgtemplate": "ARPG template",
-      "pictures": "Photos",
-      "voice": "Voice over",
-      "translations": "TRANSLATIONS",
-      "title": "TITLE",
+      "createdby": "由下列人员开发",
+      "programming": "程序",
+      "level": "关卡设计",
+      "music": "音乐和音效",
+      "leveltweaks": "关卡设计\n游玩测试",
+      "environment": "环境艺术",
+      "character": "角色设计",
+      "keyitem": "关键物品设计",
+      "boss": "Boss设计",
+      "rpgtemplate": "ARPG模板",
+      "pictures": "照片",
+      "voice": "配音",
+      "translations": "翻译",
+      "title": "标题",
       "logo": "Logo",
-      "face": "Face",
-      "thanks1": "THANKS TO EVERYONE\nTHAT MADE THIS GAME POSSIBLE",
-      "thanks1Alt": "Thanks to everyone that made this possible",
-      "thanks2": "THANK YOU FOR\nPLAYING"
+      "face": "面部",
+      "thanks1": "感谢所有让这款游戏成为可能的人",
+      "thanks1Alt": "感谢所有让这款游戏成为可能的人",
+      "thanks2": "感谢游玩"
     }
   }
 }
