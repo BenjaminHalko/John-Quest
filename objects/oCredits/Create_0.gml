@@ -96,13 +96,22 @@ credits = [
 	[lexicon_text("credits.boss"),
 	"Benjamin"],
 	
-	[ $"~ {worldText} ~"],
+	[ $"~ {lexicon_text("credits.title")} ~"],
 	
 	[lexicon_text("credits.logo"),
 	"Benjamin"],
 	
 	[lexicon_text("credits.environment"),
 	"Morlan"],
+    
+    [lexicon_text("credits.face"),
+	"John Appleby"],
+    
+    [ $"~ {lexicon_text("credits.translations")} ~"],
+    
+    [
+        "NO ONE!! >:)"
+    ],
 	
 	["_gamemaker_"],
 	
