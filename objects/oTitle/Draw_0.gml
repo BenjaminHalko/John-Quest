@@ -19,21 +19,22 @@ if (title) {
 	// Menu
 	var _menuX = 100;
 	var _menuY = 160;
+    var _textOffset = global.fontTitleYOffset;
 	draw_set_color(c_white);
 	if (menu == MENU.MAIN) {
 		for(var i = 0; i < array_length(mainMenu); i++) {
-			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX,_menuY+16*i,mainMenu[i]);
+			if (allowInput or menuSelected != i or blink % 2) draw_text(_menuX,_menuY+16*i+_textOffset,mainMenu[i]);
 		}
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
 	} else if (menu == MENU.LEVELSELECT) {
 		for(var i = 0; i < 9; i++) {
 			if (allowInput or menuSelected != i or blink % 2) {
 				if (i == 0 or i == 8) {
-					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16,levelSelect[i]);
+					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16+_textOffset,levelSelect[i]);
 				} else {
 					var _split = string_split(levelSelect[i]," ");
 					var _text = _split[0];
-					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16,_text);
+					draw_text(_menuX+(max(0,i-1) % 2)*80,_menuY+(floor(max(0,i+1) / 2))*16+_textOffset,_text);
 					var _index = real(_split[1]);
 					draw_sprite(sWorld,_index,_menuX+(max(0,i-1) % 2)*80+string_width(_text+" "),_menuY+(floor(max(0,i+1) / 2))*16);
 				}
@@ -42,11 +43,11 @@ if (title) {
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave+(max(0,menuSelected-1) % 2)*80,_menuY+(floor(max(0,menuSelected+1) / 2))*16);
 	} else if (menu == MENU.OPTIONS) {
         for(var i = 0; i < array_length(options); i++) {
-			draw_text(_menuX,_menuY+16*i,options[i]);
+			draw_text(_menuX,_menuY+16*i+_textOffset,options[i]);
 		}
 		draw_sprite(sTitleCursor,0,_menuX-16+blinkWave,_menuY+menuSelected*16);
         
-        draw_text(_menuX + 80, _menuY + 16, currentLang);
+        draw_text(_menuX + 80, _menuY + 16 + _textOffset, currentLang);
         
         draw_line(_menuX + 79, _menuY + 34, _menuX + 123, _menuY + 34);
         
@@ -81,7 +82,7 @@ if (title) {
 			draw_set_font(global.fontRetro);
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_middle);
-			draw_text_ext(room_width/2,room_height-_rectHeight/2,text[textNum],16,400);
+			draw_text_ext(room_width/2,room_height-_rectHeight/2+global.fontTitleYOffset,text[textNum],16,400);
 			draw_set_alpha(1);
 		}
 	}

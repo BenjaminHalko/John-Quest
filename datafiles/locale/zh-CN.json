@@ -28,42 +28,42 @@
     "lvl2": {
       "signs": {
         "interactionHint": "按下【空格键】与标识牌互动。",
-        "vaseStorage": "Vase Storage:\nWe keep your vases\nsafe and secure.",
-        "village": "Village ahead.\n(It's 12 tiles to your right,\nyou can't miss it...)",
+        "vaseStorage": "花瓶储存服务：\n我们为您妥善保管花瓶，确保安全无忧。",
+        "village": "前方有村庄。\n（就在你的右侧12格的位置，不会错过的……）",
         "doomCave": [
-          "WEST: Forest\nEAST: Bigger Forest\nSOUTH: Evil Slime Base",
-          "NORTH: Evil Cave of Doom!\nDO NOT ENTER AT ALL COSTS!!!"
+          "西：森林\n东：更大的森林\n南：邪恶史莱姆之地",
+          "北：厄运魔窟！\n千万不要进入！！！"
         ],
-        "garden": "Keep out of the garden!",
-        "rockFormation": "Ya ha ha!",
-        "slimeBase": "Slime Base Ahead!\nEvil Members Only!",
-        "rockWarning": "Watch for Falling Rocks"
+        "garden": "不要进入院子！",
+        "rockFormation": "呀哈哈！",
+        "slimeBase": "前方史莱姆之地！\n非邪勿扰！",
+        "rockWarning": "注意落石"
       },
       "sword": {
         "getquest": {
           "request": [
-            "Hello there! You look like a brave adventurer.",
-            "Could you help me find my missing hat?"
+            "你好！你看起来像是一个勇者！",
+            "你能帮我找找我丢失的帽子吗？"
           ],
           "response": {
-            "accept": "Of course!",
-            "reject": "This task is beneath me"
+            "accept": "当然！",
+            "reject": "会说话的剑？快跑！"
           },
           "questaccepted": [
-            "Thanks!",
-            "I think I left it in the evil\nSlime base to the South!"
+            "谢谢！",
+            "我觉得我应该将它落在南方的邪恶史莱姆之地了！"
           ]
         },
         "changedmind": {
-          "request": "Did you change your mind about helping me?",
-          "accept": "Sure, I can help.",
-          "reject": "Haha! I don't care about your stinky hat!"
+          "request": "你改变了你的想法吗？",
+          "accept": "我想我可以帮你。",
+          "reject": "哈哈！我才不在乎你的那顶臭帽子！"
         },
-        "clue": "Did you forget where I left my hat?\nI think it was in the Evil Slime Base.",
+        "clue": "你忘了帽子遗落在哪里了吗？\n它应该就在南方的邪恶史莱姆之地。",
         "questcomplete": {
-          "foundhat": "Wow, you found my hat!",
-          "foundhatwithoutasking": "Wow, you found my hat without\nme even asking you to!",
-          "hero": "You are a true hero indeed!",
+          "foundhat": "哇哦，你发现了我的帽子！",
+          "foundhatwithoutasking": "哇哦，你怎么知道我在寻找我的帽子！",
+          "hero": "你是真正的勇者大人！",
           "getsword": "Here, take this sword.\nI hear it is dangerous to go without it.",
           "gotsword": "Thanks again!\nI hope you find that sword useful!"
         },
