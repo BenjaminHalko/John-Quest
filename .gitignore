@@ -2,5 +2,8 @@
 *.resource_order
 *.old.*
 
+# Build
+BuildScripts/charset
+
 # MacOS
 .DS_Store

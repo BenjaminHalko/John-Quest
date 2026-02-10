@@ -7,6 +7,7 @@ function LexiconLoad() {
     global.locale = ini_read_string("global", "language", "");
     ini_close();
     
+    lexicon_index_definitions("locale/definitions.json");
     if (!lexicon_locale_exists(global.locale)) {
 		var _language = steam_utils_get_steam_ui_language();
 		switch(_language) {
@@ -102,7 +103,6 @@ function LexiconLoad() {
         }
     }
     
-    lexicon_index_definitions("locale/definitions.json");
     LexiconSetLanguage(global.locale);
 }
 
@@ -111,6 +111,10 @@ function LexiconSetLanguage(_locale) {
         default: {
             global.fontRetro = fRetro;
             global.fontRPG = fRPG;
+        } break;
+        case "zh-CN": {
+            global.fontRetro = fRetroCN;
+            global.fontRPG = fRPGCN;
         } break;
     }
     
@@ -121,6 +125,7 @@ function LexiconSetLanguage(_locale) {
     }
     
     if (global.locale != _locale) {
+        global.locale = _locale;
         ini_open(SAVEFILE);
         ini_write_string("global", "language", global.locale);
         ini_close();

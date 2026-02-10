@@ -2,5 +2,9 @@
   "English": {
     "locale": "en-US",
     "file": "./en-US.json"
+  },
+  "简体中文": {
+    "locale": "zh-CN",
+    "file": "./zh-CN.json"
   }
 }
