@@ -592,7 +592,7 @@ if (intro) {
 			eyeRotationSpd = ApproachFade(eyeRotationSpd,1,0.1,0.7);
 		
 			if (--timer <= 0) {
-				if (hp <= maxHp * 0.15) {
+				if (hp <= maxHp * 0.1) {
 					attack = BOSSLVL4.BULLETHELL;
 				} else {
 					do {
@@ -625,7 +625,7 @@ if (intro) {
 
 	// HP
 	if (attack != BOSSLVL4.BULLETHELL) {
-		hp = max(hp,maxHp*0.15);	
+		hp = max(hp,maxHp*0.1);	
 	}
 
 	// Eyes Shield
