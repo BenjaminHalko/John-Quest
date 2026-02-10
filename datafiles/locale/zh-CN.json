@@ -37,7 +37,7 @@
         "garden": "不要进入院子！",
         "rockFormation": "呀哈哈！",
         "slimeBase": "前方史莱姆之地！\n非邪勿扰！",
-        "rockWarning": "注意落石"
+        "rockWarning": "小心落石"
       },
       "sword": {
         "getquest": {
@@ -63,7 +63,7 @@
         "questcomplete": {
           "foundhat": "哇哦，你发现了我的帽子！",
           "foundhatwithoutasking": "哇哦，你怎么知道我在寻找我的帽子！",
-          "hero": "你是真正的勇者大人！",
+          "hero": "你是真正的勇者！",
           "getsword": "嘿，拿着我这把宝剑。\n这地没有它会很危险的。",
           "gotsword": "非常感谢！希望那把剑对你有帮助！"
         },
@@ -91,7 +91,7 @@
       },
       "eyes": [
         "我非常邪恶",
-        "我太邪恶了，以至于人们都在说\n“哇，兄弟，你可真够邪恶的！”"
+        "我太邪恶了，以至于人们都在说\n“哇，老兄，你可真够邪恶的！”"
       ]
     },
     "lvl3": {
@@ -130,7 +130,7 @@
       "programming": "程序",
       "level": "关卡设计",
       "music": "音乐和音效",
-      "leveltweaks": "关卡设计\n游玩测试",
+      "leveltweaks": "关卡设计与游玩测试",
       "environment": "环境艺术",
       "character": "角色设计",
       "keyitem": "关键物品设计",
