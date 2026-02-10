@@ -5,9 +5,7 @@ if (STEAM_ENABLED) {
 }
 
 if (InputPressed(INPUT_VERB.BACK)) {
-    if (room == rTitle) {
-        game_end();
-    } else {
+    if (room != rTitle) {
         Transition(rTitle);
     }
 }

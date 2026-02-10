@@ -50,6 +50,10 @@ if (music == -1) {
 					_select();	
 				}
 			}
+            
+            if (InputPressed(INPUT_VERB.BACK)) {
+                game_end();
+            }
 		} else if (menu == MENU.LEVELSELECT) {
 			var _hInput = InputOpposingRepeat(INPUT_VERB.LEFT, INPUT_VERB.RIGHT);
 			var _vInput = InputOpposingRepeat(INPUT_VERB.UP, INPUT_VERB.DOWN);
@@ -76,6 +80,12 @@ if (music == -1) {
 					audio_play_sound(snBlip,1,false);
 				} else _select();
 			}
+            
+            if (InputPressed(INPUT_VERB.BACK)) {
+                menu = MENU.MAIN;
+                menuSelected = 1;
+                audio_play_sound(snBlip,1,false);
+            }
         } else if (menu == MENU.OPTIONS) {
             var _hInput = InputOpposingRepeat(INPUT_VERB.LEFT, INPUT_VERB.RIGHT);
             var _vInput = InputOpposingRepeat(INPUT_VERB.UP, INPUT_VERB.DOWN);
@@ -105,7 +115,13 @@ if (music == -1) {
                     audio_play_sound(snBlip,1,false);
                 }
             }
-		} else if (InputPressed(INPUT_VERB.ACCEPT)) {
+            
+            if (InputPressed(INPUT_VERB.BACK)) {
+                menu = MENU.MAIN;
+                menuSelected = 2;
+                audio_play_sound(snBlip,1,false);
+            }
+		} else if (InputPressedMany([INPUT_VERB.ACCEPT, INPUT_VERB.BACK])) {
 			menu = MENU.MAIN;
 			audio_play_sound(snBlip,1,false);
 		}
