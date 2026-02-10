@@ -97,27 +97,27 @@
     "lvl3": {
       "desc": {
         "sword": "这是我最信任的宝剑。",
-        "bomb": "It's a bomb! Very explosive!",
-        "coin": "That's all the coins I collected\nfrom those evil monsters!",
-        "propeller": "It's the propeller I repaired with my sword.",
-        "cannon": "The cannon is loaded with explosive bombs!",
-        "laser": "It's the deadly laser shooter."
+        "bomb": "这是炸弹！小心爆炸！",
+        "coin": "这些是我从那个邪恶怪物身上\n收集的所有金币！",
+        "propeller": "这是用我的宝剑修好的螺旋桨。",
+        "cannon": "装填了炸弹的大炮！",
+        "laser": "致命的激光枪。"
       },
       "listItem": {
-        "required": "Required Parts",
-        "propeller": "propeller\nblades",
-        "cannon": "explosive\ncannon",
-        "laser": "laser\nblaster"
+        "required": "所需部件",
+        "propeller": "螺旋桨叶片",
+        "cannon": "爆炸大炮",
+        "laser": "激光枪"
       },
       "itemPickup": {
-        "takePropeller": "The propellers need to be\nrepaired before I can take them.",
-        "takeCannon": "The cannon needs to be loaded\nbefore I can take it.",
-        "repairPropeller": "I don't think I can\nrepair them with that.",
-        "loadCannon": "I don't think I can use\nthat to load the cannon.",
-        "combineLaser": "I don't think I can\ncombine those together."
+        "takePropeller": "螺旋桨需要修好才可以拿上。",
+        "takeCannon": "大炮需要装填才能被带走。",
+        "repairPropeller": "我觉得这个无法修复它。",
+        "loadCannon": "我觉得这个无法用来装填。",
+        "combineLaser": "我不觉得可以组装在一起。"
       },
       "eyeInteract": {
-        "touch": "Ouch! Aaaah the pain!\nThere must be a way to defeat it...",
+        "touch": "啊啊！好痛！\n一定有方法战胜它……",
         "useList": "What am I going to do with this?\nGive it paper cuts?",
         "usePickup": "I am supposed to be collecting these!\nNot giving them away...",
         "useMoney": "I don't think bribing it with\nmoney would be of any help.",
