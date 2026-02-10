@@ -51,7 +51,7 @@
           },
           "questaccepted": [
             "谢谢！",
-            "我觉得我应该将它落在南方的邪恶史莱姆之地了！"
+            "我觉得我应该将它落在\n南方的邪恶史莱姆之地了！"
           ]
         },
         "changedmind": {
@@ -64,39 +64,39 @@
           "foundhat": "哇哦，你发现了我的帽子！",
           "foundhatwithoutasking": "哇哦，你怎么知道我在寻找我的帽子！",
           "hero": "你是真正的勇者大人！",
-          "getsword": "Here, take this sword.\nI hear it is dangerous to go without it.",
-          "gotsword": "Thanks again!\nI hope you find that sword useful!"
+          "getsword": "嘿，拿着我这把宝剑。\n这地没有它会很危险的。",
+          "gotsword": "非常感谢！希望那把剑对你有帮助！"
         },
-        "gothat": "I am glad I got my hat back,\nnow I can see again."
+        "gothat": "我很高兴找回我的帽子，\n现在我又可以看见了。"
       },
       "bomb": {
-        "preitem": "Here, take this bomb.\nI hear it is dangerous to go without bombs.",
+        "preitem": "嘿，拿着这枚炸弹。\n这地没有它会很危险的。",
         "postitem": [
-          "Legends has it, you can\npress [SHIFT] to swap items.",
-          "By the way, have you seen that big\nrock blocking the cave in the village?",
-          "People say it was blocked due to the\nexcessive amount of evil coming from inside..."
+          "传说，你可以按下【Shift键】来切换装备。",
+          "对了，你有看见村口那个大岩石吗？",
+          "人们总是说其中有一些非常邪恶的东西……"
         ],
         "advice": {
-          "0": "Word of advice:\nDon't go wasting your bombs,\nyou only have a limited number.",
-          "1": "Be more careful next time.",
-          "2": "I'm watching you...",
-          "3": "...why?"
+          "0": "忠告：\n不要浪费你的炸弹，数量有限。",
+          "1": "下次注意一些。",
+          "2": "我在看着你……",
+          "3": "……为什么？"
         },
         "refill": {
-          "0": "You used up all my precious bombs!!!\nI am so sad.\nLuckily, I have a few more...",
-          "1": "Again??? Are you wasting my\nbombs on purpose?!?\nI still have a few more...",
-          "2": "Why are you doing this...\nHere, take my entire stock! If you run\nout after this, I am not helping anymore.",
-          "3": "R.I.P. Bomb Dude\nHe died very confused."
+          "0": "你把我宝贵的炸弹都用光了！！！\n我很伤心……\n好在，我还有一些……",
+          "1": "你认真的？？？\n你又一次浪费了所有的炸弹？！\n我还有一些……",
+          "2": "你这是何意呢……\n诺，这是我所剩的所有炸弹！\n如果还不够，那你自求多福吧。",
+          "3": "R.I.P.\n炸弹小子\n他死于困惑。"
         }
       },
       "eyes": [
-        "i am very evil",
-        "i am so evil, that people say\n\"wow dude, you sure are evil!\""
+        "我非常邪恶",
+        "我太邪恶了，以至于人们都在说\n“哇，兄弟，你可真够邪恶的！”"
       ]
     },
     "lvl3": {
       "desc": {
-        "sword": "It is my trusty sword.",
+        "sword": "这是我最信任的宝剑。",
         "bomb": "It's a bomb! Very explosive!",
         "coin": "That's all the coins I collected\nfrom those evil monsters!",
         "propeller": "It's the propeller I repaired with my sword.",

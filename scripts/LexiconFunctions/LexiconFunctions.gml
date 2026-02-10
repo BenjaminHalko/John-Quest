@@ -119,8 +119,8 @@ function LexiconSetLanguage(_locale) {
         case "zh-CN": {
             global.fontRetro = fRetroCN;
             global.fontRPG = fRetroCN;
-            global.fontTitleYOffset = -2;
-            global.fontRPGYOffset = 3;
+            global.fontTitleYOffset = -3;
+            global.fontRPGYOffset = 2;
         } break;
     }
     
