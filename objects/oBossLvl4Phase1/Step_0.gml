@@ -85,6 +85,8 @@ if (intro) {
 		if (oCamera.follow != id) {
 			manageShield = false;
 			oCamera.follow = id;
+            oCamera.xOffset = 0;
+            oCamera.yOffset = 0;
 			oPlayer.allowMovement = false;
 			timer = 0;
 			x = bCenterX;
@@ -206,6 +208,12 @@ if (intro) {
 		}
 	}
 } else {
+    
+    with (oCamera) {
+        xOffset = lerp(follow.x, other.x, 0.4) - follow.x;
+        yOffset = lerp(follow.y, other.y, 0.4) - follow.y;
+    }
+    
 	if (hp <= 0) dead = true;
 	var _switched = (lastAttack != attack);
 	lastAttack = attack;

@@ -4,6 +4,7 @@ viewWidthHalf = 480 * 0.5;
 viewHeightHalf = 270 * 0.5;
 follow = oPlayer;
 xOffset = 0;
+yOffset = 0;
 
 shakeLength = 0;
 shakeMagnitude = 0;
@@ -29,4 +30,6 @@ snapToFollow = function() {
 	}
 	xTo = x;
 	yTo = y;
+    xOffset = 0;
+    yOffset = 0;
 }

@@ -10,7 +10,7 @@
   "name":"oBossLvl4Phase1",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"allowKnockback","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"hp","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"150",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pLvl4Enemy","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"propertyId":{"name":"hp","path":"objects/pLvl4Enemy/pLvl4Enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"200",},
   ],
   "parent":{
     "name":"Boss Phase 1",

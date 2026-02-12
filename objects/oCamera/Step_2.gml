@@ -3,7 +3,7 @@
 //Update destination
 if(instance_exists(follow)) {
 	xTo = follow.x+xOffset;
-	yTo = follow.y;
+	yTo = follow.y+yOffset;
 	boundary = instance_position(xTo,yTo,oCameraBoundary);
 	if (boundary != noone) {
 		xTo = clamp(xTo, boundary.bbox_left+viewWidthHalf+max(0,boundary.xOffset), boundary.bbox_right-viewWidthHalf+min(0,boundary.xOffset));
