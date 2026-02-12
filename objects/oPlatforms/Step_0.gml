@@ -11,7 +11,7 @@ if (percent != clamp(timer,0,1)) {
 	var _onScreen = isOnScreen();
 	
 	if (_onScreen and percent == clamp(timer,0,1)) {
-		ScreenShake(5, 5);	
+		ScreenShake(1, 5);	
 	}
 	
 	// After images

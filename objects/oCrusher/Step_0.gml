@@ -15,7 +15,7 @@ if (timer > 0) {
 	if (y != ystart) {
 		y = Approach(y, ystart, 20 * (abs(distance)/64));
 		if (y == ystart and isOnScreen()) {
-			ScreenShake(6,10);	
+			ScreenShake(3,7);	
 		}
 	}
 } else {
