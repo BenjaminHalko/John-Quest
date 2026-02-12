@@ -3,7 +3,7 @@ import os
 
 localeGroups = {
     "zh-CN": ["zh-CN"],
-    "en-US": ["en-US"],
+    "en-US": ["en-US", "pt-BR"],
 }
 
 GROUP1_KEYS = ["menu", "lvl1"]

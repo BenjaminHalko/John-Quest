@@ -1,0 +1,150 @@
+{
+  "language": "Português",
+  "locale": "pt-BR",
+  "text": {
+    "menu": {
+      "newgame": "NOVO JOGO",
+      "continue": "CONTINUAR",
+      "worldselect": "SELECIONAR MUNDO",
+      "options": "OPÇÕES",
+      "credits": "CRÉDITOS",
+      "quit": "SAIR",
+      "back": "VOLTAR",
+      "world": "MUNDO",
+      "boss": "CHEFE",
+      "audio": "ÁUDIO",
+      "language": "IDIOMA"
+    },
+    "intro": [
+      "NOS REINOS MÍSTICOS,\nUM CONTO DE DOIS RIVAIS É REVELADO.",
+      "JOHN, O GUERREIRO DA LUZ,\nE JOHN MALIGNO, SEU GÊMEO DAS SOMBRAS.",
+      "JOHN MALIGNO, CONSUMIDO PELA INVEJA,\nPLANEJA CONQUISTAR AMBOS OS REINOS.",
+      "COM SEUS SEIS OLHOS MALIGNOS, ELE CORROMPEU\nOS HABITANTES DA TERRA.",
+      "JOHN, COM SUA HABILIDADE EM JOGOS,\nDEVE RESTAURAR A PAZ AO MUNDO."
+    ],
+    "lvl1": {
+      "ready": "ESTÁ PRONTO?"
+    },
+    "lvl2": {
+      "signs": {
+        "interactionHint": "Pressione [ESPAÇO] para interagir\ncom placas.",
+        "vaseStorage": "Armazém de Vasos:\nNós mantemos seus vasos\nseguros.",
+        "village": "Aldeia à frente.\n(São 12 blocos à sua direita,\nnão tem como não ver...)",
+        "doomCave": [
+          "OESTE: Floresta\nLESTE: Floresta Maior\nSUL: Base dos Slimes Malignos",
+          "NORTE: Caverna Maligna da Perdição!\nNÃO ENTRE!!!"
+        ],
+        "garden": "Fique fora do jardim!",
+        "rockFormation": "Ia ha ha!",
+        "slimeBase": "Base dos Slimes à frente!\nSomente Membros Malignos!",
+        "rockWarning": "Cuidado com as Pedras Caindo"
+      },
+      "sword": {
+        "getquest": {
+          "request": [
+            "Olá! Você parece um valente aventureiro.",
+            "Poderia me ajudar a encontrar meu chapéu?"
+          ],
+          "response": {
+            "accept": "Claro!",
+            "reject": "Esta tarefa está abaixo de mim"
+          },
+          "questaccepted": [
+            "Valeu!",
+            "Eu acho que o deixei na\nBase dos Slimes Malignos ao Sul!"
+          ]
+        },
+        "changedmind": {
+          "request": "Você mudou de ideia sobre me ajudar?",
+          "accept": "Claro, eu posso ajudar.",
+          "reject": "Haha! Eu não ligo para seu chapéu fedido!"
+        },
+        "clue": "Você se esqueceu onde deixei meu chapéu?\nAcho que foi na Base dos Slimes Malignos.",
+        "questcomplete": {
+          "foundhat": "Uau, você achou meu chapéu!",
+          "foundhatwithoutasking": "Uau, você encontrou meu chapéu sem\neu nem te pedir!",
+          "hero": "Você é mesmo um verdadeiro herói!",
+          "getsword": "Aqui, pegue esta espada.\nEu ouvi que é perigoso ir sem ela.",
+          "gotsword": "Obrigado novamente!\nEu espero que ache essa espada útil!"
+        },
+        "gothat": "Estou feliz em ter meu chapéu de volta,\nagora eu posso ver de novo."
+      },
+      "bomb": {
+        "preitem": "Aqui, pegue esta bomba.\nEu ouvi que é perigoso ir sem bombas.",
+        "postitem": [
+          "As lendas dizem, que você pode\npressionar [SHIFT] para trocar os itens.",
+          "A propósito, você viu aquela grande\nrocha bloqueando a caverna na aldeia?",
+          "Pessoas dizem que foi bloqueado devido à\numa quantidade excessiva de mal vindo por dentro..."
+        ],
+        "advice": {
+          "0": "Um conselho:\nNão saia gastando as suas bombas,\nvocê só tem um número limitado.",
+          "1": "Tenha mais cuidado na próxima vez.",
+          "2": "Estou te observando...",
+          "3": "...por quê?"
+        },
+        "refill": {
+          "0": "Você usou todas as minhas preciosas bombas!!!\nEu estou tao triste.\nPor sorte, eu tenho mais algumas...",
+          "1": "De novo??? Você esta gastando as minhas\nbombas de propósito?!?\nEu ainda tenho mais algumas...",
+          "2": "Por que você esta fazendo isso...\nAqui, leve todo o meu estoque! Se você ficar sem\ndepois disso, eu não vou mais ajudar.",
+          "3": "Descanse em paz Cara das Bombas\nEle morreu muito confuso."
+        }
+      },
+      "eyes": [
+        "eu sou muito maligno",
+        "eu sou tao maligno, que as pessoas dizem\n''uau cara, você com certeza é maligno!''"
+      ]
+    },
+    "lvl3": {
+      "desc": {
+        "sword": "Esta é a minha fiel espada.",
+        "bomb": "É uma bomba! Muito explosiva!",
+        "coin": "Estas são todas as moedas que eu coletei\ndaqueles monstros malignos!",
+        "propeller": "É a hélice que consertei com a minha espada.",
+        "cannon": "O canhão está carregado com bombas explosivas!",
+        "laser": "É o atirador de laser mortal."
+      },
+      "listItem": {
+        "required": "Peças Requeridas",
+        "propeller": "hélice\nlâmina",
+        "cannon": "explosivo\ncanhão",
+        "laser": "laser\narma"
+      },
+      "itemPickup": {
+        "takePropeller": "A hélice precisa ser\nreparada para eu poder pegá-la.",
+        "takeCannon": "O canhão precisa ser carregado\npara eu poder pegá-la.",
+        "repairPropeller": "Acredito que eu não possa\nrepará-lo com isso.",
+        "loadCannon": "Acredito que eu não possa usar\nisso para carregar o canhão.",
+        "combineLaser": "Acredito que eu não possa\ncombinar esses juntos."
+      },
+      "eyeInteract": {
+        "touch": "Ai! Aaaah que dor!\nDeve haver um jeito de derrotá-lo...",
+        "useList": "O que eu vou fazer com isso?\nDar um corte de papel?",
+        "usePickup": "Eu deveria estar coletando isto!\nE não dando embora...",
+        "useMoney": "Acredito que suborná-lo com\ndinheiro não vai ajudar em nada.",
+        "useWeapon": "Infelizmente, eles parecem ter descoberto\nque lojistas são imunes a dano!",
+        "defeatShopkeeper": "Bem, isso foi fácil..."
+      }
+    },
+    "credits": {
+      "createdby": "Um jogo por",
+      "programming": "Programação",
+      "level": "Design de Fases",
+      "music": "Músicas e efeitos especias",
+      "leveltweaks": "Design de nível\najustado e testado por",
+      "environment": "Artes do ambiente",
+      "character": "Design de personagem",
+      "keyitem": "Design de itens-chave",
+      "boss": "Design dos Chefes",
+      "rpgtemplate": "Modelo ARPG",
+      "pictures": "Fotos",
+      "voice": "Dublagem",
+      "translations": "TRADUÇÕES",
+      "title": "TÍTULO",
+      "logo": "Logo",
+      "face": "Rosto",
+      "thanks1": "OBRIGADO A TODOS\nQUE TORNARAM ESSE JOGO POSSÍVEL",
+      "thanks1Alt": "Obrigado a todos que tornaram isso possível",
+      "thanks2": "OBRIGADO POR\nJOGAR"
+    }
+  }
+}
