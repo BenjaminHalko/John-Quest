@@ -19,5 +19,7 @@ if (_mx != 0 or _my != 0) {
     global.mx = clamp(global.mx + _mx * 6, 2, RESOLUTION_W - 14);
     global.my = clamp(global.my + _my * 6, 2, RESOLUTION_H - 12);
     
-    window_mouse_set(global.mx * windowWidth / RESOLUTION_W, global.my * windowHeight / RESOLUTION_H);
+    var _pos = application_get_position();
+    
+    window_mouse_set(_pos[0] + global.mx * (_pos[2] - _pos[0]) / RESOLUTION_W, _pos[1] + global.my * (_pos[3] - _pos[1]) / RESOLUTION_H);
 }
