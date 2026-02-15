@@ -1,6 +1,6 @@
 /// @desc
 
-if (transitionType == TRANSITION.FADE) exit;
+if (transitionType == TRANSITION.FADE and room != rCredits) exit;
 
 var _camX = camera_get_view_x(view_camera[0]);
 var _camY = camera_get_view_y(view_camera[0]);
@@ -66,4 +66,10 @@ switch(transitionType) {
 			_dir += 90;
 		}
 	} break;
+    case TRANSITION.FADE: {
+        draw_set_color(c_black);
+        draw_set_alpha(clamp(percent,0,1));
+        draw_rectangle(0,0,room_width,room_height,false);
+        draw_set_alpha(1);
+    } break;
 }

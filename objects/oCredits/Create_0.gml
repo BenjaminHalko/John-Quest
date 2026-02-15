@@ -25,8 +25,12 @@ headerOffsetAfter = 0;
 headerOffset = 48;
 sectionOffset = 24;
 nameOffset = 16;
-logoOffsetBefore = 32;
 finalCreditsOffset = 96;
+
+var _translationCredits = {
+    "zh-CN": "HAOXI",
+    "pt-BR": "BRUNO",
+};
 
 worldText = lexicon_text("menu.world");
 
@@ -108,20 +112,26 @@ credits = [
 	"John Appleby"],
     
     [ $"~ {lexicon_text("credits.translations")} ~"],
-    
-    [
-        "NO ONE!! >:)"
-    ],
-	
-	["_gamemaker_"],
-	
-	[lexicon_text("credits.thanks1")],
-    
-	[lexicon_text("credits.thanks2")]
 ];
 
+var _langs = lexicon_languages_get_array();
+languageFonts = {};
+for(var i = 0; i < array_length(_langs); i++) {
+    if (!struct_exists(_translationCredits, _langs[i][1])) {
+        continue;
+    }
+    
+    var _fontConfig = LexiconGetFont(_langs[i][1]);
+    languageFonts[$ _langs[i][0]] = _fontConfig;
+    array_push(credits, [_langs[i][0], _translationCredits[$ _langs[i][1]]])
+}
+
+array_push(credits,
+    [lexicon_text("credits.thanks1")],
+    [lexicon_text("credits.thanks2")])
+
 // Calc Height
-creditsHeight = sprite_get_height(sTitle)+titleOffset+firstOffset+finalCreditsOffset*2+logoOffsetBefore-headerOffsetAfter;
+creditsHeight = sprite_get_height(sTitle)+titleOffset+firstOffset+finalCreditsOffset*2-headerOffsetAfter;
 
 for(var i = 0; i < array_length(credits); i++) {
 	if (array_length(credits[i]) == 2) {

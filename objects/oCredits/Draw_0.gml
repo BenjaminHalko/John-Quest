@@ -12,7 +12,7 @@ draw_set_alpha(1);
 draw_sprite(sTitleBuilding,1,room_width,room_height);
 
 var _x = surfWidth / 2;
-var _y = lerp(startY,endY,scrollPercent);
+var _y = round(lerp(startY,endY,scrollPercent));
 
 // Draw Title
 draw_sprite(sTitle,0,_x,max(_y,24));
@@ -30,23 +30,24 @@ for(var i = 0; i < array_length(credits); i++) {
 	_y += credits[i][1];
 	var _text = credits[i][0];
 	if (array_length(_text) == 1) {
-		if (_text[0] == "_gamemaker_") {
-			_y += logoOffsetBefore;
-			draw_sprite(sGameMaker,0,_x,_y);
-		} else {
-			draw_set_font(global.fontRetro);
-			if (is_numeric(_text[0])) {
-				draw_text_ext(_x,_y,$"~ {worldText}   ~",10,500);
-				draw_sprite(sWorld,_text[0],_x-string_width($"~ {worldText} 0 ~")/2+string_width($"~ {worldText} "),_y);
-			} else {
-				draw_text_ext(_x,_y,string_upper(_text[0]),10,500);
-			}
-		}
-		if (i >= array_length(credits) - 3) _y += finalCreditsOffset;
+        draw_set_font(global.fontRetro);
+        if (i >= array_length(credits) - 2) _y += finalCreditsOffset;
+        if (is_numeric(_text[0])) {
+            draw_text_ext(_x,_y,$"~ {worldText}   ~",10,500);
+            draw_sprite(sWorld,_text[0],_x-string_width($"~ {worldText} 0 ~")/2+string_width($"~ {worldText} "),_y);
+        } else {
+            draw_text_ext(_x,_y,string_upper(_text[0]),10,500);
+        }
 		_y += headerOffsetAfter;
 	} else {
-		draw_set_font(global.fontRPG);
-		draw_text_ext(_x,_y,_text[0],10,500);
+        if (struct_exists(languageFonts, _text[0])) {
+            var _font = languageFonts[$ _text[0]];
+            draw_set_font(_font.fontRPG);
+            draw_text_ext(_x,_y,_text[0],10,500 + _font.fontTitleYOffset);
+        } else {
+            draw_set_font(global.fontRPG);
+            draw_text_ext(_x,_y,_text[0],10,500);
+        }
 		
 		draw_set_font(global.fontRetro);
 		_y += nameOffset + (string_count("\n",credits[i][0])*10);

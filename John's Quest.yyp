@@ -764,7 +764,6 @@
     {"id":{"name":"sFragPlant","path":"sprites/sFragPlant/sFragPlant.yy",},},
     {"id":{"name":"sFragPot","path":"sprites/sFragPot/sFragPot.yy",},},
     {"id":{"name":"sFragRock","path":"sprites/sFragRock/sFragRock.yy",},},
-    {"id":{"name":"sGameMaker","path":"sprites/sGameMaker/sGameMaker.yy",},},
     {"id":{"name":"sGround1","path":"sprites/sGround1/sGround1.yy",},},
     {"id":{"name":"sGround2","path":"sprites/sGround2/sGround2.yy",},},
     {"id":{"name":"sGround3","path":"sprites/sGround3/sGround3.yy",},},
