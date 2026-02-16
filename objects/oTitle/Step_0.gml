@@ -131,11 +131,11 @@ if (music == -1) {
 				var _levels = [rLvl1,rLvl2,rLvl3,rLvl4];
 				Transition(_levels[max(0, lastLevel)]);
 			} else {
-				file_delete(SAVEFILE);
+				FileReset();
 				Transition(rLvl1);
 			}
 		} else {
-			file_delete(SAVEFILE);
+			FileReset();
 			
 			if (menuSelected <= 2) Transition(rLvl1);
 			else if (menuSelected <= 4) Transition(rLvl2);

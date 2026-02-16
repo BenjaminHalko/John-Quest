@@ -12,6 +12,15 @@ function Load(_section, _key, _default, _openFile=true) {
 	return _value;
 }
 
+function FileReset() {
+    ini_open(SAVEFILE);
+    ini_section_delete("lvl1");
+    ini_section_delete("lvl2");
+    ini_section_delete("lvl3");
+    ini_section_delete("lvl4");
+    ini_close();
+}
+
 function SaveLvl2() {
 	ini_open(SAVEFILE);
 	Save("lvl2","x",global.saveX,false);
