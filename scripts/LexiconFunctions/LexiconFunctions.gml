@@ -3,6 +3,7 @@ global.fontRetro = fRetro;
 global.fontRPG = fRPG;
 global.fontRetroYOffset = 0;
 global.fontRetroSpacing = 0;
+global.fontRPGSpacing = 0;
 
 function LexiconLoad() {
     ini_open(SAVEFILE);
@@ -114,6 +115,7 @@ function LexiconSetLanguage(_locale) {
     global.fontRPG = _config.fontRPG;
     global.fontRetroYOffset = _config.fontRetroYOffset;
     global.fontRetroSpacing = _config.fontRetroSpacing;
+    global.fontRPGSpacing = _config.fontRPGSpacing;
     
     lexicon_locale_set(_locale);
     
@@ -136,7 +138,8 @@ function LexiconGetFont(_locale) {
                 fontRetro: fRetro,
                 fontRPG: fRPG,
                 fontRetroYOffset: 0,
-                fontRetroSpacing: 9
+                fontRetroSpacing: 9,
+                fontRPGSpacing: 10
             };
         }
         case "zh-CN": {
@@ -144,7 +147,8 @@ function LexiconGetFont(_locale) {
                 fontRetro: fRetroCN,
                 fontRPG: fRetroCN,
                 fontRetroYOffset: -5,
-                fontRetroSpacing: 12
+                fontRetroSpacing: 12,
+                fontRPGSpacing: 12
             }
         }
         case "ja-JP": {
@@ -152,7 +156,8 @@ function LexiconGetFont(_locale) {
                 fontRetro: fRetroJP,
                 fontRPG: fRetroJP,
                 fontRetroYOffset: -5,
-                fontRetroSpacing: 12
+                fontRetroSpacing: 12,
+                fontRPGSpacing: 12
             }
         }
         case "ru-RU": {
@@ -160,7 +165,8 @@ function LexiconGetFont(_locale) {
                 fontRetro: fRetro,
                 fontRPG: fRPGRU,
                 fontRetroYOffset: 0,
-                fontRetroSpacing: 9
+                fontRetroSpacing: 9,
+                fontRPGSpacing: 10
             }
         }
     }

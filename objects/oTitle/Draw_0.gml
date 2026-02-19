@@ -57,7 +57,7 @@ if (title) {
         draw_sprite(sTitleAudio, 0, _menuX + 127, _menuY + 35);
     } else {
 		draw_set_font(global.fontRPG);
-		draw_text(_menuX-32,_menuY-18,$"{lexicon_text("credits.programming")} - Benjamin\n{lexicon_text("credits.level")} - Benjamin\n{lexicon_text("credits.music")} - Benjamin\n{lexicon_text("credits.character")} - Morlan\n{lexicon_text("credits.keyitem")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.environment")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.face")} - John Appleby");
+		draw_text_ext(_menuX-32,_menuY-18,$"{lexicon_text("credits.programming")} - Benjamin\n{lexicon_text("credits.level")} - Benjamin\n{lexicon_text("credits.music")} - Benjamin\n{string_replace(lexicon_text("credits.character"),"\n","")} - Morlan\n{string_replace(lexicon_text("credits.keyitem"), "\n", "")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.environment")}\n  - Morlan / Haoxi / Benjamin\n{lexicon_text("credits.face")} - John Appleby", 14, 500);
 		
 		draw_set_color(c_dkgray);
 		draw_text(_menuX-32,_menuY-36,lexicon_text("credits.thanks1Alt"));

@@ -137,7 +137,7 @@ creditsHeight = sprite_get_height(sTitle)+titleOffset+firstOffset+finalCreditsOf
 
 for(var i = 0; i < array_length(credits); i++) {
 	if (array_length(credits[i]) == 2) {
-		creditsHeight += sectionOffset + nameOffset + (string_count("\n",credits[i][0])*10);
+		creditsHeight += sectionOffset + nameOffset + (string_count("\n",credits[i][0])*global.fontRPGSpacing);
 		credits[i] = [credits[i], sectionOffset];
 	} else {
 		creditsHeight += headerOffset+headerOffsetAfter;
