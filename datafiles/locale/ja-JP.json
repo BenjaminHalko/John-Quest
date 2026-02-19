@@ -1,0 +1,150 @@
+{
+  "language": "日本語",
+  "locale": "ja-JP",
+  "text": {
+    "menu": {
+      "newgame": "ニューゲーム",
+      "continue": "コンティニュー",
+      "worldselect": "ワールドセレクト",
+      "options": "オプション",
+      "credits": "クレジット",
+      "quit": "終了",
+      "back": "戻る",
+      "world": "ワールド",
+      "boss": "ボス",
+      "audio": "音声",
+      "language": "言語"
+    },
+    "intro": [
+      "神秘なる世界で\n双方のライバルの物語が始まる",
+      "光の戦士であるジョン\nそしてその影の双子であるエビル・ジョン",
+      "エビル・ジョンは嫉妬で狂い、\n双方の世界制服を企んだ",
+      "六つのエビル・アイを率いて\n全世界の生き物を堕落に陥れた",
+      "ゲーム専門知識の持ち主ジョンは\n世界の平和を取り戻さねばならない"
+    ],
+    "lvl1": {
+      "ready": "READY?"
+    },
+    "lvl2": {
+      "signs": {
+        "interactionHint": "[SPACE]キーで\n看板を調べよう",
+        "vaseStorage": "花瓶保管\n花瓶を大事に\nしまっておきます",
+        "village": "この先に村があります。\n右に12マス進めば\n絶対見つかります。",
+        "doomCave": [
+          "西：小さい森\n東：大きい森\n南：エビル・スライムの本拠地",
+          "北：悪しき滅亡の洞窟！\n絶対に入るな!!"
+        ],
+        "garden": "庭園に入るな!",
+        "rockFormation": "ウワッ、見つかっタァ！",
+        "slimeBase": "この先スライム本拠地！\n悪者以外立ち入り禁止！",
+        "rockWarning": "落石に注意"
+      },
+      "sword": {
+        "getquest": {
+          "request": [
+            "やあ！キミは勇敢な冒険者のようだね。",
+            "ぼくの帽子を探してくれないかい？"
+          ],
+          "response": {
+            "accept": "もちろんさ！",
+            "reject": "くだらん。"
+          },
+          "questaccepted": [
+            "ありがとう！",
+            "たぶん南にあるエビル・スライムの\n本拠地でなくしたんだと思う。"
+          ]
+        },
+        "changedmind": {
+          "request": "気が変わったのかい？",
+          "accept": "ああ、手伝ってやろう",
+          "reject": "お前の帽子なんぞどうでもいい！"
+        },
+        "clue": "ヒントを忘れたのかい？\n帽子はエビル・スライムの本拠地にあると思うよ。",
+        "questcomplete": {
+          "foundhat": "わぁ、帽子を見つけてくれたんだね！",
+          "foundhatwithoutasking": "頼んでもいないのに、ぼくの帽子を\n見つけてくれたんだね！",
+          "hero": "キミは真のヒーローだね！",
+          "getsword": "ほら、剣を持って行って。\n一人では危険だそうだ。",
+          "gotsword": "本当にありがとう！\n剣が役に立つといいね。"
+        },
+        "gothat": "帽子が戻ってきてよかった。\nこれでまた目が見えるよ。"
+      },
+      "bomb": {
+        "preitem": "ほら、爆弾を持って行って。\n爆弾なしでは危険だそうだ。",
+        "postitem": [
+          "伝説によると、[SHIFT]で\nアイテムを入れ替えられるらしい。",
+          "ところで、村の洞窟の入口を\n塞いでいる大岩を見たかい？",
+          "ウワサによると、洞窟の中から強烈な\n悪意を感じるから塞がれたらしいんだ。"
+        ],
+        "advice": {
+          "0": "言っとくけど、\n爆弾の数が限られてるから\n使いすぎないようにな。",
+          "1": "次はもっと気を付けるんだな。",
+          "2": "キミの行動をしっかり監視してるよ。",
+          "3": "なんでだ？"
+        },
+        "refill": {
+          "0": "だってぼくの大事な爆弾を\n全部使っちゃうんだもん！泣けてくるよ。\n幸いに、まだ少し残ってるけどね。",
+          "1": "またかよ！？わざと爆弾を無駄遣いしてるのか！？\nまだ少し残ってるけどさ…",
+          "2": "キミ、ひどすぎるよ…\nもう全部持っていけ！\n今度使い切ったらもう手伝ってあげないよ。",
+          "3": "爆弾坊主の墓\n混乱して他界しました"
+        }
+      },
+      "eyes": [
+        "オレは極悪だ",
+        "他人が「キミって極悪だね」というほど\nオレは極悪なんだ"
+      ]
+    },
+    "lvl3": {
+      "desc": {
+        "sword": "愛用の剣だ。",
+        "bomb": "爆発的な爆弾だ。",
+        "coin": "邪悪なモンスターを倒して\n集めたコインだ。",
+        "propeller": "剣で直したプロペラだ。",
+        "cannon": "大量の爆弾が入ってるキャノン砲だ！",
+        "laser": "致命的レーザーを放つ拳銃だ。"
+      },
+      "listItem": {
+        "required": "必要な部品",
+        "propeller": "プロペラブレード",
+        "cannon": "爆弾キャノン砲",
+        "laser": "レーザーブラスター"
+      },
+      "itemPickup": {
+        "takePropeller": "プロペラは取る前に\n直さなければならない。",
+        "takeCannon": "キャノン砲は取る前に\n爆弾を詰めなければならない。",
+        "repairPropeller": "これでは直せられない。",
+        "loadCannon": "これはキャノン砲に\n詰められない。",
+        "combineLaser": "これらは合成\nできない。"
+      },
+      "eyeInteract": {
+        "touch": "痛ぇ！痛いぞ！\n倒せる方法はあるはずだ…",
+        "useList": "これをどうする気だ？\nペーパーカットか？",
+        "usePickup": "これを集めてるはずだ。\n渡してどうする？",
+        "useMoney": "わいろしても\n意味がない。",
+        "useWeapon": "あいにく、店員はダメージを受けないことに\n気づいたようだ。",
+        "defeatShopkeeper": "意外と簡単だった。"
+      }
+    },
+    "credits": {
+      "createdby": "A game by",
+      "programming": "Programming",
+      "level": "レベルデザイナー",
+      "music": "BGM作曲＆効果音",
+      "leveltweaks": "Level Design Tester",
+      "environment": "背景アート",
+      "character": "キャラクターデザイン",
+      "keyitem": "キーアイテムデザイン",
+      "boss": "ボスデザイナー",
+      "rpgtemplate": "ARPGテンプレート",
+      "pictures": "写真提供",
+      "voice": "声優",
+      "translations": "翻訳",
+      "title": "TITLE",
+      "logo": "Logo",
+      "face": "顔",
+      "thanks1": "THANKS TO EVERYONE\nTHAT MADE THIS GAME POSSIBLE",
+      "thanks1Alt": "Thanks to everyone that made this possible",
+      "thanks2": "THANK YOU FOR\nPLAYING"
+    }
+  }
+}

@@ -7,6 +7,10 @@
     "locale": "pt-BR",
     "file": "./pt-BR.json"
   },
+  "日本語": {
+    "locale": "ja-JP",
+    "file": "./ja-JP.json"
+  },
   "简体中文": {
     "locale": "zh-CN",
     "file": "./zh-CN.json"

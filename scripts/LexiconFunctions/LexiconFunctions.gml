@@ -147,5 +147,13 @@ function LexiconGetFont(_locale) {
                 fontRPGYOffset: 2
             }
         }
+        case "ja-JP": {
+            return {
+                fontRetro: fRetroJP,
+                fontRPG: fRetroJP,
+                fontTitleYOffset: -3,
+                fontRPGYOffset: 2
+            }
+        }
     }
 }
