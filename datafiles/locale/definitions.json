@@ -7,6 +7,10 @@
     "locale": "pt-BR",
     "file": "./pt-BR.json"
   },
+  "Русский": {
+    "locale": "ru-RU",
+    "file": "./ru-RU.json"
+  },
   "日本語": {
     "locale": "ja-JP",
     "file": "./ja-JP.json"

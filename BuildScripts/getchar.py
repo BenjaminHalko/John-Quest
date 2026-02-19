@@ -1,10 +1,7 @@
 import json
 import os
 
-localeGroups = {
-    "zh-CN": ["zh-CN"],
-    "en-US": ["en-US", "pt-BR"],
-}
+localeGroups = {"en-US": ["en-US", "pt-BR"], "ru-RU": ["ru-RU"]}
 
 GROUP1_KEYS = ["menu", "lvl1"]
 GROUP2_KEYS = ["lvl2"]

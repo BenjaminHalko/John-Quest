@@ -20,9 +20,9 @@ if(responses[0] != -1) and (textProgress >= string_length(text))
 
 var _portrait = (background != 0);
 
-draw_text_ext((x1+x2)/2+_portrait*24, y1+8+global.fontRPGYOffset, _print, 14, 999);
+draw_text_ext((x1+x2)/2+_portrait*24, y1+8, _print, 14, 999);
 draw_set_color(c_white);
-draw_text_ext((x1+x2)/2+_portrait*24, y1+7+global.fontRPGYOffset, _print, 14, 999);
+draw_text_ext((x1+x2)/2+_portrait*24, y1+7, _print, 14, 999);
 
 if (_portrait) {
 	draw_sprite(portraits[background-1],frameNumber,x1+8,(y1+y2)/2);
