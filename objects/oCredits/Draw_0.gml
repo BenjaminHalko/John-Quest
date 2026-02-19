@@ -33,25 +33,25 @@ for(var i = 0; i < array_length(credits); i++) {
         draw_set_font(global.fontRetro);
         if (i >= array_length(credits) - 2) _y += finalCreditsOffset;
         if (is_numeric(_text[0])) {
-            draw_text_ext(_x,_y,$"~ {worldText}   ~",10,500);
+            draw_text_ext(_x,_y + global.fontTitleYOffset,$"~ {worldText}   ~",10,500);
             draw_sprite(sWorld,_text[0],_x-string_width($"~ {worldText} 0 ~")/2+string_width($"~ {worldText} "),_y);
         } else {
-            draw_text_ext(_x,_y,string_upper(_text[0]),10,500);
+            draw_text_ext(_x,_y + global.fontTitleYOffset,string_upper(_text[0]),10,500);
         }
 		_y += headerOffsetAfter;
 	} else {
         if (struct_exists(languageFonts, _text[0])) {
             var _font = languageFonts[$ _text[0]];
             draw_set_font(_font.fontRPG);
-            draw_text_ext(_x,_y,_text[0],10,500 + _font.fontTitleYOffset);
+            draw_text_ext(_x,_y + _font.fontTitleYOffset,_text[0],10,500);
         } else {
             draw_set_font(global.fontRPG);
-            draw_text_ext(_x,_y,_text[0],10,500);
+            draw_text_ext(_x,_y + global.fontTitleYOffset,_text[0],10,500);
         }
 		
 		draw_set_font(global.fontRetro);
 		_y += nameOffset + (string_count("\n",credits[i][0])*10);
-		draw_text(_x,_y,string_upper(_text[1]));
+		draw_text(_x,_y + global.fontTitleYOffset,string_upper(_text[1]));
 	}
 	
 	if (i == 0) _y += firstOffset;
