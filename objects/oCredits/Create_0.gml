@@ -29,7 +29,8 @@ finalCreditsOffset = 96;
 
 var _translationCredits = {
     "zh-CN": "HAOXI",
-    "pt-BR": "BRUNO",
+    "pt-BR": "BRUNO MENEGASSI",
+    "ja-JP": "ALISSA STAPLES"
 };
 
 worldText = lexicon_text("menu.world");
