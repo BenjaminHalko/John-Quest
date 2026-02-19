@@ -16,8 +16,8 @@
       "language": "言語"
     },
     "intro": [
-      "神秘なる世界で\n双方のライバルの物語が始まる",
-      "光の戦士であるジョン\nそしてその影の双子であるエビル・ジョン",
+      "神秘なる世界で\n二つのライバルの物語が始まる",
+      "光の戦士であるジョン、\nそしてその影の双子であるエビル・ジョン",
       "エビル・ジョンは嫉妬で狂い、\n双方の世界制服を企んだ",
       "六つのエビル・アイを率いて\n全世界の生き物を堕落に陥れた",
       "ゲーム専門知識の持ち主ジョンは\n世界の平和を取り戻さねばならない"
@@ -28,13 +28,13 @@
     "lvl2": {
       "signs": {
         "interactionHint": "[SPACE]キーで\n看板を調べよう",
-        "vaseStorage": "花瓶保管\n花瓶を大事に\nしまっておきます",
+        "vaseStorage": "花瓶保管\n花瓶を大事に\nしまっておきます。",
         "village": "この先に村があります。\n右に12マス進めば\n絶対見つかります。",
         "doomCave": [
           "西：小さい森\n東：大きい森\n南：エビル・スライムの本拠地",
           "北：悪しき滅亡の洞窟！\n絶対に入るな!!"
         ],
-        "garden": "庭園に入るな!",
+        "garden": "庭園に入るな！",
         "rockFormation": "ウワッ、見つかっタァ！",
         "slimeBase": "この先スライム本拠地！\n悪者以外立ち入り禁止！",
         "rockWarning": "落石に注意"
@@ -46,7 +46,7 @@
             "ぼくの帽子を探してくれないかい？"
           ],
           "response": {
-            "accept": "もちろんさ！",
+            "accept": "もちろん！",
             "reject": "くだらん。"
           },
           "questaccepted": [
@@ -84,8 +84,8 @@
         },
         "refill": {
           "0": "だってぼくの大事な爆弾を\n全部使っちゃうんだもん！泣けてくるよ。\n幸いに、まだいくつか残ってるけどね。",
-          "1": "またかよ！？わざと爆弾を無駄遣いしてるのか！？\nまだ少し残ってるけどさ…",
-          "2": "キミ、ひどすぎるよ…もうどうでもいいや…\n残り全部持っていけ！今度使い切ったら\nもう手伝ってあげないよ。",
+          "1": "またかよ！？わざと爆弾を\n無駄遣いしてるのか！？\nまだ少し残ってるけどさ…",
+          "2": "キミ、ひどすぎるよ… もうどうでもいいや…\n残り全部持っていけ！今度使い切ったら\nもう手伝ってあげないよ。",
           "3": "爆弾坊主の墓\n混乱して他界しました"
         }
       },
@@ -105,14 +105,14 @@
       },
       "listItem": {
         "required": "必要な部品",
-        "propeller": "プロペラブレード",
-        "cannon": "爆弾キャノン砲",
-        "laser": "レーザーブラスター"
+        "propeller": "プロペラ\nブレード",
+        "cannon": "爆弾\nキャノン砲",
+        "laser": "レーザー\nブラスター"
       },
       "itemPickup": {
         "takePropeller": "プロペラは取る前に\n直さなければならない。",
         "takeCannon": "キャノン砲は取る前に\n爆弾を詰めなければならない。",
-        "repairPropeller": "これでは直せられない。",
+        "repairPropeller": "これで直すことは\nできない。",
         "loadCannon": "これはキャノン砲に\n詰められない。",
         "combineLaser": "これらは合成\nできない。"
       },
@@ -127,20 +127,20 @@
     },
     "credits": {
       "createdby": "A game by",
-      "programming": "Programming",
+      "programming": "プログラミング",
       "level": "レベルデザイナー",
       "music": "BGM作曲＆効果音",
-      "leveltweaks": "Level Design Tester",
+      "leveltweaks": "レベルデザイン\nテスター",
       "environment": "背景アート",
-      "character": "キャラクターデザイン",
-      "keyitem": "キーアイテムデザイン",
+      "character": "キャラクター\nデザイナー",
+      "keyitem": "キーアイテム\nデザイナー",
       "boss": "ボスデザイナー",
       "rpgtemplate": "ARPGテンプレート",
       "pictures": "写真提供",
       "voice": "声優",
       "translations": "翻訳",
-      "title": "TITLE",
-      "logo": "Logo",
+      "title": "タイトル画面",
+      "logo": "ロゴ",
       "face": "顔",
       "thanks1": "THANKS TO EVERYONE\nTHAT MADE THIS GAME POSSIBLE",
       "thanks1Alt": "Thanks to everyone that made this possible",

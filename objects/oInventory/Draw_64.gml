@@ -25,14 +25,14 @@ if (global.inHand != -1) {
 		draw_set_valign(fa_middle);
 		draw_set_color(c_black);
 		draw_sprite(sList,0,240,INVENTORY_Y/2+16);
-		draw_text(236,INVENTORY_Y/2-36+global.fontTitleYOffset,lexicon_text("lvl3.listItem.required"));
+		draw_text(236,INVENTORY_Y/2-36+global.fontRetroYOffset,lexicon_text("lvl3.listItem.required"));
 		draw_line_width(180,INVENTORY_Y/2-30,290,INVENTORY_Y/2-30,2);
 		draw_set_halign(fa_left);
 		var _x = 240 - 44;
 		for(var i = 0; i < 3; i++) {
 			var _y = INVENTORY_Y/2+28+(i-1)*32;
 			draw_sprite(sCheckmark,global.piecesCollected[i],_x,_y);
-			draw_text_ext(_x+20,_y-1,itemListDesc[i],9,100);
+            draw_text_ext(_x+20,_y-1,itemListDesc[i],global.fontRetroSpacing,100);
 		}
 	}
 } else if (itemReturn != -1) {
