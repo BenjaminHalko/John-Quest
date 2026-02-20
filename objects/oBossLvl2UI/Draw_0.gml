@@ -20,7 +20,7 @@ draw_set_color(_col);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 
-draw_text(_x+8,_barY,$"{lexicon_text("menu.boss")}:");
+draw_text(_x+8,_barY+global.fontRetroYOffset/2,$"{lexicon_text("menu.boss")}:");
 draw_set_color(c_black);
 draw_rectangle(_barX1,_barY1,_barX2,_barY2,false);
 draw_set_color(_col);
