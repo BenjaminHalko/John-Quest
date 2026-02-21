@@ -67,6 +67,9 @@ if (InputPressed(INPUT_VERB.ACCEPT))
 		if (textProgress > 2)
 		{
 			textProgress = _textLength;
+            if (background == 3 and STEAM_ENABLED and !instance_exists(oTextQueued)) {
+                steam_set_achievement("world2_evil");
+            }
 		}
 	}
 }
