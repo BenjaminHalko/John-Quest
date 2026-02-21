@@ -25,6 +25,8 @@ function LexiconLoad() {
       				global.locale = "bg-BG";
       				break;
                 case "tchinese":
+                    global.locale = "zh-TW";
+      				break;
       			case "schinese":
       				global.locale = "zh-CN";
       				break;
@@ -142,6 +144,7 @@ function LexiconGetFont(_locale) {
                 fontRPGSpacing: 10
             };
         }
+        case "zh-TW":
         case "zh-CN": {
             return {
                 fontRetro: fRetroCN,

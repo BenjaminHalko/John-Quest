@@ -189,6 +189,7 @@
     {"$GMIncludedFile":"","%Name":"pt-BR.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"pt-BR.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ru-RU.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"ru-RU.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"zh-CN.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"zh-CN.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"zh-TW.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"zh-TW.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
