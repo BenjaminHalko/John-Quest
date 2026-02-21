@@ -32,6 +32,7 @@ if (global.my <= INVENTORY_Y) {
 						Transition(rLvl3Intro);	
 					});
 				} else {
+                    oLvl3Map.displayMap = true;
 					global.isBattle = false;
 					var _music = [mLvl3Music,mLvl3Music2,mLvl3Music3];
 					var _amount = 0;

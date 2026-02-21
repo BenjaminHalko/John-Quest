@@ -3,12 +3,18 @@
 /// @param {real} north
 /// @param {real} west
 /// @param {real} south
-function Node(_east, _north, _west, _south) constructor {
+/// @param {real} x
+/// @param {real} y
+/// @param {real} floor
+function Node(_east, _north, _west, _south, _x, _y, _floor) constructor {
 	image = [_east, _north, _west, _south];
 	nextNode = array_create(4, -1);
 	hasPiece = -1;
 	pieceDir = -1;
 	twoWay = false;
+    x = _x;
+    y = _y;
+    flr = _floor;
 	
 	for(var i = 0; i < 4; i++) {
 		if (image[i] == -2) twoWay = true;

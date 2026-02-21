@@ -6,9 +6,7 @@ global.fontRetroSpacing = 0;
 global.fontRPGSpacing = 0;
 
 function LexiconLoad() {
-    ini_open(SAVEFILE);
-    global.locale = ini_read_string("global", "language", "");
-    ini_close();
+    global.locale = Load("global", "language", "");
     
     lexicon_index_definitions("locale/definitions.json");
     if (!lexicon_locale_exists(global.locale)) {
@@ -127,9 +125,7 @@ function LexiconSetLanguage(_locale) {
     
     if (global.locale != _locale) {
         global.locale = _locale;
-        ini_open(SAVEFILE);
-        ini_write_string("global", "language", global.locale);
-        ini_close();
+        Save("global", "language", global.locale);
     }
 }
 

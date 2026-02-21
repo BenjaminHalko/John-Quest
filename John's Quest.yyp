@@ -294,6 +294,7 @@
     {"id":{"name":"oLvl2Controller","path":"objects/oLvl2Controller/oLvl2Controller.yy",},},
     {"id":{"name":"oLvl3Controller","path":"objects/oLvl3Controller/oLvl3Controller.yy",},},
     {"id":{"name":"oLvl3Intro","path":"objects/oLvl3Intro/oLvl3Intro.yy",},},
+    {"id":{"name":"oLvl3Map","path":"objects/oLvl3Map/oLvl3Map.yy",},},
     {"id":{"name":"oLvl4Controller","path":"objects/oLvl4Controller/oLvl4Controller.yy",},},
     {"id":{"name":"oMusicController","path":"objects/oMusicController/oMusicController.yy",},},
     {"id":{"name":"oNodeController","path":"objects/oNodeController/oNodeController.yy",},},
