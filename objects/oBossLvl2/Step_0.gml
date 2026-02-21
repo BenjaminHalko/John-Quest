@@ -11,6 +11,9 @@ if (intro) {
 			ActivateBossLvl2NPC();
 		} else if (introWait < 0 and !instance_exists(oText) and !instance_exists(oTextQueued)) {
 			intro = false;
+            if (STEAM_ENABLED) {
+                steam_set_achievement("world2_evil");
+            }
 		}
 	}
 }
