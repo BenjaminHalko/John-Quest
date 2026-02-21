@@ -40,6 +40,7 @@ switch (roomTo) {
 }
 
 behindPlayer = false;
+depth = -10000;
 if (instance_exists(oPlayer) and (room == rLvl1 and roomTo == rLvl2)) {
 	depth = oPlayer.depth + 1;
 	behindPlayer = true;

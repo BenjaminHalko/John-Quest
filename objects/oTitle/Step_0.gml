@@ -147,7 +147,7 @@ if (music == -1) {
 		}
 	}
 } else {
-	if (InputPressed(INPUT_VERB.ACCEPT) or !audio_is_playing(mOpening)) {
+	if (InputPressedMany([INPUT_VERB.ACCEPT, INPUT_VERB.BACK]) or !audio_is_playing(mOpening)) {
 		title = true;
 		moveUpPercent = 1;
 		audio_stop_sound(music);
