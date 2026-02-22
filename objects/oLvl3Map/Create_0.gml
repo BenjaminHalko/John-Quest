@@ -3,7 +3,7 @@
 // Iso projection
 tileW = 8;
 tileH = 4;
-floorH = 32;
+floorH = 24;
 
 // Cube size
 cubeW = 4;
