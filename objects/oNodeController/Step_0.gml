@@ -90,8 +90,17 @@ if (global.movePercent != 1) {
 
 		// Inventory
 		if (_node.nextNode[global.currentDir] != -1) {
-			var _amount = 480/4; 
-			if (_node.twoWay) _amount -= _amount/3;	
+			var _amount = 480/3;
+            var _leftTurn = _amount;
+            var _rightTurn = _amount
+			if (_node.twoWay) {
+                _leftTurn -= _amount/2;
+                _rightTurn -= _amount/2;
+            }
+            else {
+                _leftTurn -= (_node.nextNode[Wrap(global.currentDir+1, 0, 3)] < 0) * _amount/2;
+                _rightTurn -= (_node.nextNode[Wrap(global.currentDir-1, 0, 3)] < 0) * _amount/2;
+            }
 		
 			if (onlyAllowUp) {
 				setCursor(CURSOR.FORWARD);
@@ -99,17 +108,20 @@ if (global.movePercent != 1) {
 					onlyAllowUp = false;
 					_move = true;
 				}
-			} else if (global.mx > _amount and global.mx < 480-_amount) {
+			} else if (global.mx > _leftTurn and global.mx < 480-_rightTurn) {
 				setCursor(CURSOR.FORWARD);
 				if (global.clicked) _move = true;
 			} else {
-				var _left = (global.mx <= _amount);
+				var _left = (global.mx <= _leftTurn);
 				if (_node.twoWay) setCursor(_left ? CURSOR.BACKWARD_LEFT : CURSOR.BACKWARD_RIGHT);
 				else setCursor(_left ? CURSOR.LEFT : CURSOR.RIGHT);
 				if (global.clicked) _rotate = _left ? 1 : -1;
 			}
 		} else {
-			var _left = (global.mx <= 480/2);
+            var _offset = 480/2;
+            _offset -= (_node.nextNode[Wrap(global.currentDir+1, 0, 3)] < 0) * 480/6;
+            _offset += (_node.nextNode[Wrap(global.currentDir-1, 0, 3)] < 0) * 480/6;
+			var _left = (global.mx <= _offset);
 			if (_node.twoWay) setCursor(_left ? CURSOR.BACKWARD_LEFT : CURSOR.BACKWARD_RIGHT);
 			else setCursor(_left ? CURSOR.LEFT : CURSOR.RIGHT);
 			if (global.clicked) _rotate = _left ? 1 : -1;
