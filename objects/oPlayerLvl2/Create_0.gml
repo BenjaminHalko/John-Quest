@@ -1,5 +1,5 @@
 state = PlayerStateFree;
-hitByAttack = -1;
+hitByAttack = ds_list_create();
 lastState = state;
 
 inputDirection = 0;

@@ -1,4 +1,4 @@
-function CalcAttack()
+function CalcAttack(_dmg=5, _allowNonEnemy=true)
 {
 	var hitByAttackNow = ds_list_create();
 	var hits = instance_place_list(x,y,pEntity,hitByAttackNow,false);
@@ -15,9 +15,9 @@ function CalcAttack()
 				{
 					if (object_is_ancestor(object_index, pEnemy))
 					{
-						HurtEnemy(id, 5, other.id, 10);
+						HurtEnemy(id, _dmg, other.id, 10);
 					}
-					else if (entityHitScript != -1) script_execute(entityHitScript);
+					else if (entityHitScript != -1 and _allowNonEnemy) script_execute(entityHitScript);
 				}
 			}
 		}
