@@ -369,15 +369,23 @@ if (intro) {
 				}
 			} else if (chargePercent == 1) {
 				spd = 8;
-				chargeSpd = Approach(chargeSpd,20-(chargeSpd != 20 and place_meeting(x,y,pCollision)),1);
+				chargeSpd = Approach(chargeSpd,20-(chargeSpd != 20 and place_meeting(x,y,pCollision)),2);
 				var _hSpd = lengthdir_x(chargeSpd,chargeDir);
 				var _vSpd = lengthdir_y(chargeSpd,chargeDir);
+                
 				if (chargeSpd == 20) {
 					if (array_length(MoveAndCollide(_hSpd,_vSpd,0,0)) > 0) {
 						stunned = true;
 						ScreenShake(10,10);
 						audio_play_sound(snExplosion,1,false,0.7,0,0.8);
-					}
+					} else if (point_distance(x, y, oPlayer.x, oPlayer.y) > 600) {
+                        attack = BOSSLVL4.HEXAGON;
+                        actualLastAttack = BOSSLVL4.HEXAGON;
+                        targetX = oPlayer.x;
+                        targetY = oPlayer.y;
+                        eyeRotationSpd = 0;
+                        break;
+                    }
 				} else {
 					x += _hSpd;
 					y += _vSpd;
