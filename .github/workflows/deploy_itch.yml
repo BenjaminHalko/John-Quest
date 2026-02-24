@@ -1,4 +1,4 @@
-name: Deploy Itch IO
+name: Deploy Itch.io
 
 on:
   workflow_dispatch:
@@ -186,6 +186,8 @@ jobs:
         uses: FedericoCarboni/setup-ffmpeg@v3
         with:
           ffmpeg-version: "6.1.0"
+      - name: Install LinuxDeploy
+        uses: miurahr/install-linuxdeploy-action@v1.8.0
       - name: Install Steam Runtime
         run: |
           sudo mkdir -p /opt/steam-runtime/
