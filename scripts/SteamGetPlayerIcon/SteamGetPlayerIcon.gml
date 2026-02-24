@@ -14,7 +14,7 @@ function SteamGetPlayerIcon(){
         if(!_l_ok)
         {
             buffer_delete(_l_cols);
-            exit;
+            return undefined;
         }
     
         var _l_surf = surface_create(_dims[0], _dims[1]);
