@@ -478,6 +478,7 @@
     {"name":"inst_2A0B45B9","path":"rooms/rLvl1/rLvl1.yy",},
     {"name":"inst_301CCB2F","path":"rooms/rLvl1/rLvl1.yy",},
     {"name":"inst_70D46D0F","path":"rooms/rLvl1/rLvl1.yy",},
+    {"name":"inst_4E9BFD7E","path":"rooms/rLvl1/rLvl1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -813,6 +814,7 @@
         {"$GMRInstance":"v4","%Name":"inst_2A0B45B9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2A0B45B9","objectId":{"name":"oSpring","path":"objects/oSpring/oSpring.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3088.0,"y":176.0,},
         {"$GMRInstance":"v4","%Name":"inst_301CCB2F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_301CCB2F","objectId":{"name":"oSpring","path":"objects/oSpring/oSpring.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":8224.0,"y":384.0,},
         {"$GMRInstance":"v4","%Name":"inst_70D46D0F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_70D46D0F","objectId":{"name":"oSpring","path":"objects/oSpring/oSpring.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":8208.0,"y":384.0,},
+        {"$GMRInstance":"v4","%Name":"inst_4E9BFD7E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4E9BFD7E","objectId":{"name":"oSpring","path":"objects/oSpring/oSpring.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-90.0,"scaleX":1.0,"scaleY":1.0,"x":5856.0,"y":624.0,},
       ],"layers":[],"name":"Springs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Platforms","depth":900,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_705FC5E9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_705FC5E9","objectId":{"name":"oPlatforms","path":"objects/oPlatforms/oPlatforms.yy",},"properties":[
