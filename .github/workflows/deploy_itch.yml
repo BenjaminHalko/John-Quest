@@ -215,6 +215,7 @@ jobs:
           platform: linux
       - name: Rename Build
         run: |
+          mkdir -p extracted
           mv "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" "extracted/JohnsQuest.AppImage"
       - name: Upload Build
         uses: actions/upload-artifact@v4
