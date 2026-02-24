@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SteamGetPlayerIcon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SteamGetPlayerIcon",
+  "parent":{
+    "name":"Steamworks",
+    "path":"folders/Global/Steamworks.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

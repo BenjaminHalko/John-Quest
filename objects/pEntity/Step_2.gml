@@ -31,7 +31,9 @@ if (!lifted)
 		if(entityThrowDistance == throwDistanceTravelled)
 		{
 			thrown = false;
-            CalcAttack(infinity, false);
+            if (object_index != oBomb) {
+                CalcAttack(infinity, false);
+            }
 			if (entityThrowBreak) instance_destroy();
 		}
 	}

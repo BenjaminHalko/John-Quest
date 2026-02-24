@@ -10,7 +10,9 @@ draw_set_alpha(1);
 if (title) {
 	draw_sprite(sTitle,0,floor((room_width-180)/2),24);
 	draw_sprite(sTitleBuilding, 1, room_width, room_height);
-	draw_sprite(sPlayerLvl1,0,350,room_height-buildingHeight+24);
+    
+    var _playerSprite = global.playerSpriteIsCustom ? global.playerCustomSprite : sPlayerLvl1;
+	draw_sprite(_playerSprite,0,350,room_height-buildingHeight+24);
 	
 	draw_set_font(global.fontRetro);
 	draw_set_halign(fa_left);
@@ -69,7 +71,8 @@ if (title) {
 	draw_sprite_ext(sTitleBuilding, 0, room_width, room_height, 1, _buildingScale, 0, c_white, 1);
 	if (blend != 0) draw_sprite_ext(sTitleBuilding, 1, room_width, room_height, 1, _buildingScale, 0, c_white, blend);
 
-	draw_sprite(sPlayerLvl1,0,350,room_height-_buildingScale*buildingHeight+24);
+    var _playerSprite = global.playerSpriteIsCustom ? global.playerCustomSprite : sPlayerLvl1;
+	draw_sprite(_playerSprite,0,350,room_height-_buildingScale*buildingHeight+24);
 
 	var _rectHeight = 48 * (1 - moveUpPercent * 8);
 	if (_rectHeight > 0) {

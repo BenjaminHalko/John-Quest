@@ -13,7 +13,8 @@
       "world": "WORLD",
       "boss": "BOSS",
       "audio": "AUDIO",
-      "language": "LANGUAGE"
+      "language": "LANGUAGE",
+      "face": "FACE"
     },
     "intro": [
       "IN THE MYSTICAL REALMS,\nA TALE OF TWO RIVALS UNFOLDED.",

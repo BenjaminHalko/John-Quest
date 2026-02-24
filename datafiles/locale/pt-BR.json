@@ -13,7 +13,8 @@
       "world": "MUNDO",
       "boss": "CHEFE",
       "audio": "ÁUDIO",
-      "language": "IDIOMA"
+      "language": "IDIOMA",
+      "face": "ROSTO"
     },
     "intro": [
       "NOS REINOS MÍSTICOS,\nUM CONTO DE DOIS RIVAIS É REVELADO.",

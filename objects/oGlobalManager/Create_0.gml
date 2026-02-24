@@ -17,6 +17,15 @@ global.uAlphaPercent = shader_get_uniform(shAlpha, "alpha");
 // Saving
 global.introLvl3 = 0;
 global.atBoss = false;
+global.playerSpriteIsCustom = false;
+global.playerCustomSprite = undefined;
+if (STEAM_ENABLED) {
+    global.playerSpriteIsCustom = Load("global", "face", false);
+    global.playerCustomSprite = SteamGetPlayerIcon();
+    if (!is_handle(global.playerCustomSprite)) {
+        global.playerSpriteIsCustom = false;
+    }
+}
 
 // Change volume
 global.audioVol = Load("global", "audio", 0.5);

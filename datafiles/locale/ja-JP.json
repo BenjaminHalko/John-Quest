@@ -1,6 +1,6 @@
 {
   "language": "日本語",
-  "locale": "ja-JP",
+  "locale": "ja-JA",
   "text": {
     "menu": {
       "newgame": "ニューゲーム",
@@ -13,7 +13,8 @@
       "world": "ワールド",
       "boss": "ボス",
       "audio": "音声",
-      "language": "言語"
+      "language": "言語",
+      "face": "顔"
     },
     "intro": [
       "神秘なる世界で\n二つのライバルの物語が始まる",

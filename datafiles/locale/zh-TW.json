@@ -13,7 +13,8 @@
       "world": "世界",
       "boss": "頭目",
       "audio": "音訊",
-      "language": "語言"
+      "language": "語言",
+      "face": "臉部"
     },
     "intro": [
       "在這個神秘的世界，\n兩個宿敵之間的故事就此展開。",
@@ -47,104 +48,104 @@
           ],
           "response": {
             "accept": "當然！",
-            "reject": "This task is beneath me"
+            "reject": "這個工作有失我的身分"
           },
           "questaccepted": [
-            "Thanks!",
-            "I think I left it in the evil\nSlime base to the South!"
+            "謝謝！",
+            "我想我是在邪惡\n史萊姆基地裏面弄丟的！"
           ]
         },
         "changedmind": {
-          "request": "Did you change your mind about helping me?",
-          "accept": "Sure, I can help.",
-          "reject": "Haha! I don't care about your stinky hat!"
+          "request": "你改變主意了嗎？",
+          "accept": "當然，我可以幫你。",
+          "reject": "哈哈！我才不在乎你那破爛的帽子呢！"
         },
-        "clue": "Did you forget where I left my hat?\nI think it was in the Evil Slime Base.",
+        "clue": "你忘記我的帽子在哪裏了嘛？\n我想應該在邪惡史萊姆基地。",
         "questcomplete": {
-          "foundhat": "Wow, you found my hat!",
-          "foundhatwithoutasking": "Wow, you found my hat without\nme even asking you to!",
-          "hero": "You are a true hero indeed!",
-          "getsword": "Here, take this sword.\nI hear it is dangerous to go without it.",
-          "gotsword": "Thanks again!\nI hope you find that sword useful!"
+          "foundhat": "哇，你找到我的帽子！",
+          "foundhatwithoutasking": "哇，你竟然在我沒開口之前\n就找到我的帽子了！",
+          "hero": "你是真正的英雄！",
+          "getsword": "給你，拿著這把劍。 \n我聽說在這裏沒有劍會很危險。",
+          "gotsword": "再次謝謝你！\n希望你覺得這把劍有用！"
         },
-        "gothat": "I am glad I got my hat back,\nnow I can see again."
+        "gothat": "我很高興找回了我的帽子，\n現在我又能看清東西了。"
       },
       "bomb": {
-        "preitem": "Here, take this bomb.\nI hear it is dangerous to go without bombs.",
+        "preitem": "給你，拿著這個炸彈。 \n我聽說在這裏沒有炸彈會很危險。",
         "postitem": [
-          "Legends has it, you can\npress [SHIFT] to swap items.",
-          "By the way, have you seen that big\nrock blocking the cave in the village?",
-          "People say it was blocked due to the\nexcessive amount of evil coming from inside..."
+          "傳說中，你可以\n按下 [SHIFT] 鍵來交換物品。",
+          "對了，你看到村子裡堵住山洞的\n那塊大石頭了嗎？",
+          "人們說它被封鎖的原因\n是因為裡面的邪惡勢力太多……"
         ],
         "advice": {
-          "0": "Word of advice:\nDon't go wasting your bombs,\nyou only have a limited number.",
-          "1": "Be more careful next time.",
-          "2": "I'm watching you...",
-          "3": "...why?"
+          "0": "忠告：\n不要浪費你的炸彈，\n你的炸彈數量有限。",
+          "1": "下次要更加小心。",
+          "2": "我在看著你……",
+          "3": "..為什麼？"
         },
         "refill": {
-          "0": "You used up all my precious bombs!!!\nI am so sad.\nLuckily, I have a few more...",
-          "1": "Again??? Are you wasting my\nbombs on purpose?!?\nI still have a few more...",
-          "2": "Why are you doing this...\nHere, take my entire stock! If you run\nout after this, I am not helping anymore.",
-          "3": "R.I.P. Bomb Dude\nHe died very confused."
+          "0": "你把我的寶貝炸彈全用光了！ ！ ！\n我好難過。 \n還好，我還有一些……",
+          "1": "又來？ ？ ？你是故意浪費我\n的炸彈嗎？ ！\n我還有一些……",
+          "2": "你為什麼要這樣做…\n來，把我的存貨都拿走！如果這些存貨\n用完了，我就不再幫你了。",
+          "3": "安息吧，炸彈小子\n他死的時候非常迷茫。"
         }
       },
       "eyes": [
-        "i am very evil",
-        "i am so evil, that people say\n\"wow dude, you sure are evil!\""
+        "我很邪惡",
+        "我太邪惡了，以至於人們會說\n“哇，老兄，你真是個邪惡的人！”"
       ]
     },
     "lvl3": {
       "desc": {
-        "sword": "It is my trusty sword.",
-        "bomb": "It's a bomb! Very explosive!",
-        "coin": "That's all the coins I collected\nfrom those evil monsters!",
-        "propeller": "It's the propeller I repaired with my sword.",
-        "cannon": "The cannon is loaded with explosive bombs!",
-        "laser": "It's the deadly laser shooter."
+        "sword": "這是我最信賴的劍。",
+        "bomb": "這是顆炸彈！威力巨大！",
+        "coin": "這就是我從那些邪惡怪物\n那裡收集到的所有硬幣！",
+        "propeller": "這是我用劍修好的螺旋槳。",
+        "cannon": "這門大砲裡裝滿了炸彈！",
+        "laser": "這是一把致命的雷射槍。"
       },
       "listItem": {
-        "required": "Required Parts",
-        "propeller": "propeller\nblades",
-        "cannon": "explosive\ncannon",
-        "laser": "laser\nblaster"
+        "required": "需要部件",
+        "propeller": "螺旋槳\n葉片",
+        "cannon": "大\n炮",
+        "laser": "雷射\n槍"
       },
       "itemPickup": {
-        "takePropeller": "The propellers need to be\nrepaired before I can take them.",
-        "takeCannon": "The cannon needs to be loaded\nbefore I can take it.",
-        "repairPropeller": "I don't think I can\nrepair them with that.",
-        "loadCannon": "I don't think I can use\nthat to load the cannon.",
-        "combineLaser": "I don't think I can\ncombine those together."
+        "takePropeller": "螺旋槳需要\n修理好我才能拿走。",
+        "takeCannon": "大砲需要裝填彈藥\n我才能拿走。",
+        "repairPropeller": "我覺得用這個方法\n修不好它們。",
+        "loadCannon": "我覺得我不能用\n這個來裝填大砲。",
+        "combineLaser": "我覺得我無法將\n它們結合起來。"
       },
       "eyeInteract": {
-        "touch": "Ouch! Aaaah the pain!\nThere must be a way to defeat it...",
-        "useList": "What am I going to do with this?\nGive it paper cuts?",
-        "usePickup": "I am supposed to be collecting these!\nNot giving them away...",
-        "useMoney": "I don't think bribing it with\nmoney would be of any help.",
-        "useWeapon": "Unfortunately, they seemed to have figured\nout that shopkeepers are immune to damage!",
-        "defeatShopkeeper": "Well that was easy..."
+        "touch": "哎喲！啊，好痛！\n一定有辦法打敗它……",
+        "useList": "我該拿它怎麼辦？\n用紙割它嗎？",
+        "usePickup": "我應該收集這些東西！\n而不是送人……",
+        "useMoney": "我認為用錢\n賄賂它沒有任何幫助。",
+        "useWeapon": "不幸的是，他們似乎已經發現了\n店主免疫傷害！",
+        "defeatShopkeeper": "這太簡單了……"
       }
     },
     "credits": {
-      "createdby": "A game by",
-      "programming": "Programming",
-      "level": "Level design",
-      "music": "Music & Sound FX",
-      "leveltweaks": "Level design\ntweaked & playtested by",
-      "environment": "Environmental art",
-      "character": "Character design",
-      "keyitem": "Key item design",
-      "boss": "Boss design",
-      "rpgtemplate": "ARPG template",
-      "pictures": "Photos",
-      "voice": "Voice over",
-      "translations": "TRANSLATIONS",
-      "title": "TITLE",
-      "logo": "Logo",
-      "face": "Face",
-      "thanks1": "THANKS TO EVERYONE\nTHAT MADE THIS GAME POSSIBLE",
-      "thanks1Alt": "Thanks to everyone that made this possible",
-      "thanks2": "THANK YOU FOR\nPLAYING"
+      "createdby": "創作者",
+      "programming": "編程",
+      "level": "關卡設計",
+      "music": "音樂和音效",
+      "leveltweaks": "關卡設計\n調整與測試",
+      "environment": "環境美術",
+      "character": "角色設計",
+      "keyitem": "關鍵道具設計",
+      "boss": "頭目設計",
+      "rpgtemplate": "角色扮演遊戲模板",
+      "pictures": "照片",
+      "voice": "配音員",
+      "translations": "翻譯",
+      "title": "標題",
+      "logo": "圖標",
+      "face": "臉部",
+      "thanks1": "感謝各位\n讓這款遊戲成為可能",
+      "thanks1Alt": "感謝各位讓這款遊戲成為可能",
+      "thanks2": "感謝您的\n參與"
     }
   }
 }

@@ -64,6 +64,10 @@ loadMenuText = function() {
         lexicon_text("menu.audio")
     ];
     
+    if (!is_undefined(global.playerCustomSprite)) {
+        array_push(options, lexicon_text("menu.face"));
+    }
+    
     langIndex = lexicon_language_get_index();
     currentLang = lexicon_language_get();
 }

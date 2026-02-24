@@ -13,7 +13,8 @@
       "world": "MUNDO",
       "boss": "JEFE",
       "audio": "AUDIO",
-      "language": "LENGUAJE"
+      "language": "LENGUAJE",
+      "face": "FACE"
     },
     "intro": [
       "EN LOS REINOS MÍSTICOS,\nUN REALTO DE DOS RIVALES ES REVELADA.",

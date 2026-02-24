@@ -56,6 +56,9 @@ autoMoveY = 0;
 
 changeDepth = true;
 
+if (global.playerSpriteIsCustom)
+    sprite_index = global.playerCustomSprite;
+
 // Hurt Player
 hurtPlayer = function(_direction,_force,_damage)
 {

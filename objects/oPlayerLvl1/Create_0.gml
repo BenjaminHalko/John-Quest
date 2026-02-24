@@ -52,6 +52,9 @@ tempHurt = 0;
 
 boss = false;
 
+if (global.playerSpriteIsCustom)
+    sprite_index = global.playerCustomSprite;
+
 hurtPlayer = function() {
 	if(respawnPercent == 1) {
 		if (boss) {
