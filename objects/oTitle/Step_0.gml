@@ -51,7 +51,7 @@ if (music == -1) {
 				}
 			}
             
-            if (InputPressed(INPUT_VERB.BACK)) {
+            if (os_type != os_operagx and InputPressed(INPUT_VERB.BACK)) {
                 game_end();
             }
 		} else if (menu == MENU.LEVELSELECT) {
