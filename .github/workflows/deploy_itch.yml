@@ -213,14 +213,14 @@ jobs:
           yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
           user-dir: ${{ steps.igor.outputs.user-dir }}
           platform: linux
-      - name: Extract Build
+      - name: Rename Build
         run: |
-          unzip "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" -d extracted
+          mv "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" "extracted/JohnsQuest.AppImage"
       - name: Upload Build
         uses: actions/upload-artifact@v4
         with:
           name: build-linux-itch
-          path: extracted
+          path: extracted/*.AppImage
           retention-days: 1
 
   build-web:
