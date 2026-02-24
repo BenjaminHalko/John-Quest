@@ -32,7 +32,8 @@ var _translationCredits = {
     "pt-BR": "BRUNO MENEGASSI",
     "ja-JP": "ALISSA STAPLES",
     "ru-RU": "ANONYMOUS",
-    "zh-TW": "JACK YAU"
+    "zh-TW": "JACK YAU",
+    "es-MX": "SANTIAGO SALMON"
 };
 
 worldText = lexicon_text("menu.world");

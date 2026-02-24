@@ -3,6 +3,10 @@
     "locale": "en-US",
     "file": "./en-US.json"
   },
+  "Español": {
+    "locale": "es-MX",
+    "file": "./es-MX.json"
+  },
   "Português": {
     "locale": "pt-BR",
     "file": "./pt-BR.json"

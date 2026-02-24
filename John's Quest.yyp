@@ -185,6 +185,7 @@
     {"$GMIncludedFile":"","%Name":"gamecontrollerdb.txt","CopyToMask":-1,"filePath":"datafiles","name":"gamecontrollerdb.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"definitions.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"definitions.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"en-US.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"en-US.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"es-MX.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"es-MX.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ja-JP.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"ja-JP.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"pt-BR.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"pt-BR.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ru-RU.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"ru-RU.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

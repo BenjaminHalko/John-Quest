@@ -1,0 +1,150 @@
+{
+  "language": "Español",
+  "locale": "es-MX",
+  "text": {
+    "menu": {
+      "newgame": "NUEVO JUEGO",
+      "continue": "CONTINUAR",
+      "worldselect": "SELECCIÓN DE MUNDO",
+      "options": "OPCIONES",
+      "credits": "CRÉDITOS",
+      "quit": "SALIR",
+      "back": "ATRÁS",
+      "world": "MUNDO",
+      "boss": "JEFE",
+      "audio": "AUDIO",
+      "language": "LENGUAJE"
+    },
+    "intro": [
+      "EN LOS REINOS MÍSTICOS,\nUN REALTO DE DOS RIVALES ES REVELADA.",
+      "JOHN, GUERRERO DE LA LUZ,\nY JOHN MALVADO, GEMELO DE SOMBRA.",
+      "JOHN MALVADO, FONSIMIDO POR LA ENVIDIA,\nANHELABA CONQUISTAR AMBOS REINOS.",
+      "CON SUS SEIS OJOS MALVADOS, CORROMPIO\nLOS HABITANTES DE LA ISLA.",
+      "JOHN, CON SU TREMENDA HABILIDAD EN EL GAMING\nDEBE RESTAURAR LA PAZ EN EL MUNDO."
+    ],
+    "lvl1": {
+      "ready": "¿LISTOS?"
+    },
+    "lvl2": {
+      "signs": {
+        "interactionHint": "Presiona [SPACE] para interactuar\ncon las señales.",
+        "vaseStorage": "Vase Storage:\nWe keep your vases\nsafe and secure.",
+        "village": "Aldea por delante.\n(Son 12 espacios a tu derecha,\nno la puedes perder...)",
+        "doomCave": [
+          "OESTE: Bosque\nESTE: Bosque Más Grande\nSUR: Base de moco malvado",
+          "NORTE: ¡Cueva Malvada del Olvido!\nNO ENTRAR DE NINGUNA MANERA!!!"
+        ],
+        "garden": "¡Manténgase fuera del jardín!",
+        "rockFormation": "¡Ya ja já!",
+        "slimeBase": "¡Base de Moco más adelante!\n¡Solo miembros malvados.",
+        "rockWarning": "Cuidado con los Deslaves"
+      },
+      "sword": {
+        "getquest": {
+          "request": [
+            "¡Hola! Te ves un aventurero valiente.",
+            "¿Podrías ayudarme a encontrar mi sombrero perdido?"
+          ],
+          "response": {
+            "accept": "¡Claro que si!",
+            "reject": "Esta tarea está por debajo de mí"
+          },
+          "questaccepted": [
+            "¡Gracias!",
+            "¡Creo que lo dejé en la malvada\nBase mocosa al Sur!"
+          ]
+        },
+        "changedmind": {
+          "request": "¿Cambiaste de opinión para ayudarme?",
+          "accept": "Por supuesto, puedo ayudar.",
+          "reject": "¡Jaja! ¡No me importa tu sombrero apestoso!"
+        },
+        "clue": "¿Te olvidaste de dónde dejé mi sombrero?\ncreo que estaba en la base de Moco Malvada.",
+        "questcomplete": {
+          "foundhat": "¡Vaya, encontraste mi sombrero!",
+          "foundhatwithoutasking": "¡Vaya, encontraste mi sombrero sin\nque te lo hubiera pedido!",
+          "hero": "¡Eres un auténtico héroe!",
+          "getsword": "Aquí, toma esta espada.\noigo que es peligroso ir sin una.",
+          "gotsword": "¡De nuevo, Gracias!\n¡Espero que te sea útil esta espada!"
+        },
+        "gothat": "Me alegro de que recupere mi sombrero,\nahora puedo volver a ver."
+      },
+      "bomb": {
+        "preitem": "Aquí, toma esta bomba.\noigo que es peligroso ir sin bombas.",
+        "postitem": [
+          "La leyenda dice: Tú puedes\npresionar [SHIFT] para cambiar items.",
+          "Por cierto, ¿has visto esa gran piedra\nbloqueando la cueva en el pueblo?",
+          "People say it was blocked due to the\nexcessive amount of evil coming from inside..."
+        ],
+        "advice": {
+          "0": "Word of advice:\nDon't go wasting your bombs,\nyou only have a limited number.",
+          "1": "Be more careful next time.",
+          "2": "I'm watching you...",
+          "3": "... ¿Por qué?"
+        },
+        "refill": {
+          "0": "You used up all my precious bombs!!!\nI am so sad.\nLuckily, I have a few more...",
+          "1": "Again??? Are you wasting my\nbombs on purpose?!?\nI still have a few more...",
+          "2": "Why are you doing this...\nHere, take my entire stock! If you run\nout after this, I am not helping anymore.",
+          "3": "R.I.P. Bomb Dude\nHe died very confused."
+        }
+      },
+      "eyes": [
+        "soy muy malo",
+        "soy tan malvado, que la gente dice\n\"¡Neta We, eres muy malvado!\""
+      ]
+    },
+    "lvl3": {
+      "desc": {
+        "sword": "Es mi espada de confianza.",
+        "bomb": "It's a bomb! Very explosive!",
+        "coin": "That's all the coins I collected\nfrom those evil monsters!",
+        "propeller": "It's the propeller I repaired with my sword.",
+        "cannon": "The cannon is loaded with explosive bombs!",
+        "laser": "It's the deadly laser shooter."
+      },
+      "listItem": {
+        "required": "Required Parts",
+        "propeller": "propeller\nblades",
+        "cannon": "cañón \nexplosivo",
+        "laser": "laser\nblaster"
+      },
+      "itemPickup": {
+        "takePropeller": "The propellers need to be\nrepaired before I can take them.",
+        "takeCannon": "The cannon needs to be loaded\nbefore I can take it.",
+        "repairPropeller": "I don't think I can\nrepair them with that.",
+        "loadCannon": "I don't think I can use\nthat to load the cannon.",
+        "combineLaser": "I don't think I can\ncombine those together."
+      },
+      "eyeInteract": {
+        "touch": "Ouch! Aaaah the pain!\nThere must be a way to defeat it...",
+        "useList": "What am I going to do with this?\nGive it paper cuts?",
+        "usePickup": "I am supposed to be collecting these!\nNot giving them away...",
+        "useMoney": "I don't think bribing it with\nmoney would be of any help.",
+        "useWeapon": "Unfortunately, they seemed to have figured\nout that shopkeepers are immune to damage!",
+        "defeatShopkeeper": "Well that was easy..."
+      }
+    },
+    "credits": {
+      "createdby": "A game by",
+      "programming": "Programming",
+      "level": "Level design",
+      "music": "Music & Sound FX",
+      "leveltweaks": "Diseño de nivel\nmodificado y probado por",
+      "environment": "Arte ambiental",
+      "character": "Diseño de personajes",
+      "keyitem": "Diseño de items clave",
+      "boss": "Diseño del jefe",
+      "rpgtemplate": "Plantilla ARPG",
+      "pictures": "Fotos",
+      "voice": "Voz en off",
+      "translations": "TRADUCCIONES",
+      "title": "TÍTULO",
+      "logo": "Logo",
+      "face": "Cara",
+      "thanks1": "THANKS TO EVERYONE\nTHAT MADE THIS GAME POSSIBLE",
+      "thanks1Alt": "Gracias a todos los que han hecho esto posible",
+      "thanks2": "THANK YOU FOR\nPLAYING"
+    }
+  }
+}
