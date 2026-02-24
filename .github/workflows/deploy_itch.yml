@@ -286,7 +286,7 @@ jobs:
       - name: Download Builds
         uses: actions/download-artifact@v4
         with:
-          pattern: build-*
+          pattern: build-*-itch
           path: build
 
       - name: Setup butler
@@ -294,9 +294,9 @@ jobs:
 
       - name: Upload to itch.io
         run: |
-          butler push build/build-windows benjamin-halko/johns-quest:windows
-          butler push build/build-macos/*.dmg benjamin-halko/johns-quest:macos
-          butler push build/build-linux/*.AppImage benjamin-halko/johns-quest:linux
-          butler push build/build-web benjamin-halko/johns-quest:web
+          butler push build/build-windows-itch benjamin-halko/johns-quest:windows
+          butler push build/build-macos-itch/*.dmg benjamin-halko/johns-quest:macos
+          butler push build/build-linux-itch/*.AppImage benjamin-halko/johns-quest:linux
+          butler push build/build-web-itch benjamin-halko/johns-quest:web
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
