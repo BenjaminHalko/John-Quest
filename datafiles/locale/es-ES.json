@@ -1,0 +1,151 @@
+{
+  "language": "Español ES",
+  "locale": "es-ES",
+  "text": {
+    "menu": {
+      "newgame": "NUEVA PARTIDA",
+      "continue": "CONTINUAR",
+      "worldselect": "ELEGIR MUNDO",
+      "options": "OPCIONES",
+      "credits": "CRÉDITOS",
+      "quit": "SALIR",
+      "back": "ATRÁS",
+      "world": "MUNDO",
+      "boss": "MONSTRUO FINAL",
+      "audio": "SONIDO",
+      "language": "IDIOMA",
+      "face": "ROSTRO"
+    },
+    "intro": [
+      "UNA ÉPICA ENTRE DOS RIVALES\nGERMINÓ EN LOS REINOS MÍSTICOS.",
+      "JOHN, GUARDIÁN DE LA LUZ,\nCONTRA EVIL JOHN, SU GEMELO OSCURO.",
+      "EVIL JOHN, ROTO POR LA ENVIDIA,\n DECIDIÓ CONQUISTAR AMBOS REINOS.",
+      "Y, CON SEIS OJOS OSCUROS,\n CORROMPIÓ A CADA LUGAREÑO.",
+      "JOHN, ERUDITO DEL VIDEOJUEGO,\nES QUIEN DEBE TRAER DE VUELTA LA PAZ."
+    ],
+    "lvl1": {
+      "ready": "¿PREPARADO?"
+    },
+    "lvl2": {
+      "signs": {
+        "interactionHint": "Pulsa [ESPACIO]\npara interactuar con señales.",
+        "vaseStorage": "Almacén de cántaros:\nNos encargamos\nde que tus cántaros estén a salvo.",
+        "village": "Pueblo a tiro de piedra\n(lo tienes a 12 bloques,\nno tiene pérdida)",
+        "doomCave": [
+          "OESTE: Bosque\nESTE: Bosque Grande\nSUR: Guarida de vilcosos.",
+          "NORTE: Cueva Vil de la Muerte\n¡¡¡EVITAR A TODA COSTA!!!"
+        ],
+        "garden": "¡No acercarse al jardín!",
+        "rockFormation": "¡Ya, ja, ja!",
+        "slimeBase": "Guarida de vilcosos más adelante\n¡Solo se admiten miembros viles!",
+        "rockWarning": "Cuidado con los desprendimientos"
+      },
+      "sword": {
+        "getquest": {
+          "request": [
+            "¡Buenas! Tienes pinta de ser un valiente aventurero.",
+            "¿Me ayudarías a buscar el sombrero que he perdido?"
+          ],
+          "response": {
+            "accept": "¡Por supuesto!",
+            "reject": "No estoy a la altura de tamaña tarea."
+          },
+          "questaccepted": [
+            "¡Gracias!",
+            "Creo que lo he dejado al sur,\nen la guarida de vilcosos."
+          ]
+        },
+        "changedmind": {
+          "request": "¿Has cambiado de opinión? ¿Me ayudarás?",
+          "accept": "Vale, te ayudaré.",
+          "reject": "¡Ja, ja, ja! ¡Me da igual tu estúpido sombrero!"
+        },
+        "clue": "¿Te recuerdo dónde dejé el sombrero?\nCreo que estaba en la guarida de vilcosos.",
+        "questcomplete": {
+          "foundhat": "¡Ostras! ¡Has encontrado mi sombrero!",
+          "foundhatwithoutasking": "¡Ostras! ¡Has encontrado mi sombrero!\n¡Y ni te lo había pedido!",
+          "hero": "No cabe duda; ¡eres un auténtico héroe!",
+          "getsword": "Toma, quédate esta espada.\nSe dice que es peligroso ir sin ella.",
+          "gotsword": "¡Gracias de nuevo!\n¡Espero que la espada te sirva!"
+        },
+        "gothat": "¡Qué alegría recuperar mi sombrero!\nYa puedo volver a ver."
+      },
+      "bomb": {
+        "preitem": "Toma, quédate esta bomba.\nSe dice que es peligroso ir por ahí sin bombas.",
+        "postitem": [
+          "Según cuenta la leyenda,\npuedes cambiar de objeto con [MAYUS].",
+          "Por cierto, ¿has visto el peñasco\nque tapa la cueva del pueblo?",
+          "Se comenta que se tapó\npor la ingente cantidad de vileza que provenía de ella..."
+        ],
+        "advice": {
+          "0": "Un consejo:\nNo malgastes las bombas;\nson limitadas.",
+          "1": "Ten más cuidado la próxima vez.",
+          "2": "Te estoy viendo...",
+          "3": "... ¿Por qué?"
+        },
+        "refill": {
+          "0": "¡¡¡Has usado todas mis bombas!!!\nQué pena.\nPor suerte, tengo unas cuantas más...",
+          "1": "¿¿¿Otra vez??? ¿¿¡¡Malgastas bombas adrede\no qué!!??\nTodavía me quedan algunas...",
+          "2": "¿Pero qué ganas con esto...?\nToma, ¡te doy todo lo que tengo! Si te vuelves a quedar sin bombas\n, te va a ayudar Rita.",
+          "3": "D.E.P. el tío de las bombas\nMurió sin entender nada."
+        }
+      },
+      "eyes": [
+        "soy muy vil",
+        "soy tan vil, que la gente me dice «uf, tío, ¡qué vil eres!»."
+      ]
+    },
+    "lvl3": {
+      "desc": {
+        "sword": "Es mi preciada espada.",
+        "bomb": "Es una bomba. ¡De las que explotan!",
+        "coin": "Estas son las monedas que he sacado\nde esos monstruos tan viles.",
+        "propeller": "Es la hélice que he arreglado con la espada.",
+        "cannon": "¡El cañón está cargado con bombas de las que explotan!",
+        "laser": "Es la pistola láser de la muerte."
+      },
+      "listItem": {
+        "required": "Piezas necesarias",
+        "propeller": "hélice",
+        "cannon": "cañón\nde explosivos",
+        "laser": "arma\nláser"
+      },
+      "itemPickup": {
+        "takePropeller": "Antes de llevarme la hélice,\ndebo arreglarla.",
+        "takeCannon": "Antes de llevarme el cañón,\ntengo que cargarlo.",
+        "repairPropeller": "No tiene pinta\nde que se pueda arreglar así.",
+        "loadCannon": "No tiene pinta\nde que se pueda cargar con eso.",
+        "combineLaser": "No tiene pinta\nde que se pueda combinar esto."
+      },
+      "eyeInteract": {
+        "touch": "¡Au! ¡Ayyyy! ¡Qué dolor!\nTiene que haber una forma de vencer...",
+        "useList": "¿Qué quieres que haga con esto?\n¿Le leo la cartilla?",
+        "usePickup": "¡Esto es mío!\nNo se toca...",
+        "useMoney": "No tiene pinta\nde que se vaya a dejar sobornar.",
+        "useWeapon": "Por desgracia, se han dado cuenta\nde que los vendedores son invulnerables.",
+        "defeatShopkeeper": "Qué fácil ha sido..."
+      }
+    },
+    "credits": {
+      "createdby": "Un juego de...",
+      "programming": "Programación",
+      "level": "Diseño de niveles",
+      "music": "Música y efectos de sonido",
+      "leveltweaks": "Ajuste y prueba\ndel diseño de niveles",
+      "environment": "Arte de los escenarios",
+      "character": "Diseño de personajes",
+      "keyitem": "Diseño de objetos",
+      "boss": "Diseño de jefes",
+      "rpgtemplate": "Plantilla de ARPG",
+      "pictures": "Imágenes",
+      "voice": "Voces",
+      "translations": "TRADUCCIONES",
+      "title": "TÍTULO",
+      "logo": "Logo",
+      "face": "Rostro",
+      "thanks1": "GRACIAS A QUIENES\nHAN HECHO POSIBLE ESTE JUEGO",
+      "thanks1Alt": "Gracias a las personas que han hecho esto posible",
+      "thanks2": "GRACIAS A TI\nPOR JUGAR"
+    }
+  }
+}

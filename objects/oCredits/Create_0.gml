@@ -33,7 +33,9 @@ var _translationCredits = {
     "ja-JP": "ALISSA STAPLES",
     "ru-RU": "ANONYMOUS",
     "zh-TW": "JACK YAU",
-    "es-MX": "SANTIAGO SALMON"
+    "es-MX": "SANTIAGO SALMON",
+    "es-ES": "AURECACE",
+    "fr-FR": "FLORIAN BOUDES"
 };
 
 worldText = lexicon_text("menu.world");

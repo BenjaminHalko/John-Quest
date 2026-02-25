@@ -3,9 +3,17 @@
     "locale": "en-US",
     "file": "./en-US.json"
   },
-  "Español": {
+  "Español ES": {
+    "locale": "es-ES",
+    "file": "./es-ES.json"
+  },
+  "Español MX": {
     "locale": "es-MX",
     "file": "./es-MX.json"
+  },
+  "Français": {
+    "locale": "fr-FR",
+    "file": "./fr-FR.json"
   },
   "Português": {
     "locale": "pt-BR",

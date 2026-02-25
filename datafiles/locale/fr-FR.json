@@ -1,0 +1,151 @@
+{
+  "language": "Français",
+  "locale": "fr-FR",
+  "text": {
+    "menu": {
+      "newgame": "NOUVELLE PARTIE",
+      "continue": "CONTINUER",
+      "worldselect": "SÉLECTION DU MONDE",
+      "options": "OPTIONS",
+      "credits": "CRÉDITS",
+      "quit": "QUITTER",
+      "back": "RETOUR",
+      "world": "MONDE",
+      "boss": "BOSS",
+      "audio": "AUDIO",
+      "language": "LANGUE",
+      "face": "VISAGE"
+    },
+    "intro": [
+      "DANS DES ROYAUMES MYSTIQUES,\nL'HISTOIRE DE DEUX RIVAUX VIT LE JOUR.",
+      "JOHN, LE GUERRIER DE LUMIÈRE,\nET JOHN MALÉFIQUE, SON JUMEAU D'OMBRE.",
+      "JOHN MALÉFIQUE, RONGÉ PAR L'ENVIE,\nCHERCHA À CONQUÉRIR LES DEUX ROYAUMES.",
+      "AVEC SES SIX YEUX MALÉFIQUES, IL CORROMPIT\nLES HABITANTS DE CES TERRES.",
+      "JOHN, GRÂCE À SON EXPERTISE DU JEU VIDÉO,\nDOIT RAMENER LA PAIX DANS LE MONDE."
+    ],
+    "lvl1": {
+      "ready": "PRÊT ?"
+    },
+    "lvl2": {
+      "signs": {
+        "interactionHint": "Appuyez sur [ESPACE] pour interagir\navec les panneaux.",
+        "vaseStorage": "Stockage de vases :\nNos vases sont gardés\nen toute sécurité.",
+        "village": "Village devant.\n(C'est à 12 cases sur votre droite,\nvous ne pouvez pas le rater...)",
+        "doomCave": [
+          "OUEST : Forêt\nEST : Grande Forêt\nSUD : Base des Slimes maléfiques",
+          "NORD : Grotte maléfique du Destin !\nN'ENTREZ SOUS AUCUN PRÉTEXTE !!!"
+        ],
+        "garden": "Défense d'entrer dans le jardin !",
+        "rockFormation": "Ya ha ha !",
+        "slimeBase": "Base des Slimes devant !\nMembres maléfiques uniquement !",
+        "rockWarning": "Attention aux chutes de pierres"
+      },
+      "sword": {
+        "getquest": {
+          "request": [
+            "Salut ! Tu as l'air d'un aventurier courageux.",
+            "Pourrais-tu m'aider à retrouver mon chapeau disparu ?"
+          ],
+          "response": {
+            "accept": "Bien sûr !",
+            "reject": "Cette tâche est indigne de moi"
+          },
+          "questaccepted": [
+            "Merci !",
+            "Je crois que je l'ai laissé dans la base\ndes Slimes maléfiques au Sud !"
+          ]
+        },
+        "changedmind": {
+          "request": "As-tu changé d'avis pour m'aider ?",
+          "accept": "Bien sûr, je peux aider.",
+          "reject": "Haha ! Je m'en fiche de ton chapeau qui pue !"
+        },
+        "clue": "As-tu oublié où j'ai laissé mon chapeau ?\nJe crois qu'il était dans la Base des Slimes maléfiques.",
+        "questcomplete": {
+          "foundhat": "Ouah, tu as trouvé mon chapeau !",
+          "foundhatwithoutasking": "Ouah, tu as trouvé mon chapeau sans même\nque je te le demande !",
+          "hero": "Tu es vraiment un véritable héros !",
+          "getsword": "Tiens, prends cette épée.\nJ'ai entendu dire qu'il est dangereux de partir sans.",
+          "gotsword": "Merci encore !\nJ'espère que cette épée te sera utile !"
+        },
+        "gothat": "Je suis ravi d'avoir récupéré mon chapeau,\nje peux enfin voir à nouveau."
+      },
+      "bomb": {
+        "preitem": "Tiens, prends cette bombe.\nJ'ai entendu dire qu'il est dangereux de partir sans bombes.",
+        "postitem": [
+          "La légende raconte que tu peux\nappuyer sur [SHIFT] pour changer d'objet.",
+          "Au fait, as-tu vu ce gros\nrocher qui bloque la grotte du village ?",
+          "On dit qu'elle a été bloquée à cause de la\nquantité excessive de mal venant de l'intérieur..."
+        ],
+        "advice": {
+          "0": "Un petit conseil :\nNe gaspille pas tes bombes,\ntu n'en as qu'un nombre limité.",
+          "1": "Fais plus attention la prochaine fois.",
+          "2": "...",
+          "3": "...pourquoi ?"
+        },
+        "refill": {
+          "0": "Tu as utilisé toutes mes précieuses bombes !!!\nJe suis si triste.\nHeureusement, j'en ai encore quelques-unes...",
+          "1": "Encore ??? Est-ce que tu gaspilles mes\nbombes exprès ?!?!\nIl m'en reste encore quelques-unes...",
+          "2": "Pourquoi fais-tu ça...\nTiens, prends tout mon stock ! Si tu en\nmanques après ça, je ne t'aiderai plus.",
+          "3": "R.I.P. le Gars aux Bombes\nIl est mort très confus."
+        }
+      },
+      "eyes": [
+        "je suis vraiment maléfique",
+        "je suis tellement maléfique que les gens disent\n\"ouah mec, t'es tellement maléfique !\""
+      ]
+    },
+    "lvl3": {
+      "desc": {
+        "sword": "C'est ma fidèle épée.",
+        "bomb": "C'est une bombe ! Vraiment explosive !",
+        "coin": "C'est toutes les pièces que j'ai collectées\nsur ces monstres maléfiques !",
+        "propeller": "C'est l'hélice que j'ai réparée avec mon épée.",
+        "cannon": "Le canon est chargé de bombes explosives !",
+        "laser": "C'est le tireur laser mortel."
+      },
+      "listItem": {
+        "required": "Pièces Requises",
+        "propeller": "pales\nd'hélice",
+        "cannon": "canon\nexplosif",
+        "laser": "blaster\nlaser"
+      },
+      "itemPickup": {
+        "takePropeller": "Les hélices doivent être\nréparées avant que je puisse\nles prendre.",
+        "takeCannon": "Le canon doit être chargé\navant que je puisse le prendre.",
+        "repairPropeller": "Je ne pense pas pouvoir\nles réparer avec ça.",
+        "loadCannon": "Je ne pense pas pouvoir utiliser\nça pour charger le canon.",
+        "combineLaser": "Je ne pense pas pouvoir\ncombiner ces objets ensemble."
+      },
+      "eyeInteract": {
+        "touch": "Aïe ! Aaaah la douleur !\nIl doit y avoir un moyen de le vaincre...",
+        "useList": "Qu'est-ce que je vais faire avec ça ?\nLui faire des coupures de papier ?",
+        "usePickup": "Je suis censé les collectionner !\nPas les donner...",
+        "useMoney": "Je ne pense pas que le corrompre avec\nde l'argent soit d'une quelconque aide.",
+        "useWeapon": "Malheureusement, ils semblent avoir compris\nque les marchands sont immunisés aux dégâts !",
+        "defeatShopkeeper": "Eh bien, c'était facile..."
+      }
+    },
+    "credits": {
+      "createdby": "Un jeu par",
+      "programming": "Programmation",
+      "level": "Conception des niveaux",
+      "music": "Musique & Effets sonores",
+      "leveltweaks": "Conception des niveaux\najusté & testé par",
+      "environment": "Art environnemental",
+      "character": "Design des personnages",
+      "keyitem": "Design des objets clés",
+      "boss": "Design des boss",
+      "rpgtemplate": "Modèle d'ARPG",
+      "pictures": "Photos",
+      "voice": "Doublage",
+      "translations": "TRADUCTIONS",
+      "title": "TITRE",
+      "logo": "Logo",
+      "face": "Visage",
+      "thanks1": "MERCI À TOUS CEUX\nQUI ONT RENDU CE JEU POSSIBLE",
+      "thanks1Alt": "Merci à tous ceux qui ont rendu ce jeu possible",
+      "thanks2": "MERCI D'AVOIR\nJOUÉ"
+    }
+  }
+}
