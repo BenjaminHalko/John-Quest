@@ -22,12 +22,13 @@ if (global.inHand != -1) {
 	else {
 		draw_set_font(global.fontRetro);
 		draw_set_halign(fa_center);
-		draw_set_valign(fa_middle);
+		draw_set_valign(fa_bottom);
 		draw_set_color(c_black);
 		draw_sprite(sList,0,240,INVENTORY_Y/2+16);
-		draw_text(236,INVENTORY_Y/2-36+global.fontRetroYOffset,lexicon_text("lvl3.listItem.required"));
+		draw_text(236,INVENTORY_Y/2-32,lexicon_text("lvl3.listItem.required"));
 		draw_line_width(180,INVENTORY_Y/2-30,290,INVENTORY_Y/2-30,2);
 		draw_set_halign(fa_left);
+        draw_set_valign(fa_middle);
 		var _x = 240 - 44;
 		for(var i = 0; i < 3; i++) {
 			var _y = INVENTORY_Y/2+28+(i-1)*32;

@@ -105,9 +105,9 @@
         "laser": "Es la pistola láser de la muerte."
       },
       "listItem": {
-        "required": "Piezas necesarias",
+        "required": "Piezas\nnecesarias",
         "propeller": "hélice",
-        "cannon": "cañón\nde explosivos",
+        "cannon": "cañón de\nexplosivos",
         "laser": "arma\nláser"
       },
       "itemPickup": {
