@@ -59,7 +59,7 @@ function createCursors() {
 	var _numCursors = array_length(global.cursorSprites);
 	if (array_length(global.cursors) != _numCursors) global.cursors = array_create(_numCursors);
 
-	var _size = max(min(window_get_width()/480,window_get_height()/270)/2,0.5);
+	var _size = os_type == os_operagx ? 2 : max(min(window_get_width()/480,window_get_height()/270)/2,0.5);
 	for(var i = 0; i < _numCursors; i++) {
 		if (global.hasNativeCursor) {
 			global.cursors[i] = native_cursor_create_from_sprite_ext(global.cursorSprites[i],0,_size,_size,c_white,1);
