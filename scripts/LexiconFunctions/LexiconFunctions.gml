@@ -78,6 +78,8 @@ function LexiconLoad() {
       				global.locale = "ru-RU";
       				break;
       			case "spanish":
+                    global.locale = "es-ES";
+      				break;
       			case "latam":
       				global.locale = "es-MX";
       				break;
