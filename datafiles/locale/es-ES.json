@@ -43,7 +43,7 @@
       "sword": {
         "getquest": {
           "request": [
-            "¡Buenas! Tienes pinta de ser un valiente aventurero.",
+            "¡Buenas! Tienes pinta de ser\nun valiente aventurero.",
             "¿Me ayudarías a buscar el sombrero que he perdido?"
           ],
           "response": {

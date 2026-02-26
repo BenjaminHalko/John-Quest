@@ -14,7 +14,7 @@
       "boss": "JEFE",
       "audio": "AUDIO",
       "language": "LENGUAJE",
-      "face": "FACE"
+      "face": "CARA"
     },
     "intro": [
       "EN LOS REINOS MÍSTICOS,\nUN REALTO DE DOS RIVALES ES REVELADA.",
@@ -29,7 +29,7 @@
     "lvl2": {
       "signs": {
         "interactionHint": "Presiona [SPACE] para interactuar\ncon las señales.",
-        "vaseStorage": "Vase Storage:\nWe keep your vases\nsafe and secure.",
+        "vaseStorage": "Vase de almacenamient:\nMantenemos sus jarrones\nsanos y salvos.",
         "village": "Aldea por delante.\n(Son 12 espacios a tu derecha,\nno la puedes perder...)",
         "doomCave": [
           "OESTE: Bosque\nESTE: Bosque Más Grande\nSUR: Base de moco malvado",
@@ -75,62 +75,62 @@
         "postitem": [
           "La leyenda dice: Tú puedes\npresionar [SHIFT] para cambiar items.",
           "Por cierto, ¿has visto esa gran piedra\nbloqueando la cueva en el pueblo?",
-          "People say it was blocked due to the\nexcessive amount of evil coming from inside..."
+          "La gente dice que fue bloqueada gracias a\n la excesiva maldad proviniendo desde adentro..."
         ],
         "advice": {
-          "0": "Word of advice:\nDon't go wasting your bombs,\nyou only have a limited number.",
-          "1": "Be more careful next time.",
-          "2": "I'm watching you...",
-          "3": "... ¿Por qué?"
+          "0": "Un consejo:\nNo desperdicies tus bombas;\nson limitadas.",
+          "1": "Ten más cuidado la próxima vez.",
+          "2": "Te estoy viendo...",
+          "3": "... ¿por qué?"
         },
         "refill": {
-          "0": "You used up all my precious bombs!!!\nI am so sad.\nLuckily, I have a few more...",
-          "1": "Again??? Are you wasting my\nbombs on purpose?!?\nI still have a few more...",
-          "2": "Why are you doing this...\nHere, take my entire stock! If you run\nout after this, I am not helping anymore.",
-          "3": "R.I.P. Bomb Dude\nHe died very confused."
+          "0": "¡¡¡Usaste todas mis bombas!!!\nchale.\nPor suerte, tengo algunas más...",
+          "1": "¿¿¿Otra vez??? ¿¿¡¡Desperdiciaste mis bombas adrede\no qué!!??\nTodavía me quedan algunas...",
+          "2": "¿Pero qué ganas con esto...?\nToma, ¡te doy todo lo que tengo! Si te vuelves a quedar sin bombas\n, no te volveré a ayudar.",
+          "3": "D.E.P. el Wey de las bombas\nMurió sin entender."
         }
       },
       "eyes": [
         "soy muy malo",
-        "soy tan malvado, que la gente dice\n\"¡Neta We, eres muy malvado!\""
+        "soy tan malvado, que la gente dice\n\"¡neta we, eres muy malvado!\""
       ]
     },
     "lvl3": {
       "desc": {
         "sword": "Es mi espada de confianza.",
-        "bomb": "It's a bomb! Very explosive!",
-        "coin": "That's all the coins I collected\nfrom those evil monsters!",
-        "propeller": "It's the propeller I repaired with my sword.",
-        "cannon": "The cannon is loaded with explosive bombs!",
-        "laser": "It's the deadly laser shooter."
+        "bomb": "¡Es una bomba! ¡Muy explosiva!",
+        "coin": "¡Estas son las monedas que saque\nde esos monstruos malvados!",
+        "propeller": "Es la hélice que repare con mi espada.",
+        "cannon": "¡El cañón está cargado con bombas de las que explotan!",
+        "laser": "Es el disparador mortal de láser."
       },
       "listItem": {
-        "required": "Required Parts",
-        "propeller": "propeller\nblades",
-        "cannon": "cañón \nexplosivo",
-        "laser": "laser\nblaster"
+        "required": "Partes\nrequeridas",
+        "propeller": "hoja\nde hélice",
+        "cannon": "cañón\nexplosivo",
+        "laser": "arma\nláser"
       },
       "itemPickup": {
-        "takePropeller": "The propellers need to be\nrepaired before I can take them.",
-        "takeCannon": "The cannon needs to be loaded\nbefore I can take it.",
-        "repairPropeller": "I don't think I can\nrepair them with that.",
-        "loadCannon": "I don't think I can use\nthat to load the cannon.",
-        "combineLaser": "I don't think I can\ncombine those together."
+        "takePropeller": "Los propulsores necesitan ser \nreparados antes de que me lo lleve.",
+        "takeCannon": "El cañón necesita recargarse\nantes de que me lo lleve.",
+        "repairPropeller": "No creo que pueda\narreglarlo con eso.",
+        "loadCannon": "No creo que pueda usar\neso para cargar el cañón.",
+        "combineLaser": "No creo que pueda\ncombinar esos juntos."
       },
       "eyeInteract": {
-        "touch": "Ouch! Aaaah the pain!\nThere must be a way to defeat it...",
-        "useList": "What am I going to do with this?\nGive it paper cuts?",
-        "usePickup": "I am supposed to be collecting these!\nNot giving them away...",
-        "useMoney": "I don't think bribing it with\nmoney would be of any help.",
-        "useWeapon": "Unfortunately, they seemed to have figured\nout that shopkeepers are immune to damage!",
-        "defeatShopkeeper": "Well that was easy..."
+        "touch": "¡Au! ¡Ayyyy! ¡Qué dolor!\nTiene que haber una forma de vencerlo...",
+        "useList": "¿Qué quieres que haga con esto?\n¿Darle cortes de papel?",
+        "usePickup": "¡Se supone que debo recolectar estos!\nNo repartirlos...",
+        "useMoney": "No creo sobornarlo con\ndinero sería de cualquier ayuda.",
+        "useWeapon": "¡Desafortunadamente, averiguaron\nque los vendedores son inmunes al daño!",
+        "defeatShopkeeper": "Bueno, eso fue fácil..."
       }
     },
     "credits": {
-      "createdby": "A game by",
-      "programming": "Programming",
-      "level": "Level design",
-      "music": "Music & Sound FX",
+      "createdby": "Un juego por",
+      "programming": "Programación",
+      "level": "Diseño de niveles",
+      "music": "Música y efectos de sonido",
       "leveltweaks": "Diseño de nivel\nmodificado y probado por",
       "environment": "Arte ambiental",
       "character": "Diseño de personajes",
@@ -143,9 +143,9 @@
       "title": "TÍTULO",
       "logo": "Logo",
       "face": "Cara",
-      "thanks1": "THANKS TO EVERYONE\nTHAT MADE THIS GAME POSSIBLE",
+      "thanks1": "GRACIAS A QUIENES\nHAN HECHO ESTE JUEGO POSIBLE",
       "thanks1Alt": "Gracias a todos los que han hecho esto posible",
-      "thanks2": "THANK YOU FOR\nPLAYING"
+      "thanks2": "GRACIAS\nPOR JUGAR"
     }
   }
 }
