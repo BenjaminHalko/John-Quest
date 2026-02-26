@@ -99,6 +99,32 @@ function LexiconLoad() {
       				global.locale = "vi-VN";
       				break;
       		}
+        } else {
+            var _lang = string_lower(os_get_language());
+            var _region = string_upper(os_get_region());
+            if (lexicon_locale_exists($"{_lang}-{_region}")) {
+                global.locale = $"{_lang}-{_region}";
+            } else {
+                var _langs = lexicon_languages_get_array();
+                
+                var _found = false;
+                for(var i = 0; i < array_length(_langs); i++) {
+                    if (string_starts_with(_langs[i][1], $"{_lang}-")) {
+                        global.locale = _langs[i][1];
+                        _found = true;
+                        break;
+                    }
+                }
+                
+                if (!_found) {
+                    for(var i = 0; i < array_length(_langs); i++) {
+                        if (string_ends_with(_langs[i][1], $"-{_region}")) {
+                            global.locale = _langs[i][1];
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
 		if (!lexicon_locale_exists(global.locale)) {
