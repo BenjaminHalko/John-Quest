@@ -35,7 +35,7 @@
           "OESTE: Bosque\nESTE: Bosque Grande\nSUR: Guarida de vilcosos.",
           "NORTE: Cueva Vil de la Muerte\n¡¡¡EVITAR A TODA COSTA!!!"
         ],
-        "garden": "¡No acercarse al jardín!",
+        "garden": "¡No me pises el huerto!",
         "rockFormation": "¡Ya, ja, ja!",
         "slimeBase": "Guarida de vilcosos más adelante\n¡Solo se admiten miembros viles!",
         "rockWarning": "Cuidado con los desprendimientos"
@@ -75,24 +75,24 @@
         "postitem": [
           "Según cuenta la leyenda,\npuedes cambiar de objeto con [MAYUS].",
           "Por cierto, ¿has visto el peñasco\nque tapa la cueva del pueblo?",
-          "Se comenta que se tapó\npor la ingente cantidad de vileza que provenía de ella..."
+          "Se comenta que se tapó\npor la ingente cantidad de vileza\nque provenía de ella..."
         ],
         "advice": {
           "0": "Un consejo:\nNo malgastes las bombas;\nson limitadas.",
           "1": "Ten más cuidado la próxima vez.",
-          "2": "Te estoy viendo...",
+          "2": "No voy a quitarte el ojo de encima...",
           "3": "... ¿Por qué?"
         },
         "refill": {
           "0": "¡¡¡Has usado todas mis bombas!!!\nQué pena.\nPor suerte, tengo unas cuantas más...",
-          "1": "¿¿¿Otra vez??? ¿¿¡¡Malgastas bombas adrede\no qué!!??\nTodavía me quedan algunas...",
-          "2": "¿Pero qué ganas con esto...?\nToma, ¡te doy todo lo que tengo! Si te vuelves a quedar sin bombas\n, te va a ayudar Rita.",
+          "1": "¿¿¿Otra vez???\n¿¿¡¡Lo haces adrede!!??\nTodavía me quedan algunas...",
+          "2": "¿Pero qué ganas con esto...?\nToma, ¡ya no tengo más!\nSi vuelve a pasarte, te va a ayudar Rita.",
           "3": "D.E.P. el tío de las bombas\nMurió sin entender nada."
         }
       },
       "eyes": [
         "soy muy vil",
-        "soy tan vil, que la gente me dice «uf, tío, ¡qué vil eres!»."
+        "soy tan vil, que la gente me dice:\n«uf, tío, ¡qué vil eres!»."
       ]
     },
     "lvl3": {
@@ -118,10 +118,10 @@
         "combineLaser": "No tiene pinta\nde que se pueda combinar esto."
       },
       "eyeInteract": {
-        "touch": "¡Au! ¡Ayyyy! ¡Qué dolor!\nTiene que haber una forma de vencer...",
-        "useList": "¿Qué quieres que haga con esto?\n¿Le leo la cartilla?",
+        "touch": "¡Au! ¡Ayyyy! ¡Qué dolor!\nTiene que haber una forma de derrotarlos...",
+        "useList": "¿Qué quieres que haga con esto?\n¿Les leo la cartilla?",
         "usePickup": "¡Esto es mío!\nNo se toca...",
-        "useMoney": "No tiene pinta\nde que se vaya a dejar sobornar.",
+        "useMoney": "No tiene pinta\nde que se vayan a dejar sobornar.",
         "useWeapon": "Por desgracia, se han dado cuenta\nde que los vendedores son invulnerables.",
         "defeatShopkeeper": "Qué fácil ha sido..."
       }

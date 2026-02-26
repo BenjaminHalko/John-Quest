@@ -34,7 +34,7 @@ var _translationCredits = {
     "ru-RU": "ANONYMOUS",
     "zh-TW": "JACK YAU",
     "es-MX": "SANTIAGO SALMON",
-    "es-ES": "AURECACE",
+    "es-ES": "AURELIO CACEREÑO",
     "fr-FR": "FLORIAN BOUDES"
 };
 

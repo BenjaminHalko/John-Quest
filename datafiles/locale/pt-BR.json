@@ -84,15 +84,15 @@
           "3": "...por quê?"
         },
         "refill": {
-          "0": "Você usou todas as minhas preciosas bombas!!!\nEu estou tao triste.\nPor sorte, eu tenho mais algumas...",
-          "1": "De novo??? Você esta gastando as minhas\nbombas de propósito?!?\nEu ainda tenho mais algumas...",
-          "2": "Por que você esta fazendo isso...\nAqui, leve todo o meu estoque! Se você ficar sem\ndepois disso, eu não vou mais ajudar.",
+          "0": "Você usou todas as minhas preciosas bombas!!!\nEu estou tão triste.\nPor sorte, eu tenho mais algumas...",
+          "1": "De novo??? Você está gastando as minhas\nbombas de propósito?!?\nEu ainda tenho mais algumas...",
+          "2": "Por que você está fazendo isso...\nAqui, leve todo o meu estoque! Se você ficar sem\ndepois disso, eu não vou mais ajudar.",
           "3": "Descanse em paz Cara das Bombas\nEle morreu muito confuso."
         }
       },
       "eyes": [
         "eu sou muito maligno",
-        "eu sou tao maligno, que as pessoas dizem\n''uau cara, você com certeza é maligno!''"
+        "eu sou tão maligno, que as pessoas dizem\n''uau cara, você com certeza é maligno!''"
       ]
     },
     "lvl3": {
@@ -112,7 +112,7 @@
       },
       "itemPickup": {
         "takePropeller": "A hélice precisa ser\nreparada para eu poder pegá-la.",
-        "takeCannon": "O canhão precisa ser carregado\npara eu poder pegá-la.",
+        "takeCannon": "O canhão precisa ser carregado\npara eu poder pegá-lo.",
         "repairPropeller": "Acredito que eu não possa\nrepará-lo com isso.",
         "loadCannon": "Acredito que eu não possa usar\nisso para carregar o canhão.",
         "combineLaser": "Acredito que eu não possa\ncombinar esses juntos."

@@ -6,7 +6,7 @@ localeGroups = {
     "ru-RU": ["ru-RU"],
 }
 
-GROUP1_KEYS = ["menu", "lvl1"]
+GROUP1_KEYS = ["menu", "lvl1", "lvl3"]
 GROUP2_KEYS = ["lvl2"]
 CREDITS_GROUP1_KEYS = ["translations", "title", "thanks1", "thanks2"]
 
