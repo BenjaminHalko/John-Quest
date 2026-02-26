@@ -13,7 +13,7 @@ global.clicked = InputPressed(INPUT_VERB.ATTACK);
 var _mx = InputX(INPUT_CLUSTER.NAVIGATION);
 var _my = InputY(INPUT_CLUSTER.NAVIGATION);
 
-if (_mx != 0 or _my != 0) {
+if ((_mx != 0 or _my != 0) and os_type != os_operagx) {
     global.mx = clamp(global.mx + _mx * 6, 2, RESOLUTION_W - 14);
     global.my = clamp(global.my + _my * 6, 2, RESOLUTION_H - 12);
     
