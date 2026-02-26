@@ -276,6 +276,7 @@ jobs:
                       });
           EOF
           sed -i '/const CHANGE_ASPECT_RATIO = true;/r /tmp/insert.txt' extracted/index.html
+          sed -i 's/border: 0px none;/border: 0px none;\n        outline: none;/' index.html
       - name: Upload Build
         uses: actions/upload-artifact@v4
         with:
