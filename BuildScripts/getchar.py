@@ -54,10 +54,6 @@ def get_charset_split(locale, charset1, charset2):
         if key in text:
             traverse_locale(text[key], charset1)
 
-    # Group 1 exception: lvl3.listItem
-    if "lvl3" in text and "listItem" in text["lvl3"]:
-        traverse_locale(text["lvl3"]["listItem"], charset1)
-
     # Credits: split between groups
     if "credits" in text:
         for key in text["credits"]:
