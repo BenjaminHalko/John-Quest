@@ -52,7 +52,12 @@ if (music == -1) {
 			}
             
             if (os_type != os_operagx and InputPressed(INPUT_VERB.BACK)) {
-                game_end();
+                if (menuSelected == 4) {
+                    game_end();
+                } else {
+                    menuSelected = 4;
+                    audio_play_sound(snBlip,1,false);
+                }
             }
 		} else if (menu == MENU.LEVELSELECT) {
 			var _hInput = InputOpposingRepeat(INPUT_VERB.LEFT, INPUT_VERB.RIGHT);

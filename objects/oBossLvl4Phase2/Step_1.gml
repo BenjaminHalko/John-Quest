@@ -111,7 +111,7 @@ if (eye1 == noone) {
 } else if (instance_exists(eye1)) {
 	eye1.x = x+96;
 	eye1.y = y-30;
-	eye1.scale = Approach(eye1.scale,0.8,0.05);
+	eye1.scale = Approach(eye1.scale,0.8,0.04);
 	if (eye1.scale == 0.8) {
 		eye1.depth = depth-5;
 		eye1.spd = 8;
@@ -130,7 +130,7 @@ if (eye2 == noone) {
 		eye2.hp = 5;
 	}
 } else if (instance_exists(eye2)) {
-	eye2.scale = Approach(eye2.scale,0.8,0.05);
+	eye2.scale = Approach(eye2.scale,0.8,0.04);
 	eye2.x = x+162;
 	eye2.y = y-26;
 	if (eye2.scale == 0.8) {
