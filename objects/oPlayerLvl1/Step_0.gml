@@ -12,7 +12,7 @@ if (respawnPercent == 1) {
 			} else if (_duck != 0 and boss) {
 				walkWave += 1/10;
 			} else walkWave = pi*1.5;
-			hsp = ApproachFade(hsp,_move*(moveSpd+1*boss),0.8,0.85-0.2*boss);
+			hsp = ApproachFade(hsp,_move*(moveSpd+1*boss),0.8,0.75-0.1*boss);
 		} else {
 			if abs(x-autoMove) <= moveSpd+5 {
 				x = autoMove;

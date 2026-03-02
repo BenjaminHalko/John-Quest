@@ -4,6 +4,7 @@ flash = 0;
 if (image_index == 1) exit;
 
 timer = 0;
+windUp = 0;
 extra = instance_create_layer(x,y,layer,oCrusher,{image_index: 1});
 extra.beatOffset = beatOffset;
 extra.beatLoop = beatLoop;
