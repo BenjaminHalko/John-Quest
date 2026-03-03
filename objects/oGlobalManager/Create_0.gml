@@ -35,4 +35,7 @@ audio_master_gain(_vol);
 // Load Translations
 LexiconLoad();
 
+// Pausing
+global.paused = false;
+
 Transition(rTitle,1);

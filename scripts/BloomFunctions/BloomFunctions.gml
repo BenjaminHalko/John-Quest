@@ -1,5 +1,5 @@
 function BloomStart() {
-	if (event_type == ev_draw and event_number == ev_draw_normal) {
+	if (event_type == ev_draw and event_number == ev_draw_normal and !global.paused) {
 		surface_set_target(oBloom.surfacePing);
 		draw_clear_alpha(c_black,0);
 		camera_apply(view_camera[0]);
@@ -7,7 +7,7 @@ function BloomStart() {
 }
 
 function BloomDraw() {
-	if (event_type == ev_draw and event_number == ev_draw_normal) {
+	if (event_type == ev_draw and event_number == ev_draw_normal and !global.paused) {
 		surface_reset_target();
 		
 		var _x = camera_get_view_x(view_camera[0]);
