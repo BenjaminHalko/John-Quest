@@ -13,8 +13,8 @@ if (thrown and !inRightSpot and !entityThrowBreak) {
 
 if (!thrown and inRightSpot) {
     inRightSpot = false;
-    entityThrowDistance = 52;
-    entityThrowBreak = true;
+    entityActivateScript = -1;
+    
     if (STEAM_ENABLED) {
         steam_set_achievement("world2_secretsign");
     }
