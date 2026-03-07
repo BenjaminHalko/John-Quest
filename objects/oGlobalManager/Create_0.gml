@@ -33,7 +33,7 @@ var _vol = log10(global.audioVol + 1) / log10(2);
 audio_master_gain(_vol);
 
 // VSync
-global.vsync = Load("global", "vsync", true);
+global.vsync = Load("global", "vsync", false);
 display_reset(0, global.vsync);
 
 // Load Translations
