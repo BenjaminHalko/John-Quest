@@ -111,6 +111,11 @@ if (music == -1) {
                     Save("global", "audio", global.audioVol);
                     audio_play_sound(snBlip,1,false);
                 } else if (menuSelected == 3) {
+                    global.vsync = !global.vsync;
+                    display_reset(0, global.vsync);
+                    Save("global", "vsync", global.vsync);
+                    audio_play_sound(snBlip,1,false);
+                } else if (menuSelected == 4) {
                     global.playerSpriteIsCustom = !global.playerSpriteIsCustom;
                     Save("global", "face", global.playerSpriteIsCustom);
                     audio_play_sound(snBlip,1,false);
@@ -123,6 +128,11 @@ if (music == -1) {
                     menuSelected = 2;
                     audio_play_sound(snBlip,1,false);
                 } else if (menuSelected == 3) {
+                    global.vsync = !global.vsync;
+                    display_reset(0, global.vsync);
+                    Save("global", "vsync", global.vsync);
+                    audio_play_sound(snBlip,1,false);
+                } else if (menuSelected == 4) {
                     global.playerSpriteIsCustom = !global.playerSpriteIsCustom;
                     Save("global", "face", global.playerSpriteIsCustom);
                     audio_play_sound(snBlip,1,false);

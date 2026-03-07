@@ -61,7 +61,8 @@ loadMenuText = function() {
     options = [
         lexicon_text("menu.back"),
         lexicon_text("menu.language"),
-        lexicon_text("menu.audio")
+        lexicon_text("menu.audio"),
+        lexicon_text("menu.vsync")
     ];
     
     if (!is_undefined(global.playerCustomSprite)) {
