@@ -55,7 +55,7 @@ if (title) {
         
         var _lineX = round(lerp(_menuX + 80, _menuX + 123, global.audioVol));
         
-        draw_text(_menuX + 80, _menuY + 16 * 3 + _textOffset, lexicon_text($"menu.{global.vsync ? "on" : "off"}"));
+        draw_sprite(sTitleCheckbox, global.vsync, _menuX + 80, _menuY + 16 * 3 - 1);
         
         draw_line(_lineX, _menuY + 32, _lineX, _menuY + 37);
         

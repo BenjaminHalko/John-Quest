@@ -15,8 +15,6 @@
       "audio": "AUDIO",
       "language": "LANGUAGE",
       "vsync": "VSYNC",
-      "on": "ON",
-      "off": "OFF",
       "face": "FACE"
     },
     "intro": [

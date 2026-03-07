@@ -14,12 +14,13 @@
       "boss": "BOSS",
       "audio": "AUDIO",
       "language": "LANGUE",
+      "vsync": "VSYNC",
       "face": "VISAGE"
     },
     "intro": [
-      "DANS DES ROYAUMES MYSTIQUES,\nL'HISTOIRE DE DEUX RIVAUX VIT LE JOUR.",
-      "JOHN, LE GUERRIER DE LUMIÈRE,\nET JOHN MALÉFIQUE, SON JUMEAU D'OMBRE.",
-      "JOHN MALÉFIQUE, RONGÉ PAR L'ENVIE,\nCHERCHA À CONQUÉRIR LES DEUX ROYAUMES.",
+      "DANS LES ROYAUMES MYSTIQUES,\nL'HISTOIRE DE DEUX RIVAUX DÉBUTA",
+      "JOHN, LE GUERRIER DE LUMIÈRE,\nET EVIL JOHN, SON JUMEAU MALÉFIQUE.",
+      "EVIL JOHN , RONGÉ PAR L'ENVIE,\nCHERCHA À CONQUÉRIR LES DEUX ROYAUMES.",
       "AVEC SES SIX YEUX MALÉFIQUES, IL CORROMPIT\nLES HABITANTS DE CES TERRES.",
       "JOHN, GRÂCE À SON EXPERTISE DU JEU VIDÉO,\nDOIT RAMENER LA PAIX DANS LE MONDE."
     ],
@@ -30,15 +31,15 @@
       "signs": {
         "interactionHint": "Appuyez sur [ESPACE] pour interagir\navec les panneaux.",
         "vaseStorage": "Stockage de vases :\nNos vases sont gardés\nen toute sécurité.",
-        "village": "Village devant.\n(C'est à 12 cases sur votre droite,\nvous ne pouvez pas le rater...)",
+        "village": "Village droit devant.\n(C'est à 12 cases sur votre droite,\nvous ne pouvez pas le rater...)",
         "doomCave": [
-          "OUEST : Forêt\nEST : Grande Forêt\nSUD : Base des Slimes maléfiques",
+          "OUEST : Forêt\nEST : Plus Grande Forêt\nSUD : Base des Slimes maléfiques",
           "NORD : Grotte maléfique du Destin !\nN'ENTREZ SOUS AUCUN PRÉTEXTE !!!"
         ],
         "garden": "Défense d'entrer dans le jardin !",
         "rockFormation": "Ya ha ha !",
         "slimeBase": "Base des Slimes devant !\nMembres maléfiques uniquement !",
-        "rockWarning": "Attention aux chutes de pierres"
+        "rockWarning": "Attention, chutes de pierres !!"
       },
       "sword": {
         "getquest": {
@@ -71,23 +72,23 @@
         "gothat": "Je suis ravi d'avoir récupéré mon chapeau,\nje peux enfin voir à nouveau."
       },
       "bomb": {
-        "preitem": "Tiens, prends cette bombe.\nJ'ai entendu dire qu'il est dangereux de partir sans bombes.",
+        "preitem": "Tiens, prends cette bombe.\nJ'ai entendu dire qu'il est dangereux de partir sans.",
         "postitem": [
           "La légende raconte que tu peux\nappuyer sur [SHIFT] pour changer d'objet.",
           "Au fait, as-tu vu ce gros\nrocher qui bloque la grotte du village ?",
-          "On dit qu'elle a été bloquée à cause de la\nquantité excessive de mal venant de l'intérieur..."
+          "On dit qu'elle a été bloquée à cause de la\nquantité excessive de magie noire venant de l'intérieur..."
         ],
         "advice": {
           "0": "Un petit conseil :\nNe gaspille pas tes bombes,\ntu n'en as qu'un nombre limité.",
           "1": "Fais plus attention la prochaine fois.",
-          "2": "...",
+          "2": "Je t'observe...",
           "3": "...pourquoi ?"
         },
         "refill": {
           "0": "Tu as utilisé toutes mes précieuses bombes !!!\nJe suis si triste.\nHeureusement, j'en ai encore quelques-unes...",
-          "1": "Encore ??? Est-ce que tu gaspilles mes\nbombes exprès ?!?!\nIl m'en reste encore quelques-unes...",
+          "1": "Encore ??? Est-ce que tu gaspilles mes\nbombes exprès ?!?!\nIl m'en reste presque plus...",
           "2": "Pourquoi fais-tu ça...\nTiens, prends tout mon stock ! Si tu en\nmanques après ça, je ne t'aiderai plus.",
-          "3": "R.I.P. le Gars aux Bombes\nIl est mort très confus."
+          "3": "R.I.P. le Gars aux Bombes\nIl n'a rien vu venir."
         }
       },
       "eyes": [
@@ -118,7 +119,7 @@
         "combineLaser": "Je ne pense pas pouvoir\ncombiner ces objets ensemble."
       },
       "eyeInteract": {
-        "touch": "Aïe ! Aaaah la douleur !\nIl doit y avoir un moyen de le vaincre...",
+        "touch": "Aïe ! Aaaah ça fait mal !\nIl doit y avoir un moyen de le vaincre...",
         "useList": "Qu'est-ce que je vais faire avec ça ?\nLui faire des coupures de papier ?",
         "usePickup": "Je suis censé les collectionner !\nPas les donner...",
         "useMoney": "Je ne pense pas que le corrompre avec\nde l'argent soit d'une quelconque aide.",

@@ -837,6 +837,7 @@
     {"id":{"name":"sTitle","path":"sprites/sTitle/sTitle.yy",},},
     {"id":{"name":"sTitleAudio","path":"sprites/sTitleAudio/sTitleAudio.yy",},},
     {"id":{"name":"sTitleBuilding","path":"sprites/sTitleBuilding/sTitleBuilding.yy",},},
+    {"id":{"name":"sTitleCheckbox","path":"sprites/sTitleCheckbox/sTitleCheckbox.yy",},},
     {"id":{"name":"sTitleCursor","path":"sprites/sTitleCursor/sTitleCursor.yy",},},
     {"id":{"name":"sTitleLandscape","path":"sprites/sTitleLandscape/sTitleLandscape.yy",},},
     {"id":{"name":"sTriangleJump","path":"sprites/sTriangleJump/sTriangleJump.yy",},},

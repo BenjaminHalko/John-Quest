@@ -14,6 +14,7 @@
       "boss": "CHEFE",
       "audio": "ÁUDIO",
       "language": "IDIOMA",
+      "vsync": "VSYNC",
       "face": "ROSTO"
     },
     "intro": [

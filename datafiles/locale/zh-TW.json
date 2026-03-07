@@ -14,6 +14,7 @@
       "boss": "頭目",
       "audio": "音訊",
       "language": "語言",
+      "vsync": "垂直同步",
       "face": "臉部"
     },
     "intro": [
@@ -50,10 +51,7 @@
             "accept": "當然！",
             "reject": "這個工作有失我的身分"
           },
-          "questaccepted": [
-            "謝謝！",
-            "我想我是在邪惡\n史萊姆基地裏面弄丟的！"
-          ]
+          "questaccepted": ["謝謝！", "我想我是在邪惡\n史萊姆基地裏面弄丟的！"]
         },
         "changedmind": {
           "request": "你改變主意了嗎？",
