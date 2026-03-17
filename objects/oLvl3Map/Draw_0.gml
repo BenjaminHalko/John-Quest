@@ -42,7 +42,14 @@ for (var _f = 0; _f <= 2; _f++) {
 		if (_nodes[i].flr != _f || !visited[i]) continue;
 		for (var d = 0; d < 4; d++) {
 			var _nb = _nodes[i].nextNode[d];
-			if (_nb <= i || _nodes[_nb].flr != _f || !visited[_nb]) continue;
+			if (_nb <= i || _nodes[_nb].flr != _f || !visited[_nb]) {
+                if (_nb >= 0 and _nodes[_nb].hint and visited[10] and _nodes[_nb].flr == _curFloor) {
+                    draw_set_alpha(0.5);
+                    draw_line(_screenX[i], _screenY[i], _screenX[_nb], _screenY[_nb]);
+                    draw_set_alpha(_alpha);
+                }
+                continue;
+            }
 			draw_line(_screenX[i], _screenY[i], _screenX[_nb], _screenY[_nb]);
 		}
 	}
@@ -69,6 +76,16 @@ for (var i = 0; i < _count; i++) {
 // Current node on top
 draw_set_alpha(1);
 drawCube(_screenX[global.currentNode], _screenY[global.currentNode], currentColor);
+
+// Questions
+if (visited[10]) {
+    for (var i = 0; i < _count; i++) {
+        if (_nodes[i].hint and _nodes[i].flr == _curFloor and !visited[i] and i != global.currentNode) {
+            draw_sprite(sMapHint, 0, _screenX[i], _screenY[i]);
+        }
+    }
+}
+
 surface_reset_target();
 
 draw_surface_ext(surf, room_width - surfW, 0, 1, 1, 0, c_white, alpha);
