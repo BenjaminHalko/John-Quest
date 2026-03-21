@@ -7,13 +7,16 @@ if (STEAM_ENABLED) {
 if (
     room != rTitle and
     !instance_exists(oTransition) and
-    !global.paused and
-    InputPressed(INPUT_VERB.BACK)
+    !global.paused
 ) {
-    if (room == rCredits) {
-        Transition(rTitle);
-    } else {
-        instance_create_depth(0, 0, 0, oPause);
+    var _status = InputPlayerGetStatus(0);
+
+    if (InputPressed(INPUT_VERB.BACK) or _status == INPUT_PLAYER_STATUS.NEWLY_DISCONNECTED) {
+        if (room == rCredits) {
+            Transition(rTitle);
+        } else {
+            instance_create_depth(0, 0, 0, oPause);
+        }
     }
 }
 
