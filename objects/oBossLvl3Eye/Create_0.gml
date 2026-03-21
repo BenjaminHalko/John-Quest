@@ -1,6 +1,6 @@
 /// @desc 
 
-hovered = false;
+hovered = 0;
 dead = false;
 timer = 0;
 count = 0;

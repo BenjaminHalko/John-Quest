@@ -175,4 +175,5 @@ if (dead) {
 	image_xscale = Wave(0.8,1.2,0.2+waveOffset/4,waveOffset)*scale;
 	image_yscale = Wave(0.8,1.2,0.2+waveOffset/4,1-waveOffset)*scale;
 	scale = ApproachFade(scale,1,0.1,0.6);
+    hovered = Approach(hovered, 0, 0.05);
 }

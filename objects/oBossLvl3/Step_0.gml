@@ -5,8 +5,11 @@ if (global.my <= INVENTORY_Y) {
 	
 	if (!showingAnimation) {
 		with(oBossLvl3Eye) {
-			hovered = position_meeting(mouse_x,mouse_y,id);
-			if (hovered) {
+			if (position_meeting(mouse_x,mouse_y,id)) {
+                hovered = 1;
+                _hovered = true;
+            }
+			if (hovered > 0) {
 				if (global.clicked) {
 					if (global.inHand == -1) {
 						with(oInventory) {
@@ -56,7 +59,6 @@ if (global.my <= INVENTORY_Y) {
 						}
 					}
 				}
-				_hovered = true;
 				break;
 			}
 		}
