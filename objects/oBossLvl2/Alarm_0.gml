@@ -1,5 +1,8 @@
 /// @desc 
 
+if (global.playerHealth <= 0)
+    exit;
+
 if (shootCounter-- == 0) {
 	isTeleporting = true;
 	shootCounter = 4;
