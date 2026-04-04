@@ -22,6 +22,5 @@ if (
 
 if (os_type != os_operagx and (keyboard_check_pressed(vk_f4) or keyboard_check_pressed(vk_f11))) {
     window_set_fullscreen(!window_get_fullscreen());
-    window_set_size(1440, 810);
     window_center();
 }
