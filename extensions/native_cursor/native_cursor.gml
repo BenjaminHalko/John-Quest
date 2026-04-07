@@ -32,10 +32,18 @@ while (--i >= 0) {
     }
 }
 
-var _info = os_get_info();
-var _swap_br = !ds_map_exists(_info, "video_adapter_0_name");
-ds_map_destroy(_info);
-native_cursor_preinit_raw(window_handle(), _swap_br);
+var _swap_br = false;
+if (os_type == os_windows) {
+    var _info = os_get_info();
+    _swap_br = !ds_map_exists(_info, "video_adapter_0_name");
+    ds_map_destroy(_info);
+} else if (os_type == os_linux) {
+    _swap_br = true;
+} else if (os_type == os_macosx) {
+    _swap_br = false;
+}
+var _ret = native_cursor_preinit_raw(window_handle(), _swap_br);
+if (os_browser != browser_not_a_browser && _ret) native_cursor_preinit_gmcallback();
 
 #define native_cursor_create_from_file
 /// (path)->
@@ -118,7 +126,12 @@ var _size = _width * _height * 4;
 var _pixels = global.g_native_cursor_buf;
 if (buffer_get_size(_pixels) < _size) buffer_resize(_pixels, _size);
 buffer_get_surface(_pixels, _surf, 0);
-return native_cursor_create_from_buffer(_pixels, _width, _height, _hx, _hy, _fps);
+var _is_js = (os_browser != browser_not_a_browser || os_type == os_operagx);
+if (_is_js) {
+    return native_cursor_create_from_buffer(buffer_base64_encode(_pixels, 0, _size), _width, _height, _hx, _hy, _fps);
+} else {
+    return native_cursor_create_from_buffer(_pixels, _width, _height, _hx, _hy, _fps);
+}
 
 #define native_cursor_add_from_surface
 /// (cursor, surface, hotspot_x, hotspot_y)
@@ -129,7 +142,12 @@ var _size = _width * _height * 4;
 var _pixels = global.g_native_cursor_buf;
 if (buffer_get_size(_pixels) < _size) buffer_resize(_pixels, _size);
 buffer_get_surface(_pixels, _surf, 0);
-native_cursor_add_from_buffer(_cursor, _pixels, _width, _height,  _hx, _hy);
+var _is_js = (os_browser != browser_not_a_browser || os_type == os_operagx);
+if (_is_js) {
+    native_cursor_add_from_buffer(_cursor, buffer_base64_encode(_pixels, 0, _size), _width, _height, _hx, _hy);
+} else {
+    native_cursor_add_from_buffer(_cursor, _pixels, _width, _height, _hx, _hy);
+}
 
 #define native_cursor_resolve_full_path
 /// (path)->

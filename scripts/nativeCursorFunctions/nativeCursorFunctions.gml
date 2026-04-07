@@ -8,7 +8,7 @@ enum CURSOR {
 	BACKWARD_RIGHT,
 	LVL4
 }
-global.hasNativeCursor = (os_type == os_windows);
+global.hasNativeCursor = true;
 global.cursorSprites = [
 	sCursor,
 	sCursorHover,
