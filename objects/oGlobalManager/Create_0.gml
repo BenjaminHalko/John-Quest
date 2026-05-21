@@ -34,8 +34,8 @@ audio_master_gain(_vol);
 
 // VSync
 if (os_type != os_operagx) {
-    global.vsync = Load("global", "vsync", true);
-    if (!global.vsync) {
+    global.vsync = Load("global", "vsync", false);
+    if (global.vsync) {
         display_reset(0, global.vsync);
     }
 }
