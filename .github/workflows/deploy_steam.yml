@@ -7,9 +7,9 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Setup Igor
-        uses: BenjaminHalko/igor-setup@84c70345c0de99824faddf054658453f2d460c86
+        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
           target-yyp: "John's Quest.yyp"
@@ -29,7 +29,7 @@ jobs:
         run: |
           Expand-Archive -Path "${{ steps.build.outputs.out-dir }}\${{ steps.build.outputs.out-name }}" -DestinationPath extracted
       - name: Upload Build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-windows-steam
           path: extracted
@@ -38,9 +38,9 @@ jobs:
   build-macos:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Setup Igor
-        uses: bscotch/igor-setup@v3
+        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
           target-yyp: "John's Quest.yyp"
@@ -61,7 +61,7 @@ jobs:
           unzip "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" -d extracted
           mv extracted/John_s_Quest.app "extracted/John's Quest.app"
       - name: Upload Build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-macos-steam
           path: extracted
@@ -70,7 +70,7 @@ jobs:
   build-linux:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Enable unprivileged user namespaces
         run: |
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
@@ -83,7 +83,7 @@ jobs:
           sudo mkdir -p /opt/steam-runtime/
           curl https://repo.steampowered.com/steamrt-images-scout/snapshots/latest-steam-client-general-availability/com.valvesoftware.SteamRuntime.Sdk-amd64,i386-scout-sysroot.tar.gz | sudo tar -xzf - -C /opt/steam-runtime/
       - name: Setup Igor
-        uses: bscotch/igor-setup@v3
+        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
           target-yyp: "John's Quest.yyp"
@@ -103,7 +103,7 @@ jobs:
         run: |
           unzip "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" -d extracted
       - name: Upload Build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-linux-steam
           path: extracted
@@ -114,7 +114,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Builds
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: build-*-steam
           path: build

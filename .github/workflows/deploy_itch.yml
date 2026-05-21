@@ -7,20 +7,12 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Get Project Path
-        id: find_yyp
-        run: |
-          $yyp = Get-ChildItem -Path ${{ github.workspace }} -Filter *.yyp | Select-Object -First 1
-          $newName = $yyp.Name -replace '[^a-zA-Z0-9.]', '_'
-          $newPath = Join-Path $yyp.DirectoryName $newName
-          Rename-Item -Path $yyp.FullName -NewName $newName
-          "yyp-path=$newPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      - uses: actions/checkout@v6
       - name: Setup Igor
-        uses: bscotch/igor-setup@v3
+        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
-          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          target-yyp: "John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: windows
@@ -29,7 +21,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          yyp-path: "John's Quest.yyp"
           user-dir: "${{ steps.igor.outputs.user-dir }}"
           platform: windows
       - name: Extract Build
@@ -46,12 +38,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Get Project Path
-        id: find_yyp
-        run: |
-          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
-          echo "YYP file found at: $yyp"
-          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
       - name: Install signing certificate
         env:
           CERTIFICATE_BASE64: ${{ secrets.APPLE_CERTIFICATE_BASE64 }}
@@ -70,10 +56,10 @@ jobs:
           security set-key-partition-list -S apple-tool:,apple: -k "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
           security list-keychain -d user -s $KEYCHAIN_PATH
       - name: Setup Igor
-        uses: bscotch/igor-setup@v3
+        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
-          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          target-yyp: "John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: mac
@@ -82,7 +68,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          yyp-path: "John's Quest.yyp"
           user-dir: "${{ steps.igor.outputs.user-dir }}"
           platform: mac
       - name: Extract Build
@@ -165,7 +151,7 @@ jobs:
             -ov -format UDZO \
             "extracted/$APP_NAME.dmg"
       - name: Upload Build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-macos-itch
           path: extracted/*.dmg
@@ -178,12 +164,6 @@ jobs:
       - name: Enable unprivileged user namespaces
         run: |
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
-      - name: Get Project Path
-        id: find_yyp
-        run: |
-          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
-          echo "YYP file found at: $yyp"
-          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
       - name: Set up ffmpeg
         uses: FedericoCarboni/setup-ffmpeg@v3
         with:
@@ -201,10 +181,10 @@ jobs:
           sudo mkdir -p /opt/steam-runtime/
           curl https://repo.steampowered.com/steamrt-images-scout/snapshots/latest-steam-client-general-availability/com.valvesoftware.SteamRuntime.Sdk-amd64,i386-scout-sysroot.tar.gz | sudo tar -xzf - -C /opt/steam-runtime/
       - name: Setup Igor
-        uses: bscotch/igor-setup@v3
+        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
-          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          target-yyp: "John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: linux
@@ -213,7 +193,7 @@ jobs:
         uses: BenjaminHalko/igor-build@c716028ec30a5594fd74777920ad9927348a172a
         id: build
         with:
-          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          yyp-path: "John's Quest.yyp"
           user-dir: ${{ steps.igor.outputs.user-dir }}
           platform: linux
       - name: Rename Build
@@ -221,7 +201,7 @@ jobs:
           mkdir -p extracted
           mv "${{ steps.build.outputs.out-dir }}/${{ steps.build.outputs.out-name }}" "extracted/JohnsQuest.AppImage"
       - name: Upload Build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-linux-itch
           path: extracted/*.AppImage
@@ -230,12 +210,7 @@ jobs:
   build-web:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Get Project Path
-        id: find_yyp
-        run: |
-          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
-          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
+      - uses: actions/checkout@v6
       - name: Set up ffmpeg
         uses: FedericoCarboni/setup-ffmpeg@v3
         with:
@@ -251,10 +226,10 @@ jobs:
           version: 3.1.47
           actions-cache-folder: emsdk-cache
       - name: Setup Igor
-        uses: bscotch/igor-setup@v3
+        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
-          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          target-yyp: "John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           modules: operagx
           cache: true
@@ -262,7 +237,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          yyp-path: "John's Quest.yyp"
           user-dir: ${{ steps.igor.outputs.user-dir }}
           platform: operagx
       - name: Extract Build
@@ -281,7 +256,7 @@ jobs:
           sed -i '/const CHANGE_ASPECT_RATIO = true;/r /tmp/insert.txt' extracted/index.html
           sed -i 's/border: 0px none;/border: 0px none;\n        outline: none;/' extracted/index.html
       - name: Upload Build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-web-itch
           path: extracted
@@ -292,7 +267,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Builds
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: build-*-itch
           path: build
