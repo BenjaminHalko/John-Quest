@@ -12,7 +12,7 @@ jobs:
         uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
-          target-yyp: "John's Quest.yyp"
+          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: windows
@@ -21,7 +21,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: "John's Quest.yyp"
+          yyp-path: "${{ github.workspace }}/John's Quest.yyp"
           user-dir: "${{ steps.igor.outputs.user-dir }}"
           platform: windows
       - name: Extract Build
@@ -59,7 +59,7 @@ jobs:
         uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
-          target-yyp: "John's Quest.yyp"
+          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: mac
@@ -68,7 +68,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: "John's Quest.yyp"
+          yyp-path: "${{ github.workspace }}/John's Quest.yyp"
           user-dir: "${{ steps.igor.outputs.user-dir }}"
           platform: mac
       - name: Extract Build
@@ -184,7 +184,7 @@ jobs:
         uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
         id: igor
         with:
-          target-yyp: "John's Quest.yyp"
+          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: linux
@@ -193,7 +193,7 @@ jobs:
         uses: BenjaminHalko/igor-build@c716028ec30a5594fd74777920ad9927348a172a
         id: build
         with:
-          yyp-path: "John's Quest.yyp"
+          yyp-path: "${{ github.workspace }}/John's Quest.yyp"
           user-dir: ${{ steps.igor.outputs.user-dir }}
           platform: linux
       - name: Rename Build
