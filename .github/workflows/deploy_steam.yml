@@ -8,19 +8,11 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Get Project Path
-        id: find_yyp
-        run: |
-          $yyp = Get-ChildItem -Path ${{ github.workspace }} -Filter *.yyp | Select-Object -First 1
-          $newName = $yyp.Name -replace '[^a-zA-Z0-9.]', '_'
-          $newPath = Join-Path $yyp.DirectoryName $newName
-          Rename-Item -Path $yyp.FullName -NewName $newName
-          "yyp-path=$newPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       - name: Setup Igor
         uses: BenjaminHalko/igor-setup@84c70345c0de99824faddf054658453f2d460c86
         id: igor
         with:
-          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          target-yyp: "John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: windows
@@ -29,7 +21,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          yyp-path: "John's Quest.yyp"
           user-dir: "${{ steps.igor.outputs.user-dir }}"
           platform: windows
           config: Steam
@@ -47,17 +39,11 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Get Project Path
-        id: find_yyp
-        run: |
-          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
-          echo "YYP file found at: $yyp"
-          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
       - name: Setup Igor
         uses: bscotch/igor-setup@v3
         id: igor
         with:
-          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          target-yyp: "John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: mac
@@ -66,7 +52,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          yyp-path: "John's Quest.yyp"
           user-dir: "${{ steps.igor.outputs.user-dir }}"
           platform: mac
           config: Steam
@@ -88,12 +74,6 @@ jobs:
       - name: Enable unprivileged user namespaces
         run: |
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
-      - name: Get Project Path
-        id: find_yyp
-        run: |
-          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
-          echo "YYP file found at: $yyp"
-          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
       - name: Set up ffmpeg
         uses: FedericoCarboni/setup-ffmpeg@v3
         with:
@@ -106,7 +86,7 @@ jobs:
         uses: bscotch/igor-setup@v3
         id: igor
         with:
-          target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
+          target-yyp: "John's Quest.yyp"
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
           modules: linux
@@ -115,7 +95,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: ${{ steps.find_yyp.outputs.yyp-path }}
+          yyp-path: "John's Quest.yyp"
           user-dir: ${{ steps.igor.outputs.user-dir }}
           platform: linux
           config: Steam
