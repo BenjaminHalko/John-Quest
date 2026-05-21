@@ -17,7 +17,7 @@ jobs:
           Rename-Item -Path $yyp.FullName -NewName $newName
           "yyp-path=$newPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       - name: Setup Igor
-        uses: bscotch/igor-setup@v3
+        uses: BenjaminHalko/igor-setup@84c70345c0de99824faddf054658453f2d460c86
         id: igor
         with:
           target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
