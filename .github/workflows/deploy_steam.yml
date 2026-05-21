@@ -22,6 +22,7 @@ jobs:
         with:
           target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
           access-key: ${{ secrets.GAMEMAKER_KEY }}
+          runtime-version: 2026.0.0.23
           modules: windows
           cache: true
       - name: Build with Igor
@@ -58,6 +59,7 @@ jobs:
         with:
           target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
           access-key: ${{ secrets.GAMEMAKER_KEY }}
+          runtime-version: 2026.0.0.23
           modules: mac
           cache: true
       - name: Build with Igor
@@ -106,6 +108,7 @@ jobs:
         with:
           target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
           access-key: ${{ secrets.GAMEMAKER_KEY }}
+          runtime-version: 2026.0.0.23
           modules: linux
           cache: true
       - name: Build with Igor
