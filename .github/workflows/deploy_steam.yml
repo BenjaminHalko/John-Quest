@@ -9,12 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Setup Igor
-        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
+        uses: bscotch/igor-setup@v1.4.0
         id: igor
         with:
-          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
-          access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
           modules: windows
           cache: true
       - name: Build with Igor
@@ -40,12 +39,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Setup Igor
-        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
+        uses: bscotch/igor-setup@v1.4.0
         id: igor
         with:
-          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
-          access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
           modules: mac
           cache: true
       - name: Build with Igor
@@ -83,12 +81,11 @@ jobs:
           sudo mkdir -p /opt/steam-runtime/
           curl https://repo.steampowered.com/steamrt-images-scout/snapshots/latest-steam-client-general-availability/com.valvesoftware.SteamRuntime.Sdk-amd64,i386-scout-sysroot.tar.gz | sudo tar -xzf - -C /opt/steam-runtime/
       - name: Setup Igor
-        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
+        uses: bscotch/igor-setup@v1.4.0
         id: igor
         with:
-          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
-          access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
           modules: linux
           cache: true
       - name: Build with Igor

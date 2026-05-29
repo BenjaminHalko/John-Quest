@@ -9,12 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Setup Igor
-        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
+        uses: bscotch/igor-setup@v1.4.0
         id: igor
         with:
-          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
-          access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
           modules: windows
           cache: true
       - name: Build with Igor
@@ -28,7 +27,7 @@ jobs:
         run: |
           Expand-Archive -Path "${{ steps.build.outputs.out-dir }}\${{ steps.build.outputs.out-name }}" -DestinationPath extracted
       - name: Upload Build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-windows-itch
           path: extracted
@@ -37,7 +36,7 @@ jobs:
   build-macos:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install signing certificate
         env:
           CERTIFICATE_BASE64: ${{ secrets.APPLE_CERTIFICATE_BASE64 }}
@@ -56,12 +55,11 @@ jobs:
           security set-key-partition-list -S apple-tool:,apple: -k "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
           security list-keychain -d user -s $KEYCHAIN_PATH
       - name: Setup Igor
-        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
+        uses: bscotch/igor-setup@v1.4.0
         id: igor
         with:
-          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
-          access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
           modules: mac
           cache: true
       - name: Build with Igor
@@ -160,7 +158,7 @@ jobs:
   build-linux:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Enable unprivileged user namespaces
         run: |
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
@@ -181,12 +179,11 @@ jobs:
           sudo mkdir -p /opt/steam-runtime/
           curl https://repo.steampowered.com/steamrt-images-scout/snapshots/latest-steam-client-general-availability/com.valvesoftware.SteamRuntime.Sdk-amd64,i386-scout-sysroot.tar.gz | sudo tar -xzf - -C /opt/steam-runtime/
       - name: Setup Igor
-        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
+        uses: bscotch/igor-setup@v1.4.0
         id: igor
         with:
-          target-yyp: "${{ github.workspace }}/John's Quest.yyp"
-          access-key: ${{ secrets.GAMEMAKER_KEY }}
           runtime-version: 2026.0.0.23
+          access-key: ${{ secrets.GAMEMAKER_KEY }}
           modules: linux
           cache: true
       - name: Build with Igor
@@ -211,6 +208,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - name: Get Project Path
+        id: find_yyp
+        run: |
+          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
+          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
       - name: Set up ffmpeg
         uses: FedericoCarboni/setup-ffmpeg@v3
         with:
@@ -226,10 +228,10 @@ jobs:
           version: 3.1.47
           actions-cache-folder: emsdk-cache
       - name: Setup Igor
-        uses: BenjaminHalko/igor-setup@42da37c07af9bfbb4a9db6619fbae1a90b43fdb5
+        uses: bscotch/igor-setup@v1.4.0
         id: igor
         with:
-          target-yyp: "John's Quest.yyp"
+          runtime-version: 2026.0.0.23
           access-key: ${{ secrets.GAMEMAKER_KEY }}
           modules: operagx
           cache: true
@@ -237,7 +239,7 @@ jobs:
         uses: bscotch/igor-build@v1
         id: build
         with:
-          yyp-path: "John's Quest.yyp"
+          yyp-path: "${{ github.workspace }}/John's Quest.yyp"
           user-dir: ${{ steps.igor.outputs.user-dir }}
           platform: operagx
       - name: Extract Build
