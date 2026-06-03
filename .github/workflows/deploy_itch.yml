@@ -206,20 +206,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Get Project Path
-        id: find_yyp
-        run: |
-          yyp=$(find "${{ github.workspace }}" -maxdepth 1 -type f -name "*.yyp" | head -n 1)
-          echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
       - name: Set up ffmpeg
         uses: AnimMouse/setup-ffmpeg@v1
       - name: Setup cache
         id: cache-system-libraries
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: emsdk-cache
           key: emsdk-cache
-      - uses: mymindstorm/setup-emsdk@v14
+      - uses: mymindstorm/setup-emsdk@v15
         with:
           version: 3.1.47
           actions-cache-folder: emsdk-cache
