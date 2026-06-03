@@ -20,6 +20,12 @@ global.cursorSprites = [
 	sCursorLvl4
 ];
 
+if (global.hasNativeCursor) {
+    native_cursor_reset();
+} else {
+    window_set_cursor(cr_none);
+}
+
 function native_cursor(_ptr) constructor {
 	__ptr__ = _ptr;
 }
