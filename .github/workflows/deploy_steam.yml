@@ -74,8 +74,6 @@ jobs:
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
       - name: Set up ffmpeg
         uses: AnimMouse/setup-ffmpeg@v1
-        with:
-          ffmpeg-version: "6.1.0"
       - name: Install Steam Runtime
         run: |
           sudo mkdir -p /opt/steam-runtime/

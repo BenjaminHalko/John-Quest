@@ -164,8 +164,6 @@ jobs:
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
       - name: Set up ffmpeg
         uses: AnimMouse/setup-ffmpeg@v1
-        with:
-          ffmpeg-version: "6.1.0"
       - name: Install LinuxDeploy
         run: |
           wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
@@ -215,8 +213,6 @@ jobs:
           echo "yyp-path=$yyp" >> $GITHUB_OUTPUT
       - name: Set up ffmpeg
         uses: AnimMouse/setup-ffmpeg@v1
-        with:
-          ffmpeg-version: "6.1.0"
       - name: Setup cache
         id: cache-system-libraries
         uses: actions/cache@v4
