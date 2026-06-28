@@ -184,6 +184,7 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"gamecontrollerdb.txt","CopyToMask":-1,"filePath":"datafiles","name":"gamecontrollerdb.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"de-DE.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"de-DE.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"definitions.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"definitions.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"en-US.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"en-US.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"es-ES.json","CopyToMask":-1,"filePath":"datafiles/locale","name":"es-ES.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

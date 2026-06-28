@@ -2,7 +2,7 @@ import json
 import os
 
 localeGroups = {
-    "en-US": ["en-US", "pt-BR", "es-MX", "es-ES", "fr-FR"],
+    "en-US": ["en-US", "pt-BR", "es-MX", "es-ES", "fr-FR", "de-De"],
     "ru-RU": ["ru-RU"],
 }
 

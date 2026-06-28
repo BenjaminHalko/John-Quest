@@ -35,7 +35,8 @@ var _translationCredits = {
     "zh-TW": "JACK YAU",
     "es-MX": "SANTIAGO SALMON",
     "es-ES": "AURELIO CACEREÑO",
-    "fr-FR": "FLORIAN BOUDES"
+    "fr-FR": "FLORIAN BOUDES",
+    "de-DE": "SIMON PABSTONE"
 };
 
 worldText = lexicon_text("menu.world");

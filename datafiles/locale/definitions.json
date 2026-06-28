@@ -1,4 +1,8 @@
 {
+  "Deutsch": {
+    "locale": "de-DE",
+    "file": "./de-DE.json"
+  },
   "English": {
     "locale": "en-US",
     "file": "./en-US.json"

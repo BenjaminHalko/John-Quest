@@ -1,0 +1,152 @@
+{
+  "language": "Deutsch",
+  "locale": "de-DE",
+  "text": {
+    "menu": {
+      "newgame": "NEUES SPIEL",
+      "continue": "SPIEL FORTSETZEN",
+      "worldselect": "SPIELWELT AUSWÄHLEN",
+      "options": "EINSTELLUNGEN",
+      "credits": "MITWIRKENDE",
+      "quit": "SPIEL BEENDEN",
+      "back": "ZURÜCK",
+      "world": "WELT",
+      "boss": "FEIND",
+      "audio": "TÖNE",
+      "language": "SPRACHE",
+      "vsync": "VSYNC",
+      "face": "GESICHT"
+    },
+    "intro": [
+      "IN DEN MYSTISCHEN REICHEN\nTRUG SICH EINE GESCHICHTE VON ZWEI RIVALEN ZU.",
+      "JOHN, DER KRIEGER DES LICHTS,\nUND EVIL JOHN, SEIN BÖSER ZWILLING IM SCHATTENREICH.",
+      "DER BÖSE JOHN, ZERFRESSEN VON MISSGUNST,\nSTREBT DANACH, BEIDE REICHE ZU ZERSTÖREN.",
+      "MIT SEINEN SECHS BÖSEN AUGENPAAREN\n VERDIRBT ER DIE BEWOHNER DES LANDES.",
+      "JOHN MUSS, MITHILFE SEINES FACHWISSENS\n ÜBER SPIELE, DEN FRIEDEN DER WELT WIEDERHERSTELLEN."
+    ],
+    "lvl1": {
+      "ready": "BIST DU BEREIT?"
+    },
+    "lvl2": {
+      "signs": {
+        "interactionHint": "Drücken Sie [LEERTASTE], um\nmit Schildern zu interagieren.",
+        "vaseStorage": "Krügelager:\nWir bewahren Deine Krüge\nsicher und geschützt auf.",
+        "village": "Das Dorf liegt voraus.\n(Es befindet sich 12 Kacheln rechts von Dir,\nDu kannst es nicht verpassen...)",
+        "doomCave": [
+          "WESTEN: Wald\nEAST: Größerer Wald\nSÜDEN: Böse Schleimbasis",
+          "NORDEN: Schaurige Höhle des \nUntergangs!\nAUF KEINEN FALL BETRETEN!!!"
+        ],
+        "garden": "Bleib vom Garten fern!",
+        "rockFormation": "Ja ha ha!",
+        "slimeBase": "Schleim-Basis voraus! Zutritt nur für Mitglieder des Bösen\n!",
+        "rockWarning": "Achte auf fallende Steine"
+      },
+      "sword": {
+        "getquest": {
+          "request": [
+            "Hallo da! Du siehst aus wie ein tapferer Abenteurer.",
+            "Kannst Du mir helfen, meinen verlorenen Hut zu finden?"
+          ],
+          "response": {
+            "accept": "Natürlich!",
+            "reject": "Diese Aufgabe ist für mich ein Leichtes"
+          },
+          "questaccepted": [
+            "Vielen Dank!",
+            "Ich glaube, ich habe meinen Hut in der bösen\nSchleimbasis im Süden liegen gelassen!"
+          ]
+        },
+        "changedmind": {
+          "request": "Hast Du Deine Meinung geändert, mir zu helfen?",
+          "accept": "Sicher, ich werde Dir helfen.",
+          "reject": "Haha! Ich interessiere mich nicht für Deinen stinkenden Hut!"
+        },
+        "clue": "Hast Du vergessen, wo ich meinen Hut verloren habe?\nIch denke, es war in der bösen Schleimbasis.",
+        "questcomplete": {
+          "foundhat": "Hurra, Du hast meinen Hut gefunden!",
+          "foundhatwithoutasking": "Hurra, Du hast meinen Hut \ngefunden, ohne dass ich Dich danach gefragt habe!",
+          "hero": "Du bist wirklich ein wahrer Held!",
+          "getsword": "Hier, nimm dieses Schwert.\nIch höre, dass es gefährlich ist, ohne es unterwegs zu sein.",
+          "gotsword": "Nochmals vielen Dank!\nIch hoffe, Du findest dieses Schwert nützlich!"
+        },
+        "gothat": "Ich bin froh, dass ich meinen Hut zurückbekommen habe,\njetzt kann ich wieder sehen."
+      },
+      "bomb": {
+        "preitem": "Hier, nimm diese Bombe.\nIch hörte, es sei gefährlich, ohne Bomben unterwegs zu sein.",
+        "postitem": [
+          "Die Legende besagt, dass Du \n [GROSSCHREIBTASTE] drücken musst, um Ausrüstungsgegenstände auszutauschen.",
+          "Hast Du übrigens den großen\nFelsen gesehen, der die Höhle im Dorf blockiert?",
+          "Die Leute sagen, dass sie gesperrt wurde, wegen der\nzu großen Menge des Bösen, das aus ihrem Inneren hervorkommt..."
+        ],
+        "advice": {
+          "0": "Ein Ratschlag:\nVergeude nicht Deine Bomben,\ndenn Du hast nur eine begrenzte Anzahl von ihnen.",
+          "1": "Sei das nächste Mal etwas vorsichtiger.",
+          "2": "Ich beobachte Dich...",
+          "3": "...aber warum?"
+        },
+        "refill": {
+          "0": "Du hast alle meine kostbaren Bomben aufgebraucht!!!\nIch bin so traurig.\nZum Glück habe ich ein paar mehr...",
+          "1": "Schon wieder??? Verschwendest Du meine\nBomben mit Absicht?!?\nIch habe zum Glück noch ein paar bei mir...",
+          "2": "Warum tust Du das...\nHier, nimm meinen gesamten Vorrat! Wenn Du diese verbraucht hast\ndann helfe ich Dir nicht mehr.",
+          "3": "Ruhe in Frieden, Bombenwerfer\nEr starb sehr verwirrt."
+        }
+      },
+      "eyes": [
+        "ich bin sehr böse",
+        "ich bin so bösartig, dass die leute sagen\n\"meine güte, du bist ziemlich böse!\""
+      ]
+    },
+    "lvl3": {
+      "desc": {
+        "sword": "Es ist meine treue Klinge.",
+        "bomb": "Es ist eine Bombe! Sie ist hochexplosiv!",
+        "coin": "Das sind all die Münzen, die ich mit\nvon diesen bösen Monstern eingesammelt habe!",
+        "propeller": "Es ist der Rotor, den ich mit meinem Schwert repariert habe.",
+        "cannon": "Die Kanone ist mit explosiven Bomben beladen!",
+        "laser": "Es ist der tödliche Laserblaster."
+      },
+      "listItem": {
+        "required": "Benötigte Teile",
+        "propeller": "Rotor-\nblätter",
+        "cannon": "explosive\nKanone",
+        "laser": "Laser\nBlaster"
+      },
+      "itemPickup": {
+        "takePropeller": "Die Rotoren müssen\nrepariert werden, bevor ich sie aufnehmen kann.",
+        "takeCannon": "Die Kanone muss neu\ngeladen werden, bevor ich sie mitnehmen kann.",
+        "repairPropeller": "Ich glaube nicht, dass ich sie\ndamit reparieren kann.",
+        "loadCannon": "Ich glaube nicht, dass ich\nbenutzen kann, um die Kanone zu laden.",
+        "combineLaser": "Ich glaube nicht, dass ich diese\nkombinieren kann."
+      },
+      "eyeInteract": {
+        "touch": "Aua, das sind Schmerzen!\nEs muss eine Möglichkeit geben, ihn zu besiegen...",
+        "useList": "Was werde ich damit machen?\nWinzige Wunden verursachen?",
+        "usePickup": "Ich habe den Auftrag, sie zu sammeln!\nDie gebe ich nicht weg...",
+        "useMoney": "Ich denke nicht, dass eine Bestechung \nmit Geld hilfreich wäre.",
+        "useWeapon": "Unglücklicherweise scheinen sie herausgefunden\n zu haben, dass Ladenbesitzer immun gegen Schaden sind!",
+        "defeatShopkeeper": "Nun, das war ja einfach..."
+      }
+    },
+    "credits": {
+      "createdby": "Ein Spiel von",
+      "programming": "Programmierung",
+      "level": "Level-Design",
+      "music": "Musik & Toneffekte",
+      "leveltweaks": "Levelgestaltung\noptimiert und getestet von",
+      "environment": "Künstlerische Gestaltung der Spielumgebung",
+      "character": "Charaktergestaltung",
+      "keyitem": "Leitproduktgestaltung",
+      "boss": "Endgegnergestaltung",
+      "rpgtemplate": "ARPG-Template",
+      "pictures": "Fotos",
+      "voice": "Sprachausgabe",
+      "translations": "ÜBERSETZUNGEN",
+      "title": "TITEL",
+      "logo": "Logo",
+      "face": "Gesicht",
+      "thanks1": "DANKE AN ALLE\nDIE DIESES SPIEL ERMÖGLICHT HABEN",
+      "thanks1Alt": "Danke an alle, die dies ermöglicht haben",
+      "thanks2": "DANKE FÜR'S\nSPIELEN"
+    }
+  }
+}
