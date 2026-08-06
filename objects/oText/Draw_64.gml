@@ -21,6 +21,7 @@ if(responses[0] != -1) and (textProgress >= string_length(text))
 var _portrait = (background != 0);
 
 var _xDraw = clamp((x2-x1-_portrait*12)/2 - string_width(text)/2, 0, _portrait*24);
+if (global.locale == "de-DE") _xDraw = 0;
 draw_text_ext((x1+x2)/2+_xDraw, y1+8, _print, 14, 999);
 draw_set_color(c_white);
 draw_text_ext((x1+x2)/2+_xDraw, y1+7, _print, 14, 999);

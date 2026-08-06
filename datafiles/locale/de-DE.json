@@ -59,7 +59,7 @@
         "changedmind": {
           "request": "Hast Du Deine Meinung geändert, mir zu helfen?",
           "accept": "Sicher, ich werde Dir helfen.",
-          "reject": "Haha! Ich interessiere mich nicht für Deinen stinkenden Hut!"
+          "reject": "Ich interessiere mich nicht für Deinen stinkenden Hut!"
         },
         "clue": "Hast Du vergessen, wo ich meinen Hut verloren habe?\nIch denke, es war in der bösen Schleimbasis.",
         "questcomplete": {
