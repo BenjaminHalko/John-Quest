@@ -47,12 +47,13 @@ if (respawnPercent == 1) {
 			}
 	
 			// Dashing
-			if InputPressed(INPUT_VERB.DASH) {
+			if InputBufferPressed(INPUT_VERB.DASH, 20) {
 				if canJump > 0 {
 					if(savedJumpID.collect()) {
 						vsp = jumpSpd;
 						allowDash = true;
 						rotation = -10;
+                        InputVerbConsume(INPUT_VERB.DASH);
 					}
 				} else if (allowDash or boss) {
 					dash = 10;
@@ -63,11 +64,12 @@ if (respawnPercent == 1) {
 					} else {
 						dashDir = 180 * (dirFacing == -1);
 					}
+                    InputVerbConsume(INPUT_VERB.DASH);
 				}
 			}
 		}
 	} else {
-		dash--;
+        dash--;
 		var _spd = lerp(moveSpd,dashSpd,dash/10);
 		hsp = lengthdir_x(_spd,dashDir);
 		vsp = lengthdir_y(_spd,dashDir);
